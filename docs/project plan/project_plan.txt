@@ -1,13 +1,14 @@
-Project flow:
+Questions for TA:
 Q1) Any functions we really do need to show we can master?
   a) Split/join
   b) Mutate
 Q2) Can we do other kind of split than we suggested in the handed-in outline?
+Q3) When to use '::' and when not to?
 
+Project flow:
 1) 
 while project == "not_finished":
   case_when(cup == "empty" ~ get_coffee())
-
 2) Load data, one variable for each sheet
 3) Are the data tidy?
 4) Clean data (How many failed PCR, should they all be removed?)

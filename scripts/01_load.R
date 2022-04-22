@@ -1,10 +1,15 @@
 library(tidyverse)
 library(readxl)
 
-data <- read_excel("data/_raw/Data.xlsx",
+#Load data sheet
+data_raw <- read_excel("data/_raw/Data.xlsx",
                    sheet = 2) %>% 
-  write_csv("data/raw_data.csv")
-info <- read_excel("data/_raw/Data.xlsx",
+  write_csv("data/01_dat_load.csv")
+
+#Load legend sheet
+legend <- read_excel("data/_raw/Data.xlsx",
                    sheet = 1) %>%
-  write_csv("data/info.csv")
+  write_csv("data/01_legend_load.csv")
+
+
 
