@@ -11,6 +11,16 @@ read_excel("data/_raw/Data.xlsx",
                          "numeric","numeric","numeric","numeric",
                          "numeric","numeric","numeric","numeric"),
            .name_repair = "universal") %>%
+  rename(Age = Age..yr.,
+         TNM = TNM.stage,
+         AJCC = AJCC.stage,
+         PSA = PSA.level..ng.ml.,
+         Gleason = Gleason.score,
+         Dfi = Daily.fat.dietary.intake....,
+         Smoking = Smoking.history,
+         PCaHist = Family.history.of.PCa,
+         BMI = BMI..kg.m2.,
+         mtDNA = mtDNA.copy.number) %>% 
   write_csv("data/01_dat_load.csv")
 
 #Load legend sheet
