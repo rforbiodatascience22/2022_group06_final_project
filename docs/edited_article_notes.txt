@@ -1,6 +1,7 @@
-- what does dose-response relationship mean?
+- What does dose-response relationship mean?
+    https://en.wikipedia.org/wiki/Dose%E2%80%93response_relationship
 - What are relative mtDNA copy numbers?
-	Maybe just the relation of pation counts vs. control counts for corresponding age?
+	  mtDNA count number compared to globulin DNA count number.
 - What is gleason score?
 
 
