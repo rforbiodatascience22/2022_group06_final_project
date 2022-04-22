@@ -18,7 +18,8 @@ while project == "not_finished":
   a) Case when (BMI into classifiers)
   b) Split in case of Family History?
   c) Split in case of DFT, smoking history and BMI 
-  d) Can we find other stuff to add/alter?
+  d) Do some fancy mapping stuff perhaps? Not really sure how that works though
+  e) Can we find other stuff to add/alter?
 6) Do PCA
 7) Logistic Regression
 8) Data visualization
