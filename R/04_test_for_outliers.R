@@ -46,7 +46,7 @@ mtDNAPlot <- data %>%
   labs(x = "mtDNA copy number",
        y = "")
 
-BigPlot <- (AgePlot + FatIntakePlot) / 
+BigPlot <- (AgePlot + FatIntakePlot + PSAPlot) / 
   (BMIPlot + AJCCPlot) /
   (GleasonPlot + mtDNAPlot) + 
   plot_annotation(title = "A plot of the nonbinary attributes, to examine distribution of outliers")
