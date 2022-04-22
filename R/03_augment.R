@@ -3,10 +3,10 @@ data <- read_csv(file = "data/02_dat_clean.csv")
 
 #Create artificial split, remove patient info
 patient_info <- data %>% 
-  select(Sample, Age, Dairy, Smoking_history, Family_hist, BMI)
+  select(Sample, Age, Dfi, Smoking, PCaHist, BMI)
   
 medical_info <- data %>% 
-  select(!c(Age, dietary, Smoking_history, Family_hist, BMI))
+  select(!c(Age, Dfi, Smoking, PCaHist, BMI))
 
 #Add BMI_class and convert into factors
 patient_info <- patient_info %>% 
@@ -20,9 +20,9 @@ patient_info <- patient_info %>%
 
 #Add dietary_class
 patient_info <- patient_info %>% 
-  mutate(dietary_class = case_when(dietary < 20 ~ 1,
-                                   20 <= dietary & dietary < 30 ~ 2,
-                                   30 <= dietary ~ 3))
+  mutate(Dfi_class = case_when(Dfi < 20 ~ 1,
+                                   20 <= Dfi & Dfi < 30 ~ 2,
+                                   30 <= Dfi ~ 3))
 
 #Join patient info and medical info based in Sample
 data_augmented <- patient_info %>% 
