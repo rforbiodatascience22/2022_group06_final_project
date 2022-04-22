@@ -5,7 +5,7 @@ Q1) Any functions we really do need to show we can master?
 Q2) Can we do other kind of split than we suggested in the handed-in outline?
 
 1) 
-while project == "not_finished":
+while_project == "not_finished":
   case_when(cup == "empty" ~ get_coffee())
 
 2) Load data, one variable for each sheet
