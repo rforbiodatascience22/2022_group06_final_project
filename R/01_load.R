@@ -5,7 +5,7 @@ library(tidyverse)
 # set to "custom" in the data/_raw/Data.xlsx and not "general"
 # the data is loaded as a date and time and not a number.
 # This has forced us to indicate each class of data seperately 
-john = read_excel("data/_raw/Data.xlsx",
+read_excel("data/_raw/Data.xlsx",
            sheet = 2,
            col_types = c("text","numeric","numeric","numeric","text",
                          "numeric","numeric","numeric","numeric",
