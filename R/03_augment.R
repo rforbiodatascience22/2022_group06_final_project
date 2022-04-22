@@ -26,13 +26,13 @@ patient_info <- patient_info %>%
 
 #Add variables derived from TNM 
 medical_info <- medical_info %>% 
-  select(TNM) %>% 
-  mutate(Tumor = case_when(matches("TX.") ~ "NA",
-                           #select(TNM, matches("T0*")) ~ 0,
+  #select(TNM) %>% 
+  mutate(Tumor = case_when(str_detect(TNM,"T4.+") ~ 4,
+                           #str_detect(TNM,"T0.") ~ 0,
                            #select(TNM, matches("T1*")) ~ 1,
                            #select(TNM, matches("T2*")) ~ 2,
                            #select(TNM, matches("T3*")) ~ 3,
-                           #select(TNM, matches("T4*")) ~ 4,)#,
+                           #select(TNM, matches("TX.")) ~ "NA",)#,
          #LymphNodes = case_when(),
          #Metastasis = case_when()
          ))
