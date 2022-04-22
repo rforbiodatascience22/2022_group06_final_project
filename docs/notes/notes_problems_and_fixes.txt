@@ -1,0 +1,7 @@
+Notes:
+
+Problem:
+PSA level provided in "_raw/Datalxlsx" is interperetet as a data when read using simple read_excel() in 01_load.R - we suspect it is due to the column in the excel file being attributed as 'custom', as this problem does not occur for the 'dietary fat', 'BMI' and similar columns. These columns are marked as 'general'.
+Fix:
+
+
