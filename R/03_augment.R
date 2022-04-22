@@ -3,7 +3,7 @@ data <- read_csv(file = "data/02_dat_clean.csv")
 
 #Create artificial split, remove patient info
 patient_info <- data %>% 
-  select(Sample, Age, dietary, Smoking_history, Family_hist, BMI)
+  select(Sample, Age, Dairy, Smoking_history, Family_hist, BMI)
   
 medical_info <- data %>% 
   select(!c(Age, dietary, Smoking_history, Family_hist, BMI))
