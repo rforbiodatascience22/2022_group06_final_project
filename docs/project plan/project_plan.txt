@@ -1,1 +1,22 @@
 Project flow:
+Q1) Any functions we really do need to show we can master?
+  a) Split/join
+  b) Mutate
+Q2) Can we do other kind of split than we suggested in the handed-in outline?
+
+1) 
+while project == "not_finished":
+  case_when(cup == "empty" ~ get_coffee())
+
+2) Load data, one variable for each sheet
+3) Are the data tidy?
+4) Clean data (How many failed PCR, should they all be removed?)
+  a) Any other outliers? Maybe check this with boxplot for each variable
+5) Augment data (split and join)
+  a) Case when (BMI into classifiers)
+  b) Split in case of Family History?
+  c) Split in case of DFT, smoking history and BMI 
+  d) Can we find other stuff to add/alter?
+6) Do PCA
+7) Logistic Regression
+8) Data visualization
