@@ -24,6 +24,21 @@ patient_info <- patient_info %>%
                                    20 <= Dfi & Dfi < 30 ~ 2,
                                    30 <= Dfi ~ 3))
 
+#Add variables derived from TNM 
+medical_info <- medical_info %>% 
+  select(TNM) %>% 
+  mutate(Tumor = case_when(matches("TX.") ~ "NA",
+                           #select(TNM, matches("T0*")) ~ 0,
+                           #select(TNM, matches("T1*")) ~ 1,
+                           #select(TNM, matches("T2*")) ~ 2,
+                           #select(TNM, matches("T3*")) ~ 3,
+                           #select(TNM, matches("T4*")) ~ 4,)#,
+         #LymphNodes = case_when(),
+         #Metastasis = case_when()
+         ))
+
+
+
 #Join patient info and medical info based in Sample
 data_augmented <- patient_info %>% 
   full_join(medical_info,
