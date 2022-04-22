@@ -25,25 +25,25 @@ BMIPlot <- data %>%
 AJCCPlot <- data %>% 
   ggplot(mapping = aes(x = AJCC)) +
   geom_boxplot() + 
-  labs(x = "AJJC",
+  labs(x = "AJJC stage",
        y = "")
 
 PSAPlot <- data %>% 
   ggplot(mapping = aes(x = PSA)) +
   geom_boxplot() + 
-  labs(x = "PSA",
+  labs(x = "Prostate specific antigen",
        y = "")
 
 GleasonPlot <- data %>% 
   ggplot(mapping = aes(x = Gleason)) +
   geom_boxplot() + 
-  labs(x = "Gleason",
+  labs(x = "Gleason score",
        y = "")
 
 mtDNAPlot <- data %>% 
   ggplot(mapping = aes(x = mtDNA)) +
   geom_boxplot() + 
-  labs(x = "mtDNA",
+  labs(x = "mtDNA copy number",
        y = "")
 
 BigPlot <- (AgePlot + FatIntakePlot) / 
