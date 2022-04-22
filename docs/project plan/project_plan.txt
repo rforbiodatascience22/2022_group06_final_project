@@ -4,10 +4,11 @@ Q1) Any functions we really do need to show we can master?
   b) Mutate
 Q2) Can we do other kind of split than we suggested in the handed-in outline?
 Q3) When to use '::' and when not to?
+Q4) We have a problem with loading data, how much can we add to our load script?
 
 Project flow:
 1) 
-while_project == "not_finished":
+while project == "not_finished":
   case_when(cup == "empty" ~ get_coffee())
 2) Load data, one variable for each sheet
 3) Are the data tidy?
