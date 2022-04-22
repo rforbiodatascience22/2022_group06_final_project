@@ -1,0 +1,10 @@
+- what does dose-response relationship mean?
+- What are relative mtDNA copy numbers?
+	Maybe just the relation of pation counts vs. control counts for corresponding age?
+- What is gleason score?
+
+
+- Visualisations:
+	mtDNA copy numbers vs Gleason score?
+	unconditional logistic regression analysis?
+	Bunch of tables with mtDNA stratified on different categorical values. Usable?

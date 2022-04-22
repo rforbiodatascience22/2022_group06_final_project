@@ -30,4 +30,5 @@ data_augmented <- patient_info %>%
             by = "Sample")
 
 #Write the data file
-write_csv("data/03_dat_aug.csv")
+data_augmented %>% 
+  write_csv("data/03_dat_aug.csv")
