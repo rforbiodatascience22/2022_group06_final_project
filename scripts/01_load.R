@@ -1,5 +1,4 @@
 library(tidyverse)
-library(readxl)
 
 #Load data sheet
 data_raw <- read_excel("data/_raw/Data.xlsx",
