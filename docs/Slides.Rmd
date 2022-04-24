@@ -29,9 +29,9 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-## Slide with Plot
+## Slide with Image
 
-```{r pressure}
-plot(pressure)
+```{r out.width="100%"}
+knitr::include_graphics("../results/BigPlot.png")
 ```
 
