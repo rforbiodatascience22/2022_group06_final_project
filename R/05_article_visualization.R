@@ -11,9 +11,17 @@ data <- data %>%
 ggplot(data,
        mapping = aes(x = Group,
                      y = mtDNA,
-                     stratification = Group)) + 
-  geom_boxplot() 
-  
+                     stratification = Group, 
+                     fill  = Group)) + 
+  geom_boxplot() +
+  theme_classic() +
+  theme(legend.position = "right") +
+  labs(title = "Plot", 
+       y = "mtDNA", 
+       x = "Group", 
+       caption = "Figure: Distribution of pheripheral blood mtDNA copy number in Han chinese with prostate cancer and healthy controls.") 
+      
+    
   
 
 
