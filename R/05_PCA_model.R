@@ -17,9 +17,13 @@ pc1_vs_pc2 <- pca_fit %>%
   geom_point(size = 1.5) +
   theme_classic() +
   theme(legend.position = "bottom") +
-  labs(color = "Group")
+  labs(color = "Group") +
+  theme_bw()
 
-ggsave("results/pc1_vs_pc2.png", pc1_vs_pc2)
+ggsave(filename = "results/pc1_vs_pc2.png", 
+       plot = pc1_vs_pc2,
+       width = 10,
+       height = 5)
 
 # define arrow style for plotting
 arrow_style <- arrow(
@@ -37,9 +41,12 @@ pc1_pc2_weights <- pca_fit %>%
     hjust = 1, nudge_x = -0.02, size = 2.5,
     color = "#904C2F"
   ) +
-  theme_minimal()
+  theme_bw()
 
-ggsave("results/pc1_vs_pc2_weights.png", pc1_pc2_weights)
+ggsave(filename = "results/pc1_vs_pc2_weights.png", 
+       plot = pc1_vs_pc2_weights,
+       width = 10,
+       height = 5)
 
 pca_var_explained <- pca_fit %>%
   tidy(matrix = "eigenvalues") %>%
@@ -51,6 +58,9 @@ pca_var_explained <- pca_fit %>%
     labels = scales::percent_format(),
     expand = expansion(mult = c(0, 0.01))
   ) +
-  theme_minimal()
+  theme_bw()
 
-ggsave("results/pca_var_explained.png", pca_var_explained)
+ggsave(filename = "results/pca_var_explained.png", 
+       plot = pca_var_explained,
+       width = 10,
+       height = 5)
