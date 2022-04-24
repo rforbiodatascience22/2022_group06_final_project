@@ -15,10 +15,12 @@ pc1_vs_pc2 <- pca_fit %>%
   augment(PCA_data) %>% # add original dataset back in
   ggplot(aes(.fittedPC1, .fittedPC2, color = as.character(Group))) +
   geom_point(size = 1.5) +
-  theme_minimal(base_size = 20) +
+  theme_minimal(base_size = 19) +
   theme(legend.position = "bottom",
         plot.background = element_rect(colour = "black", fill=NA, size=1)) +
-  labs(color = "Group")
+  labs(color = "Group",
+       x = "PC1",
+       y = "PC2")
 
 ggsave(filename = "results/pc1_vs_pc2.png", 
        plot = pc1_vs_pc2,
@@ -38,8 +40,9 @@ pc1_pc2_weights <- pca_fit %>%
   geom_segment(xend = 0, yend = 0, arrow = arrow_style) +
   geom_text(
     aes(label = column),
-    hjust = 1, nudge_x = -0.02, size = 2.5,
+    hjust = 1, nudge_x = -0.02, size = 5.5,
     color = "#904C2F") +
+  xlim(-0.8,0.5) +
   theme_minimal(base_size = 20) +
   theme(plot.background = element_rect(colour = "black", fill=NA, size=1))
 
@@ -57,7 +60,7 @@ pca_var_explained <- pca_fit %>%
   scale_y_continuous(
     labels = scales::percent_format(),
     expand = expansion(mult = c(0, 0.01))) +
-  theme_minimal(base_size = 20) +
+  theme_minimal(base_size = 19) +
   theme(plot.background = element_rect(colour = "black", fill=NA, size=1))
 
 ggsave(filename = "results/pca_var_explained.png", 
