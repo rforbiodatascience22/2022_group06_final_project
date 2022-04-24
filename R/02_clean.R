@@ -9,6 +9,5 @@ is_duplicated <- filtered_data %>%
 
 print(str("Number of duplicates in the dataset:", dim(is_duplicated)[0]))
 
-
 filtered_data %>% 
   write_csv("data/02_dat_clean.csv")

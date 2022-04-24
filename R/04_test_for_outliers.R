@@ -46,9 +46,28 @@ mtDNAPlot <- data %>%
   labs(x = "mtDNA copy number",
        y = "")
 
+TumorPlot <- data %>% 
+  ggplot(mapping = aes(x = Tumor)) +
+  geom_boxplot() + 
+  labs(x = "Tumor severity",
+       y = "")
+
+NodesPlot <- data %>% 
+  ggplot(mapping = aes(x = LymphNodes)) +
+  geom_boxplot() + 
+  labs(x = "Lymph nodes affected",
+       y = "")
+
+MetastasisPlot <- data %>% 
+  ggplot(mapping = aes(x = Metastasis)) +
+  geom_boxplot() + 
+  labs(x = "Metastasis",
+       y = "")
+
 BigPlot <- (AgePlot + FatIntakePlot + PSAPlot) / 
   (BMIPlot + AJCCPlot) /
-  (GleasonPlot + mtDNAPlot) + 
+  (GleasonPlot + mtDNAPlot) /
+  (TumorPlot + NodesPlot + MetastasisPlot) +
   plot_annotation(title = "A plot of the nonbinary attributes, to examine distribution of outliers")
 
 BigPlot
