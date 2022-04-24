@@ -5,7 +5,7 @@ data <- read_csv(file = "data/02_dat_clean.csv")
 data <- data %>% 
   select(Group, mtDNA) %>% 
   mutate(Group = case_when(Group == 1 ~ "PCa cases",
-                            Group == 0 ~ "control"))
+                            Group == 0 ~ "Controls"))
 
 #recreating plot from article
 ggplot(data,
@@ -13,7 +13,8 @@ ggplot(data,
                      y = mtDNA,
                      stratification = Group, 
                      fill  = Group)) + 
-  geom_boxplot() +
+  stat_boxplot(geom = "errorbar", width = 0.5) +  
+  geom_boxplot(outlier.shape = 1) +
   theme_classic() +
   theme(legend.position = "right") +
   labs(title = "Plot", 
