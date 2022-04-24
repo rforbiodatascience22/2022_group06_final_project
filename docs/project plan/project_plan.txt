@@ -5,6 +5,7 @@ Q1) Any functions we really do need to show we can master?
 Q2) Can we do other kind of split than we suggested in the handed-in outline?
 Q3) When to use '::' and when not to?
 Q4) We have a problem with loading data, how much can we add to our load script?
+Q5) How can we guard against duplets in 02_clean.R?
 
 Project flow:
 1) 
