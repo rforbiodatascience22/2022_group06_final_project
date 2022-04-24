@@ -25,6 +25,8 @@ patient_info <- patient_info %>%
                                    30 <= Dfi ~ 3))
 
 #Add variables derived from TNM 
+#Data points that do not follow the standard naming convention 
+#are left as "NA", convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
   #select(TNM) %>% 
   mutate(Tumor = case_when(str_detect(TNM,"T0.+") ~ 0,
