@@ -23,7 +23,7 @@ pc1_vs_pc2 <- pca_fit %>%
 ggsave(filename = "results/pc1_vs_pc2.png", 
        plot = pc1_vs_pc2,
        width = 10,
-       height = 5)
+       height = 7)
 
 # define arrow style for plotting
 arrow_style <- arrow(
@@ -43,8 +43,8 @@ pc1_pc2_weights <- pca_fit %>%
   theme_minimal() +
   theme(plot.background = element_rect(colour = "black", fill=NA, size=1))
 
-ggsave(filename = "results/pc1_vs_pc2_weights.png", 
-       plot = pc1_vs_pc2_weights,
+ggsave(filename = "results/pc1_pc2_weights.png", 
+       plot = pc1_pc2_weights,
        width = 10,
        height = 5)
 
@@ -63,4 +63,4 @@ pca_var_explained <- pca_fit %>%
 ggsave(filename = "results/pca_var_explained.png", 
        plot = pca_var_explained,
        width = 10,
-       height = 5)
+       height = 7)

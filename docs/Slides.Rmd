@@ -49,6 +49,6 @@ knitr::include_graphics("../results/BigPlot.png")
 ```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="PCA",fig.show='hold',fig.align='center'}
 knitr::include_graphics(c("../results/pc1_vs_pc2.png",
                           "../results/pca_var_explained.png",
-                          "../results/pc1_vs_pc2_weights.png"))
+                          "../results/pc1_pc2_weights.png"))
 ```
 
