@@ -1,14 +1,18 @@
 ---
 title: "Prostate cancer analyses"
 author:
- - name: Esben, s1945
- - name: William Hagedorn-Rasmussen, s194545
+ - name: "Esben Vestergaard Øyan, s194564"
+ - name: "William Hagedorn-Rasmussen, s194545"
+ - name: "Eskild Fisker Angen, s184241"
+ - name: "Mathias Rahbek-Borre, s183447"
+ - name: "Joachim Breitenstein, s183460"
 output: ioslides_presentation
 date: '2022-04-24'
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
 ```
 
 ## R Markdown
@@ -24,14 +28,27 @@ When you click the **Knit** button a document will be generated that includes bo
 - Bullet 3
 
 ## Slide with R Output
+```{r read data, include=FALSE}
+data <- read_csv("../data/03_dat_aug.csv")
+```
 
-```{r cars, echo = TRUE}
-summary(cars)
+
+```{r data summary, echo = TRUE}
+summary(data)
 ```
 
 ## Slide with Image
 
-```{r out.width="100%"}
+```{r out.width="100%",out.height="100%"}
 knitr::include_graphics("../results/BigPlot.png")
+```
+
+## Slide with PCA
+
+
+```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="PCA",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("../results/pc1_vs_pc2.png",
+                          "../results/pca_var_explained.png",
+                          "../results/pc1_pc2_weights.png"))
 ```
 

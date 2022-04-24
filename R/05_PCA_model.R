@@ -15,11 +15,15 @@ pc1_vs_pc2 <- pca_fit %>%
   augment(PCA_data) %>% # add original dataset back in
   ggplot(aes(.fittedPC1, .fittedPC2, color = as.character(Group))) +
   geom_point(size = 1.5) +
-  theme_classic() +
-  theme(legend.position = "bottom") +
+  theme_minimal(base_size = 20) +
+  theme(legend.position = "bottom",
+        plot.background = element_rect(colour = "black", fill=NA, size=1)) +
   labs(color = "Group")
 
-ggsave("results/pc1_vs_pc2.png", pc1_vs_pc2)
+ggsave(filename = "results/pc1_vs_pc2.png", 
+       plot = pc1_vs_pc2,
+       width = 10,
+       height = 7)
 
 # define arrow style for plotting
 arrow_style <- arrow(
@@ -35,11 +39,14 @@ pc1_pc2_weights <- pca_fit %>%
   geom_text(
     aes(label = column),
     hjust = 1, nudge_x = -0.02, size = 2.5,
-    color = "#904C2F"
-  ) +
-  theme_minimal()
+    color = "#904C2F") +
+  theme_minimal(base_size = 20) +
+  theme(plot.background = element_rect(colour = "black", fill=NA, size=1))
 
-ggsave("results/pc1_vs_pc2_weights.png", pc1_pc2_weights)
+ggsave(filename = "results/pc1_pc2_weights.png", 
+       plot = pc1_pc2_weights,
+       width = 10,
+       height = 5)
 
 pca_var_explained <- pca_fit %>%
   tidy(matrix = "eigenvalues") %>%
@@ -49,8 +56,11 @@ pca_var_explained <- pca_fit %>%
   scale_x_continuous(breaks = 1:12) +
   scale_y_continuous(
     labels = scales::percent_format(),
-    expand = expansion(mult = c(0, 0.01))
-  ) +
-  theme_minimal()
+    expand = expansion(mult = c(0, 0.01))) +
+  theme_minimal(base_size = 20) +
+  theme(plot.background = element_rect(colour = "black", fill=NA, size=1))
 
-ggsave("results/pca_var_explained.png", pca_var_explained)
+ggsave(filename = "results/pca_var_explained.png", 
+       plot = pca_var_explained,
+       width = 10,
+       height = 7)

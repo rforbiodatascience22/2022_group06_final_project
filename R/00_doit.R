@@ -1,4 +1,5 @@
 library(tidyverse)
+library(readxl)
 
 # Run all scripts ---------------------------------------------------------
 source("R/01_load.R")
@@ -9,3 +10,4 @@ source("R/05_PCA_model.R")
 source("R/06_logisticregression.R")
 source("R/07_boxplot_BMI_Dfi_class.R")
 source("R/08_article_visualization.R")
+source("docs/Slides.Rmd", Local = knitr::knit_global())
