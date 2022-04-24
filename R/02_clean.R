@@ -5,10 +5,9 @@ filtered_data <- read_csv("data/01_dat_load.csv") %>%
 
 is_duplicated <- filtered_data %>% 
   group_by(Sample) %>% 
-  filter(n() != 1) %>% 
-  ungroup() %>% 
-  pull()
-print(str("Are there any duplications in the dataset?", is_duplicated))
+  filter(n() != 1)
+
+print(str("Number of duplicates in the dataset:", dim(is_duplicated)[0]))
 
 
 filtered_data %>% 

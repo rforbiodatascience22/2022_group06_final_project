@@ -20,9 +20,9 @@ patient_info <- patient_info %>%
 
 #Add dietary_class
 patient_info <- patient_info %>% 
-  mutate(Dfi_class = case_when(Dfi < 20 ~ 1,
-                                   20 <= Dfi & Dfi < 30 ~ 2,
-                                   30 <= Dfi ~ 3))
+  mutate(Dfi_class = case_when(Dfi < 20 ~ "low fat",
+                                   20 <= Dfi & Dfi < 30 ~ "medium fat",
+                                   30 <= Dfi ~ "high fat"))
 
 #Add variables derived from TNM 
 medical_info <- medical_info %>% 
