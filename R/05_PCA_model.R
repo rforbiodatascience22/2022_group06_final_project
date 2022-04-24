@@ -11,7 +11,7 @@ pca_fit <- PCA_data %>%
   select(Age, PSA, Dfi, BMI, mtDNA) %>%
   prcomp(scale = TRUE)
 
-pca_fit %>%
+pc1_vs_pc2 <- pca_fit %>%
   augment(PCA_data) %>% # add original dataset back in
   ggplot(aes(.fittedPC1, .fittedPC2, color = as.character(Group))) +
   geom_point(size = 1.5) +
@@ -19,13 +19,15 @@ pca_fit %>%
   theme(legend.position = "bottom") +
   labs(color = "Group")
 
+ggsave("results/pc1_vs_pc2.png", pc1_vs_pc2)
+
 # define arrow style for plotting
 arrow_style <- arrow(
   angle = 20, ends = "first", type = "closed", length = grid::unit(8, "pt")
 )
 
 # plot rotation matrix
-pca_fit %>%
+pc1_pc2_weights <- pca_fit %>%
   tidy(matrix = "rotation") %>%
   pivot_wider(names_from = "PC", names_prefix = "PC", values_from = "value") %>%
   ggplot(aes(PC1, PC2)) +
@@ -37,8 +39,9 @@ pca_fit %>%
   ) +
   theme_minimal()
 
+ggsave("results/pc1_vs_pc2_weights.png", pc1_pc2_weights)
 
-pca_fit %>%
+pca_var_explained <- pca_fit %>%
   tidy(matrix = "eigenvalues") %>%
   filter(percent > 0.025) %>%
   ggplot(aes(PC, percent)) +
@@ -49,3 +52,5 @@ pca_fit %>%
     expand = expansion(mult = c(0, 0.01))
   ) +
   theme_minimal()
+
+ggsave("results/pca_var_explained.png", pca_var_explained)
