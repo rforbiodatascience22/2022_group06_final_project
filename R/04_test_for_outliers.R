@@ -2,7 +2,7 @@ library(tidyverse)
 library(patchwork)
 library(fs)
 
-data = read_csv("data/03_dat_aug.csv")
+data <- read_csv("data/03_dat_aug.csv")
 
 AgePlot <- data %>% 
   ggplot(mapping = aes(x = Age)) +
@@ -70,4 +70,8 @@ BigPlot <- (AgePlot + FatIntakePlot + PSAPlot) /
   (TumorPlot + NodesPlot + MetastasisPlot) +
   plot_annotation(title = "A plot of the nonbinary attributes, to examine distribution of outliers")
 
-BigPlot
+ggsave(filename = 'results/BigPlot.png',
+       plot = BigPlot,
+       width = 10,
+       height = 6.5)
+
