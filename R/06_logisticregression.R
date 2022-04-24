@@ -1,4 +1,4 @@
-library("broom")
+library(broom)
 #Load data
 data <- read_csv("data/03_dat_aug.csv")
 
