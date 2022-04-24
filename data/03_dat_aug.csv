@@ -1,388 +1,779 @@
-Sample,Age,Dfi,Smoking,PCaHist,BMI,BMI_class,Dfi_class,Group,PCRsuccess,TNM,AJCC,PSA,Gleason,mtDNA
-CM4028,50,14.6,0,0,22.35,normal weight,1,1,1,T4N1M0,4,17.02,7,0.842
-CM4033,76,27.3,0,0,34.12,obese,2,1,1,T4N0M0,4,23.29,8,0.804
-CM4038,70,34.2,0,0,19.59,normal weight,3,1,1,T4N1M1b,4,100.3,7,1.797
-CM4039,56,20,0,0,26.91,overweight,2,1,1,T3bN0M0,3,53.9,8,1.059
-CM4042,67,31.4,0,0,25.95,overweight,3,1,1,T3N0M0,3,56.04,7,1.006
-CM4048,82,19.6,1,0,21.88,normal weight,1,1,1,T3bN0M1b,4,56.76,9,0.848
-CM4049,46,29.7,0,1,36.46,obese,2,1,1,T4N1M0,4,61.95,10,1.066
-CM4056,66,28.3,1,0,27.5,overweight,2,1,1,T2bN0M0,2,5,7,0.866
-CM4057,72,31.4,1,0,26.88,overweight,3,1,1,T4N0M1b,4,60.31,6,0.814
-CM4058,49,27.7,1,0,21.3,normal weight,2,1,1,T4N1M1b,4,128.38,8,0.667
-CM4063,66,22.4,1,0,27.38,overweight,2,1,1,T3aN1M0,4,61.23,8,0.981
-CM4065,64,39.9,1,0,28.67,overweight,3,1,1,T4N0M1b,4,25.5,7,0.504
-CM4067,60,18.9,0,0,27.82,overweight,1,1,1,T4N0M1b,4,65.8,7,1.457
-CM4069,73,19.8,1,0,23.03,normal weight,1,1,1,NA,NA,78.3,NA,2.133
-CM4072,85,26.9,0,0,26.25,overweight,2,1,1,T3aN0M0,3,43.21,8,0.557
-CM4077,83,33.5,1,0,23.12,normal weight,3,1,1,T3aN0M0,3,12.11,8,0.403
-CM4082,77,16.3,0,0,27.68,overweight,1,1,1,T3bN0Mlb,3,46.51,7,0.977
-CM4085,70,23.7,0,1,19.21,normal weight,2,1,1,T4N1M1b,4,6.84,NA,1.207
-CM4090,75,33,1,0,15.78,underweight,3,1,1,T3bN0M1b,4,80.48,7,0.67
-CM4091,81,27.5,0,0,22.89,normal weight,2,1,1,T3N0M0,3,67.35,6,1.245
-CM4098,81,16.2,0,0,26.45,overweight,1,1,1,T4N0M0,4,6.83,6,1.352
-CM4101,62,26.9,1,0,27.16,overweight,2,1,1,NA,NA,122.45,7,0.782
-CM4102,78,14.8,1,0,19.05,normal weight,1,1,1,T4N1M1b,4,35.46,9,0.7
-CM4103,71,28.1,0,0,27.55,overweight,2,1,1,T4N1M1b,4,6.86,7,1.541
-CM4112,66,13.2,0,0,26.39,overweight,1,1,1,T4N0M1b,4,75.8,7,0.794
-CM4115,69,30.4,1,0,25.31,overweight,3,1,1,T3bN0M0,3,45.95,7,0.909
-CM4116,87,23.8,1,0,32.15,obese,2,1,1,T4N0M1b,4,47.82,8,0.827
-CM4126,69,21.5,1,0,21.61,normal weight,2,1,1,T4N0M1b,4,15.14,7,0.908
-CM4133,68,19,0,0,19.92,normal weight,1,1,1,T4N1M1b,4,59.38,8,0.905
-CM4134,76,24.7,1,0,22.12,normal weight,2,1,1,T4N0M0,4,85.71,6,1.146
-CM4136,80,30.7,0,1,23.14,normal weight,3,1,1,T3aN1M1b,4,76.54,NA,0.81
-CM4142,67,30.9,0,0,26.37,overweight,3,1,1,NA,NA,63.18,NA,1.436
-CM4146,63,24.1,1,0,20.2,normal weight,2,1,1,T3aN0M1b,4,11.5,7,0.891
-CM4157,68,31.4,1,0,18.31,underweight,3,1,1,T4N1M1b,4,31.34,6,0.403
-CM4162,70,23.7,0,0,19.81,normal weight,2,1,1,T4N1M1b,4,78.54,7,0.503
-CM4165,74,19.3,0,0,23.88,normal weight,1,1,1,T4N1M0,4,32.67,6,1.464
-CM4166,54,23.7,1,0,28.19,overweight,2,1,1,T4aN1M1b,4,50.4,10,1.238
-CM4169,85,32.3,0,0,21.67,normal weight,3,1,1,T3bN0M0,3,36.18,7,0.895
-CM4174,58,25.2,1,0,29.13,overweight,2,1,1,T4N1M1b,4,63.73,8,1.184
-CM4180,79,28.5,1,1,27.68,overweight,2,1,1,T4N1M1b,4,7.49,7,1.393
-CM4192,73,28.9,1,0,27.65,overweight,2,1,1,T3bN0M0,3,20.42,6,0.988
-CM4195,59,33.9,0,0,22.15,normal weight,3,1,1,T4N0M1b,4,32.77,8,0.669
-CM4202,76,42.9,0,0,20.76,normal weight,3,1,1,T4N0M1b,4,157,6,0.554
-CM4207,54,19.9,0,0,26.77,overweight,1,1,1,T3bN0M0,3,1.1,6,1.022
-CM4211,73,23.5,1,0,21.13,normal weight,2,1,1,T2N0M0,2,45.36,6,1.073
-CM4232,76,33.2,1,0,22.27,normal weight,3,1,1,T3aN0M1b,4,23.54,7,1.596
-CM4236,63,28.1,1,0,27.08,overweight,2,1,1,T3aN1M1b,4,56.98,7,1.293
-CM4241,72,35.5,0,0,22.45,normal weight,3,1,1,T4N1M1b,4,12.31,6,0.815
-CM4248,76,18.2,0,0,24.61,normal weight,1,1,1,T4N1M1b,4,74.25,7,1.016
-CM4250,80,22.5,0,0,24.8,normal weight,2,1,1,T3aN0M0,3,43.72,8,0.785
-CM4256,55,32.1,1,0,30.12,obese,3,1,1,T4N0M0,4,34.25,7,1.433
-CM4260,66,15.2,1,0,28.73,overweight,1,1,1,T2cN0M1b,4,45.66,7,1.617
-CM4262,84,25.9,0,0,23.22,normal weight,2,1,1,T4N1M1b,4,56.32,6,0.388
-CM4266,66,33,1,0,21.97,normal weight,3,1,1,T4N1M1b,4,77.53,6,0.611
-CM4272,80,20.7,0,0,27.5,overweight,2,1,1,T3bN0M0,3,32.5,6,1.078
-CM4278,64,41.8,0,0,24.61,normal weight,3,1,1,T2bN0M1c,4,55.25,6,1.52
-CM4286,70,18.4,1,0,25.61,overweight,1,1,1,T2bN1M1b,2,21.36,7,0.664
-CM4295,67,27.3,0,1,25.95,overweight,2,1,1,T3N0M0,3,61.57,6,0.484
-CM4296,67,28.3,1,0,22.31,normal weight,2,1,1,T4N1M0,4,53.65,9,0.489
-CM4300,59,32.6,0,0,24.56,normal weight,3,1,1,T4N1M1b,4,65.65,7,0.614
-CM4302,68,16.5,1,0,24.03,normal weight,1,1,1,T4N0M1b,4,76.95,9,1.116
-CM4306,80,26.8,0,0,18.32,underweight,2,1,1,T2bN0M0,2,66.91,7,0.503
-CM4308,64,30.1,0,0,19.84,normal weight,3,1,1,T3bN1M1b,4,48.86,8,1.652
-CM4313,82,15.3,0,0,24.19,normal weight,1,1,1,T3aN0M0,3,25.52,9,0.717
-CM4317,75,24.3,0,0,25.31,overweight,2,1,1,T2N0M0,1,1.12,8,1.062
-CM4327,47,44.9,1,0,18.21,underweight,3,1,1,T4N0M0,4,87.38,10,0.764
-CM4328,71,27.8,1,1,20.19,normal weight,2,1,1,T3N0M0,3,11.61,6,2.298
-CM4337,71,32.7,0,0,25.51,overweight,3,1,1,T2bN0M0,3,69.14,9,0.981
-CM4338,64,30.2,1,0,24.56,normal weight,3,1,1,T4N0M0,4,34.18,7,0.917
-CM4341,74,17.5,1,0,21.61,normal weight,1,1,1,T3aN0M1b,4,68.93,8,1.052
-CM4345,68,30.5,0,1,25.71,overweight,3,1,1,T1N0M0,1,62.23,6,0.807
-CM4351,75,17.5,1,0,26.87,overweight,1,1,1,T4N1M1b,4,9,10,0.975
-CM4352,79,14.1,1,0,17.06,underweight,1,1,1,T4N1M0,4,101.4,8,0.587
-CM4361,72,29.1,0,0,24.76,normal weight,2,1,1,T3bN0M0,3,60.33,7,0.675
-CM4370,82,30.4,0,0,24.51,normal weight,3,1,1,T4N1M1b,4,40.94,7,1.246
-CM4372,71,26.9,1,0,26.81,overweight,2,1,1,T3N0M1b,4,38.45,6,1.369
-CM4373,79,31.9,1,0,24.09,normal weight,3,1,1,T3bN1M1b,4,8.33,8,0.46
-CM4374,70,27.5,0,0,22.18,normal weight,2,1,1,T4N0M0,4,13.3,9,1.021
-CM4376,81,31.1,0,0,21.61,normal weight,3,1,1,T4N0M0,4,4.36,7,0.844
-CM4377,69,31,0,0,24.1,normal weight,3,1,1,T4N1M1b,4,23.45,8,2.029
-CM4386,70,17.9,1,1,23.03,normal weight,1,1,1,T3aN0M0,3,53.25,6,0.676
-CM4396,64,37.6,0,0,27.34,overweight,3,1,1,T3N0M0,3,39.59,7,0.883
-CM4411,77,30.5,0,0,24.18,normal weight,3,1,1,T3bN0M1b,4,140.32,7,1.197
-CM4415,62,26.5,1,0,24.56,normal weight,2,1,1,T4N0M1b,4,68.45,8,0.718
-CM4418,81,16,1,0,23.11,normal weight,1,1,1,T2cN0M0,2,98.56,9,1.65
-CM4425,58,28.4,0,0,18.17,underweight,2,1,1,T4N1M1b,4,145.63,10,1.877
-CM4437,66,35.3,0,0,25.86,overweight,3,1,1,T2N0M0,1,7.45,6,0.96
-CM4447,86,34,0,0,23.23,normal weight,3,1,1,T0N0M1b,4,53.74,6,0.688
-CM4452,70,18.8,1,0,19.96,normal weight,1,1,1,T2N0M0,2,8.45,6,1.025
-CM4454,63,28.4,1,0,25.69,overweight,2,1,1,T3bN1M1b,4,76.38,7,0.902
-CM4468,67,29.1,1,1,27.75,overweight,2,1,1,T2N0M0,2,56.36,9,0.786
-CM4485,64,31.9,1,0,21.36,normal weight,3,1,1,T4N1M1b,4,34.78,8,1.433
-CM4487,69,22.4,0,0,28.75,overweight,2,1,1,T3bN1M1b,4,159.32,9,1.305
-CM4491,72,34.3,1,0,22.15,normal weight,3,1,1,T3aN0M1b,4,89.34,10,1.357
-CM4499,65,19.6,1,0,22.35,normal weight,1,1,1,T2N0M0,1,7.41,6,0.843
-CM4503,60,25,0,0,25.61,overweight,2,1,1,T4N0M0,4,85.34,5,0.739
-CM4519,62,15.3,0,0,23.98,normal weight,1,1,1,T4N0M1b,4,89.34,9,1.162
-CM4528,57,23.9,0,0,31.25,obese,2,1,1,T2bN0M1b,4,56.76,8,0.969
-CM4549,77,30.7,1,0,33.57,obese,3,1,1,T4N0M0,4,35.58,6,1.481
-CM4556,65,26.9,1,0,23.14,normal weight,2,1,1,T3aN0M1b,4,4.68,8,0.708
-CM4559,64,36.9,1,0,20.78,normal weight,3,1,1,T1N0M0,1,10.21,6,0.803
-CM4567,68,28.6,1,0,22.56,normal weight,2,1,1,T2N0M0,2,18.14,7,0.804
-CM4574,82,14.7,1,1,20.46,normal weight,1,1,1,T4N1M0,4,144.03,6,0.886
-CM4577,69,22.7,1,0,26.35,overweight,2,1,1,T3bN0M0,3,48.45,7,1.003
-CM4578,77,28.3,1,0,21.24,normal weight,2,1,1,T2aN0M0,1,14.57,6,0.76
-CM4579,72,13.2,0,0,30.21,obese,1,1,1,T3N0M0,3,58.97,6,0.837
-CM4582,59,31.5,0,0,20.79,normal weight,3,1,1,T4N0M0,4,97.12,10,1.395
-CM4595,58,28.3,0,0,23.9,normal weight,2,1,1,T3N1M1b,4,23.16,9,1.298
-CM4600,89,28.4,0,0,20.3,normal weight,2,1,1,T2aN0M0,2,76.35,6,0.777
-CM4602,62,12.9,1,0,35.12,obese,1,1,1,T3aN1M1b,4,46.24,6,1.05
-CM4613,59,24.6,0,0,23.3,normal weight,2,1,1,T4N0M1b,4,58.14,6,0.881
-CM4617,76,31.7,0,0,29.07,overweight,3,1,1,T4N1M1b,4,12.35,7,1.003
-CM4620,63,27.9,0,0,22.12,normal weight,2,1,1,T3aN1M0,4,21.58,6,1.039
-CM4631,69,16.9,0,0,30.21,obese,1,1,1,T2N0M0,1,80.1,9,0.577
-CM4634,62,21,0,0,20.14,normal weight,2,1,1,T4N1M0,4,214.35,7,1.037
-CM4639,66,16.4,1,0,22.06,normal weight,1,1,1,T4N1M0,4,56.47,8,0.989
-CM4643,71,22.6,0,0,22,normal weight,2,1,1,T2cN0M0,2,61.93,6,0.805
-CM4664,80,32.3,0,0,26,overweight,3,1,1,T4N0M1b,4,47.02,7,0.739
-CM4665,74,27.6,1,1,19.21,normal weight,2,1,1,T4N1M1b,4,121,7,0.847
-CM4671,65,37.4,0,0,31.21,obese,3,1,1,T4N1M1b,4,106.18,9,0.993
-CM4674,81,31.8,0,0,26.12,overweight,3,1,1,T4N0M1b,4,69.32,6,0.745
-CM4677,59,21.8,0,0,25.76,overweight,2,1,1,T3bN0M1c,4,108,6,0.617
-CM4678,66,21.3,0,0,23.03,normal weight,2,1,1,T3aN0M0,3,49.39,6,0.682
-CM4682,73,19.4,1,0,29.15,overweight,1,1,1,T3bN0M0,3,79.64,9,1.166
-CM4685,65,24.7,1,0,26.78,overweight,2,1,1,T3bN1M1b,4,89,7,1.174
-CM4691,69,13.2,1,0,22.89,normal weight,1,1,1,T4N0M0,4,82.95,8,1.133
-CM4696,85,21.9,1,0,19.57,normal weight,2,1,1,T4N0M1b,4,178.3,7,1.723
-CM4704,63,32.8,1,0,21.68,normal weight,3,1,1,T4N1M1b,4,150.69,9,1.673
-CM4709,66,22.7,1,0,22.99,normal weight,2,1,1,T3aN0M0,3,30,7,0.985
-CM4724,47,34.9,0,0,29.15,overweight,3,1,1,T4N1M1b,4,3.47,6,1.024
-CM4729,75,28,1,0,20.7,normal weight,2,1,1,T4N1M1b,4,220.49,9,2.077
-CM4734,75,21.1,0,0,20.16,normal weight,2,1,1,T2cN0M0,2,50.27,6,1.496
-CM4736,72,16.1,1,0,24.35,normal weight,1,1,1,T2bN0M0,1,8.35,5,0.578
-CM4738,79,28,1,0,24.8,normal weight,2,1,1,T4N1M1c,4,123.1,9,1.001
-CM4739,57,35.1,0,0,24.98,normal weight,3,1,1,T4N1M1b,4,129.27,7,1.462
-CM4748,78,26.8,0,0,21.86,normal weight,2,1,1,T2N0M0,2,36.14,6,0.808
-CM4749,77,16.1,1,0,22.35,normal weight,1,1,1,T4N0M1b,4,87.06,7,0.695
-CM4752,80,32,1,0,23.66,normal weight,3,1,1,T3aN0M0,3,54.66,7,0.692
-CM4755,61,25.5,1,0,23.14,normal weight,2,1,1,T2bN0M0,2,82.04,7,0.848
-CM4768,54,15.7,1,1,26.04,overweight,1,1,1,T4N1M1b,4,154.36,10,0.718
-CM4769,61,25.3,1,0,17.58,underweight,2,1,1,T2bN0M1b,4,43.64,7,0.827
-CM4770,80,35.5,1,0,28.1,overweight,3,1,1,T4N0M0,4,1.04,6,0.653
-CM4771,64,17.6,0,0,14.12,underweight,1,1,1,T2N0M0,1,104.9,6,0.856
-CM4773,69,29.6,1,0,31.51,obese,2,1,1,T3N0M1b,4,18,6,0.892
-CM4781,70,29.9,1,0,25.12,overweight,2,1,1,T2bN0M1b,4,21.19,7,1.011
-CM4786,78,32.5,0,0,14.53,underweight,3,1,1,T4N1M1b,4,49.5,8,1.333
-CM4791,73,17,1,0,23.64,normal weight,1,1,1,T3aN1M1b,4,28.16,8,1.495
-CM4799,63,25.9,0,0,30.15,obese,2,1,1,T4N0M0,4,128.41,7,1.349
-CM4806,73,25.3,1,0,26.08,overweight,2,1,1,T3aN0M0,3,12.4,6,0.792
-CM4815,59,31.1,0,0,21.26,normal weight,3,1,1,T3bN0M0,3,5.49,8,0.865
-CM4817,74,21.2,1,0,24.77,normal weight,2,1,1,T4N0M1b,4,143.75,9,1.589
-CM4818,69,20.9,1,1,32.14,obese,2,1,1,T4N0M0,4,90.12,7,1.055
-CM4820,76,35.2,1,0,21.26,normal weight,3,1,1,T3bN0M0,3,71.88,7,1.028
-CM4823,70,13.5,0,0,24.22,normal weight,1,1,1,T2bN0M0,2,22.15,6,0.663
-CM4826,80,16.3,0,1,23.36,normal weight,1,1,1,T4N0M0,4,74.17,8,1.539
-CM4850,66,23.4,1,0,17.21,underweight,2,1,1,T4N0M1b,4,94.78,7,0.918
-CM4856,88,25.3,0,0,19.14,normal weight,2,1,1,T4N1M1c,4,48.38,8,1.014
-CM4858,71,36.5,0,0,29.31,overweight,3,1,1,T3aN0M0,3,27.06,7,0.902
-CM4861,65,23,1,0,21.61,normal weight,2,1,1,T4N1M1b,4,45.21,9,0.93
-CM4862,63,32.4,0,0,24.51,normal weight,3,1,1,T4N1M0,4,32.29,7,1.045
-CM4864,80,18.3,0,0,18.14,underweight,1,1,1,T4N0M1b,4,85.72,6,0.931
-CM4870,83,31,1,0,25.45,overweight,3,1,1,T2N0M0,2,115.71,6,0.566
-CM4872,80,14.6,1,1,24.35,normal weight,1,1,1,T4N0M1b,4,21.3,7,1.283
-CM4873,79,21,0,0,20.57,normal weight,2,1,1,T4N1M1b,4,17.41,7,1.527
-CM4874,82,19,1,0,17.21,underweight,1,1,1,T4N3M1b,4,82.88,9,1.589
-CM4880,78,19.7,0,0,24.22,normal weight,1,1,1,T2aN0M0,1,14.16,6,0.643
-CM4892,78,26.4,0,0,21.97,normal weight,2,1,1,T3N0M1b,3,12.47,7,1.357
-CM4893,68,42.6,0,0,23.88,normal weight,3,1,1,T3aN0M0,3,7.72,6,1.703
-CM4895,57,19.1,1,0,26.77,overweight,1,1,1,T3aN0M0,3,9.63,7,0.828
-CM4907,69,21.9,1,0,21.88,normal weight,2,1,1,T4N0M1b,4,121.56,6,0.762
-CM4915,75,45.1,0,0,19.05,normal weight,3,1,1,T3bN0M0,3,70.65,6,0.776
-CM4924,79,21.2,0,0,20.9,normal weight,2,1,1,T4N0M0,4,19.19,7,1.07
-CM4925,92,19.2,1,0,19.61,normal weight,1,1,1,T2N0M0,1,68.09,7,0.554
-CM4927,76,28.9,1,0,23.88,normal weight,2,1,1,T2N0m0,2,8.21,8,0.79
-CM4931,59,38.3,0,0,22.15,normal weight,3,1,1,T4N0M1b,4,31.24,8,1.138
-CM4935,83,29.3,1,1,23.12,normal weight,2,1,1,T3aN0M0,3,97.2,6,0.881
-CM4937,48,27.2,1,0,25.26,overweight,2,1,1,T4N1M1b,4,14.17,8,1.694
-CM4942,66,36.7,0,0,21.97,normal weight,3,1,1,T4N1M1b,4,84.77,6,0.72
-CM4943,65,26.8,1,0,21.36,normal weight,2,1,1,T4N0M0,4,33.93,7,0.893
-CM4945,66,30.7,0,0,24.22,normal weight,3,1,1,T2bN0M0,1,3.77,7,0.888
-CM4947,60,13.1,1,0,28.41,overweight,1,1,1,T4N1M1b,4,40.17,9,1.127
-CM4948,69,25.6,1,0,22.23,normal weight,2,1,1,T3N0M1b,4,76.16,7,0.654
-CM4955,85,25.4,1,0,24.22,normal weight,2,1,1,T4N1M1b,4,150.81,6,0.912
-CM4956,69,16,1,0,23.44,normal weight,1,1,1,T4N0M1b,4,78.89,7,0.797
-CM4958,81,14.4,1,0,27.73,overweight,1,1,1,T4N0M0,4,5.76,7,0.82
-CM4967,68,20.3,1,1,19.92,normal weight,2,1,1,T4N1M1b,4,59.38,8,0.923
-CM4977,70,35.6,0,0,22.68,normal weight,3,1,1,T3aN0M0,3,53.16,6,0.849
-CM4979,74,24.9,0,0,22.31,normal weight,2,1,1,T2aN0M0,1,8.73,6,0.673
-CM4987,72,31.1,0,0,33.06,obese,3,1,1,T4N1M1b,4,43.12,9,1.515
-CM4988,80,16.9,1,0,24.8,normal weight,1,1,1,T3aN0M0,3,49.72,7,0.676
-CM4992,74,14.4,1,1,21.61,normal weight,1,1,1,T3aN0M1b,4,77.45,8,0.59
-CM4995,82,24.3,0,0,22.53,normal weight,2,1,1,T3bN0M1b,4,53.32,7,0.496
-CM4997,73,40.9,1,0,28.12,overweight,3,1,1,T3bN0M0,3,84.94,8,0.715
-CN7157,57,21.9,0,0,23.12,normal weight,2,0,1,NA,NA,1.68,NA,0.695
-CN7158,57,24.5,0,0,18.24,underweight,2,0,1,NA,NA,0.39,NA,0.816
-CN7167,68,17.9,1,0,22.13,normal weight,1,0,1,NA,NA,1.23,NA,1.421
-CN7190,59,27.7,0,0,16.14,underweight,2,0,1,NA,NA,1.63,NA,0.75
-CN7193,66,30.5,0,0,22.96,normal weight,3,0,1,NA,NA,0.93,NA,0.893
-CN7197,59,22.6,1,0,23.56,normal weight,2,0,1,NA,NA,1.02,NA,0.695
-CN7204,72,13.8,0,0,24.86,normal weight,1,0,1,NA,NA,3.11,NA,0.824
-CN7221,69,25.5,1,0,18.21,underweight,2,0,1,NA,NA,2.14,NA,0.809
-CN7243,65,24.3,1,0,23.38,normal weight,2,0,1,NA,NA,1.83,NA,1.105
-CN7248,77,30.8,1,0,19.35,normal weight,3,0,1,NA,NA,3.24,NA,0.532
-CN7261,65,17.2,1,0,21.37,normal weight,1,0,1,NA,NA,1.47,NA,0.927
-CN7262,75,30.3,1,0,20.14,normal weight,3,0,1,NA,NA,1.24,NA,0.71
-CN7270,74,29.7,0,0,21.31,normal weight,2,0,1,NA,NA,1.46,NA,0.759
-CN7272,61,28.1,1,0,29.86,overweight,2,0,1,NA,NA,2.33,NA,1.231
-CN7285,66,13.3,0,0,23.58,normal weight,1,0,1,NA,NA,3.3,NA,1.266
-CN7296,76,32.2,1,0,23.13,normal weight,3,0,1,NA,NA,3.4,NA,0.812
-CN7307,66,15.8,0,0,22.38,normal weight,1,0,1,NA,NA,0.67,NA,0.648
-CN7311,62,39.5,0,0,23.46,normal weight,3,0,1,NA,NA,1.65,NA,0.742
-CN7324,85,31.9,1,0,24.18,normal weight,3,0,1,NA,NA,1.05,NA,0.888
-CN7334,62,28.3,0,0,20.85,normal weight,2,0,1,NA,NA,0.68,NA,0.885
-CN7337,73,12.8,0,0,23.08,normal weight,1,0,1,NA,NA,1.86,NA,0.95
-CN7340,72,28,1,0,19.4,normal weight,2,0,1,NA,NA,0.14,NA,1.12
-CN7341,79,23.3,1,0,22.38,normal weight,2,0,1,NA,NA,2.01,NA,0.933
-CN7345,69,18.6,0,0,27.5,overweight,1,0,1,NA,NA,1.77,NA,0.907
-CN7379,74,26.3,0,0,25.48,overweight,2,0,1,NA,NA,3.01,NA,0.641
-CN7385,63,29.3,1,0,26.53,overweight,2,0,1,NA,NA,1.71,NA,0.982
-CN7393,54,12.9,1,0,19.15,normal weight,1,0,1,NA,NA,2.29,NA,1.076
-CN7403,77,21.5,1,0,24.56,normal weight,2,0,1,NA,NA,2.21,NA,0.99
-CN7412,63,19.4,0,0,20.52,normal weight,1,0,1,NA,NA,2.26,NA,0.965
-CN7430,72,24.9,1,0,21.04,normal weight,2,0,1,NA,NA,3.04,NA,1.106
-CN7459,73,17.7,0,0,22.96,normal weight,1,0,1,NA,NA,2.42,NA,0.838
-CN7460,82,34.4,0,0,23.54,normal weight,3,0,1,NA,NA,2.93,NA,0.892
-CN7467,63,30.6,1,0,21.67,normal weight,3,0,1,NA,NA,1.32,NA,0.904
-CN7479,69,24.3,1,0,31.4,obese,2,0,1,NA,NA,1.98,NA,0.851
-CN7501,83,29.5,0,0,22.21,normal weight,2,0,1,NA,NA,3.43,NA,0.779
-CN7508,84,15.2,0,0,27,overweight,1,0,1,NA,NA,1.4,NA,0.636
-CN7524,78,26.8,1,0,22.68,normal weight,2,0,1,NA,NA,1.42,NA,1.15
-CN7531,84,23.2,0,0,27.43,overweight,2,0,1,NA,NA,1.69,NA,0.583
-CN7533,84,33.7,1,0,19.27,normal weight,3,0,1,NA,NA,1.57,NA,0.878
-CN7541,69,22.9,1,0,26.73,overweight,2,0,1,NA,NA,1.41,NA,1.283
-CN7560,78,17.6,1,0,25,overweight,1,0,1,NA,NA,0.88,NA,0.817
-CN7562,70,26.1,0,0,22.15,normal weight,2,0,1,NA,NA,1.53,NA,1.276
-CN7564,73,39,0,0,23.6,normal weight,3,0,1,NA,NA,1.61,NA,0.883
-CN7567,80,34.1,0,0,19.15,normal weight,3,0,1,NA,NA,1.78,NA,0.632
-CN7568,78,20,1,0,20.95,normal weight,2,0,1,NA,NA,1.66,NA,1.026
-CN7570,81,29,1,0,23.91,normal weight,2,0,1,NA,NA,3.11,NA,0.83
-CN7576,70,17.2,1,0,23.45,normal weight,1,0,1,NA,NA,2.37,NA,0.798
-CN7586,64,29.9,0,0,19.21,normal weight,2,0,1,NA,NA,0.01,NA,0.66
-CN7593,71,29.1,0,0,17.68,underweight,2,0,1,NA,NA,1.44,NA,1.178
-CN7606,79,18.3,0,0,26.07,overweight,1,0,1,NA,NA,0.17,NA,0.922
-CN7637,80,23.5,1,0,18.55,normal weight,2,0,1,NA,NA,2.44,NA,0.88
-CN7652,79,18.2,1,0,20.87,normal weight,1,0,1,NA,NA,0.3,NA,0.871
-CN7673,47,36.3,0,0,30.8,obese,3,0,1,NA,NA,3.08,NA,0.764
-CN7674,64,15.3,1,0,24.61,normal weight,1,0,1,NA,NA,2.56,NA,1.304
-CN7685,75,23.8,0,0,25.35,overweight,2,0,1,NA,NA,2.05,NA,0.649
-CN7712,80,18,0,0,30.08,obese,1,0,1,NA,NA,2.13,NA,0.832
-CN7717,68,34.8,1,0,16.82,underweight,3,0,1,NA,NA,1.59,NA,1.068
-CN7719,67,17,0,0,22.48,normal weight,1,0,1,NA,NA,3.07,NA,0.704
-CN7725,71,22.5,1,0,22.19,normal weight,2,0,1,NA,NA,1.76,NA,0.701
-CN7727,76,27.2,0,0,27.52,overweight,2,0,1,NA,NA,2.78,NA,1.171
-CN7746,82,25.1,1,0,21.13,normal weight,2,0,1,NA,NA,2.83,NA,0.871
-CN7749,79,27.2,0,0,31.46,obese,2,0,1,NA,NA,2.76,NA,1.073
-CN7759,79,27,0,0,23.45,normal weight,2,0,1,NA,NA,2.96,NA,0.847
-CN7760,90,23.6,0,0,15.85,underweight,2,0,1,NA,NA,2.21,NA,0.845
-CN7763,78,14.4,0,0,24.62,normal weight,1,0,1,NA,NA,1.62,NA,1.254
-CN7768,81,27.7,1,0,20.62,normal weight,2,0,1,NA,NA,2.11,NA,0.79
-CN7789,81,16.9,1,0,25.08,overweight,1,0,1,NA,NA,0.7,NA,0.741
-CN7796,75,34.8,0,0,21.68,normal weight,3,0,1,NA,NA,2.56,NA,0.591
-CN7801,69,17.7,1,0,25.58,overweight,1,0,1,NA,NA,0.23,NA,1.485
-CN7804,78,39.8,1,0,19.12,normal weight,3,0,1,NA,NA,1.27,NA,0.568
-CN7805,68,31.4,0,0,23.56,normal weight,3,0,1,NA,NA,1.14,NA,0.911
-CN7808,59,19.6,1,0,26.6,overweight,1,0,1,NA,NA,0.73,NA,0.632
-CN7809,59,21.7,1,0,17.89,underweight,2,0,1,NA,NA,1.54,NA,0.656
-CN7816,65,27.9,0,0,18.56,normal weight,2,0,1,NA,NA,0.97,NA,1.308
-CN7818,75,18.7,0,0,27.68,overweight,1,0,1,NA,NA,0.42,NA,0.77
-CN7820,65,27.9,1,0,24.56,normal weight,2,0,1,NA,NA,1.86,NA,0.747
-CN7827,66,16.3,1,0,20.4,normal weight,1,0,1,NA,NA,3.95,NA,0.549
-CN7829,53,30,0,0,17.85,underweight,3,0,1,NA,NA,2.75,NA,1.1
-CN7851,75,26.3,0,0,22.39,normal weight,2,0,1,NA,NA,0.98,NA,0.513
-CN7863,58,24.8,0,0,30.5,obese,2,0,1,NA,NA,1.85,NA,0.448
-CN7865,65,33.9,1,0,19.37,normal weight,3,0,1,NA,NA,1.07,NA,1.959
-CN7869,77,16.3,0,0,29.12,overweight,1,0,1,NA,NA,1.65,NA,0.775
-CN7880,68,31.8,0,0,20.94,normal weight,3,0,1,NA,NA,1.84,NA,0.503
-CN7902,55,28.3,1,0,22.68,normal weight,2,0,1,NA,NA,2.16,NA,0.645
-CN7916,71,25.7,1,0,24.17,normal weight,2,0,1,NA,NA,2.42,NA,1.232
-CN7919,72,32.1,0,0,29.07,overweight,3,0,1,NA,NA,0.89,NA,0.748
-CN7932,52,18.9,0,0,24.19,normal weight,1,0,1,NA,NA,0.64,NA,0.667
-CN7941,63,26.9,0,0,20.45,normal weight,2,0,1,NA,NA,1.18,NA,0.644
-CN7962,78,19.2,1,0,24.14,normal weight,1,0,1,NA,NA,1.91,NA,1.509
-CN7968,47,28.3,1,0,16.41,underweight,2,0,1,NA,NA,0.37,NA,1.103
-CN7975,73,15,1,0,23.82,normal weight,1,0,1,NA,NA,1.45,NA,0.523
-CN7979,60,12.1,1,0,19.15,normal weight,1,0,1,NA,NA,0.19,NA,0.591
-CN7981,78,28.1,0,0,24.46,normal weight,2,0,1,NA,NA,1.64,NA,1.16
-CN7989,72,18.6,1,0,22.68,normal weight,1,0,1,NA,NA,1.52,NA,0.66
-CN8001,57,24.2,1,0,23.56,normal weight,2,0,1,NA,NA,1.38,NA,0.416
-CN8003,65,17.2,0,0,18.79,normal weight,1,0,1,NA,NA,2.18,NA,0.929
-CN8009,47,28.6,0,0,23.39,normal weight,2,0,1,NA,NA,0.74,NA,1.811
-CN8012,63,18.4,0,0,25.64,overweight,1,0,1,NA,NA,0.21,NA,0.585
-CN8018,75,21.7,1,0,29.71,overweight,2,0,1,NA,NA,2.88,NA,0.769
-CN8019,60,32.7,1,0,27.5,overweight,3,0,1,NA,NA,3.26,NA,1.25
-CN8039,48,13.6,0,0,23.74,normal weight,1,0,1,NA,NA,0.63,NA,0.562
-CN8048,71,25.5,1,0,22.13,normal weight,2,0,1,NA,NA,2.47,NA,0.861
-CN8052,58,17.8,0,0,26.52,overweight,1,0,1,NA,NA,1.06,NA,0.583
-CN8056,74,25.5,1,0,21.19,normal weight,2,0,1,NA,NA,2.19,NA,0.88
-CN8075,50,16.3,1,0,20.45,normal weight,1,0,1,NA,NA,1.17,NA,1.015
-CN8092,58,14.1,0,0,26.25,overweight,1,0,1,NA,NA,1.16,NA,0.746
-CN8093,71,25.1,0,0,24.75,normal weight,2,0,1,NA,NA,2.88,NA,0.511
-CN8103,58,20.9,0,0,30.57,obese,2,0,1,NA,NA,0.47,NA,0.909
-CN8108,56,16.8,0,0,16.8,underweight,1,0,1,NA,NA,2.61,NA,0.477
-CN8118,56,27.5,1,0,23.34,normal weight,2,0,1,NA,NA,1.23,NA,0.774
-CN8121,58,17.8,0,0,26.14,overweight,1,0,1,NA,NA,1.78,NA,1.218
-CN8124,70,35.8,0,0,25.58,overweight,3,0,1,NA,NA,2.22,NA,0.772
-CN8126,65,16.7,0,0,23,normal weight,1,0,1,NA,NA,1.67,NA,0.979
-CN8142,74,24.8,0,0,24.56,normal weight,2,0,1,NA,NA,3.48,NA,0.483
-CN8150,76,18.4,0,0,23,normal weight,1,0,1,NA,NA,1.53,NA,1.16
-CN8152,67,23.2,1,0,21.61,normal weight,2,0,1,NA,NA,0.99,NA,0.545
-CN8158,81,16.4,0,0,21.48,normal weight,1,0,1,NA,NA,3.19,NA,0.841
-CN8162,62,18.7,0,0,16.7,underweight,1,0,1,NA,NA,1.39,NA,0.624
-CN8169,82,24.2,1,0,23.56,normal weight,2,0,1,NA,NA,2.05,NA,0.441
-CN8183,66,19.3,0,0,17.68,underweight,1,0,1,NA,NA,2.62,NA,0.723
-CN8187,70,35.8,0,0,22.16,normal weight,3,0,1,NA,NA,1.37,NA,1.253
-CN8200,83,18.7,0,0,21.71,normal weight,1,0,1,NA,NA,3.72,NA,0.627
-CN8213,65,30.2,0,0,27.12,overweight,3,0,1,NA,NA,0.91,NA,1.486
-CN8218,74,24.6,1,0,21.25,normal weight,2,0,1,NA,NA,2.45,NA,0.389
-CN8233,76,22.7,1,0,17.19,underweight,2,0,1,NA,NA,1.79,NA,0.685
-CN8235,64,19.7,1,0,25.47,overweight,1,0,1,NA,NA,1.35,NA,0.646
-CN8243,76,21.1,1,0,29.56,overweight,2,0,1,NA,NA,1.99,NA,0.819
-CN8264,81,19.8,1,0,25.38,overweight,1,0,1,NA,NA,1.49,NA,1.341
-CN8284,67,29.3,1,0,20.08,normal weight,2,0,1,NA,NA,2.1,NA,0.836
-CN8288,70,17.8,0,0,18.36,underweight,1,0,1,NA,NA,2.03,NA,0.683
-CN8303,83,27.5,1,0,19.95,normal weight,2,0,1,NA,NA,1.62,NA,1.564
-CN8304,68,32.3,0,0,30.92,obese,3,0,1,NA,NA,0.57,NA,0.811
-CN8311,76,28.7,1,0,25.95,overweight,2,0,1,NA,NA,2.86,NA,0.712
-CN8312,88,14.3,1,0,20.08,normal weight,1,0,1,NA,NA,2.61,NA,1.136
-CN8315,64,13.9,0,0,28.99,overweight,1,0,1,NA,NA,2.59,NA,0.624
-CN8323,70,21.5,0,0,22.18,normal weight,2,0,1,NA,NA,0.54,NA,0.785
-CN8327,67,33.9,1,0,26.19,overweight,3,0,1,NA,NA,1.29,NA,0.936
-CN8346,82,29.5,1,0,19.56,normal weight,2,0,1,NA,NA,1.85,NA,1.238
-CN8352,74,18.2,1,0,26.01,overweight,1,0,1,NA,NA,1.9,NA,1.095
-CN8355,87,24.2,1,0,24.68,normal weight,2,0,1,NA,NA,1.93,NA,0.481
-CN8382,70,28,1,0,34.56,obese,2,0,1,NA,NA,0.86,NA,0.738
-CN8385,72,18.1,1,0,19.1,normal weight,1,0,1,NA,NA,1.58,NA,0.705
-CN8388,82,24.3,0,0,23.14,normal weight,2,0,1,NA,NA,1.75,NA,0.854
-CN8389,64,19.1,1,0,14.6,underweight,1,0,1,NA,NA,1.08,NA,0.967
-CN8398,80,28.1,1,0,23.81,normal weight,2,0,1,NA,NA,2.26,NA,0.736
-CN8404,69,25.1,0,0,28.44,overweight,2,0,1,NA,NA,1.56,NA,1.256
-CN8412,71,27.8,1,0,24.37,normal weight,2,0,1,NA,NA,0.95,NA,0.753
-CN8418,64,23,0,0,22.86,normal weight,2,0,1,NA,NA,0.09,NA,0.573
-CN8429,70,19.7,1,0,17.24,underweight,1,0,1,NA,NA,1.51,NA,0.532
-CN8433,80,24.2,0,0,24.56,normal weight,2,0,1,NA,NA,2.56,NA,0.719
-CN8446,77,31.8,1,0,21.85,normal weight,3,0,1,NA,NA,2.98,NA,0.77
-CN8451,55,23.4,1,0,17.5,underweight,2,0,1,NA,NA,1.7,NA,1.035
-CN8465,67,31.9,1,0,20.66,normal weight,3,0,1,NA,NA,2.4,NA,0.633
-CN8471,55,22.2,0,0,25.34,overweight,2,0,1,NA,NA,1.21,NA,0.856
-CN8477,80,17.6,0,0,22.65,normal weight,1,0,1,NA,NA,1.87,NA,0.781
-CN8485,47,27.3,1,0,18.74,normal weight,2,0,1,NA,NA,0.29,NA,1.208
-CN8486,81,30.1,0,0,23.89,normal weight,3,0,1,NA,NA,1,NA,0.61
-CN8491,64,19.3,0,0,25.72,overweight,1,0,1,NA,NA,2.34,NA,1.069
-CN8494,81,28,1,0,21.45,normal weight,2,0,1,NA,NA,1.67,NA,0.653
-CN8495,66,17.4,0,1,23.68,normal weight,1,0,1,NA,NA,0.6,NA,1.13
-CN8506,77,22.1,0,0,22.94,normal weight,2,0,1,NA,NA,3.64,NA,0.346
-CN8510,57,18.4,1,0,21.98,normal weight,1,0,1,NA,NA,1.15,NA,0.57
-CN8513,64,26,1,0,22.68,normal weight,2,0,1,NA,NA,3.91,NA,1.21
-CN8525,70,30.4,0,0,18.67,normal weight,3,0,1,NA,NA,2.17,NA,0.906
-CN8539,82,35.4,1,0,17.84,underweight,3,0,1,NA,NA,2.63,NA,0.443
-CN8541,67,19.7,0,0,23.97,normal weight,1,0,1,NA,NA,1.55,NA,0.7
-CN8547,80,37.4,0,0,28.51,overweight,3,0,1,NA,NA,3.32,NA,1.129
-CN8553,66,29.9,0,0,18.06,underweight,2,0,1,NA,NA,1.97,NA,0.684
-CN8554,82,12.3,1,0,27.49,overweight,1,0,1,NA,NA,2.04,NA,1.056
-CN8556,62,17.8,1,0,27.5,overweight,1,0,1,NA,NA,1.75,NA,0.725
-CN8557,86,36.9,0,0,29.21,overweight,3,0,1,NA,NA,2.49,NA,1.587
-CN8559,72,12.1,0,0,26.23,overweight,1,0,1,NA,NA,3.45,NA,0.785
-CN8567,68,23.2,1,0,23.73,normal weight,2,0,1,NA,NA,3.26,NA,0.708
-CN8571,60,26.5,1,0,23.21,normal weight,2,0,1,NA,NA,0.75,NA,0.952
-CN8594,80,18.7,0,0,28.57,overweight,1,0,1,NA,NA,2.8,NA,0.83
-CN8598,85,26.5,1,0,19.88,normal weight,2,0,1,NA,NA,1.95,NA,0.503
-CN8604,67,30.8,1,0,27.51,overweight,3,0,1,NA,NA,1.36,NA,0.91
-CN8610,92,32.9,0,0,21.17,normal weight,3,0,1,NA,NA,1.42,NA,1.242
-CN8614,66,22.3,1,0,29.79,overweight,2,0,1,NA,NA,0.59,NA,0.672
-CN8619,71,25.7,0,0,20.92,normal weight,2,0,1,NA,NA,1.33,NA,1.694
-CN8620,64,26.1,1,0,31.11,obese,2,0,1,NA,NA,0.71,NA,0.812
-CN8628,68,14.7,1,0,25.75,overweight,1,0,1,NA,NA,0.9,NA,0.685
-CN8646,76,25.1,1,0,24.31,normal weight,2,0,1,NA,NA,1.48,NA,0.675
-CN8654,81,30,1,0,21.98,normal weight,3,0,1,NA,NA,1.39,NA,1.382
-CN8662,69,16.3,0,0,22.76,normal weight,1,0,1,NA,NA,1.34,NA,1.022
-CN8664,72,34.9,1,0,21.37,normal weight,3,0,1,NA,NA,0.56,NA,0.961
-CN8673,66,18.8,0,0,22.2,normal weight,1,0,1,NA,NA,1.12,NA,1.031
-CN8700,76,38.2,0,0,25.86,overweight,3,0,1,NA,NA,2.07,NA,0.457
-CN8714,69,17.1,0,1,22.12,normal weight,1,0,1,NA,NA,1.82,NA,0.801
-CN8715,72,22.7,1,0,24.02,normal weight,2,0,1,NA,NA,3.52,NA,0.701
-CN8716,64,35.6,1,0,16.71,underweight,3,0,1,NA,NA,2.32,NA,0.982
-CN8717,68,14.7,0,0,26.78,overweight,1,0,1,NA,NA,0.52,NA,0.653
-CN8724,68,34.4,1,0,23.61,normal weight,3,0,1,NA,NA,1.69,NA,0.561
-CN8732,70,30.5,0,0,25.46,overweight,3,0,1,NA,NA,2.66,NA,1.512
+<<<<<<< HEAD
+Sample,Age,Dfi,Smoking,PCaHist,BMI,BMI_class,Dfi_class,Group,PCRsuccess,TNM,AJCC,PSA,Gleason,mtDNA,Tumor
+CM4028,50,14.6,0,0,22.35,normal weight,low fat,1,1,T4N1M0,4,17.02,7,0.842,4
+CM4033,76,27.3,0,0,34.12,obese,medium fat,1,1,T4N0M0,4,23.29,8,0.804,4
+CM4038,70,34.2,0,0,19.59,normal weight,high fat,1,1,T4N1M1b,4,100.3,7,1.797,4
+CM4039,56,20,0,0,26.91,overweight,medium fat,1,1,T3bN0M0,3,53.9,8,1.059,NA
+CM4042,67,31.4,0,0,25.95,overweight,high fat,1,1,T3N0M0,3,56.04,7,1.006,NA
+CM4048,82,19.6,1,0,21.88,normal weight,low fat,1,1,T3bN0M1b,4,56.76,9,0.848,NA
+CM4049,46,29.7,0,1,36.46,obese,medium fat,1,1,T4N1M0,4,61.95,10,1.066,4
+CM4056,66,28.3,1,0,27.5,overweight,medium fat,1,1,T2bN0M0,2,5,7,0.866,NA
+CM4057,72,31.4,1,0,26.88,overweight,high fat,1,1,T4N0M1b,4,60.31,6,0.814,4
+CM4058,49,27.7,1,0,21.3,normal weight,medium fat,1,1,T4N1M1b,4,128.38,8,0.667,4
+CM4063,66,22.4,1,0,27.38,overweight,medium fat,1,1,T3aN1M0,4,61.23,8,0.981,NA
+CM4065,64,39.9,1,0,28.67,overweight,high fat,1,1,T4N0M1b,4,25.5,7,0.504,4
+CM4067,60,18.9,0,0,27.82,overweight,low fat,1,1,T4N0M1b,4,65.8,7,1.457,4
+CM4069,73,19.8,1,0,23.03,normal weight,low fat,1,1,NA,NA,78.3,NA,2.133,NA
+CM4072,85,26.9,0,0,26.25,overweight,medium fat,1,1,T3aN0M0,3,43.21,8,0.557,NA
+CM4077,83,33.5,1,0,23.12,normal weight,high fat,1,1,T3aN0M0,3,12.11,8,0.403,NA
+CM4082,77,16.3,0,0,27.68,overweight,low fat,1,1,T3bN0Mlb,3,46.51,7,0.977,NA
+CM4085,70,23.7,0,1,19.21,normal weight,medium fat,1,1,T4N1M1b,4,6.84,NA,1.207,4
+CM4090,75,33,1,0,15.78,underweight,high fat,1,1,T3bN0M1b,4,80.48,7,0.67,NA
+CM4091,81,27.5,0,0,22.89,normal weight,medium fat,1,1,T3N0M0,3,67.35,6,1.245,NA
+CM4098,81,16.2,0,0,26.45,overweight,low fat,1,1,T4N0M0,4,6.83,6,1.352,4
+CM4101,62,26.9,1,0,27.16,overweight,medium fat,1,1,NA,NA,122.45,7,0.782,NA
+CM4102,78,14.8,1,0,19.05,normal weight,low fat,1,1,T4N1M1b,4,35.46,9,0.7,4
+CM4103,71,28.1,0,0,27.55,overweight,medium fat,1,1,T4N1M1b,4,6.86,7,1.541,4
+CM4112,66,13.2,0,0,26.39,overweight,low fat,1,1,T4N0M1b,4,75.8,7,0.794,4
+CM4115,69,30.4,1,0,25.31,overweight,high fat,1,1,T3bN0M0,3,45.95,7,0.909,NA
+CM4116,87,23.8,1,0,32.15,obese,medium fat,1,1,T4N0M1b,4,47.82,8,0.827,4
+CM4126,69,21.5,1,0,21.61,normal weight,medium fat,1,1,T4N0M1b,4,15.14,7,0.908,4
+CM4133,68,19,0,0,19.92,normal weight,low fat,1,1,T4N1M1b,4,59.38,8,0.905,4
+CM4134,76,24.7,1,0,22.12,normal weight,medium fat,1,1,T4N0M0,4,85.71,6,1.146,4
+CM4136,80,30.7,0,1,23.14,normal weight,high fat,1,1,T3aN1M1b,4,76.54,NA,0.81,NA
+CM4142,67,30.9,0,0,26.37,overweight,high fat,1,1,NA,NA,63.18,NA,1.436,NA
+CM4146,63,24.1,1,0,20.2,normal weight,medium fat,1,1,T3aN0M1b,4,11.5,7,0.891,NA
+CM4157,68,31.4,1,0,18.31,underweight,high fat,1,1,T4N1M1b,4,31.34,6,0.403,4
+CM4162,70,23.7,0,0,19.81,normal weight,medium fat,1,1,T4N1M1b,4,78.54,7,0.503,4
+CM4165,74,19.3,0,0,23.88,normal weight,low fat,1,1,T4N1M0,4,32.67,6,1.464,4
+CM4166,54,23.7,1,0,28.19,overweight,medium fat,1,1,T4aN1M1b,4,50.4,10,1.238,4
+CM4169,85,32.3,0,0,21.67,normal weight,high fat,1,1,T3bN0M0,3,36.18,7,0.895,NA
+CM4174,58,25.2,1,0,29.13,overweight,medium fat,1,1,T4N1M1b,4,63.73,8,1.184,4
+CM4180,79,28.5,1,1,27.68,overweight,medium fat,1,1,T4N1M1b,4,7.49,7,1.393,4
+CM4192,73,28.9,1,0,27.65,overweight,medium fat,1,1,T3bN0M0,3,20.42,6,0.988,NA
+CM4195,59,33.9,0,0,22.15,normal weight,high fat,1,1,T4N0M1b,4,32.77,8,0.669,4
+CM4202,76,42.9,0,0,20.76,normal weight,high fat,1,1,T4N0M1b,4,157,6,0.554,4
+CM4207,54,19.9,0,0,26.77,overweight,low fat,1,1,T3bN0M0,3,1.1,6,1.022,NA
+CM4211,73,23.5,1,0,21.13,normal weight,medium fat,1,1,T2N0M0,2,45.36,6,1.073,NA
+CM4232,76,33.2,1,0,22.27,normal weight,high fat,1,1,T3aN0M1b,4,23.54,7,1.596,NA
+CM4236,63,28.1,1,0,27.08,overweight,medium fat,1,1,T3aN1M1b,4,56.98,7,1.293,NA
+CM4241,72,35.5,0,0,22.45,normal weight,high fat,1,1,T4N1M1b,4,12.31,6,0.815,4
+CM4248,76,18.2,0,0,24.61,normal weight,low fat,1,1,T4N1M1b,4,74.25,7,1.016,4
+CM4250,80,22.5,0,0,24.8,normal weight,medium fat,1,1,T3aN0M0,3,43.72,8,0.785,NA
+CM4256,55,32.1,1,0,30.12,obese,high fat,1,1,T4N0M0,4,34.25,7,1.433,4
+CM4260,66,15.2,1,0,28.73,overweight,low fat,1,1,T2cN0M1b,4,45.66,7,1.617,NA
+CM4262,84,25.9,0,0,23.22,normal weight,medium fat,1,1,T4N1M1b,4,56.32,6,0.388,4
+CM4266,66,33,1,0,21.97,normal weight,high fat,1,1,T4N1M1b,4,77.53,6,0.611,4
+CM4272,80,20.7,0,0,27.5,overweight,medium fat,1,1,T3bN0M0,3,32.5,6,1.078,NA
+CM4278,64,41.8,0,0,24.61,normal weight,high fat,1,1,T2bN0M1c,4,55.25,6,1.52,NA
+CM4286,70,18.4,1,0,25.61,overweight,low fat,1,1,T2bN1M1b,2,21.36,7,0.664,NA
+CM4295,67,27.3,0,1,25.95,overweight,medium fat,1,1,T3N0M0,3,61.57,6,0.484,NA
+CM4296,67,28.3,1,0,22.31,normal weight,medium fat,1,1,T4N1M0,4,53.65,9,0.489,4
+CM4300,59,32.6,0,0,24.56,normal weight,high fat,1,1,T4N1M1b,4,65.65,7,0.614,4
+CM4302,68,16.5,1,0,24.03,normal weight,low fat,1,1,T4N0M1b,4,76.95,9,1.116,4
+CM4306,80,26.8,0,0,18.32,underweight,medium fat,1,1,T2bN0M0,2,66.91,7,0.503,NA
+CM4308,64,30.1,0,0,19.84,normal weight,high fat,1,1,T3bN1M1b,4,48.86,8,1.652,NA
+CM4313,82,15.3,0,0,24.19,normal weight,low fat,1,1,T3aN0M0,3,25.52,9,0.717,NA
+CM4317,75,24.3,0,0,25.31,overweight,medium fat,1,1,T2N0M0,1,1.12,8,1.062,NA
+CM4327,47,44.9,1,0,18.21,underweight,high fat,1,1,T4N0M0,4,87.38,10,0.764,4
+CM4328,71,27.8,1,1,20.19,normal weight,medium fat,1,1,T3N0M0,3,11.61,6,2.298,NA
+CM4337,71,32.7,0,0,25.51,overweight,high fat,1,1,T2bN0M0,3,69.14,9,0.981,NA
+CM4338,64,30.2,1,0,24.56,normal weight,high fat,1,1,T4N0M0,4,34.18,7,0.917,4
+CM4341,74,17.5,1,0,21.61,normal weight,low fat,1,1,T3aN0M1b,4,68.93,8,1.052,NA
+CM4345,68,30.5,0,1,25.71,overweight,high fat,1,1,T1N0M0,1,62.23,6,0.807,NA
+CM4351,75,17.5,1,0,26.87,overweight,low fat,1,1,T4N1M1b,4,9,10,0.975,4
+CM4352,79,14.1,1,0,17.06,underweight,low fat,1,1,T4N1M0,4,101.4,8,0.587,4
+CM4361,72,29.1,0,0,24.76,normal weight,medium fat,1,1,T3bN0M0,3,60.33,7,0.675,NA
+CM4370,82,30.4,0,0,24.51,normal weight,high fat,1,1,T4N1M1b,4,40.94,7,1.246,4
+CM4372,71,26.9,1,0,26.81,overweight,medium fat,1,1,T3N0M1b,4,38.45,6,1.369,NA
+CM4373,79,31.9,1,0,24.09,normal weight,high fat,1,1,T3bN1M1b,4,8.33,8,0.46,NA
+CM4374,70,27.5,0,0,22.18,normal weight,medium fat,1,1,T4N0M0,4,13.3,9,1.021,4
+CM4376,81,31.1,0,0,21.61,normal weight,high fat,1,1,T4N0M0,4,4.36,7,0.844,4
+CM4377,69,31,0,0,24.1,normal weight,high fat,1,1,T4N1M1b,4,23.45,8,2.029,4
+CM4386,70,17.9,1,1,23.03,normal weight,low fat,1,1,T3aN0M0,3,53.25,6,0.676,NA
+CM4396,64,37.6,0,0,27.34,overweight,high fat,1,1,T3N0M0,3,39.59,7,0.883,NA
+CM4411,77,30.5,0,0,24.18,normal weight,high fat,1,1,T3bN0M1b,4,140.32,7,1.197,NA
+CM4415,62,26.5,1,0,24.56,normal weight,medium fat,1,1,T4N0M1b,4,68.45,8,0.718,4
+CM4418,81,16,1,0,23.11,normal weight,low fat,1,1,T2cN0M0,2,98.56,9,1.65,NA
+CM4425,58,28.4,0,0,18.17,underweight,medium fat,1,1,T4N1M1b,4,145.63,10,1.877,4
+CM4437,66,35.3,0,0,25.86,overweight,high fat,1,1,T2N0M0,1,7.45,6,0.96,NA
+CM4447,86,34,0,0,23.23,normal weight,high fat,1,1,T0N0M1b,4,53.74,6,0.688,NA
+CM4452,70,18.8,1,0,19.96,normal weight,low fat,1,1,T2N0M0,2,8.45,6,1.025,NA
+CM4454,63,28.4,1,0,25.69,overweight,medium fat,1,1,T3bN1M1b,4,76.38,7,0.902,NA
+CM4468,67,29.1,1,1,27.75,overweight,medium fat,1,1,T2N0M0,2,56.36,9,0.786,NA
+CM4485,64,31.9,1,0,21.36,normal weight,high fat,1,1,T4N1M1b,4,34.78,8,1.433,4
+CM4487,69,22.4,0,0,28.75,overweight,medium fat,1,1,T3bN1M1b,4,159.32,9,1.305,NA
+CM4491,72,34.3,1,0,22.15,normal weight,high fat,1,1,T3aN0M1b,4,89.34,10,1.357,NA
+CM4499,65,19.6,1,0,22.35,normal weight,low fat,1,1,T2N0M0,1,7.41,6,0.843,NA
+CM4503,60,25,0,0,25.61,overweight,medium fat,1,1,T4N0M0,4,85.34,5,0.739,4
+CM4519,62,15.3,0,0,23.98,normal weight,low fat,1,1,T4N0M1b,4,89.34,9,1.162,4
+CM4528,57,23.9,0,0,31.25,obese,medium fat,1,1,T2bN0M1b,4,56.76,8,0.969,NA
+CM4549,77,30.7,1,0,33.57,obese,high fat,1,1,T4N0M0,4,35.58,6,1.481,4
+CM4556,65,26.9,1,0,23.14,normal weight,medium fat,1,1,T3aN0M1b,4,4.68,8,0.708,NA
+CM4559,64,36.9,1,0,20.78,normal weight,high fat,1,1,T1N0M0,1,10.21,6,0.803,NA
+CM4567,68,28.6,1,0,22.56,normal weight,medium fat,1,1,T2N0M0,2,18.14,7,0.804,NA
+CM4574,82,14.7,1,1,20.46,normal weight,low fat,1,1,T4N1M0,4,144.03,6,0.886,4
+CM4577,69,22.7,1,0,26.35,overweight,medium fat,1,1,T3bN0M0,3,48.45,7,1.003,NA
+CM4578,77,28.3,1,0,21.24,normal weight,medium fat,1,1,T2aN0M0,1,14.57,6,0.76,NA
+CM4579,72,13.2,0,0,30.21,obese,low fat,1,1,T3N0M0,3,58.97,6,0.837,NA
+CM4582,59,31.5,0,0,20.79,normal weight,high fat,1,1,T4N0M0,4,97.12,10,1.395,4
+CM4595,58,28.3,0,0,23.9,normal weight,medium fat,1,1,T3N1M1b,4,23.16,9,1.298,NA
+CM4600,89,28.4,0,0,20.3,normal weight,medium fat,1,1,T2aN0M0,2,76.35,6,0.777,NA
+CM4602,62,12.9,1,0,35.12,obese,low fat,1,1,T3aN1M1b,4,46.24,6,1.05,NA
+CM4613,59,24.6,0,0,23.3,normal weight,medium fat,1,1,T4N0M1b,4,58.14,6,0.881,4
+CM4617,76,31.7,0,0,29.07,overweight,high fat,1,1,T4N1M1b,4,12.35,7,1.003,4
+CM4620,63,27.9,0,0,22.12,normal weight,medium fat,1,1,T3aN1M0,4,21.58,6,1.039,NA
+CM4631,69,16.9,0,0,30.21,obese,low fat,1,1,T2N0M0,1,80.1,9,0.577,NA
+CM4634,62,21,0,0,20.14,normal weight,medium fat,1,1,T4N1M0,4,214.35,7,1.037,4
+CM4639,66,16.4,1,0,22.06,normal weight,low fat,1,1,T4N1M0,4,56.47,8,0.989,4
+CM4643,71,22.6,0,0,22,normal weight,medium fat,1,1,T2cN0M0,2,61.93,6,0.805,NA
+CM4664,80,32.3,0,0,26,overweight,high fat,1,1,T4N0M1b,4,47.02,7,0.739,4
+CM4665,74,27.6,1,1,19.21,normal weight,medium fat,1,1,T4N1M1b,4,121,7,0.847,4
+CM4671,65,37.4,0,0,31.21,obese,high fat,1,1,T4N1M1b,4,106.18,9,0.993,4
+CM4674,81,31.8,0,0,26.12,overweight,high fat,1,1,T4N0M1b,4,69.32,6,0.745,4
+CM4677,59,21.8,0,0,25.76,overweight,medium fat,1,1,T3bN0M1c,4,108,6,0.617,NA
+CM4678,66,21.3,0,0,23.03,normal weight,medium fat,1,1,T3aN0M0,3,49.39,6,0.682,NA
+CM4682,73,19.4,1,0,29.15,overweight,low fat,1,1,T3bN0M0,3,79.64,9,1.166,NA
+CM4685,65,24.7,1,0,26.78,overweight,medium fat,1,1,T3bN1M1b,4,89,7,1.174,NA
+CM4691,69,13.2,1,0,22.89,normal weight,low fat,1,1,T4N0M0,4,82.95,8,1.133,4
+CM4696,85,21.9,1,0,19.57,normal weight,medium fat,1,1,T4N0M1b,4,178.3,7,1.723,4
+CM4704,63,32.8,1,0,21.68,normal weight,high fat,1,1,T4N1M1b,4,150.69,9,1.673,4
+CM4709,66,22.7,1,0,22.99,normal weight,medium fat,1,1,T3aN0M0,3,30,7,0.985,NA
+CM4724,47,34.9,0,0,29.15,overweight,high fat,1,1,T4N1M1b,4,3.47,6,1.024,4
+CM4729,75,28,1,0,20.7,normal weight,medium fat,1,1,T4N1M1b,4,220.49,9,2.077,4
+CM4734,75,21.1,0,0,20.16,normal weight,medium fat,1,1,T2cN0M0,2,50.27,6,1.496,NA
+CM4736,72,16.1,1,0,24.35,normal weight,low fat,1,1,T2bN0M0,1,8.35,5,0.578,NA
+CM4738,79,28,1,0,24.8,normal weight,medium fat,1,1,T4N1M1c,4,123.1,9,1.001,4
+CM4739,57,35.1,0,0,24.98,normal weight,high fat,1,1,T4N1M1b,4,129.27,7,1.462,4
+CM4748,78,26.8,0,0,21.86,normal weight,medium fat,1,1,T2N0M0,2,36.14,6,0.808,NA
+CM4749,77,16.1,1,0,22.35,normal weight,low fat,1,1,T4N0M1b,4,87.06,7,0.695,4
+CM4752,80,32,1,0,23.66,normal weight,high fat,1,1,T3aN0M0,3,54.66,7,0.692,NA
+CM4755,61,25.5,1,0,23.14,normal weight,medium fat,1,1,T2bN0M0,2,82.04,7,0.848,NA
+CM4768,54,15.7,1,1,26.04,overweight,low fat,1,1,T4N1M1b,4,154.36,10,0.718,4
+CM4769,61,25.3,1,0,17.58,underweight,medium fat,1,1,T2bN0M1b,4,43.64,7,0.827,NA
+CM4770,80,35.5,1,0,28.1,overweight,high fat,1,1,T4N0M0,4,1.04,6,0.653,4
+CM4771,64,17.6,0,0,14.12,underweight,low fat,1,1,T2N0M0,1,104.9,6,0.856,NA
+CM4773,69,29.6,1,0,31.51,obese,medium fat,1,1,T3N0M1b,4,18,6,0.892,NA
+CM4781,70,29.9,1,0,25.12,overweight,medium fat,1,1,T2bN0M1b,4,21.19,7,1.011,NA
+CM4786,78,32.5,0,0,14.53,underweight,high fat,1,1,T4N1M1b,4,49.5,8,1.333,4
+CM4791,73,17,1,0,23.64,normal weight,low fat,1,1,T3aN1M1b,4,28.16,8,1.495,NA
+CM4799,63,25.9,0,0,30.15,obese,medium fat,1,1,T4N0M0,4,128.41,7,1.349,4
+CM4806,73,25.3,1,0,26.08,overweight,medium fat,1,1,T3aN0M0,3,12.4,6,0.792,NA
+CM4815,59,31.1,0,0,21.26,normal weight,high fat,1,1,T3bN0M0,3,5.49,8,0.865,NA
+CM4817,74,21.2,1,0,24.77,normal weight,medium fat,1,1,T4N0M1b,4,143.75,9,1.589,4
+CM4818,69,20.9,1,1,32.14,obese,medium fat,1,1,T4N0M0,4,90.12,7,1.055,4
+CM4820,76,35.2,1,0,21.26,normal weight,high fat,1,1,T3bN0M0,3,71.88,7,1.028,NA
+CM4823,70,13.5,0,0,24.22,normal weight,low fat,1,1,T2bN0M0,2,22.15,6,0.663,NA
+CM4826,80,16.3,0,1,23.36,normal weight,low fat,1,1,T4N0M0,4,74.17,8,1.539,4
+CM4850,66,23.4,1,0,17.21,underweight,medium fat,1,1,T4N0M1b,4,94.78,7,0.918,4
+CM4856,88,25.3,0,0,19.14,normal weight,medium fat,1,1,T4N1M1c,4,48.38,8,1.014,4
+CM4858,71,36.5,0,0,29.31,overweight,high fat,1,1,T3aN0M0,3,27.06,7,0.902,NA
+CM4861,65,23,1,0,21.61,normal weight,medium fat,1,1,T4N1M1b,4,45.21,9,0.93,4
+CM4862,63,32.4,0,0,24.51,normal weight,high fat,1,1,T4N1M0,4,32.29,7,1.045,4
+CM4864,80,18.3,0,0,18.14,underweight,low fat,1,1,T4N0M1b,4,85.72,6,0.931,4
+CM4870,83,31,1,0,25.45,overweight,high fat,1,1,T2N0M0,2,115.71,6,0.566,NA
+CM4872,80,14.6,1,1,24.35,normal weight,low fat,1,1,T4N0M1b,4,21.3,7,1.283,4
+CM4873,79,21,0,0,20.57,normal weight,medium fat,1,1,T4N1M1b,4,17.41,7,1.527,4
+CM4874,82,19,1,0,17.21,underweight,low fat,1,1,T4N3M1b,4,82.88,9,1.589,4
+CM4880,78,19.7,0,0,24.22,normal weight,low fat,1,1,T2aN0M0,1,14.16,6,0.643,NA
+CM4892,78,26.4,0,0,21.97,normal weight,medium fat,1,1,T3N0M1b,3,12.47,7,1.357,NA
+CM4893,68,42.6,0,0,23.88,normal weight,high fat,1,1,T3aN0M0,3,7.72,6,1.703,NA
+CM4895,57,19.1,1,0,26.77,overweight,low fat,1,1,T3aN0M0,3,9.63,7,0.828,NA
+CM4907,69,21.9,1,0,21.88,normal weight,medium fat,1,1,T4N0M1b,4,121.56,6,0.762,4
+CM4915,75,45.1,0,0,19.05,normal weight,high fat,1,1,T3bN0M0,3,70.65,6,0.776,NA
+CM4924,79,21.2,0,0,20.9,normal weight,medium fat,1,1,T4N0M0,4,19.19,7,1.07,4
+CM4925,92,19.2,1,0,19.61,normal weight,low fat,1,1,T2N0M0,1,68.09,7,0.554,NA
+CM4927,76,28.9,1,0,23.88,normal weight,medium fat,1,1,T2N0m0,2,8.21,8,0.79,NA
+CM4931,59,38.3,0,0,22.15,normal weight,high fat,1,1,T4N0M1b,4,31.24,8,1.138,4
+CM4935,83,29.3,1,1,23.12,normal weight,medium fat,1,1,T3aN0M0,3,97.2,6,0.881,NA
+CM4937,48,27.2,1,0,25.26,overweight,medium fat,1,1,T4N1M1b,4,14.17,8,1.694,4
+CM4942,66,36.7,0,0,21.97,normal weight,high fat,1,1,T4N1M1b,4,84.77,6,0.72,4
+CM4943,65,26.8,1,0,21.36,normal weight,medium fat,1,1,T4N0M0,4,33.93,7,0.893,4
+CM4945,66,30.7,0,0,24.22,normal weight,high fat,1,1,T2bN0M0,1,3.77,7,0.888,NA
+CM4947,60,13.1,1,0,28.41,overweight,low fat,1,1,T4N1M1b,4,40.17,9,1.127,4
+CM4948,69,25.6,1,0,22.23,normal weight,medium fat,1,1,T3N0M1b,4,76.16,7,0.654,NA
+CM4955,85,25.4,1,0,24.22,normal weight,medium fat,1,1,T4N1M1b,4,150.81,6,0.912,4
+CM4956,69,16,1,0,23.44,normal weight,low fat,1,1,T4N0M1b,4,78.89,7,0.797,4
+CM4958,81,14.4,1,0,27.73,overweight,low fat,1,1,T4N0M0,4,5.76,7,0.82,4
+CM4967,68,20.3,1,1,19.92,normal weight,medium fat,1,1,T4N1M1b,4,59.38,8,0.923,4
+CM4977,70,35.6,0,0,22.68,normal weight,high fat,1,1,T3aN0M0,3,53.16,6,0.849,NA
+CM4979,74,24.9,0,0,22.31,normal weight,medium fat,1,1,T2aN0M0,1,8.73,6,0.673,NA
+CM4987,72,31.1,0,0,33.06,obese,high fat,1,1,T4N1M1b,4,43.12,9,1.515,4
+CM4988,80,16.9,1,0,24.8,normal weight,low fat,1,1,T3aN0M0,3,49.72,7,0.676,NA
+CM4992,74,14.4,1,1,21.61,normal weight,low fat,1,1,T3aN0M1b,4,77.45,8,0.59,NA
+CM4995,82,24.3,0,0,22.53,normal weight,medium fat,1,1,T3bN0M1b,4,53.32,7,0.496,NA
+CM4997,73,40.9,1,0,28.12,overweight,high fat,1,1,T3bN0M0,3,84.94,8,0.715,NA
+CN7157,57,21.9,0,0,23.12,normal weight,medium fat,0,1,NA,NA,1.68,NA,0.695,NA
+CN7158,57,24.5,0,0,18.24,underweight,medium fat,0,1,NA,NA,0.39,NA,0.816,NA
+CN7167,68,17.9,1,0,22.13,normal weight,low fat,0,1,NA,NA,1.23,NA,1.421,NA
+CN7190,59,27.7,0,0,16.14,underweight,medium fat,0,1,NA,NA,1.63,NA,0.75,NA
+CN7193,66,30.5,0,0,22.96,normal weight,high fat,0,1,NA,NA,0.93,NA,0.893,NA
+CN7197,59,22.6,1,0,23.56,normal weight,medium fat,0,1,NA,NA,1.02,NA,0.695,NA
+CN7204,72,13.8,0,0,24.86,normal weight,low fat,0,1,NA,NA,3.11,NA,0.824,NA
+CN7221,69,25.5,1,0,18.21,underweight,medium fat,0,1,NA,NA,2.14,NA,0.809,NA
+CN7243,65,24.3,1,0,23.38,normal weight,medium fat,0,1,NA,NA,1.83,NA,1.105,NA
+CN7248,77,30.8,1,0,19.35,normal weight,high fat,0,1,NA,NA,3.24,NA,0.532,NA
+CN7261,65,17.2,1,0,21.37,normal weight,low fat,0,1,NA,NA,1.47,NA,0.927,NA
+CN7262,75,30.3,1,0,20.14,normal weight,high fat,0,1,NA,NA,1.24,NA,0.71,NA
+CN7270,74,29.7,0,0,21.31,normal weight,medium fat,0,1,NA,NA,1.46,NA,0.759,NA
+CN7272,61,28.1,1,0,29.86,overweight,medium fat,0,1,NA,NA,2.33,NA,1.231,NA
+CN7285,66,13.3,0,0,23.58,normal weight,low fat,0,1,NA,NA,3.3,NA,1.266,NA
+CN7296,76,32.2,1,0,23.13,normal weight,high fat,0,1,NA,NA,3.4,NA,0.812,NA
+CN7307,66,15.8,0,0,22.38,normal weight,low fat,0,1,NA,NA,0.67,NA,0.648,NA
+CN7311,62,39.5,0,0,23.46,normal weight,high fat,0,1,NA,NA,1.65,NA,0.742,NA
+CN7324,85,31.9,1,0,24.18,normal weight,high fat,0,1,NA,NA,1.05,NA,0.888,NA
+CN7334,62,28.3,0,0,20.85,normal weight,medium fat,0,1,NA,NA,0.68,NA,0.885,NA
+CN7337,73,12.8,0,0,23.08,normal weight,low fat,0,1,NA,NA,1.86,NA,0.95,NA
+CN7340,72,28,1,0,19.4,normal weight,medium fat,0,1,NA,NA,0.14,NA,1.12,NA
+CN7341,79,23.3,1,0,22.38,normal weight,medium fat,0,1,NA,NA,2.01,NA,0.933,NA
+CN7345,69,18.6,0,0,27.5,overweight,low fat,0,1,NA,NA,1.77,NA,0.907,NA
+CN7379,74,26.3,0,0,25.48,overweight,medium fat,0,1,NA,NA,3.01,NA,0.641,NA
+CN7385,63,29.3,1,0,26.53,overweight,medium fat,0,1,NA,NA,1.71,NA,0.982,NA
+CN7393,54,12.9,1,0,19.15,normal weight,low fat,0,1,NA,NA,2.29,NA,1.076,NA
+CN7403,77,21.5,1,0,24.56,normal weight,medium fat,0,1,NA,NA,2.21,NA,0.99,NA
+CN7412,63,19.4,0,0,20.52,normal weight,low fat,0,1,NA,NA,2.26,NA,0.965,NA
+CN7430,72,24.9,1,0,21.04,normal weight,medium fat,0,1,NA,NA,3.04,NA,1.106,NA
+CN7459,73,17.7,0,0,22.96,normal weight,low fat,0,1,NA,NA,2.42,NA,0.838,NA
+CN7460,82,34.4,0,0,23.54,normal weight,high fat,0,1,NA,NA,2.93,NA,0.892,NA
+CN7467,63,30.6,1,0,21.67,normal weight,high fat,0,1,NA,NA,1.32,NA,0.904,NA
+CN7479,69,24.3,1,0,31.4,obese,medium fat,0,1,NA,NA,1.98,NA,0.851,NA
+CN7501,83,29.5,0,0,22.21,normal weight,medium fat,0,1,NA,NA,3.43,NA,0.779,NA
+CN7508,84,15.2,0,0,27,overweight,low fat,0,1,NA,NA,1.4,NA,0.636,NA
+CN7524,78,26.8,1,0,22.68,normal weight,medium fat,0,1,NA,NA,1.42,NA,1.15,NA
+CN7531,84,23.2,0,0,27.43,overweight,medium fat,0,1,NA,NA,1.69,NA,0.583,NA
+CN7533,84,33.7,1,0,19.27,normal weight,high fat,0,1,NA,NA,1.57,NA,0.878,NA
+CN7541,69,22.9,1,0,26.73,overweight,medium fat,0,1,NA,NA,1.41,NA,1.283,NA
+CN7560,78,17.6,1,0,25,overweight,low fat,0,1,NA,NA,0.88,NA,0.817,NA
+CN7562,70,26.1,0,0,22.15,normal weight,medium fat,0,1,NA,NA,1.53,NA,1.276,NA
+CN7564,73,39,0,0,23.6,normal weight,high fat,0,1,NA,NA,1.61,NA,0.883,NA
+CN7567,80,34.1,0,0,19.15,normal weight,high fat,0,1,NA,NA,1.78,NA,0.632,NA
+CN7568,78,20,1,0,20.95,normal weight,medium fat,0,1,NA,NA,1.66,NA,1.026,NA
+CN7570,81,29,1,0,23.91,normal weight,medium fat,0,1,NA,NA,3.11,NA,0.83,NA
+CN7576,70,17.2,1,0,23.45,normal weight,low fat,0,1,NA,NA,2.37,NA,0.798,NA
+CN7586,64,29.9,0,0,19.21,normal weight,medium fat,0,1,NA,NA,0.01,NA,0.66,NA
+CN7593,71,29.1,0,0,17.68,underweight,medium fat,0,1,NA,NA,1.44,NA,1.178,NA
+CN7606,79,18.3,0,0,26.07,overweight,low fat,0,1,NA,NA,0.17,NA,0.922,NA
+CN7637,80,23.5,1,0,18.55,normal weight,medium fat,0,1,NA,NA,2.44,NA,0.88,NA
+CN7652,79,18.2,1,0,20.87,normal weight,low fat,0,1,NA,NA,0.3,NA,0.871,NA
+CN7673,47,36.3,0,0,30.8,obese,high fat,0,1,NA,NA,3.08,NA,0.764,NA
+CN7674,64,15.3,1,0,24.61,normal weight,low fat,0,1,NA,NA,2.56,NA,1.304,NA
+CN7685,75,23.8,0,0,25.35,overweight,medium fat,0,1,NA,NA,2.05,NA,0.649,NA
+CN7712,80,18,0,0,30.08,obese,low fat,0,1,NA,NA,2.13,NA,0.832,NA
+CN7717,68,34.8,1,0,16.82,underweight,high fat,0,1,NA,NA,1.59,NA,1.068,NA
+CN7719,67,17,0,0,22.48,normal weight,low fat,0,1,NA,NA,3.07,NA,0.704,NA
+CN7725,71,22.5,1,0,22.19,normal weight,medium fat,0,1,NA,NA,1.76,NA,0.701,NA
+CN7727,76,27.2,0,0,27.52,overweight,medium fat,0,1,NA,NA,2.78,NA,1.171,NA
+CN7746,82,25.1,1,0,21.13,normal weight,medium fat,0,1,NA,NA,2.83,NA,0.871,NA
+CN7749,79,27.2,0,0,31.46,obese,medium fat,0,1,NA,NA,2.76,NA,1.073,NA
+CN7759,79,27,0,0,23.45,normal weight,medium fat,0,1,NA,NA,2.96,NA,0.847,NA
+CN7760,90,23.6,0,0,15.85,underweight,medium fat,0,1,NA,NA,2.21,NA,0.845,NA
+CN7763,78,14.4,0,0,24.62,normal weight,low fat,0,1,NA,NA,1.62,NA,1.254,NA
+CN7768,81,27.7,1,0,20.62,normal weight,medium fat,0,1,NA,NA,2.11,NA,0.79,NA
+CN7789,81,16.9,1,0,25.08,overweight,low fat,0,1,NA,NA,0.7,NA,0.741,NA
+CN7796,75,34.8,0,0,21.68,normal weight,high fat,0,1,NA,NA,2.56,NA,0.591,NA
+CN7801,69,17.7,1,0,25.58,overweight,low fat,0,1,NA,NA,0.23,NA,1.485,NA
+CN7804,78,39.8,1,0,19.12,normal weight,high fat,0,1,NA,NA,1.27,NA,0.568,NA
+CN7805,68,31.4,0,0,23.56,normal weight,high fat,0,1,NA,NA,1.14,NA,0.911,NA
+CN7808,59,19.6,1,0,26.6,overweight,low fat,0,1,NA,NA,0.73,NA,0.632,NA
+CN7809,59,21.7,1,0,17.89,underweight,medium fat,0,1,NA,NA,1.54,NA,0.656,NA
+CN7816,65,27.9,0,0,18.56,normal weight,medium fat,0,1,NA,NA,0.97,NA,1.308,NA
+CN7818,75,18.7,0,0,27.68,overweight,low fat,0,1,NA,NA,0.42,NA,0.77,NA
+CN7820,65,27.9,1,0,24.56,normal weight,medium fat,0,1,NA,NA,1.86,NA,0.747,NA
+CN7827,66,16.3,1,0,20.4,normal weight,low fat,0,1,NA,NA,3.95,NA,0.549,NA
+CN7829,53,30,0,0,17.85,underweight,high fat,0,1,NA,NA,2.75,NA,1.1,NA
+CN7851,75,26.3,0,0,22.39,normal weight,medium fat,0,1,NA,NA,0.98,NA,0.513,NA
+CN7863,58,24.8,0,0,30.5,obese,medium fat,0,1,NA,NA,1.85,NA,0.448,NA
+CN7865,65,33.9,1,0,19.37,normal weight,high fat,0,1,NA,NA,1.07,NA,1.959,NA
+CN7869,77,16.3,0,0,29.12,overweight,low fat,0,1,NA,NA,1.65,NA,0.775,NA
+CN7880,68,31.8,0,0,20.94,normal weight,high fat,0,1,NA,NA,1.84,NA,0.503,NA
+CN7902,55,28.3,1,0,22.68,normal weight,medium fat,0,1,NA,NA,2.16,NA,0.645,NA
+CN7916,71,25.7,1,0,24.17,normal weight,medium fat,0,1,NA,NA,2.42,NA,1.232,NA
+CN7919,72,32.1,0,0,29.07,overweight,high fat,0,1,NA,NA,0.89,NA,0.748,NA
+CN7932,52,18.9,0,0,24.19,normal weight,low fat,0,1,NA,NA,0.64,NA,0.667,NA
+CN7941,63,26.9,0,0,20.45,normal weight,medium fat,0,1,NA,NA,1.18,NA,0.644,NA
+CN7962,78,19.2,1,0,24.14,normal weight,low fat,0,1,NA,NA,1.91,NA,1.509,NA
+CN7968,47,28.3,1,0,16.41,underweight,medium fat,0,1,NA,NA,0.37,NA,1.103,NA
+CN7975,73,15,1,0,23.82,normal weight,low fat,0,1,NA,NA,1.45,NA,0.523,NA
+CN7979,60,12.1,1,0,19.15,normal weight,low fat,0,1,NA,NA,0.19,NA,0.591,NA
+CN7981,78,28.1,0,0,24.46,normal weight,medium fat,0,1,NA,NA,1.64,NA,1.16,NA
+CN7989,72,18.6,1,0,22.68,normal weight,low fat,0,1,NA,NA,1.52,NA,0.66,NA
+CN8001,57,24.2,1,0,23.56,normal weight,medium fat,0,1,NA,NA,1.38,NA,0.416,NA
+CN8003,65,17.2,0,0,18.79,normal weight,low fat,0,1,NA,NA,2.18,NA,0.929,NA
+CN8009,47,28.6,0,0,23.39,normal weight,medium fat,0,1,NA,NA,0.74,NA,1.811,NA
+CN8012,63,18.4,0,0,25.64,overweight,low fat,0,1,NA,NA,0.21,NA,0.585,NA
+CN8018,75,21.7,1,0,29.71,overweight,medium fat,0,1,NA,NA,2.88,NA,0.769,NA
+CN8019,60,32.7,1,0,27.5,overweight,high fat,0,1,NA,NA,3.26,NA,1.25,NA
+CN8039,48,13.6,0,0,23.74,normal weight,low fat,0,1,NA,NA,0.63,NA,0.562,NA
+CN8048,71,25.5,1,0,22.13,normal weight,medium fat,0,1,NA,NA,2.47,NA,0.861,NA
+CN8052,58,17.8,0,0,26.52,overweight,low fat,0,1,NA,NA,1.06,NA,0.583,NA
+CN8056,74,25.5,1,0,21.19,normal weight,medium fat,0,1,NA,NA,2.19,NA,0.88,NA
+CN8075,50,16.3,1,0,20.45,normal weight,low fat,0,1,NA,NA,1.17,NA,1.015,NA
+CN8092,58,14.1,0,0,26.25,overweight,low fat,0,1,NA,NA,1.16,NA,0.746,NA
+CN8093,71,25.1,0,0,24.75,normal weight,medium fat,0,1,NA,NA,2.88,NA,0.511,NA
+CN8103,58,20.9,0,0,30.57,obese,medium fat,0,1,NA,NA,0.47,NA,0.909,NA
+CN8108,56,16.8,0,0,16.8,underweight,low fat,0,1,NA,NA,2.61,NA,0.477,NA
+CN8118,56,27.5,1,0,23.34,normal weight,medium fat,0,1,NA,NA,1.23,NA,0.774,NA
+CN8121,58,17.8,0,0,26.14,overweight,low fat,0,1,NA,NA,1.78,NA,1.218,NA
+CN8124,70,35.8,0,0,25.58,overweight,high fat,0,1,NA,NA,2.22,NA,0.772,NA
+CN8126,65,16.7,0,0,23,normal weight,low fat,0,1,NA,NA,1.67,NA,0.979,NA
+CN8142,74,24.8,0,0,24.56,normal weight,medium fat,0,1,NA,NA,3.48,NA,0.483,NA
+CN8150,76,18.4,0,0,23,normal weight,low fat,0,1,NA,NA,1.53,NA,1.16,NA
+CN8152,67,23.2,1,0,21.61,normal weight,medium fat,0,1,NA,NA,0.99,NA,0.545,NA
+CN8158,81,16.4,0,0,21.48,normal weight,low fat,0,1,NA,NA,3.19,NA,0.841,NA
+CN8162,62,18.7,0,0,16.7,underweight,low fat,0,1,NA,NA,1.39,NA,0.624,NA
+CN8169,82,24.2,1,0,23.56,normal weight,medium fat,0,1,NA,NA,2.05,NA,0.441,NA
+CN8183,66,19.3,0,0,17.68,underweight,low fat,0,1,NA,NA,2.62,NA,0.723,NA
+CN8187,70,35.8,0,0,22.16,normal weight,high fat,0,1,NA,NA,1.37,NA,1.253,NA
+CN8200,83,18.7,0,0,21.71,normal weight,low fat,0,1,NA,NA,3.72,NA,0.627,NA
+CN8213,65,30.2,0,0,27.12,overweight,high fat,0,1,NA,NA,0.91,NA,1.486,NA
+CN8218,74,24.6,1,0,21.25,normal weight,medium fat,0,1,NA,NA,2.45,NA,0.389,NA
+CN8233,76,22.7,1,0,17.19,underweight,medium fat,0,1,NA,NA,1.79,NA,0.685,NA
+CN8235,64,19.7,1,0,25.47,overweight,low fat,0,1,NA,NA,1.35,NA,0.646,NA
+CN8243,76,21.1,1,0,29.56,overweight,medium fat,0,1,NA,NA,1.99,NA,0.819,NA
+CN8264,81,19.8,1,0,25.38,overweight,low fat,0,1,NA,NA,1.49,NA,1.341,NA
+CN8284,67,29.3,1,0,20.08,normal weight,medium fat,0,1,NA,NA,2.1,NA,0.836,NA
+CN8288,70,17.8,0,0,18.36,underweight,low fat,0,1,NA,NA,2.03,NA,0.683,NA
+CN8303,83,27.5,1,0,19.95,normal weight,medium fat,0,1,NA,NA,1.62,NA,1.564,NA
+CN8304,68,32.3,0,0,30.92,obese,high fat,0,1,NA,NA,0.57,NA,0.811,NA
+CN8311,76,28.7,1,0,25.95,overweight,medium fat,0,1,NA,NA,2.86,NA,0.712,NA
+CN8312,88,14.3,1,0,20.08,normal weight,low fat,0,1,NA,NA,2.61,NA,1.136,NA
+CN8315,64,13.9,0,0,28.99,overweight,low fat,0,1,NA,NA,2.59,NA,0.624,NA
+CN8323,70,21.5,0,0,22.18,normal weight,medium fat,0,1,NA,NA,0.54,NA,0.785,NA
+CN8327,67,33.9,1,0,26.19,overweight,high fat,0,1,NA,NA,1.29,NA,0.936,NA
+CN8346,82,29.5,1,0,19.56,normal weight,medium fat,0,1,NA,NA,1.85,NA,1.238,NA
+CN8352,74,18.2,1,0,26.01,overweight,low fat,0,1,NA,NA,1.9,NA,1.095,NA
+CN8355,87,24.2,1,0,24.68,normal weight,medium fat,0,1,NA,NA,1.93,NA,0.481,NA
+CN8382,70,28,1,0,34.56,obese,medium fat,0,1,NA,NA,0.86,NA,0.738,NA
+CN8385,72,18.1,1,0,19.1,normal weight,low fat,0,1,NA,NA,1.58,NA,0.705,NA
+CN8388,82,24.3,0,0,23.14,normal weight,medium fat,0,1,NA,NA,1.75,NA,0.854,NA
+CN8389,64,19.1,1,0,14.6,underweight,low fat,0,1,NA,NA,1.08,NA,0.967,NA
+CN8398,80,28.1,1,0,23.81,normal weight,medium fat,0,1,NA,NA,2.26,NA,0.736,NA
+CN8404,69,25.1,0,0,28.44,overweight,medium fat,0,1,NA,NA,1.56,NA,1.256,NA
+CN8412,71,27.8,1,0,24.37,normal weight,medium fat,0,1,NA,NA,0.95,NA,0.753,NA
+CN8418,64,23,0,0,22.86,normal weight,medium fat,0,1,NA,NA,0.09,NA,0.573,NA
+CN8429,70,19.7,1,0,17.24,underweight,low fat,0,1,NA,NA,1.51,NA,0.532,NA
+CN8433,80,24.2,0,0,24.56,normal weight,medium fat,0,1,NA,NA,2.56,NA,0.719,NA
+CN8446,77,31.8,1,0,21.85,normal weight,high fat,0,1,NA,NA,2.98,NA,0.77,NA
+CN8451,55,23.4,1,0,17.5,underweight,medium fat,0,1,NA,NA,1.7,NA,1.035,NA
+CN8465,67,31.9,1,0,20.66,normal weight,high fat,0,1,NA,NA,2.4,NA,0.633,NA
+CN8471,55,22.2,0,0,25.34,overweight,medium fat,0,1,NA,NA,1.21,NA,0.856,NA
+CN8477,80,17.6,0,0,22.65,normal weight,low fat,0,1,NA,NA,1.87,NA,0.781,NA
+CN8485,47,27.3,1,0,18.74,normal weight,medium fat,0,1,NA,NA,0.29,NA,1.208,NA
+CN8486,81,30.1,0,0,23.89,normal weight,high fat,0,1,NA,NA,1,NA,0.61,NA
+CN8491,64,19.3,0,0,25.72,overweight,low fat,0,1,NA,NA,2.34,NA,1.069,NA
+CN8494,81,28,1,0,21.45,normal weight,medium fat,0,1,NA,NA,1.67,NA,0.653,NA
+CN8495,66,17.4,0,1,23.68,normal weight,low fat,0,1,NA,NA,0.6,NA,1.13,NA
+CN8506,77,22.1,0,0,22.94,normal weight,medium fat,0,1,NA,NA,3.64,NA,0.346,NA
+CN8510,57,18.4,1,0,21.98,normal weight,low fat,0,1,NA,NA,1.15,NA,0.57,NA
+CN8513,64,26,1,0,22.68,normal weight,medium fat,0,1,NA,NA,3.91,NA,1.21,NA
+CN8525,70,30.4,0,0,18.67,normal weight,high fat,0,1,NA,NA,2.17,NA,0.906,NA
+CN8539,82,35.4,1,0,17.84,underweight,high fat,0,1,NA,NA,2.63,NA,0.443,NA
+CN8541,67,19.7,0,0,23.97,normal weight,low fat,0,1,NA,NA,1.55,NA,0.7,NA
+CN8547,80,37.4,0,0,28.51,overweight,high fat,0,1,NA,NA,3.32,NA,1.129,NA
+CN8553,66,29.9,0,0,18.06,underweight,medium fat,0,1,NA,NA,1.97,NA,0.684,NA
+CN8554,82,12.3,1,0,27.49,overweight,low fat,0,1,NA,NA,2.04,NA,1.056,NA
+CN8556,62,17.8,1,0,27.5,overweight,low fat,0,1,NA,NA,1.75,NA,0.725,NA
+CN8557,86,36.9,0,0,29.21,overweight,high fat,0,1,NA,NA,2.49,NA,1.587,NA
+CN8559,72,12.1,0,0,26.23,overweight,low fat,0,1,NA,NA,3.45,NA,0.785,NA
+CN8567,68,23.2,1,0,23.73,normal weight,medium fat,0,1,NA,NA,3.26,NA,0.708,NA
+CN8571,60,26.5,1,0,23.21,normal weight,medium fat,0,1,NA,NA,0.75,NA,0.952,NA
+CN8594,80,18.7,0,0,28.57,overweight,low fat,0,1,NA,NA,2.8,NA,0.83,NA
+CN8598,85,26.5,1,0,19.88,normal weight,medium fat,0,1,NA,NA,1.95,NA,0.503,NA
+CN8604,67,30.8,1,0,27.51,overweight,high fat,0,1,NA,NA,1.36,NA,0.91,NA
+CN8610,92,32.9,0,0,21.17,normal weight,high fat,0,1,NA,NA,1.42,NA,1.242,NA
+CN8614,66,22.3,1,0,29.79,overweight,medium fat,0,1,NA,NA,0.59,NA,0.672,NA
+CN8619,71,25.7,0,0,20.92,normal weight,medium fat,0,1,NA,NA,1.33,NA,1.694,NA
+CN8620,64,26.1,1,0,31.11,obese,medium fat,0,1,NA,NA,0.71,NA,0.812,NA
+CN8628,68,14.7,1,0,25.75,overweight,low fat,0,1,NA,NA,0.9,NA,0.685,NA
+CN8646,76,25.1,1,0,24.31,normal weight,medium fat,0,1,NA,NA,1.48,NA,0.675,NA
+CN8654,81,30,1,0,21.98,normal weight,high fat,0,1,NA,NA,1.39,NA,1.382,NA
+CN8662,69,16.3,0,0,22.76,normal weight,low fat,0,1,NA,NA,1.34,NA,1.022,NA
+CN8664,72,34.9,1,0,21.37,normal weight,high fat,0,1,NA,NA,0.56,NA,0.961,NA
+CN8673,66,18.8,0,0,22.2,normal weight,low fat,0,1,NA,NA,1.12,NA,1.031,NA
+CN8700,76,38.2,0,0,25.86,overweight,high fat,0,1,NA,NA,2.07,NA,0.457,NA
+CN8714,69,17.1,0,1,22.12,normal weight,low fat,0,1,NA,NA,1.82,NA,0.801,NA
+CN8715,72,22.7,1,0,24.02,normal weight,medium fat,0,1,NA,NA,3.52,NA,0.701,NA
+CN8716,64,35.6,1,0,16.71,underweight,high fat,0,1,NA,NA,2.32,NA,0.982,NA
+CN8717,68,14.7,0,0,26.78,overweight,low fat,0,1,NA,NA,0.52,NA,0.653,NA
+CN8724,68,34.4,1,0,23.61,normal weight,high fat,0,1,NA,NA,1.69,NA,0.561,NA
+CN8732,70,30.5,0,0,25.46,overweight,high fat,0,1,NA,NA,2.66,NA,1.512,NA
+=======
+Sample,Age,Dfi,Smoking,PCaHist,BMI,BMI_class,Dfi_class,Group,PCRsuccess,TNM,AJCC,PSA,Gleason,mtDNA,Tumor,LymphNodes,Metastasis
+CM4028,50,14.6,0,0,22.35,normal weight,1,1,1,T4N1M0,4,17.02,7,0.842,4,1,0
+CM4033,76,27.3,0,0,34.12,obese,2,1,1,T4N0M0,4,23.29,8,0.804,4,0,0
+CM4038,70,34.2,0,0,19.59,normal weight,3,1,1,T4N1M1b,4,100.3,7,1.797,4,1,2
+CM4039,56,20,0,0,26.91,overweight,2,1,1,T3bN0M0,3,53.9,8,1.059,3,0,0
+CM4042,67,31.4,0,0,25.95,overweight,3,1,1,T3N0M0,3,56.04,7,1.006,3,0,0
+CM4048,82,19.6,1,0,21.88,normal weight,1,1,1,T3bN0M1b,4,56.76,9,0.848,3,0,2
+CM4049,46,29.7,0,1,36.46,obese,2,1,1,T4N1M0,4,61.95,10,1.066,4,1,0
+CM4056,66,28.3,1,0,27.5,overweight,2,1,1,T2bN0M0,2,5,7,0.866,2,0,0
+CM4057,72,31.4,1,0,26.88,overweight,3,1,1,T4N0M1b,4,60.31,6,0.814,4,0,2
+CM4058,49,27.7,1,0,21.3,normal weight,2,1,1,T4N1M1b,4,128.38,8,0.667,4,1,2
+CM4063,66,22.4,1,0,27.38,overweight,2,1,1,T3aN1M0,4,61.23,8,0.981,3,1,0
+CM4065,64,39.9,1,0,28.67,overweight,3,1,1,T4N0M1b,4,25.5,7,0.504,4,0,2
+CM4067,60,18.9,0,0,27.82,overweight,1,1,1,T4N0M1b,4,65.8,7,1.457,4,0,2
+CM4069,73,19.8,1,0,23.03,normal weight,1,1,1,NA,NA,78.3,NA,2.133,NA,NA,NA
+CM4072,85,26.9,0,0,26.25,overweight,2,1,1,T3aN0M0,3,43.21,8,0.557,3,0,0
+CM4077,83,33.5,1,0,23.12,normal weight,3,1,1,T3aN0M0,3,12.11,8,0.403,3,0,0
+CM4082,77,16.3,0,0,27.68,overweight,1,1,1,T3bN0Mlb,3,46.51,7,0.977,3,0,NA
+CM4085,70,23.7,0,1,19.21,normal weight,2,1,1,T4N1M1b,4,6.84,NA,1.207,4,1,2
+CM4090,75,33,1,0,15.78,underweight,3,1,1,T3bN0M1b,4,80.48,7,0.67,3,0,2
+CM4091,81,27.5,0,0,22.89,normal weight,2,1,1,T3N0M0,3,67.35,6,1.245,3,0,0
+CM4098,81,16.2,0,0,26.45,overweight,1,1,1,T4N0M0,4,6.83,6,1.352,4,0,0
+CM4101,62,26.9,1,0,27.16,overweight,2,1,1,NA,NA,122.45,7,0.782,NA,NA,NA
+CM4102,78,14.8,1,0,19.05,normal weight,1,1,1,T4N1M1b,4,35.46,9,0.7,4,1,2
+CM4103,71,28.1,0,0,27.55,overweight,2,1,1,T4N1M1b,4,6.86,7,1.541,4,1,2
+CM4112,66,13.2,0,0,26.39,overweight,1,1,1,T4N0M1b,4,75.8,7,0.794,4,0,2
+CM4115,69,30.4,1,0,25.31,overweight,3,1,1,T3bN0M0,3,45.95,7,0.909,3,0,0
+CM4116,87,23.8,1,0,32.15,obese,2,1,1,T4N0M1b,4,47.82,8,0.827,4,0,2
+CM4126,69,21.5,1,0,21.61,normal weight,2,1,1,T4N0M1b,4,15.14,7,0.908,4,0,2
+CM4133,68,19,0,0,19.92,normal weight,1,1,1,T4N1M1b,4,59.38,8,0.905,4,1,2
+CM4134,76,24.7,1,0,22.12,normal weight,2,1,1,T4N0M0,4,85.71,6,1.146,4,0,0
+CM4136,80,30.7,0,1,23.14,normal weight,3,1,1,T3aN1M1b,4,76.54,NA,0.81,3,1,2
+CM4142,67,30.9,0,0,26.37,overweight,3,1,1,NA,NA,63.18,NA,1.436,NA,NA,NA
+CM4146,63,24.1,1,0,20.2,normal weight,2,1,1,T3aN0M1b,4,11.5,7,0.891,3,0,2
+CM4157,68,31.4,1,0,18.31,underweight,3,1,1,T4N1M1b,4,31.34,6,0.403,4,1,2
+CM4162,70,23.7,0,0,19.81,normal weight,2,1,1,T4N1M1b,4,78.54,7,0.503,4,1,2
+CM4165,74,19.3,0,0,23.88,normal weight,1,1,1,T4N1M0,4,32.67,6,1.464,4,1,0
+CM4166,54,23.7,1,0,28.19,overweight,2,1,1,T4aN1M1b,4,50.4,10,1.238,5,1,2
+CM4169,85,32.3,0,0,21.67,normal weight,3,1,1,T3bN0M0,3,36.18,7,0.895,3,0,0
+CM4174,58,25.2,1,0,29.13,overweight,2,1,1,T4N1M1b,4,63.73,8,1.184,4,1,2
+CM4180,79,28.5,1,1,27.68,overweight,2,1,1,T4N1M1b,4,7.49,7,1.393,4,1,2
+CM4192,73,28.9,1,0,27.65,overweight,2,1,1,T3bN0M0,3,20.42,6,0.988,3,0,0
+CM4195,59,33.9,0,0,22.15,normal weight,3,1,1,T4N0M1b,4,32.77,8,0.669,4,0,2
+CM4202,76,42.9,0,0,20.76,normal weight,3,1,1,T4N0M1b,4,157,6,0.554,4,0,2
+CM4207,54,19.9,0,0,26.77,overweight,1,1,1,T3bN0M0,3,1.1,6,1.022,3,0,0
+CM4211,73,23.5,1,0,21.13,normal weight,2,1,1,T2N0M0,2,45.36,6,1.073,2,0,0
+CM4232,76,33.2,1,0,22.27,normal weight,3,1,1,T3aN0M1b,4,23.54,7,1.596,3,0,2
+CM4236,63,28.1,1,0,27.08,overweight,2,1,1,T3aN1M1b,4,56.98,7,1.293,3,1,2
+CM4241,72,35.5,0,0,22.45,normal weight,3,1,1,T4N1M1b,4,12.31,6,0.815,4,1,2
+CM4248,76,18.2,0,0,24.61,normal weight,1,1,1,T4N1M1b,4,74.25,7,1.016,4,1,2
+CM4250,80,22.5,0,0,24.8,normal weight,2,1,1,T3aN0M0,3,43.72,8,0.785,3,0,0
+CM4256,55,32.1,1,0,30.12,obese,3,1,1,T4N0M0,4,34.25,7,1.433,4,0,0
+CM4260,66,15.2,1,0,28.73,overweight,1,1,1,T2cN0M1b,4,45.66,7,1.617,2,0,2
+CM4262,84,25.9,0,0,23.22,normal weight,2,1,1,T4N1M1b,4,56.32,6,0.388,4,1,2
+CM4266,66,33,1,0,21.97,normal weight,3,1,1,T4N1M1b,4,77.53,6,0.611,4,1,2
+CM4272,80,20.7,0,0,27.5,overweight,2,1,1,T3bN0M0,3,32.5,6,1.078,3,0,0
+CM4278,64,41.8,0,0,24.61,normal weight,3,1,1,T2bN0M1c,4,55.25,6,1.52,2,0,3
+CM4286,70,18.4,1,0,25.61,overweight,1,1,1,T2bN1M1b,2,21.36,7,0.664,2,1,2
+CM4295,67,27.3,0,1,25.95,overweight,2,1,1,T3N0M0,3,61.57,6,0.484,3,0,0
+CM4296,67,28.3,1,0,22.31,normal weight,2,1,1,T4N1M0,4,53.65,9,0.489,4,1,0
+CM4300,59,32.6,0,0,24.56,normal weight,3,1,1,T4N1M1b,4,65.65,7,0.614,4,1,2
+CM4302,68,16.5,1,0,24.03,normal weight,1,1,1,T4N0M1b,4,76.95,9,1.116,4,0,2
+CM4306,80,26.8,0,0,18.32,underweight,2,1,1,T2bN0M0,2,66.91,7,0.503,2,0,0
+CM4308,64,30.1,0,0,19.84,normal weight,3,1,1,T3bN1M1b,4,48.86,8,1.652,3,1,2
+CM4313,82,15.3,0,0,24.19,normal weight,1,1,1,T3aN0M0,3,25.52,9,0.717,3,0,0
+CM4317,75,24.3,0,0,25.31,overweight,2,1,1,T2N0M0,1,1.12,8,1.062,2,0,0
+CM4327,47,44.9,1,0,18.21,underweight,3,1,1,T4N0M0,4,87.38,10,0.764,4,0,0
+CM4328,71,27.8,1,1,20.19,normal weight,2,1,1,T3N0M0,3,11.61,6,2.298,3,0,0
+CM4337,71,32.7,0,0,25.51,overweight,3,1,1,T2bN0M0,3,69.14,9,0.981,2,0,0
+CM4338,64,30.2,1,0,24.56,normal weight,3,1,1,T4N0M0,4,34.18,7,0.917,4,0,0
+CM4341,74,17.5,1,0,21.61,normal weight,1,1,1,T3aN0M1b,4,68.93,8,1.052,3,0,2
+CM4345,68,30.5,0,1,25.71,overweight,3,1,1,T1N0M0,1,62.23,6,0.807,1,0,0
+CM4351,75,17.5,1,0,26.87,overweight,1,1,1,T4N1M1b,4,9,10,0.975,4,1,2
+CM4352,79,14.1,1,0,17.06,underweight,1,1,1,T4N1M0,4,101.4,8,0.587,4,1,0
+CM4361,72,29.1,0,0,24.76,normal weight,2,1,1,T3bN0M0,3,60.33,7,0.675,3,0,0
+CM4370,82,30.4,0,0,24.51,normal weight,3,1,1,T4N1M1b,4,40.94,7,1.246,4,1,2
+CM4372,71,26.9,1,0,26.81,overweight,2,1,1,T3N0M1b,4,38.45,6,1.369,3,0,2
+CM4373,79,31.9,1,0,24.09,normal weight,3,1,1,T3bN1M1b,4,8.33,8,0.46,3,1,2
+CM4374,70,27.5,0,0,22.18,normal weight,2,1,1,T4N0M0,4,13.3,9,1.021,4,0,0
+CM4376,81,31.1,0,0,21.61,normal weight,3,1,1,T4N0M0,4,4.36,7,0.844,4,0,0
+CM4377,69,31,0,0,24.1,normal weight,3,1,1,T4N1M1b,4,23.45,8,2.029,4,1,2
+CM4386,70,17.9,1,1,23.03,normal weight,1,1,1,T3aN0M0,3,53.25,6,0.676,3,0,0
+CM4396,64,37.6,0,0,27.34,overweight,3,1,1,T3N0M0,3,39.59,7,0.883,3,0,0
+CM4411,77,30.5,0,0,24.18,normal weight,3,1,1,T3bN0M1b,4,140.32,7,1.197,3,0,2
+CM4415,62,26.5,1,0,24.56,normal weight,2,1,1,T4N0M1b,4,68.45,8,0.718,4,0,2
+CM4418,81,16,1,0,23.11,normal weight,1,1,1,T2cN0M0,2,98.56,9,1.65,2,0,0
+CM4425,58,28.4,0,0,18.17,underweight,2,1,1,T4N1M1b,4,145.63,10,1.877,4,1,2
+CM4437,66,35.3,0,0,25.86,overweight,3,1,1,T2N0M0,1,7.45,6,0.96,2,0,0
+CM4447,86,34,0,0,23.23,normal weight,3,1,1,T0N0M1b,4,53.74,6,0.688,0,0,2
+CM4452,70,18.8,1,0,19.96,normal weight,1,1,1,T2N0M0,2,8.45,6,1.025,2,0,0
+CM4454,63,28.4,1,0,25.69,overweight,2,1,1,T3bN1M1b,4,76.38,7,0.902,3,1,2
+CM4468,67,29.1,1,1,27.75,overweight,2,1,1,T2N0M0,2,56.36,9,0.786,2,0,0
+CM4485,64,31.9,1,0,21.36,normal weight,3,1,1,T4N1M1b,4,34.78,8,1.433,4,1,2
+CM4487,69,22.4,0,0,28.75,overweight,2,1,1,T3bN1M1b,4,159.32,9,1.305,3,1,2
+CM4491,72,34.3,1,0,22.15,normal weight,3,1,1,T3aN0M1b,4,89.34,10,1.357,3,0,2
+CM4499,65,19.6,1,0,22.35,normal weight,1,1,1,T2N0M0,1,7.41,6,0.843,2,0,0
+CM4503,60,25,0,0,25.61,overweight,2,1,1,T4N0M0,4,85.34,5,0.739,4,0,0
+CM4519,62,15.3,0,0,23.98,normal weight,1,1,1,T4N0M1b,4,89.34,9,1.162,4,0,2
+CM4528,57,23.9,0,0,31.25,obese,2,1,1,T2bN0M1b,4,56.76,8,0.969,2,0,2
+CM4549,77,30.7,1,0,33.57,obese,3,1,1,T4N0M0,4,35.58,6,1.481,4,0,0
+CM4556,65,26.9,1,0,23.14,normal weight,2,1,1,T3aN0M1b,4,4.68,8,0.708,3,0,2
+CM4559,64,36.9,1,0,20.78,normal weight,3,1,1,T1N0M0,1,10.21,6,0.803,1,0,0
+CM4567,68,28.6,1,0,22.56,normal weight,2,1,1,T2N0M0,2,18.14,7,0.804,2,0,0
+CM4574,82,14.7,1,1,20.46,normal weight,1,1,1,T4N1M0,4,144.03,6,0.886,4,1,0
+CM4577,69,22.7,1,0,26.35,overweight,2,1,1,T3bN0M0,3,48.45,7,1.003,3,0,0
+CM4578,77,28.3,1,0,21.24,normal weight,2,1,1,T2aN0M0,1,14.57,6,0.76,2,0,0
+CM4579,72,13.2,0,0,30.21,obese,1,1,1,T3N0M0,3,58.97,6,0.837,3,0,0
+CM4582,59,31.5,0,0,20.79,normal weight,3,1,1,T4N0M0,4,97.12,10,1.395,4,0,0
+CM4595,58,28.3,0,0,23.9,normal weight,2,1,1,T3N1M1b,4,23.16,9,1.298,3,1,2
+CM4600,89,28.4,0,0,20.3,normal weight,2,1,1,T2aN0M0,2,76.35,6,0.777,2,0,0
+CM4602,62,12.9,1,0,35.12,obese,1,1,1,T3aN1M1b,4,46.24,6,1.05,3,1,2
+CM4613,59,24.6,0,0,23.3,normal weight,2,1,1,T4N0M1b,4,58.14,6,0.881,4,0,2
+CM4617,76,31.7,0,0,29.07,overweight,3,1,1,T4N1M1b,4,12.35,7,1.003,4,1,2
+CM4620,63,27.9,0,0,22.12,normal weight,2,1,1,T3aN1M0,4,21.58,6,1.039,3,1,0
+CM4631,69,16.9,0,0,30.21,obese,1,1,1,T2N0M0,1,80.1,9,0.577,2,0,0
+CM4634,62,21,0,0,20.14,normal weight,2,1,1,T4N1M0,4,214.35,7,1.037,4,1,0
+CM4639,66,16.4,1,0,22.06,normal weight,1,1,1,T4N1M0,4,56.47,8,0.989,4,1,0
+CM4643,71,22.6,0,0,22,normal weight,2,1,1,T2cN0M0,2,61.93,6,0.805,2,0,0
+CM4664,80,32.3,0,0,26,overweight,3,1,1,T4N0M1b,4,47.02,7,0.739,4,0,2
+CM4665,74,27.6,1,1,19.21,normal weight,2,1,1,T4N1M1b,4,121,7,0.847,4,1,2
+CM4671,65,37.4,0,0,31.21,obese,3,1,1,T4N1M1b,4,106.18,9,0.993,4,1,2
+CM4674,81,31.8,0,0,26.12,overweight,3,1,1,T4N0M1b,4,69.32,6,0.745,4,0,2
+CM4677,59,21.8,0,0,25.76,overweight,2,1,1,T3bN0M1c,4,108,6,0.617,3,0,3
+CM4678,66,21.3,0,0,23.03,normal weight,2,1,1,T3aN0M0,3,49.39,6,0.682,3,0,0
+CM4682,73,19.4,1,0,29.15,overweight,1,1,1,T3bN0M0,3,79.64,9,1.166,3,0,0
+CM4685,65,24.7,1,0,26.78,overweight,2,1,1,T3bN1M1b,4,89,7,1.174,3,1,2
+CM4691,69,13.2,1,0,22.89,normal weight,1,1,1,T4N0M0,4,82.95,8,1.133,4,0,0
+CM4696,85,21.9,1,0,19.57,normal weight,2,1,1,T4N0M1b,4,178.3,7,1.723,4,0,2
+CM4704,63,32.8,1,0,21.68,normal weight,3,1,1,T4N1M1b,4,150.69,9,1.673,4,1,2
+CM4709,66,22.7,1,0,22.99,normal weight,2,1,1,T3aN0M0,3,30,7,0.985,3,0,0
+CM4724,47,34.9,0,0,29.15,overweight,3,1,1,T4N1M1b,4,3.47,6,1.024,4,1,2
+CM4729,75,28,1,0,20.7,normal weight,2,1,1,T4N1M1b,4,220.49,9,2.077,4,1,2
+CM4734,75,21.1,0,0,20.16,normal weight,2,1,1,T2cN0M0,2,50.27,6,1.496,2,0,0
+CM4736,72,16.1,1,0,24.35,normal weight,1,1,1,T2bN0M0,1,8.35,5,0.578,2,0,0
+CM4738,79,28,1,0,24.8,normal weight,2,1,1,T4N1M1c,4,123.1,9,1.001,4,1,3
+CM4739,57,35.1,0,0,24.98,normal weight,3,1,1,T4N1M1b,4,129.27,7,1.462,4,1,2
+CM4748,78,26.8,0,0,21.86,normal weight,2,1,1,T2N0M0,2,36.14,6,0.808,2,0,0
+CM4749,77,16.1,1,0,22.35,normal weight,1,1,1,T4N0M1b,4,87.06,7,0.695,4,0,2
+CM4752,80,32,1,0,23.66,normal weight,3,1,1,T3aN0M0,3,54.66,7,0.692,3,0,0
+CM4755,61,25.5,1,0,23.14,normal weight,2,1,1,T2bN0M0,2,82.04,7,0.848,2,0,0
+CM4768,54,15.7,1,1,26.04,overweight,1,1,1,T4N1M1b,4,154.36,10,0.718,4,1,2
+CM4769,61,25.3,1,0,17.58,underweight,2,1,1,T2bN0M1b,4,43.64,7,0.827,2,0,2
+CM4770,80,35.5,1,0,28.1,overweight,3,1,1,T4N0M0,4,1.04,6,0.653,4,0,0
+CM4771,64,17.6,0,0,14.12,underweight,1,1,1,T2N0M0,1,104.9,6,0.856,2,0,0
+CM4773,69,29.6,1,0,31.51,obese,2,1,1,T3N0M1b,4,18,6,0.892,3,0,2
+CM4781,70,29.9,1,0,25.12,overweight,2,1,1,T2bN0M1b,4,21.19,7,1.011,2,0,2
+CM4786,78,32.5,0,0,14.53,underweight,3,1,1,T4N1M1b,4,49.5,8,1.333,4,1,2
+CM4791,73,17,1,0,23.64,normal weight,1,1,1,T3aN1M1b,4,28.16,8,1.495,3,1,2
+CM4799,63,25.9,0,0,30.15,obese,2,1,1,T4N0M0,4,128.41,7,1.349,4,0,0
+CM4806,73,25.3,1,0,26.08,overweight,2,1,1,T3aN0M0,3,12.4,6,0.792,3,0,0
+CM4815,59,31.1,0,0,21.26,normal weight,3,1,1,T3bN0M0,3,5.49,8,0.865,3,0,0
+CM4817,74,21.2,1,0,24.77,normal weight,2,1,1,T4N0M1b,4,143.75,9,1.589,4,0,2
+CM4818,69,20.9,1,1,32.14,obese,2,1,1,T4N0M0,4,90.12,7,1.055,4,0,0
+CM4820,76,35.2,1,0,21.26,normal weight,3,1,1,T3bN0M0,3,71.88,7,1.028,3,0,0
+CM4823,70,13.5,0,0,24.22,normal weight,1,1,1,T2bN0M0,2,22.15,6,0.663,2,0,0
+CM4826,80,16.3,0,1,23.36,normal weight,1,1,1,T4N0M0,4,74.17,8,1.539,4,0,0
+CM4850,66,23.4,1,0,17.21,underweight,2,1,1,T4N0M1b,4,94.78,7,0.918,4,0,2
+CM4856,88,25.3,0,0,19.14,normal weight,2,1,1,T4N1M1c,4,48.38,8,1.014,4,1,3
+CM4858,71,36.5,0,0,29.31,overweight,3,1,1,T3aN0M0,3,27.06,7,0.902,3,0,0
+CM4861,65,23,1,0,21.61,normal weight,2,1,1,T4N1M1b,4,45.21,9,0.93,4,1,2
+CM4862,63,32.4,0,0,24.51,normal weight,3,1,1,T4N1M0,4,32.29,7,1.045,4,1,0
+CM4864,80,18.3,0,0,18.14,underweight,1,1,1,T4N0M1b,4,85.72,6,0.931,4,0,2
+CM4870,83,31,1,0,25.45,overweight,3,1,1,T2N0M0,2,115.71,6,0.566,2,0,0
+CM4872,80,14.6,1,1,24.35,normal weight,1,1,1,T4N0M1b,4,21.3,7,1.283,4,0,2
+CM4873,79,21,0,0,20.57,normal weight,2,1,1,T4N1M1b,4,17.41,7,1.527,4,1,2
+CM4874,82,19,1,0,17.21,underweight,1,1,1,T4N3M1b,4,82.88,9,1.589,4,3,2
+CM4880,78,19.7,0,0,24.22,normal weight,1,1,1,T2aN0M0,1,14.16,6,0.643,2,0,0
+CM4892,78,26.4,0,0,21.97,normal weight,2,1,1,T3N0M1b,3,12.47,7,1.357,3,0,2
+CM4893,68,42.6,0,0,23.88,normal weight,3,1,1,T3aN0M0,3,7.72,6,1.703,3,0,0
+CM4895,57,19.1,1,0,26.77,overweight,1,1,1,T3aN0M0,3,9.63,7,0.828,3,0,0
+CM4907,69,21.9,1,0,21.88,normal weight,2,1,1,T4N0M1b,4,121.56,6,0.762,4,0,2
+CM4915,75,45.1,0,0,19.05,normal weight,3,1,1,T3bN0M0,3,70.65,6,0.776,3,0,0
+CM4924,79,21.2,0,0,20.9,normal weight,2,1,1,T4N0M0,4,19.19,7,1.07,4,0,0
+CM4925,92,19.2,1,0,19.61,normal weight,1,1,1,T2N0M0,1,68.09,7,0.554,2,0,0
+CM4927,76,28.9,1,0,23.88,normal weight,2,1,1,T2N0m0,2,8.21,8,0.79,2,0,NA
+CM4931,59,38.3,0,0,22.15,normal weight,3,1,1,T4N0M1b,4,31.24,8,1.138,4,0,2
+CM4935,83,29.3,1,1,23.12,normal weight,2,1,1,T3aN0M0,3,97.2,6,0.881,3,0,0
+CM4937,48,27.2,1,0,25.26,overweight,2,1,1,T4N1M1b,4,14.17,8,1.694,4,1,2
+CM4942,66,36.7,0,0,21.97,normal weight,3,1,1,T4N1M1b,4,84.77,6,0.72,4,1,2
+CM4943,65,26.8,1,0,21.36,normal weight,2,1,1,T4N0M0,4,33.93,7,0.893,4,0,0
+CM4945,66,30.7,0,0,24.22,normal weight,3,1,1,T2bN0M0,1,3.77,7,0.888,2,0,0
+CM4947,60,13.1,1,0,28.41,overweight,1,1,1,T4N1M1b,4,40.17,9,1.127,4,1,2
+CM4948,69,25.6,1,0,22.23,normal weight,2,1,1,T3N0M1b,4,76.16,7,0.654,3,0,2
+CM4955,85,25.4,1,0,24.22,normal weight,2,1,1,T4N1M1b,4,150.81,6,0.912,4,1,2
+CM4956,69,16,1,0,23.44,normal weight,1,1,1,T4N0M1b,4,78.89,7,0.797,4,0,2
+CM4958,81,14.4,1,0,27.73,overweight,1,1,1,T4N0M0,4,5.76,7,0.82,4,0,0
+CM4967,68,20.3,1,1,19.92,normal weight,2,1,1,T4N1M1b,4,59.38,8,0.923,4,1,2
+CM4977,70,35.6,0,0,22.68,normal weight,3,1,1,T3aN0M0,3,53.16,6,0.849,3,0,0
+CM4979,74,24.9,0,0,22.31,normal weight,2,1,1,T2aN0M0,1,8.73,6,0.673,2,0,0
+CM4987,72,31.1,0,0,33.06,obese,3,1,1,T4N1M1b,4,43.12,9,1.515,4,1,2
+CM4988,80,16.9,1,0,24.8,normal weight,1,1,1,T3aN0M0,3,49.72,7,0.676,3,0,0
+CM4992,74,14.4,1,1,21.61,normal weight,1,1,1,T3aN0M1b,4,77.45,8,0.59,3,0,2
+CM4995,82,24.3,0,0,22.53,normal weight,2,1,1,T3bN0M1b,4,53.32,7,0.496,3,0,2
+CM4997,73,40.9,1,0,28.12,overweight,3,1,1,T3bN0M0,3,84.94,8,0.715,3,0,0
+CN7157,57,21.9,0,0,23.12,normal weight,2,0,1,NA,NA,1.68,NA,0.695,NA,NA,NA
+CN7158,57,24.5,0,0,18.24,underweight,2,0,1,NA,NA,0.39,NA,0.816,NA,NA,NA
+CN7167,68,17.9,1,0,22.13,normal weight,1,0,1,NA,NA,1.23,NA,1.421,NA,NA,NA
+CN7190,59,27.7,0,0,16.14,underweight,2,0,1,NA,NA,1.63,NA,0.75,NA,NA,NA
+CN7193,66,30.5,0,0,22.96,normal weight,3,0,1,NA,NA,0.93,NA,0.893,NA,NA,NA
+CN7197,59,22.6,1,0,23.56,normal weight,2,0,1,NA,NA,1.02,NA,0.695,NA,NA,NA
+CN7204,72,13.8,0,0,24.86,normal weight,1,0,1,NA,NA,3.11,NA,0.824,NA,NA,NA
+CN7221,69,25.5,1,0,18.21,underweight,2,0,1,NA,NA,2.14,NA,0.809,NA,NA,NA
+CN7243,65,24.3,1,0,23.38,normal weight,2,0,1,NA,NA,1.83,NA,1.105,NA,NA,NA
+CN7248,77,30.8,1,0,19.35,normal weight,3,0,1,NA,NA,3.24,NA,0.532,NA,NA,NA
+CN7261,65,17.2,1,0,21.37,normal weight,1,0,1,NA,NA,1.47,NA,0.927,NA,NA,NA
+CN7262,75,30.3,1,0,20.14,normal weight,3,0,1,NA,NA,1.24,NA,0.71,NA,NA,NA
+CN7270,74,29.7,0,0,21.31,normal weight,2,0,1,NA,NA,1.46,NA,0.759,NA,NA,NA
+CN7272,61,28.1,1,0,29.86,overweight,2,0,1,NA,NA,2.33,NA,1.231,NA,NA,NA
+CN7285,66,13.3,0,0,23.58,normal weight,1,0,1,NA,NA,3.3,NA,1.266,NA,NA,NA
+CN7296,76,32.2,1,0,23.13,normal weight,3,0,1,NA,NA,3.4,NA,0.812,NA,NA,NA
+CN7307,66,15.8,0,0,22.38,normal weight,1,0,1,NA,NA,0.67,NA,0.648,NA,NA,NA
+CN7311,62,39.5,0,0,23.46,normal weight,3,0,1,NA,NA,1.65,NA,0.742,NA,NA,NA
+CN7324,85,31.9,1,0,24.18,normal weight,3,0,1,NA,NA,1.05,NA,0.888,NA,NA,NA
+CN7334,62,28.3,0,0,20.85,normal weight,2,0,1,NA,NA,0.68,NA,0.885,NA,NA,NA
+CN7337,73,12.8,0,0,23.08,normal weight,1,0,1,NA,NA,1.86,NA,0.95,NA,NA,NA
+CN7340,72,28,1,0,19.4,normal weight,2,0,1,NA,NA,0.14,NA,1.12,NA,NA,NA
+CN7341,79,23.3,1,0,22.38,normal weight,2,0,1,NA,NA,2.01,NA,0.933,NA,NA,NA
+CN7345,69,18.6,0,0,27.5,overweight,1,0,1,NA,NA,1.77,NA,0.907,NA,NA,NA
+CN7379,74,26.3,0,0,25.48,overweight,2,0,1,NA,NA,3.01,NA,0.641,NA,NA,NA
+CN7385,63,29.3,1,0,26.53,overweight,2,0,1,NA,NA,1.71,NA,0.982,NA,NA,NA
+CN7393,54,12.9,1,0,19.15,normal weight,1,0,1,NA,NA,2.29,NA,1.076,NA,NA,NA
+CN7403,77,21.5,1,0,24.56,normal weight,2,0,1,NA,NA,2.21,NA,0.99,NA,NA,NA
+CN7412,63,19.4,0,0,20.52,normal weight,1,0,1,NA,NA,2.26,NA,0.965,NA,NA,NA
+CN7430,72,24.9,1,0,21.04,normal weight,2,0,1,NA,NA,3.04,NA,1.106,NA,NA,NA
+CN7459,73,17.7,0,0,22.96,normal weight,1,0,1,NA,NA,2.42,NA,0.838,NA,NA,NA
+CN7460,82,34.4,0,0,23.54,normal weight,3,0,1,NA,NA,2.93,NA,0.892,NA,NA,NA
+CN7467,63,30.6,1,0,21.67,normal weight,3,0,1,NA,NA,1.32,NA,0.904,NA,NA,NA
+CN7479,69,24.3,1,0,31.4,obese,2,0,1,NA,NA,1.98,NA,0.851,NA,NA,NA
+CN7501,83,29.5,0,0,22.21,normal weight,2,0,1,NA,NA,3.43,NA,0.779,NA,NA,NA
+CN7508,84,15.2,0,0,27,overweight,1,0,1,NA,NA,1.4,NA,0.636,NA,NA,NA
+CN7524,78,26.8,1,0,22.68,normal weight,2,0,1,NA,NA,1.42,NA,1.15,NA,NA,NA
+CN7531,84,23.2,0,0,27.43,overweight,2,0,1,NA,NA,1.69,NA,0.583,NA,NA,NA
+CN7533,84,33.7,1,0,19.27,normal weight,3,0,1,NA,NA,1.57,NA,0.878,NA,NA,NA
+CN7541,69,22.9,1,0,26.73,overweight,2,0,1,NA,NA,1.41,NA,1.283,NA,NA,NA
+CN7560,78,17.6,1,0,25,overweight,1,0,1,NA,NA,0.88,NA,0.817,NA,NA,NA
+CN7562,70,26.1,0,0,22.15,normal weight,2,0,1,NA,NA,1.53,NA,1.276,NA,NA,NA
+CN7564,73,39,0,0,23.6,normal weight,3,0,1,NA,NA,1.61,NA,0.883,NA,NA,NA
+CN7567,80,34.1,0,0,19.15,normal weight,3,0,1,NA,NA,1.78,NA,0.632,NA,NA,NA
+CN7568,78,20,1,0,20.95,normal weight,2,0,1,NA,NA,1.66,NA,1.026,NA,NA,NA
+CN7570,81,29,1,0,23.91,normal weight,2,0,1,NA,NA,3.11,NA,0.83,NA,NA,NA
+CN7576,70,17.2,1,0,23.45,normal weight,1,0,1,NA,NA,2.37,NA,0.798,NA,NA,NA
+CN7586,64,29.9,0,0,19.21,normal weight,2,0,1,NA,NA,0.01,NA,0.66,NA,NA,NA
+CN7593,71,29.1,0,0,17.68,underweight,2,0,1,NA,NA,1.44,NA,1.178,NA,NA,NA
+CN7606,79,18.3,0,0,26.07,overweight,1,0,1,NA,NA,0.17,NA,0.922,NA,NA,NA
+CN7637,80,23.5,1,0,18.55,normal weight,2,0,1,NA,NA,2.44,NA,0.88,NA,NA,NA
+CN7652,79,18.2,1,0,20.87,normal weight,1,0,1,NA,NA,0.3,NA,0.871,NA,NA,NA
+CN7673,47,36.3,0,0,30.8,obese,3,0,1,NA,NA,3.08,NA,0.764,NA,NA,NA
+CN7674,64,15.3,1,0,24.61,normal weight,1,0,1,NA,NA,2.56,NA,1.304,NA,NA,NA
+CN7685,75,23.8,0,0,25.35,overweight,2,0,1,NA,NA,2.05,NA,0.649,NA,NA,NA
+CN7712,80,18,0,0,30.08,obese,1,0,1,NA,NA,2.13,NA,0.832,NA,NA,NA
+CN7717,68,34.8,1,0,16.82,underweight,3,0,1,NA,NA,1.59,NA,1.068,NA,NA,NA
+CN7719,67,17,0,0,22.48,normal weight,1,0,1,NA,NA,3.07,NA,0.704,NA,NA,NA
+CN7725,71,22.5,1,0,22.19,normal weight,2,0,1,NA,NA,1.76,NA,0.701,NA,NA,NA
+CN7727,76,27.2,0,0,27.52,overweight,2,0,1,NA,NA,2.78,NA,1.171,NA,NA,NA
+CN7746,82,25.1,1,0,21.13,normal weight,2,0,1,NA,NA,2.83,NA,0.871,NA,NA,NA
+CN7749,79,27.2,0,0,31.46,obese,2,0,1,NA,NA,2.76,NA,1.073,NA,NA,NA
+CN7759,79,27,0,0,23.45,normal weight,2,0,1,NA,NA,2.96,NA,0.847,NA,NA,NA
+CN7760,90,23.6,0,0,15.85,underweight,2,0,1,NA,NA,2.21,NA,0.845,NA,NA,NA
+CN7763,78,14.4,0,0,24.62,normal weight,1,0,1,NA,NA,1.62,NA,1.254,NA,NA,NA
+CN7768,81,27.7,1,0,20.62,normal weight,2,0,1,NA,NA,2.11,NA,0.79,NA,NA,NA
+CN7789,81,16.9,1,0,25.08,overweight,1,0,1,NA,NA,0.7,NA,0.741,NA,NA,NA
+CN7796,75,34.8,0,0,21.68,normal weight,3,0,1,NA,NA,2.56,NA,0.591,NA,NA,NA
+CN7801,69,17.7,1,0,25.58,overweight,1,0,1,NA,NA,0.23,NA,1.485,NA,NA,NA
+CN7804,78,39.8,1,0,19.12,normal weight,3,0,1,NA,NA,1.27,NA,0.568,NA,NA,NA
+CN7805,68,31.4,0,0,23.56,normal weight,3,0,1,NA,NA,1.14,NA,0.911,NA,NA,NA
+CN7808,59,19.6,1,0,26.6,overweight,1,0,1,NA,NA,0.73,NA,0.632,NA,NA,NA
+CN7809,59,21.7,1,0,17.89,underweight,2,0,1,NA,NA,1.54,NA,0.656,NA,NA,NA
+CN7816,65,27.9,0,0,18.56,normal weight,2,0,1,NA,NA,0.97,NA,1.308,NA,NA,NA
+CN7818,75,18.7,0,0,27.68,overweight,1,0,1,NA,NA,0.42,NA,0.77,NA,NA,NA
+CN7820,65,27.9,1,0,24.56,normal weight,2,0,1,NA,NA,1.86,NA,0.747,NA,NA,NA
+CN7827,66,16.3,1,0,20.4,normal weight,1,0,1,NA,NA,3.95,NA,0.549,NA,NA,NA
+CN7829,53,30,0,0,17.85,underweight,3,0,1,NA,NA,2.75,NA,1.1,NA,NA,NA
+CN7851,75,26.3,0,0,22.39,normal weight,2,0,1,NA,NA,0.98,NA,0.513,NA,NA,NA
+CN7863,58,24.8,0,0,30.5,obese,2,0,1,NA,NA,1.85,NA,0.448,NA,NA,NA
+CN7865,65,33.9,1,0,19.37,normal weight,3,0,1,NA,NA,1.07,NA,1.959,NA,NA,NA
+CN7869,77,16.3,0,0,29.12,overweight,1,0,1,NA,NA,1.65,NA,0.775,NA,NA,NA
+CN7880,68,31.8,0,0,20.94,normal weight,3,0,1,NA,NA,1.84,NA,0.503,NA,NA,NA
+CN7902,55,28.3,1,0,22.68,normal weight,2,0,1,NA,NA,2.16,NA,0.645,NA,NA,NA
+CN7916,71,25.7,1,0,24.17,normal weight,2,0,1,NA,NA,2.42,NA,1.232,NA,NA,NA
+CN7919,72,32.1,0,0,29.07,overweight,3,0,1,NA,NA,0.89,NA,0.748,NA,NA,NA
+CN7932,52,18.9,0,0,24.19,normal weight,1,0,1,NA,NA,0.64,NA,0.667,NA,NA,NA
+CN7941,63,26.9,0,0,20.45,normal weight,2,0,1,NA,NA,1.18,NA,0.644,NA,NA,NA
+CN7962,78,19.2,1,0,24.14,normal weight,1,0,1,NA,NA,1.91,NA,1.509,NA,NA,NA
+CN7968,47,28.3,1,0,16.41,underweight,2,0,1,NA,NA,0.37,NA,1.103,NA,NA,NA
+CN7975,73,15,1,0,23.82,normal weight,1,0,1,NA,NA,1.45,NA,0.523,NA,NA,NA
+CN7979,60,12.1,1,0,19.15,normal weight,1,0,1,NA,NA,0.19,NA,0.591,NA,NA,NA
+CN7981,78,28.1,0,0,24.46,normal weight,2,0,1,NA,NA,1.64,NA,1.16,NA,NA,NA
+CN7989,72,18.6,1,0,22.68,normal weight,1,0,1,NA,NA,1.52,NA,0.66,NA,NA,NA
+CN8001,57,24.2,1,0,23.56,normal weight,2,0,1,NA,NA,1.38,NA,0.416,NA,NA,NA
+CN8003,65,17.2,0,0,18.79,normal weight,1,0,1,NA,NA,2.18,NA,0.929,NA,NA,NA
+CN8009,47,28.6,0,0,23.39,normal weight,2,0,1,NA,NA,0.74,NA,1.811,NA,NA,NA
+CN8012,63,18.4,0,0,25.64,overweight,1,0,1,NA,NA,0.21,NA,0.585,NA,NA,NA
+CN8018,75,21.7,1,0,29.71,overweight,2,0,1,NA,NA,2.88,NA,0.769,NA,NA,NA
+CN8019,60,32.7,1,0,27.5,overweight,3,0,1,NA,NA,3.26,NA,1.25,NA,NA,NA
+CN8039,48,13.6,0,0,23.74,normal weight,1,0,1,NA,NA,0.63,NA,0.562,NA,NA,NA
+CN8048,71,25.5,1,0,22.13,normal weight,2,0,1,NA,NA,2.47,NA,0.861,NA,NA,NA
+CN8052,58,17.8,0,0,26.52,overweight,1,0,1,NA,NA,1.06,NA,0.583,NA,NA,NA
+CN8056,74,25.5,1,0,21.19,normal weight,2,0,1,NA,NA,2.19,NA,0.88,NA,NA,NA
+CN8075,50,16.3,1,0,20.45,normal weight,1,0,1,NA,NA,1.17,NA,1.015,NA,NA,NA
+CN8092,58,14.1,0,0,26.25,overweight,1,0,1,NA,NA,1.16,NA,0.746,NA,NA,NA
+CN8093,71,25.1,0,0,24.75,normal weight,2,0,1,NA,NA,2.88,NA,0.511,NA,NA,NA
+CN8103,58,20.9,0,0,30.57,obese,2,0,1,NA,NA,0.47,NA,0.909,NA,NA,NA
+CN8108,56,16.8,0,0,16.8,underweight,1,0,1,NA,NA,2.61,NA,0.477,NA,NA,NA
+CN8118,56,27.5,1,0,23.34,normal weight,2,0,1,NA,NA,1.23,NA,0.774,NA,NA,NA
+CN8121,58,17.8,0,0,26.14,overweight,1,0,1,NA,NA,1.78,NA,1.218,NA,NA,NA
+CN8124,70,35.8,0,0,25.58,overweight,3,0,1,NA,NA,2.22,NA,0.772,NA,NA,NA
+CN8126,65,16.7,0,0,23,normal weight,1,0,1,NA,NA,1.67,NA,0.979,NA,NA,NA
+CN8142,74,24.8,0,0,24.56,normal weight,2,0,1,NA,NA,3.48,NA,0.483,NA,NA,NA
+CN8150,76,18.4,0,0,23,normal weight,1,0,1,NA,NA,1.53,NA,1.16,NA,NA,NA
+CN8152,67,23.2,1,0,21.61,normal weight,2,0,1,NA,NA,0.99,NA,0.545,NA,NA,NA
+CN8158,81,16.4,0,0,21.48,normal weight,1,0,1,NA,NA,3.19,NA,0.841,NA,NA,NA
+CN8162,62,18.7,0,0,16.7,underweight,1,0,1,NA,NA,1.39,NA,0.624,NA,NA,NA
+CN8169,82,24.2,1,0,23.56,normal weight,2,0,1,NA,NA,2.05,NA,0.441,NA,NA,NA
+CN8183,66,19.3,0,0,17.68,underweight,1,0,1,NA,NA,2.62,NA,0.723,NA,NA,NA
+CN8187,70,35.8,0,0,22.16,normal weight,3,0,1,NA,NA,1.37,NA,1.253,NA,NA,NA
+CN8200,83,18.7,0,0,21.71,normal weight,1,0,1,NA,NA,3.72,NA,0.627,NA,NA,NA
+CN8213,65,30.2,0,0,27.12,overweight,3,0,1,NA,NA,0.91,NA,1.486,NA,NA,NA
+CN8218,74,24.6,1,0,21.25,normal weight,2,0,1,NA,NA,2.45,NA,0.389,NA,NA,NA
+CN8233,76,22.7,1,0,17.19,underweight,2,0,1,NA,NA,1.79,NA,0.685,NA,NA,NA
+CN8235,64,19.7,1,0,25.47,overweight,1,0,1,NA,NA,1.35,NA,0.646,NA,NA,NA
+CN8243,76,21.1,1,0,29.56,overweight,2,0,1,NA,NA,1.99,NA,0.819,NA,NA,NA
+CN8264,81,19.8,1,0,25.38,overweight,1,0,1,NA,NA,1.49,NA,1.341,NA,NA,NA
+CN8284,67,29.3,1,0,20.08,normal weight,2,0,1,NA,NA,2.1,NA,0.836,NA,NA,NA
+CN8288,70,17.8,0,0,18.36,underweight,1,0,1,NA,NA,2.03,NA,0.683,NA,NA,NA
+CN8303,83,27.5,1,0,19.95,normal weight,2,0,1,NA,NA,1.62,NA,1.564,NA,NA,NA
+CN8304,68,32.3,0,0,30.92,obese,3,0,1,NA,NA,0.57,NA,0.811,NA,NA,NA
+CN8311,76,28.7,1,0,25.95,overweight,2,0,1,NA,NA,2.86,NA,0.712,NA,NA,NA
+CN8312,88,14.3,1,0,20.08,normal weight,1,0,1,NA,NA,2.61,NA,1.136,NA,NA,NA
+CN8315,64,13.9,0,0,28.99,overweight,1,0,1,NA,NA,2.59,NA,0.624,NA,NA,NA
+CN8323,70,21.5,0,0,22.18,normal weight,2,0,1,NA,NA,0.54,NA,0.785,NA,NA,NA
+CN8327,67,33.9,1,0,26.19,overweight,3,0,1,NA,NA,1.29,NA,0.936,NA,NA,NA
+CN8346,82,29.5,1,0,19.56,normal weight,2,0,1,NA,NA,1.85,NA,1.238,NA,NA,NA
+CN8352,74,18.2,1,0,26.01,overweight,1,0,1,NA,NA,1.9,NA,1.095,NA,NA,NA
+CN8355,87,24.2,1,0,24.68,normal weight,2,0,1,NA,NA,1.93,NA,0.481,NA,NA,NA
+CN8382,70,28,1,0,34.56,obese,2,0,1,NA,NA,0.86,NA,0.738,NA,NA,NA
+CN8385,72,18.1,1,0,19.1,normal weight,1,0,1,NA,NA,1.58,NA,0.705,NA,NA,NA
+CN8388,82,24.3,0,0,23.14,normal weight,2,0,1,NA,NA,1.75,NA,0.854,NA,NA,NA
+CN8389,64,19.1,1,0,14.6,underweight,1,0,1,NA,NA,1.08,NA,0.967,NA,NA,NA
+CN8398,80,28.1,1,0,23.81,normal weight,2,0,1,NA,NA,2.26,NA,0.736,NA,NA,NA
+CN8404,69,25.1,0,0,28.44,overweight,2,0,1,NA,NA,1.56,NA,1.256,NA,NA,NA
+CN8412,71,27.8,1,0,24.37,normal weight,2,0,1,NA,NA,0.95,NA,0.753,NA,NA,NA
+CN8418,64,23,0,0,22.86,normal weight,2,0,1,NA,NA,0.09,NA,0.573,NA,NA,NA
+CN8429,70,19.7,1,0,17.24,underweight,1,0,1,NA,NA,1.51,NA,0.532,NA,NA,NA
+CN8433,80,24.2,0,0,24.56,normal weight,2,0,1,NA,NA,2.56,NA,0.719,NA,NA,NA
+CN8446,77,31.8,1,0,21.85,normal weight,3,0,1,NA,NA,2.98,NA,0.77,NA,NA,NA
+CN8451,55,23.4,1,0,17.5,underweight,2,0,1,NA,NA,1.7,NA,1.035,NA,NA,NA
+CN8465,67,31.9,1,0,20.66,normal weight,3,0,1,NA,NA,2.4,NA,0.633,NA,NA,NA
+CN8471,55,22.2,0,0,25.34,overweight,2,0,1,NA,NA,1.21,NA,0.856,NA,NA,NA
+CN8477,80,17.6,0,0,22.65,normal weight,1,0,1,NA,NA,1.87,NA,0.781,NA,NA,NA
+CN8485,47,27.3,1,0,18.74,normal weight,2,0,1,NA,NA,0.29,NA,1.208,NA,NA,NA
+CN8486,81,30.1,0,0,23.89,normal weight,3,0,1,NA,NA,1,NA,0.61,NA,NA,NA
+CN8491,64,19.3,0,0,25.72,overweight,1,0,1,NA,NA,2.34,NA,1.069,NA,NA,NA
+CN8494,81,28,1,0,21.45,normal weight,2,0,1,NA,NA,1.67,NA,0.653,NA,NA,NA
+CN8495,66,17.4,0,1,23.68,normal weight,1,0,1,NA,NA,0.6,NA,1.13,NA,NA,NA
+CN8506,77,22.1,0,0,22.94,normal weight,2,0,1,NA,NA,3.64,NA,0.346,NA,NA,NA
+CN8510,57,18.4,1,0,21.98,normal weight,1,0,1,NA,NA,1.15,NA,0.57,NA,NA,NA
+CN8513,64,26,1,0,22.68,normal weight,2,0,1,NA,NA,3.91,NA,1.21,NA,NA,NA
+CN8525,70,30.4,0,0,18.67,normal weight,3,0,1,NA,NA,2.17,NA,0.906,NA,NA,NA
+CN8539,82,35.4,1,0,17.84,underweight,3,0,1,NA,NA,2.63,NA,0.443,NA,NA,NA
+CN8541,67,19.7,0,0,23.97,normal weight,1,0,1,NA,NA,1.55,NA,0.7,NA,NA,NA
+CN8547,80,37.4,0,0,28.51,overweight,3,0,1,NA,NA,3.32,NA,1.129,NA,NA,NA
+CN8553,66,29.9,0,0,18.06,underweight,2,0,1,NA,NA,1.97,NA,0.684,NA,NA,NA
+CN8554,82,12.3,1,0,27.49,overweight,1,0,1,NA,NA,2.04,NA,1.056,NA,NA,NA
+CN8556,62,17.8,1,0,27.5,overweight,1,0,1,NA,NA,1.75,NA,0.725,NA,NA,NA
+CN8557,86,36.9,0,0,29.21,overweight,3,0,1,NA,NA,2.49,NA,1.587,NA,NA,NA
+CN8559,72,12.1,0,0,26.23,overweight,1,0,1,NA,NA,3.45,NA,0.785,NA,NA,NA
+CN8567,68,23.2,1,0,23.73,normal weight,2,0,1,NA,NA,3.26,NA,0.708,NA,NA,NA
+CN8571,60,26.5,1,0,23.21,normal weight,2,0,1,NA,NA,0.75,NA,0.952,NA,NA,NA
+CN8594,80,18.7,0,0,28.57,overweight,1,0,1,NA,NA,2.8,NA,0.83,NA,NA,NA
+CN8598,85,26.5,1,0,19.88,normal weight,2,0,1,NA,NA,1.95,NA,0.503,NA,NA,NA
+CN8604,67,30.8,1,0,27.51,overweight,3,0,1,NA,NA,1.36,NA,0.91,NA,NA,NA
+CN8610,92,32.9,0,0,21.17,normal weight,3,0,1,NA,NA,1.42,NA,1.242,NA,NA,NA
+CN8614,66,22.3,1,0,29.79,overweight,2,0,1,NA,NA,0.59,NA,0.672,NA,NA,NA
+CN8619,71,25.7,0,0,20.92,normal weight,2,0,1,NA,NA,1.33,NA,1.694,NA,NA,NA
+CN8620,64,26.1,1,0,31.11,obese,2,0,1,NA,NA,0.71,NA,0.812,NA,NA,NA
+CN8628,68,14.7,1,0,25.75,overweight,1,0,1,NA,NA,0.9,NA,0.685,NA,NA,NA
+CN8646,76,25.1,1,0,24.31,normal weight,2,0,1,NA,NA,1.48,NA,0.675,NA,NA,NA
+CN8654,81,30,1,0,21.98,normal weight,3,0,1,NA,NA,1.39,NA,1.382,NA,NA,NA
+CN8662,69,16.3,0,0,22.76,normal weight,1,0,1,NA,NA,1.34,NA,1.022,NA,NA,NA
+CN8664,72,34.9,1,0,21.37,normal weight,3,0,1,NA,NA,0.56,NA,0.961,NA,NA,NA
+CN8673,66,18.8,0,0,22.2,normal weight,1,0,1,NA,NA,1.12,NA,1.031,NA,NA,NA
+CN8700,76,38.2,0,0,25.86,overweight,3,0,1,NA,NA,2.07,NA,0.457,NA,NA,NA
+CN8714,69,17.1,0,1,22.12,normal weight,1,0,1,NA,NA,1.82,NA,0.801,NA,NA,NA
+CN8715,72,22.7,1,0,24.02,normal weight,2,0,1,NA,NA,3.52,NA,0.701,NA,NA,NA
+CN8716,64,35.6,1,0,16.71,underweight,3,0,1,NA,NA,2.32,NA,0.982,NA,NA,NA
+CN8717,68,14.7,0,0,26.78,overweight,1,0,1,NA,NA,0.52,NA,0.653,NA,NA,NA
+CN8724,68,34.4,1,0,23.61,normal weight,3,0,1,NA,NA,1.69,NA,0.561,NA,NA,NA
+CN8732,70,30.5,0,0,25.46,overweight,3,0,1,NA,NA,2.66,NA,1.512,NA,NA,NA
+>>>>>>> 4d27b27e35d022eaaa53c5876c5272c63ef12993

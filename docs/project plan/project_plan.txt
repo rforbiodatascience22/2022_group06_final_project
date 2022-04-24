@@ -5,6 +5,7 @@ Q1) Any functions we really do need to show we can master?
 Q2) Can we do other kind of split than we suggested in the handed-in outline?
 Q3) When to use '::' and when not to?
 Q4) We have a problem with loading data, how much can we add to our load script?
+Q5) How can we guard against duplets in 02_clean.R?
 
 Project flow:
 1) 
@@ -18,7 +19,7 @@ while project == "not_finished":
   a) Case when (BMI into classifiers)
   b) Split in case of Family History?
   c) Split in case of DFT, smoking history and BMI 
-  d) Do some fancy mapping stuff perhaps? Not really sure how that works though
+  d) Do some fancy nesting stuff perhaps? Not really sure how that works though
   e) Can we find other stuff to add/alter?
 6) Do PCA
 7) Logistic Regression
