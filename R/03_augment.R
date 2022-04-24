@@ -28,7 +28,6 @@ patient_info <- patient_info %>%
 #Data points that do not follow the standard naming convention 
 #are left as "NA", convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
-  #select(TNM) %>% 
   mutate(Tumor = case_when(str_detect(TNM,"T0.+") ~ 0,
                            str_detect(TNM,"T1.+") ~ 1,
                            str_detect(TNM,"T2.+") ~ 2,
