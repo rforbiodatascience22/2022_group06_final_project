@@ -35,3 +35,4 @@ summary(cars)
 knitr::include_graphics("../results/BigPlot.png")
 ```
 
+## Slide with PCA
