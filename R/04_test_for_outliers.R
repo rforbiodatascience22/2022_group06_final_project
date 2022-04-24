@@ -69,9 +69,9 @@ BigPlot <- (AgePlot + FatIntakePlot + PSAPlot) /
   (GleasonPlot + mtDNAPlot) /
   (TumorPlot + NodesPlot + MetastasisPlot) +
   plot_annotation(title = "A plot of the nonbinary attributes, to examine distribution of outliers")
+
 ggsave(filename = 'results/BigPlot.png',
        plot = BigPlot,
        width = 10,
        height = 6.5)
-BigPlot
 
