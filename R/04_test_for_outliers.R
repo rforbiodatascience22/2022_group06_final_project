@@ -5,7 +5,7 @@ library(fs)
 data <- read_csv("data/03_dat_aug.csv")
 
 AgePlot <- data %>% 
-  ggplot(mapping = aes(x = Age, y = "")) +
+  ggplot(mapping = aes(y = Age, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -15,7 +15,7 @@ AgePlot <- data %>%
   theme_classic()
 
 FatIntakePlot <- data %>% 
-  ggplot(mapping = aes(x = Dfi, y = "")) +
+  ggplot(mapping = aes(y = Dfi, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -25,7 +25,7 @@ FatIntakePlot <- data %>%
   theme_classic()
 
 BMIPlot <- data %>% 
-  ggplot(mapping = aes(x = BMI, y = "")) +
+  ggplot(mapping = aes(y = BMI, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -35,7 +35,7 @@ BMIPlot <- data %>%
   theme_classic()
   
 AJCCPlot <- data %>% 
-  ggplot(mapping = aes(x = AJCC, y = "")) +
+  ggplot(mapping = aes(y = AJCC, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -45,7 +45,7 @@ AJCCPlot <- data %>%
   theme_classic()
 
 PSAPlot <- data %>% 
-  ggplot(mapping = aes(x = PSA, y = "")) +
+  ggplot(mapping = aes(y = PSA, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -55,7 +55,7 @@ PSAPlot <- data %>%
   theme_classic()
 
 GleasonPlot <- data %>% 
-  ggplot(mapping = aes(x = Gleason, y = "")) +
+  ggplot(mapping = aes(y = Gleason, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -65,7 +65,7 @@ GleasonPlot <- data %>%
   theme_classic()
 
 mtDNAPlot <- data %>% 
-  ggplot(mapping = aes(x = mtDNA, y = "")) +
+  ggplot(mapping = aes(y = mtDNA, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -75,7 +75,7 @@ mtDNAPlot <- data %>%
   theme_classic()
 
 TumorPlot <- data %>% 
-  ggplot(mapping = aes(x = Tumor, y = "")) +
+  ggplot(mapping = aes(y = Tumor, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -85,7 +85,7 @@ TumorPlot <- data %>%
   theme_classic()
 
 NodesPlot <- data %>% 
-  ggplot(mapping = aes(x = LymphNodes, y = "")) +
+  ggplot(mapping = aes(y = LymphNodes, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -95,7 +95,7 @@ NodesPlot <- data %>%
   theme_classic()
 
 MetastasisPlot <- data %>% 
-  ggplot(mapping = aes(x = Metastasis, y = "")) +
+  ggplot(mapping = aes(y = Metastasis, x = "")) +
   geom_boxplot() + 
   geom_point(position = position_jitter(w = 0.1, h = 0.2),
              alpha = 0.3) + 
@@ -104,14 +104,20 @@ MetastasisPlot <- data %>%
        y = "") + 
   theme_classic()
 
-BigPlot <- (AgePlot + FatIntakePlot + PSAPlot) / 
-  (BMIPlot + AJCCPlot) /
-  (GleasonPlot + mtDNAPlot) /
-  (TumorPlot + NodesPlot + MetastasisPlot) +
+Plot1 <- AgePlot + FatIntakePlot + PSAPlot + BMIPlot + mtDNAPlot +
+  plot_layout(ncol = 5) + 
   plot_annotation(title = "A plot of the nonbinary attributes, to examine distribution of outliers")
 
-ggsave(filename = 'results/BigPlot.png',
-       plot = BigPlot,
+Plot2 <- AJCCPlot + GleasonPlot + TumorPlot + NodesPlot + MetastasisPlot + 
+  plot_layout(ncol = 5) + 
+  plot_annotation(title = "A plot of the nonbinary attributes, to examine distribution of outliers")
+  
+ggsave(filename = 'results/OutlierPlot1.png',
+       plot = Plot1,
        width = 10,
        height = 6.5)
-BigPlot
+
+ggsave(filename = 'results/OutlierPlot2.png',
+       plot = Plot2,
+       width = 10,
+       height = 6.5)

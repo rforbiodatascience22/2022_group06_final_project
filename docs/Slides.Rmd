@@ -37,11 +37,18 @@ data <- read_csv("../data/03_dat_aug.csv")
 summary(data)
 ```
 
-## Slide with Image
+## Slide with half of the outliers
 
 ```{r out.width="100%",out.height="100%"}
-knitr::include_graphics("../results/BigPlot.png")
+knitr::include_graphics("../results/OutlierPlot1.png")
 ```
+
+## Slide with other half of the outliers
+
+```{r out.width="100%",out.height="100%"}
+knitr::include_graphics("../results/OutlierPlot2.png")
+```
+
 
 ## Slide with PCA
 
