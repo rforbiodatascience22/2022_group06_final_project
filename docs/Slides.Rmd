@@ -6,7 +6,10 @@ author:
  - name: "Eskild Fisker Angen, s184241"  
  - name: "Mathias Rahbek-Borre, s183447"  
  - name: "Joachim Breitenstein, s183460"  
-output: ioslides_presentation
+output:
+  ioslides_presentation:
+    #incremental: TRUE, enable to get "bullet point by bullet point"
+    smaller:  TRUE
 date: '2022-04-24'
 ---
 
@@ -63,6 +66,16 @@ knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
 
 ## Logistic regression
 ```{r}
-read_rds("../results/Logistic_regression.rds") %>% 
-  paged_table(options = list(cols.min.print = 6))
+read_rds("../results/Logistic_regression.rds") %>%
+  filter(term == str_match(term, "PSA")) %>% 
+  paged_table()
 ```
+```{r}
+data %>% 
+  select(Dfi_class, Group) %>% 
+  count(Dfi_class, Group) %>% 
+  distinct() %>% 
+  paged_table()
+```
+
+
