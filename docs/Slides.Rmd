@@ -13,6 +13,8 @@ date: '2022-04-24'
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
+library(rmarkdown)
+library(knitr)
 ```
 
 ## R Markdown
@@ -59,3 +61,14 @@ knitr::include_graphics(c("../results/pc1_vs_pc2.png",
                           "../results/pc1_pc2_weights.png"))
 ```
 
+## Interesting Boxplot
+```{r out.width="100%",out.height="100%"}
+knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
+```
+
+
+## Logistic regression
+```{r}
+read_rds("../results/Logistic_regression.rds") %>% 
+  paged_table(options = list(cols.min.print = 6))
+```

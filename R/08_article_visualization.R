@@ -19,7 +19,3 @@ ggplot(data,
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number in Han chinese with prostate cancer and healthy controls.") 
       
-    
-  
-
-

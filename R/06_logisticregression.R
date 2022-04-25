@@ -21,7 +21,7 @@ data_nested <- data_nested %>%
                              family = binomial(link = "logit"))))
 
 #Extract estimates and p-values among others
-data_nested_new <- data_nested %>% 
+data_nested <- data_nested %>% 
   # Make a new variable by extracting statistical values from model
   mutate(coef = map(mu_group,
                     ~tidy(.))) %>% 
@@ -40,6 +40,14 @@ data_nested_new <- data_nested %>%
   #Indicate whether significant or not
   mutate(identified_as = case_when(p.value < 0.05 ~ "Significant",
                                    p.value >= 0.05 ~ "Not significant"))
+
+
+# Save file
+data_nested %>% 
+  select(-data) %>%
+  mutate(estimate = round(estimate, 3),
+         p.value = round(p.value, 3)) %>% 
+  write_rds(file = "results/Logistic_regression.rds")
 #The above shows, that mtDNA has a correlation with cancer.
 # Except for people with Dfi_class = 3. More investigation to other factors,
 # which could correlate with cancer in the below

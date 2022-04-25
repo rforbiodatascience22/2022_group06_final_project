@@ -16,3 +16,6 @@ ggplot(data, mapping = aes(x = BMI,
   geom_boxplot() +
   scale_y_discrete(limits = c("low fat", "medium fat", "high fat"))
 
+ggsave(filename = "results/Boxplot_BMI_Dfi.png",
+       width = 10,
+       height = 7)
