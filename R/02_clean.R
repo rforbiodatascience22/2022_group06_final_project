@@ -10,9 +10,10 @@ is_duplicated <- filtered_data %>%
   filter(n() != 1)
 
 #print error if sample duplicates are present in the data frame
-if (dim(is_dublicated)[0] > 0) {
-  print(str("Number of duplicates in the dataset:", dim(is_duplicated)[0]))
+if (nrow(is_duplicated) > 0) {
+  printstr = nrow(is_duplicated)
+  print(paste("Number of duplicates in the dataset:", printstr))
 }
-
+#nrow(is_duplicated)
 filtered_data %>% 
   write_csv("data/02_dat_clean.csv")
