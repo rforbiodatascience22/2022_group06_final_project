@@ -210,4 +210,3 @@ ggsave(filename = 'results/OutlierPlot2.png',
        plot = Plot2,
        width = 10,
        height = 6.5)
-Plot2
