@@ -15,7 +15,7 @@ CM4067,60,18.9,0,0,27.82,overweight,low fat,1,1,T4N0M1b,4,65.8,7,1.457,4,0,2
 CM4069,73,19.8,1,0,23.03,normal weight,low fat,1,1,NA,NA,78.3,NA,2.133,NA,NA,NA
 CM4072,85,26.9,0,0,26.25,overweight,medium fat,1,1,T3aN0M0,3,43.21,8,0.557,3,0,0
 CM4077,83,33.5,1,0,23.12,normal weight,high fat,1,1,T3aN0M0,3,12.11,8,0.403,3,0,0
-CM4082,77,16.3,0,0,27.68,overweight,low fat,1,1,T3bN0Mlb,3,46.51,7,0.977,3,0,NA
+CM4082,77,16.3,0,0,27.68,overweight,low fat,1,1,T3bN0Mlb,3,46.51,7,0.977,3,0,2
 CM4085,70,23.7,0,1,19.21,normal weight,medium fat,1,1,T4N1M1b,4,6.84,NA,1.207,4,1,2
 CM4090,75,33,1,0,15.78,underweight,high fat,1,1,T3bN0M1b,4,80.48,7,0.67,3,0,2
 CM4091,81,27.5,0,0,22.89,normal weight,medium fat,1,1,T3N0M0,3,67.35,6,1.245,3,0,0
@@ -172,7 +172,7 @@ CM4907,69,21.9,1,0,21.88,normal weight,medium fat,1,1,T4N0M1b,4,121.56,6,0.762,4
 CM4915,75,45.1,0,0,19.05,normal weight,high fat,1,1,T3bN0M0,3,70.65,6,0.776,3,0,0
 CM4924,79,21.2,0,0,20.9,normal weight,medium fat,1,1,T4N0M0,4,19.19,7,1.07,4,0,0
 CM4925,92,19.2,1,0,19.61,normal weight,low fat,1,1,T2N0M0,1,68.09,7,0.554,2,0,0
-CM4927,76,28.9,1,0,23.88,normal weight,medium fat,1,1,T2N0m0,2,8.21,8,0.79,2,0,NA
+CM4927,76,28.9,1,0,23.88,normal weight,medium fat,1,1,T2N0m0,2,8.21,8,0.79,2,0,0
 CM4931,59,38.3,0,0,22.15,normal weight,high fat,1,1,T4N0M1b,4,31.24,8,1.138,4,0,2
 CM4935,83,29.3,1,1,23.12,normal weight,medium fat,1,1,T3aN0M0,3,97.2,6,0.881,3,0,0
 CM4937,48,27.2,1,0,25.26,overweight,medium fat,1,1,T4N1M1b,4,14.17,8,1.694,4,1,2
