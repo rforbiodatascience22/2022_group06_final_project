@@ -5,12 +5,21 @@ library(readxl)
 # Since the data structure of the PSA level attribute column is 
 # set to "custom" in the data/_raw/Data.xlsx and not "general"
 # the data is loaded as a date and time and not a number.
-# This has forced us to indicate each class of data seperately 
+
+
+# Fix wrong guesses -------------------------------------------------------
+#readr takes a wrong guess when guessing the type of data for column "PSA level
+# (ng/ml)". Instead we get column name and uses an if-else statement
+nms <- names(read_excel("data/_raw/Data.xlsx",
+                        sheet = "Data Set",
+                        n_max = 0))
+cnames <- ifelse(str_detect(nms, "^PSA"), "numeric", "guess")
+
+
+# Load data set -----------------------------------------------------------
 read_excel("data/_raw/Data.xlsx",
-           sheet = 2,
-           col_types = c("text","numeric","numeric","numeric","text",
-                         "numeric","numeric","numeric","numeric",
-                         "numeric","numeric","numeric","numeric"),
+           sheet = "Data Set",
+           col_types = cnames,
            .name_repair = "universal") %>%
   rename(Age = Age..yr.,
          TNM = TNM.stage,
@@ -24,8 +33,7 @@ read_excel("data/_raw/Data.xlsx",
          mtDNA = mtDNA.copy.number) %>% 
   write_csv("data/01_dat_load.csv")
 
-#Load legend sheet
+# Load legend data --------------------------------------------------------
 read_excel("data/_raw/Data.xlsx",
-                   sheet = 1) %>%
+           sheet = "Column Legend") %>%
   write_csv("data/01_legend_load.csv")
-
