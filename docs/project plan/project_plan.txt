@@ -1,11 +1,15 @@
 Questions for TA:
 Q1) Any functions we really do need to show we can master?
-  a) Split/join
-  b) Mutate
+  a) The core tidyverse functions (such as dplyr)
+  b) Show that we master the data science cycle
 Q2) Can we do other kind of split than we suggested in the handed-in outline?
+  a) yes
 Q3) When to use '::' and when not to?
+  a) Dont use in the analysis, only needed to ensure no masking of functions
 Q4) We have a problem with loading data, how much can we add to our load script?
+  a) Fixing the data here is ok, but should be done on column name, not position
 Q5) How can we guard against duplets in 02_clean.R?
+  a) current implement is good, maybe use a logfile
 
 Project flow:
 1) 

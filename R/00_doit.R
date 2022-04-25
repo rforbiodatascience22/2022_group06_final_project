@@ -12,3 +12,4 @@ source("R/07_boxplot_BMI_Dfi_class.R")
 source("R/08_article_visualization.R")
 rmarkdown::render("docs/Slides.Rmd")
 browseURL("docs/Slides.html")
+

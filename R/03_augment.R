@@ -42,7 +42,13 @@ medical_info <- medical_info %>%
          Metastasis = case_when(str_detect(TNM,".+M0") ~ 0,
                                 str_detect(TNM,".+M1a") ~ 1,
                                 str_detect(TNM,".+M1b") ~ 2,
-                                str_detect(TNM,".+M1c") ~ 3,)
+                                str_detect(TNM,".+M1c") ~ 3,
+                                # observing the data revealed two points 
+                                # that were entered incorrectly, which
+                                # we handle at this point
+                                str_detect(TNM,".+Mlb") ~ 2,
+                                str_detect(TNM,".+m0") ~ 0)
+
          )
 
 
