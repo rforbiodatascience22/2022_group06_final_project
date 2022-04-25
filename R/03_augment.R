@@ -30,8 +30,7 @@ patient_info <- patient_info %>%
 
 # Split TNM notation into usable numbers ----------------------------------
 #Add variables derived from TNM 
-#Data points that do not follow the standard naming convention 
-#are left as "NA", convention taken from www.cancerresearchuk.org
+#Standard naming convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
   mutate(Tumor = case_when(str_detect(TNM,"T0.+") ~ 0,
                            str_detect(TNM,"T1.+") ~ 1,
@@ -55,7 +54,7 @@ medical_info <- medical_info %>%
                                 str_detect(TNM,".+m0") ~ 0))
 
 
-# Add Groups as characters ------------------------------------------------
+# Add Group names ------------------------------------------------
 medical_info <- medical_info %>% 
   mutate(Group_names = case_when(Group == 1 ~ "PCa cases",
                                  Group == 0 ~ "Controls"))
