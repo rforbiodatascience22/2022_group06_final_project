@@ -2,8 +2,12 @@ library(tidyverse)
 library(patchwork)
 library(fs)
 
+
+# Load augmented data -----------------------------------------------------
 data <- read_csv("data/03_dat_aug.csv")
 
+
+# Create boxplot for each numeric variable to check for outliers ----------
 AgePlot <- data %>% 
   ggplot(mapping = aes(x = Age, y = "")) +
   geom_boxplot() + 
