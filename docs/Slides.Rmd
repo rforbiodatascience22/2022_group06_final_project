@@ -1,11 +1,11 @@
 ---
 title: "Prostate cancer analyses"
-author:
- - name: "Esben Vestergaard Øyan, s194564"
- - name: "William Hagedorn-Rasmussen, s194545"
- - name: "Eskild Fisker Angen, s184241"
- - name: "Mathias Rahbek-Borre, s183447"
- - name: "Joachim Breitenstein, s183460"
+author:  
+ - name: "Esben Vestergaard Øyan, s194564"  
+ - name: "William Hagedorn-Rasmussen, s194545"  
+ - name: "Eskild Fisker Angen, s184241"  
+ - name: "Mathias Rahbek-Borre, s183447"  
+ - name: "Joachim Breitenstein, s183460"  
 output: ioslides_presentation
 date: '2022-04-24'
 ---
@@ -13,13 +13,9 @@ date: '2022-04-24'
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
+library(rmarkdown)
+library(knitr)
 ```
-
-## R Markdown
-
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
 ## Slide with Bullets
 
@@ -59,3 +55,14 @@ knitr::include_graphics(c("../results/pc1_vs_pc2.png",
                           "../results/pc1_pc2_weights.png"))
 ```
 
+## Interesting Boxplot
+```{r out.width="100%",out.height="100%"}
+knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
+```
+
+
+## Logistic regression
+```{r}
+read_rds("../results/Logistic_regression.rds") %>% 
+  paged_table(options = list(cols.min.print = 6))
+```
