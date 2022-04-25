@@ -1,13 +1,10 @@
-#load clean data
-data <- read_csv(file = "data/02_dat_clean.csv")
+library(tidyverse)
 
-#augmenting data to fit plot
-data <- data %>% 
-  select(Group, mtDNA) %>% 
-  mutate(Group = case_when(Group == 1 ~ "PCa cases",
-                            Group == 0 ~ "Controls"))
+# Re-creation of plot from article ----------------------------------------
+# Load augmented data
+data <- read_csv(file = "data/03_dat_aug.csv")
 
-#recreating plot from article
+#Recreating plot from article
 ggplot(data,
        mapping = aes(x = Group,
                      y = mtDNA,

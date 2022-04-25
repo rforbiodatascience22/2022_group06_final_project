@@ -1,9 +1,12 @@
 library(tidyverse)
 library(broom)
 
-#Load data
+
+# Load augmented data -----------------------------------------------------
 data <- read_csv(file = "data/03_dat_aug.csv")
 
+
+# Select data for PCA analysis --------------------------------------------
 PCA_data <- data %>%
   select(Group, Age, PSA, Dfi, BMI, mtDNA)
 
@@ -11,6 +14,8 @@ pca_fit <- PCA_data %>%
   select(Age, PSA, Dfi, BMI, mtDNA) %>%
   prcomp(scale = TRUE)
 
+
+# Perfoming PCA analysis --------------------------------------------------
 pc1_vs_pc2 <- pca_fit %>%
   augment(PCA_data) %>% # add original dataset back in
   ggplot(aes(.fittedPC1, .fittedPC2, color = as.character(Group))) +
@@ -22,6 +27,7 @@ pc1_vs_pc2 <- pca_fit %>%
        x = "PC1",
        y = "PC2")
 
+#Plot of PC1 vs PC2
 ggsave(filename = "results/pc1_vs_pc2.png", 
        plot = pc1_vs_pc2,
        width = 10,
@@ -32,6 +38,8 @@ arrow_style <- arrow(
   angle = 20, ends = "first", type = "closed", length = grid::unit(8, "pt")
 )
 
+
+# PCA weights -------------------------------------------------------------
 # plot rotation matrix
 pc1_pc2_weights <- pca_fit %>%
   tidy(matrix = "rotation") %>%
@@ -51,6 +59,8 @@ ggsave(filename = "results/pc1_pc2_weights.png",
        width = 10,
        height = 5)
 
+
+# Plot of the explained variance ------------------------------------------
 pca_var_explained <- pca_fit %>%
   tidy(matrix = "eigenvalues") %>%
   filter(percent > 0.025) %>%

@@ -1,7 +1,11 @@
 library(broom)
-#Load data
+
+
+# Load augmented data -----------------------------------------------------
 data <- read_csv("data/03_dat_aug.csv")
 
+
+# Data wrangling and regression -------------------------------------------
 #Nest Group and mtDNA
 data_nested <- data %>%
   select(Dfi_class, Group, mtDNA) %>% 
@@ -36,10 +40,13 @@ data_nested_new <- data_nested %>%
   #Indicate whether significant or not
   mutate(identified_as = case_when(p.value < 0.05 ~ "Significant",
                                    p.value >= 0.05 ~ "Not significant"))
+#The above shows, that mtDNA has a correlation with cancer.
+# Except for people with Dfi_class = 3. More investigation to other factors,
+# which could correlate with cancer in the below
 
+
+# Further analysis of correlation between cancer and variables ------------
 #See boxplot for mtDNA stratisfied on age to see if age affect Dfi
 ggplot(data = data, map = aes(y = Age,
                               color = Dfi_class)) +
   geom_boxplot()
-
-

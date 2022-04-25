@@ -55,6 +55,10 @@ medical_info <- medical_info %>%
                                 str_detect(TNM,".+m0") ~ 0))
 
 
+# Add Groups as characters ------------------------------------------------
+medical_info <- medical_info %>% 
+  mutate(Group_names = case_when(Group == 1 ~ "PCa cases",
+                                 Group == 0 ~ "Controls"))
 
 
 # Join patient info and medical info based on Sample ----------------------
