@@ -6,14 +6,15 @@ data <- read_csv("data/03_dat_aug.csv")
 
 
 # Data wrangling and regression -------------------------------------------
-#Nest Group and mtDNA
+#Nest Group and all continuous variables
 data_nested <- data %>%
   select(Group, Dfi_class, Age, BMI, PSA, mtDNA) %>% 
   group_by(Dfi_class) %>% 
   nest %>% 
   ungroup
 
-#Perform logistic regression on Group vs mtDNA stratisfied on Dfi_class
+#Perform logistic regression on Group vs all continuous variables
+# stratisfied on Dfi_class
 data_nested <- data_nested %>% 
   mutate(mu_group = map(data,
                         ~glm(Group ~ Age + BMI + PSA + mtDNA,
@@ -48,9 +49,10 @@ data_nested %>%
   mutate(estimate = round(estimate, 3),
          p.value = round(p.value, 3)) %>% 
   write_rds(file = "results/Logistic_regression.rds")
-#The above shows, that mtDNA has a correlation with cancer.
-# Except for people with Dfi_class = 3. More investigation into other factors,
-# which could correlate with cancer in the below
+#The above shows, that only PSA has a correlation with cancer.
+# Except for people with Dfi_class = 1, then nothing was significant.
+# More investigation into other factors,
+# which could correlate with cancer in the below.
 
 
 # Correlation of other factors --------------------------------------------
