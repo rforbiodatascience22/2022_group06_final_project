@@ -26,6 +26,14 @@ library(knitr)
 - Bullet 2
 - Bullet 3
 
+# Slide with increments {.build}
+<div>
+Here is something
+</div>
+<div>
+Here is another thing
+</div>
+
 ## Slide with R Output
 ```{r read data, include=FALSE}
 data <- read_csv("../data/03_dat_aug.csv")
@@ -64,14 +72,14 @@ knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
 ```
 
 
-## Logistic regression
---
+## Logistic regression {.build}
+
 ```{r}
 read_rds("../results/Logistic_regression.rds") %>%
   filter(term == str_match(term, "PSA")) %>% 
   paged_table()
 ```
--
+<div>
 ```{r}
 data %>% 
   select(Dfi_class, Group) %>% 
@@ -79,4 +87,4 @@ data %>%
   distinct() %>% 
   paged_table()
 ```
-
+</div>
