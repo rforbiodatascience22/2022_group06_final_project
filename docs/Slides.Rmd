@@ -75,7 +75,7 @@ knitr::include_graphics("../results/article_visualization.png")
 
 ## A better biomarker for PCa?
 ```{r out.width="100%"}
-knitr::include_graphics("../results/.png")
+knitr::include_graphics("../results/boxplot_PSA.png")
 ```
 
 ## Principal component analysis (PCA)
@@ -84,6 +84,38 @@ knitr::include_graphics(c("../results/pc1_vs_pc2.png",
                           "../results/pca_var_explained.png",
                           "../results/pc1_pc2_weights.png"))
 ```
+
+## Interesting Boxplot
+```{r out.width="100%",out.height="100%"}
+knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
+```
+
+## Logistic regression, incl. PSA {.build}
+Significant p-values:
+```{r}
+read_rds("../results/Logistic_regression_PSA.rds") %>%
+  filter(identified_as == "Significant") %>% 
+  paged_table()
+```
+<div>
+Maybe the distribution of Dfi-classes are skewed?
+```{r}
+data_aug %>% 
+  select(Dfi_class, Group) %>% 
+  count(Dfi_class, Group) %>% 
+  distinct() %>% 
+  paged_table()
+```
+</div>
+
+## Logistic regression, excl. PSA {.build}
+Significant p-values:
+```{r}
+read_rds("../results/Logistic_regression_mtDNA.rds") %>%
+  filter(identified_as == "Significant") %>% 
+  paged_table()
+```
+
 
 ## Slide with increments {.build}
 <div>
@@ -95,26 +127,4 @@ Here is another thing
 
 
 
-## Interesting Boxplot
-```{r out.width="100%",out.height="100%"}
-knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
-```
-
-
-## Logistic regression {.build}
-Significant p-values:
-```{r}
-read_rds("../results/Logistic_regression.rds") %>%
-  filter(identified_as == "Significant") %>% 
-  paged_table()
-```
-<div>
-Maybe the distribution of Dfi-classes is skewed?
-```{r}
-data_aug %>% 
-  select(Dfi_class, Group) %>% 
-  count(Dfi_class, Group) %>% 
-  distinct() %>% 
-  paged_table()
-```
-</div>
+## Conlusion

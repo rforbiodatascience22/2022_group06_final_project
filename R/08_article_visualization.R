@@ -27,7 +27,7 @@ plt1 <- ggplot(data, mapping = aes(x = Group_names,
 plt1 + ggpubr::stat_compare_means(method = "t.test", size = 3)
 
 ggsave(filename = "results/article_visualization.png",
-       plot = plt,
+       plot = plt1,
        width = 10,
        height = 7)
 
@@ -51,6 +51,11 @@ plt2 <- ggplot(data, mapping = aes(x = Group_names,
   theme(plot.title = element_text(size = 10), 
         plot.caption = element_text(size = 6),
         plot.caption.position = "plot")  
+
+ggsave(filename = "results/boxplot_PSA.png",
+       plot = plt2,
+       width = 10,
+       height = 7)
 
 plt2 + ggpubr::stat_compare_means(method = "t.test", size = 3)
 
