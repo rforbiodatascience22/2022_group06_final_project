@@ -16,8 +16,7 @@ ggplot(data,
   theme(legend.position = "right") + 
   labs(title = "Boxplot of relative mtDNA copy number of controls and PCa cases", 
        y = "mtDNA", 
-       x = "Group", 
-<<<<<<< HEAD
+       x = "Group",
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number in Han chinese with prostate cancer and healthy controls.") +
   theme(plot.title = element_text(size = 10), plot.caption = element_text(size = 5))
 
