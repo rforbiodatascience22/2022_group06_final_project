@@ -24,6 +24,11 @@ plt <- ggplot(data, mapping = aes(x = Group_names,
         plot.caption.position = "plot") + 
   ylim(0, 2.8)
 
+ggsave(filename = "results/article_visualization.png",
+       plot = plt,
+       width = 10,
+       height = 7)
+
 plt + ggpubr::stat_compare_means(method = "t.test", size = 3)
 
 

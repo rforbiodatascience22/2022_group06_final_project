@@ -42,7 +42,7 @@ data_clean <- read_csv("../data/02_dat_clean.csv")
 data_aug <- read_csv("../data/03_dat_aug.csv")
 ```
 <div>
-**Clean** 
+**Cleaning** 
 </div>
 
 - Check for duplicates
@@ -50,7 +50,7 @@ data_aug <- read_csv("../data/03_dat_aug.csv")
 - New dimensions: `r dim(data_clean)`
 
 <div>
-**Augment** 
+**Augmenting** 
 </div>
 
 - BMI- and Dfi-classifier  
@@ -58,16 +58,31 @@ data_aug <- read_csv("../data/03_dat_aug.csv")
 - Add Group as strings  
 - New dimensions: `r dim(data_aug)`  
 
-## Boxplot with continuous variables
-
+## Boxplot with continuous variables, any outliers?
 ```{r out.width="100%", out.height="100%"}
 knitr::include_graphics("../results/OutlierPlot1.png")
 ```
 
-## Boxplot with discrete variables
-
+## Boxplot with discrete variables, any outliers?
 ```{r out.width="100%", out.height="100%"}
 knitr::include_graphics("../results/OutlierPlot2.png")
+```
+
+## Re-creating plot from the article
+```{r out.width="100%"}
+knitr::include_graphics("../results/article_visualization.png")
+```
+
+## A better biomarker for PCa?
+```{r out.width="100%"}
+knitr::include_graphics("../results/.png")
+```
+
+## Principal component analysis (PCA)
+```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="PCA",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("../results/pc1_vs_pc2.png",
+                          "../results/pca_var_explained.png",
+                          "../results/pc1_pc2_weights.png"))
 ```
 
 ## Slide with increments {.build}
@@ -78,23 +93,7 @@ Here is something
 Here is another thing
 </div>
 
-## Slide with R Output
 
-```{r data summary, echo = TRUE}
-summary(data_aug)
-```
-
-
-
-
-## Slide with PCA
-
-
-```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="PCA",fig.show='hold',fig.align='center'}
-knitr::include_graphics(c("../results/pc1_vs_pc2.png",
-                          "../results/pca_var_explained.png",
-                          "../results/pc1_pc2_weights.png"))
-```
 
 ## Interesting Boxplot
 ```{r out.width="100%",out.height="100%"}
@@ -103,13 +102,14 @@ knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
 
 
 ## Logistic regression {.build}
-
+Significant p-values:
 ```{r}
 read_rds("../results/Logistic_regression.rds") %>%
-  filter(term == str_match(term, "PSA")) %>% 
+  filter(identified_as == "Significant") %>% 
   paged_table()
 ```
 <div>
+Maybe the distribution of Dfi-classes is skewed?
 ```{r}
 data_aug %>% 
   select(Dfi_class, Group) %>% 
