@@ -26,7 +26,7 @@ library(knitr)
 - Bullet 2
 - Bullet 3
 
-# Slide with increments {.build}
+## Slide with increments {.build}
 <div>
 Here is something
 </div>
