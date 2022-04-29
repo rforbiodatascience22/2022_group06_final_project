@@ -42,4 +42,9 @@ plt4 <- ggplot(data_PCa[[1]][[1]], mapping = aes(x = BMI,
 
 plt4 + ggpubr::stat_cor(method = "spearman")
 
+#mtDNA vs. gleason score
+plt5 <- ggplot(data_PCa[[1]][[1]], mapping = aes(x = Gleason, 
+                                                 y = mtDNA)) + 
+  geom_point()  
 
+plt5 + ggpubr::stat_cor(method = "spearman")

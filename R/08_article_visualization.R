@@ -12,8 +12,8 @@ plt <- ggplot(data, mapping = aes(x = Group_names,
   
   stat_boxplot(geom = "errorbar", width = 0.5) +  
   geom_boxplot(outlier.shape = 1) +
-  
-  theme_classic() +
+  geom_signif(comparisons = list(c("Controls", "PCa cases")), 
+              map_signif_level=TRUE, size = 0.4) +
   theme(legend.position = "right") + 
   labs(title = "Boxplot of relative mtDNA copy number of controls and PCa cases", 
        y = "mtDNA", 
@@ -21,9 +21,10 @@ plt <- ggplot(data, mapping = aes(x = Group_names,
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number in Han chinese with prostate cancer and healthy controls.") +
   theme(plot.title = element_text(size = 10), 
         plot.caption = element_text(size = 6),
-        plot.caption.position = "plot")
+        plot.caption.position = "plot") + 
+  ylim(0, 2.8)
 
-plt + ggpubr::stat_compare_means(method = "t.test")
+plt + ggpubr::stat_compare_means(method = "t.test", size = 3)
 
 
     
