@@ -8,7 +8,7 @@ data <- read_csv("data/03_dat_aug.csv")
 
 
 # Create boxplot for each numeric variable to check for outliers ----------
-AgePlot <- data %>% 
+Age_Plot <- data %>% 
   ggplot(aes(y = Age,
              x = Group_names,
              color = Group_names)) +
@@ -26,7 +26,7 @@ AgePlot <- data %>%
   theme_classic()
 
 
-FatIntakePlot <- data %>% 
+Fat_Intake_Plot <- data %>% 
   ggplot(aes(y = Dfi,
              x = Group_names,
              color = Group_names)) +
@@ -44,7 +44,7 @@ FatIntakePlot <- data %>%
   theme_classic()
 
 
-BMIPlot <- data %>% 
+BMI_Plot <- data %>% 
   ggplot(aes(y = BMI,
              x = Group_names,
              color = Group_names)) +
@@ -62,7 +62,7 @@ BMIPlot <- data %>%
   theme_classic()
 
 
-PSAPlot <- data %>% 
+PSA_Plot <- data %>% 
   ggplot(aes(y = PSA,
              x = Group_names,
              color = Group_names)) +
@@ -80,7 +80,7 @@ PSAPlot <- data %>%
   theme_classic()
 
 
-mtDNAPlot <- data %>% 
+mtDNA_Plot <- data %>% 
   ggplot(aes(y = mtDNA,
              x = Group_names,
              color = Group_names)) +
@@ -98,7 +98,7 @@ mtDNAPlot <- data %>%
   theme_classic()
 
 
-GleasonPlot <- data %>% 
+Gleason_Plot <- data %>% 
   ggplot(aes(y = Gleason,
              x = "",
              color = Group_names)) +
@@ -117,7 +117,7 @@ GleasonPlot <- data %>%
   theme_classic()
 
 
-AJCCPlot <- data %>% 
+AJCC_Plot <- data %>% 
   ggplot(aes(y = AJCC,
              x = "",
              color = Group_names)) +
@@ -136,7 +136,7 @@ AJCCPlot <- data %>%
   theme_classic()  
 
 
-TumorPlot <- data %>% 
+Tumor_Plot <- data %>% 
   ggplot(aes(y = Tumor,
              x = "",
              color = Group_names)) +
@@ -155,7 +155,7 @@ TumorPlot <- data %>%
   theme_classic()
 
 
-NodesPlot <- data %>% 
+Nodes_Plot <- data %>% 
   ggplot(aes(y = LymphNodes,
              x = "",
              color = Group_names)) +
@@ -174,7 +174,7 @@ NodesPlot <- data %>%
   theme_classic()
 
 
-MetastasisPlot <- data %>% 
+Metastasis_Plot <- data %>% 
   ggplot(aes(y = Metastasis,
              x = "",
              color = Group_names)) +
@@ -193,20 +193,24 @@ MetastasisPlot <- data %>%
   theme_classic()
 
 
-Plot1 <- AgePlot + FatIntakePlot + PSAPlot + BMIPlot + mtDNAPlot +
+boxplot_continuous <- Age_Plot + Fat_Intake_Plot +
+                      PSA_Plot + BMI_Plot + mtDNA_Plot +
   plot_layout(ncol = 5) + 
-  plot_annotation(title = "A plot of the nonbinary attributes, to examine distribution of outliers")
+  plot_annotation(title = "A plot of the nonbinary attributes, to examine
+                           distribution of outliers")
 
-Plot2 <- AJCCPlot + GleasonPlot + TumorPlot + NodesPlot + MetastasisPlot + 
+boxplot_discrete <- AJCC_Plot + Gleason_Plot + Tumor_Plot +
+                    Nodes_Plot + MetastasisPlot + 
   plot_layout(ncol = 5) + 
-  plot_annotation(title = "A plot of the nonbinary attributes, to examine distribution of outliers")
+  plot_annotation(title = "A plot of the nonbinary attributes, to examine
+                           distribution of outliers")
   
-ggsave(filename = 'results/OutlierPlot1.png',
-       plot = Plot1,
+ggsave(filename = 'results/boxplot_continuous.png',
+       plot = boxplot_continuous,
        width = 10,
        height = 6.5)
 
-ggsave(filename = 'results/OutlierPlot2.png',
-       plot = Plot2,
+ggsave(filename = 'results/boxplot_discrete.png',
+       plot = boxplot_discrete,
        width = 10,
        height = 6.5)
