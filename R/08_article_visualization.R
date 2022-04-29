@@ -26,6 +26,13 @@ plt1 <- ggplot(data, mapping = aes(x = Group_names,
 
 plt1 + ggpubr::stat_compare_means(method = "t.test", size = 3)
 
+ggsave(filename = "results/article_visualization.png",
+       plot = plt,
+       width = 10,
+       height = 7)
+
+plt1 + ggpubr::stat_compare_means(method = "t.test", size = 3)
+
 
 plt2 <- ggplot(data, mapping = aes(x = Group_names,
                                   y = PSA,
