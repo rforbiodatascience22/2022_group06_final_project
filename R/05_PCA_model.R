@@ -1,5 +1,6 @@
 library(tidyverse)
 library(broom)
+library(ggtext)
 
 
 # Load augmented data -----------------------------------------------------
@@ -21,12 +22,15 @@ pc1_vs_pc2 <- pca_fit %>%
   ggplot(aes(.fittedPC1, .fittedPC2, color = as.character(Group))) +
   geom_point(size = 1.5) +
   theme_minimal(base_size = 19) +
-  theme(legend.position = "bottom",
-        plot.background = element_rect(colour = "black", fill=NA, size=1)) +
+  theme(legend.position = "none",
+        plot.background = element_rect(colour = "black", fill=NA, size=1),
+        plot.title = element_markdown()) +
+  scale_color_brewer(palette = "Dark2") +
   labs(color = "Group",
        x = "PC1",
        y = "PC2",
-       title = "PC1 vs PC2"
+       title = "PC1 vs PC2 and split up for <span style = 'color: #d95f02;'>sick</span>
+               and <span style = 'color: #1b9e77;'>control</span>"
        )
 
 #Plot of PC1 vs PC2

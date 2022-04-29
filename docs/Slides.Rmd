@@ -1,14 +1,16 @@
 ---
-title: "Prostate cancer analyses"
-author:  
- - name: "Esben Vestergaard Øyan, s194564"  
- - name: "William Hagedorn-Rasmussen, s194545"  
- - name: "Eskild Fisker Angen, s184241"  
- - name: "Mathias Rahbek-Borre, s183447"  
- - name: "Joachim Breitenstein, s183460"  
+title: "Prostate cancer (PCa) analysis"
+subtitle: "Group 6"
+author: 
+- "Esben Vestergaard Øyan, s194564"
+- "William Hagedorn-Rasmussen, s194545"
+- "Eskild Fisker Angen, s184241"
+- "Mathias Rahbek-Borre, s183447"
+- "Joachim Breitenstein, s183460"
+
 output:
   ioslides_presentation:
-    incremental: TRUE #enable to get "bullet point by bullet point"
+    #incremental: TRUE #enable to get incremental bullet point
     smaller:  TRUE
 date: '2022-04-24'
 ---
@@ -20,46 +22,83 @@ library(rmarkdown)
 library(knitr)
 ```
 
-## Slide with Bullets
+## Data set overview {.build}
+```{r read data_load, include = FALSE}
+data_load <- read_csv("../data/01_dat_load.csv") 
+```
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Dimensions of the data set: `r dim(data_load)` 
 
-# Slide with increments {.build}
 <div>
-Here is something
-</div>
-<div>
-Here is another thing
+- Stratified on Controls and PCa cases  
 </div>
 
-## Slide with R Output
-```{r read data, include=FALSE}
-data <- read_csv("../data/03_dat_aug.csv")
+<div>
+- Purpose of article: Predict PCa from other variables  
+</div>
+
+
+## Cleaning and augment of data set {.build}
+```{r read data_clean, include = FALSE}
+data_clean <- read_csv("../data/02_dat_clean.csv") 
 ```
 
+```{r data_aug, include = FALSE}
+data_aug <- read_csv("../data/03_dat_aug.csv")
+```
+**Cleaning**  
 
-```{r data summary, echo = TRUE}
-summary(data)
+<div>
+- Check for duplicates  
+</div>
+
+<div>
+- Filter for PCRsuccess  
+</div>
+
+<div>
+- New dimensions: `r dim(data_clean)`  
+</div>
+<div>
+**Augmenting**  
+
+
+- BMI- and Dfi-classifier  
+</div>
+
+<div>
+- New columns based on TNM-notation  
+</div>
+
+<div>
+- Add Group as strings  
+</div>
+
+<div>
+- New dimensions: `r dim(data_aug)`  
+</div>
+
+## Boxplot with continuous variables, any outliers?
+```{r out.width="100%", out.height="100%"}
+knitr::include_graphics("../results/boxplot_continuous.png")
 ```
 
-## Slide with half of the outliers
-
-```{r out.width="100%",out.height="100%"}
-knitr::include_graphics("../results/OutlierPlot1.png")
+## Boxplot with discrete variables, any outliers?
+```{r out.width="100%", out.height="100%"}
+knitr::include_graphics("../results/boxplot_discrete.png")
 ```
 
-## Slide with other half of the outliers
-
-```{r out.width="100%",out.height="100%"}
-knitr::include_graphics("../results/OutlierPlot2.png")
+## Re-creating plot from the article
+```{r out.width="100%"}
+knitr::include_graphics("../results/article_visualization.png")
 ```
 
+## A better biomarker for PCa?
+```{r out.width="100%"}
+knitr::include_graphics("../results/boxplot_PSA.png")
+```
 
-## Slide with PCA
-
-
+## Principal component analysis (PCA)
 ```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="PCA",fig.show='hold',fig.align='center'}
 knitr::include_graphics(c("../results/pc1_vs_pc2.png",
                           "../results/pca_var_explained.png",
@@ -71,20 +110,32 @@ knitr::include_graphics(c("../results/pc1_vs_pc2.png",
 knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
 ```
 
-
-## Logistic regression {.build}
-
+## Logistic regression, incl. PSA {.build}
+Significant p-values:
 ```{r}
-read_rds("../results/Logistic_regression.rds") %>%
-  filter(term == str_match(term, "PSA")) %>% 
+read_rds("../results/Logistic_regression_PSA.rds") %>%
+  filter(identified_as == "Significant") %>% 
   paged_table()
 ```
+
 <div>
+Maybe the distribution of Dfi-classes are skewed?
 ```{r}
-data %>% 
+data_aug %>% 
   select(Dfi_class, Group) %>% 
   count(Dfi_class, Group) %>% 
   distinct() %>% 
   paged_table()
 ```
 </div>
+
+## Logistic regression, excl. PSA {.build}
+Significant p-values:
+```{r}
+read_rds("../results/Logistic_regression_mtDNA.rds") %>%
+  filter(identified_as == "Significant") %>% 
+  paged_table()
+```
+
+
+## Conlusion
