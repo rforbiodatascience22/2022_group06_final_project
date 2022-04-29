@@ -30,3 +30,19 @@ while project == "not_finished":
 6) Do PCA
 7) Logistic Regression
 8) Data visualization
+
+To do:
+1) Check we follow the project flow
+2) Make sure we use the same naming conventions
+3) Is the coding style correct across the board (newline, include "=" where possible)
+4) Data visualitation with "slice" function
+5) Use geom_density?
+6) Insert subtitles?
+7) Use geom_label?
+8) Use a heatmap? (geom_tile). Perhaps illustrate difference in PSA-level
+9) Add color to titles, see Lab 3 Task IX
+10) Make sure we fully understand the summarise function
+11) Go through code, did we do anything multiple times? Make a function
+12) Use separate function for TMN? (function from Lab 5, Q20)
+13) Manhatten plot? (lab 6)
+14) Might need to do some broom stuff, whatever that is
