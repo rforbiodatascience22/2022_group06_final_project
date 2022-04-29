@@ -13,6 +13,17 @@ Q5) How can we guard against duplets in 02_clean.R?
 
 Q6) How important is it that we don't use base R functions? (using ncol over creating a function with purrr)
 
+
+Presentation outline 
+-Introduction data    DONE
+-Cleaning             DONE
+-What has been done in article?
+  -With our plots     PLOT DONE, some table recreations missing
+-Examine PCA,
+  -Because of 
+  -Conclusion
+
+
 Project flow:
 1) 
 while project == "not_finished":
