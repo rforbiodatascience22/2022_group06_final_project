@@ -48,7 +48,7 @@ data_nested_PSA %>%
   select(-data) %>%
   mutate(estimate = round(estimate, 3),
          p.value = round(p.value, 3)) %>% 
-  write_rds(file = "results/Logistic_regression_PSA.rds")
+  write_csv(file = "results/Logistic_regression_PSA.csv")
 #The above shows, that only PSA has a correlation with cancer.
 # Except for people with Dfi_class = 1, then nothing was significant.
 # More investigation into other factors,
@@ -91,4 +91,4 @@ data_nested_mtDNA %>%
   select(-data) %>%
   mutate(estimate = round(estimate, 3),
          p.value = round(p.value, 3)) %>% 
-  write_rds(file = "results/Logistic_regression_mtDNA.rds")
+  write_csv(file = "results/Logistic_regression_mtDNA.csv")
