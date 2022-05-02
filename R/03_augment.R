@@ -4,30 +4,30 @@ library(stringi)
 data <- read_csv(file = "data/02_dat_clean.csv")
 
 
-# Make artifical split. Split into patient- and medical info --------------
+# Make artificial split. Split into patient- and medical info --------------
 patient_info <- data %>% 
-  select(Sample, Age, Dfi, Smoking, PCaHist, BMI)
+  select(sample, age, dfi, smoking, pca_hist, bmi)
   
 medical_info <- data %>% 
-  select(!c(Age, Dfi, Smoking, PCaHist, BMI))
+  select(!c(age, dfi, smoking, pca_hist, bmi))
 
 
-# Add in a BMI classifier -------------------------------------------------
+# Add in a bmi classifier -------------------------------------------------
 patient_info <- patient_info %>% 
-  mutate(BMI_class = case_when(BMI < 18.5 ~ "underweight",
-                               18.5 <= BMI & BMI < 25 ~ "normal weight",
-                               25 <= BMI & BMI < 30 ~ "overweight",
-                               30 <= BMI ~ "obese"),
-         BMI_class = factor(BMI_class,
+  mutate(bmi_class = case_when(bmi < 18.5 ~ "underweight",
+                               18.5 <= bmi & bmi < 25 ~ "normal weight",
+                               25 <= bmi & bmi < 30 ~ "overweight",
+                               30 <= bmi ~ "obese"),
+         bmi_class = factor(bmi_class,
                             levels =  c("underweight", "normal weight",
                                         "overweight", "obese")))
 
 
-# Add in a Dfi classifier -------------------------------------------------
+# Add in a dfi classifier -------------------------------------------------
 patient_info <- patient_info %>% 
-  mutate(Dfi_class = case_when(Dfi < 20 ~ "low fat",
-                                   20 <= Dfi & Dfi < 30 ~ "medium fat",
-                                   30 <= Dfi ~ "high fat"))
+  mutate(dfi_class = case_when(dfi < 20 ~ "low fat",
+                                   20 <= dfi & dfi < 30 ~ "medium fat",
+                                   30 <= dfi ~ "high fat"))
 
 
 # Split TNM notation into usable numbers ----------------------------------
@@ -53,16 +53,16 @@ medical_info <- medical_info %>%
                                 str_detect(TNM,".+m0") ~ 0))
 
 
-# Add Group names ------------------------------------------------
+# Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
-  mutate(Group_names = case_when(Group == 1 ~ "PCa cases",
-                                 Group == 0 ~ "Controls"))
+  mutate(group_names = case_when(group == 1 ~ "pca_cases",
+                                 group == 0 ~ "Controls"))
 
 
 # Join patient info and medical info based on Sample ----------------------
 data_augmented <- patient_info %>% 
   full_join(medical_info,
-            by = "Sample")
+            by = "sample")
 
 
 # Write the augmented data file -----------------------------------------------------

@@ -196,13 +196,13 @@ Metastasis_Plot <- data %>%
 boxplot_continuous <- Age_Plot + Fat_Intake_Plot +
                       PSA_Plot + BMI_Plot + mtDNA_Plot +
   plot_layout(ncol = 5) + 
-  plot_annotation(title = "A plot of the nonbinary attributes, to examine
+  plot_annotation(title = "A plot of the continuous attributes, to examine
                            distribution of outliers")
 
 boxplot_discrete <- AJCC_Plot + Gleason_Plot + Tumor_Plot +
                     Nodes_Plot + MetastasisPlot + 
   plot_layout(ncol = 5) + 
-  plot_annotation(title = "A plot of the nonbinary attributes, to examine
+  plot_annotation(title = "A plot of the discrete attributes, to examine
                            distribution of outliers")
   
 ggsave(filename = 'results/boxplot_continuous.png',
