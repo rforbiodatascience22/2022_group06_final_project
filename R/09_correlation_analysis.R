@@ -50,8 +50,8 @@ plt5 <- ggplot(data_PCa[[1]][[1]], mapping = aes(x = Gleason,
 
 plt5 + ggpubr::stat_cor(method = "spearman")
 
-#mtDNA vs. PSA
-plt6 <- ggplot(data_PCa[[1]][[1]], mapping = aes(x = PSA, 
-                                                 y = mtDNA)) + 
+#PSA vs. Gleason
+plt6 <- ggplot(data_PCa[[1]][[1]], mapping = aes(x = Gleason, 
+                                                 y = PSA)) + 
   geom_point()   
 plt6 + ggpubr::stat_cor(method = "spearman")

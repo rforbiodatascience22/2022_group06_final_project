@@ -1,18 +1,17 @@
 ---
 title: "Prostate cancer (PCa) analysis"
 subtitle: "Group 6"
-author: 
-- "Esben Vestergaard Øyan, s194564"
-- "William Hagedorn-Rasmussen, s194545"
-- "Eskild Fisker Angen, s184241"
-- "Mathias Rahbek-Borre, s183447"
-- "Joachim Breitenstein, s183460"
-
+author:
+  - Esben Vestergaard Øyan, s194564
+  - William Hagedorn-Rasmussen, s194545
+  - Eskild Fisker Angen, s184241
+  - Mathias Rahbek-Borre, s183447
+  - Joachim Breitenstein, s183460
 output:
   ioslides_presentation:
     #incremental: TRUE #enable to get incremental bullet point
     smaller:  TRUE
-date: '2022-04-24'
+date: '2022-05-10'
 ---
 
 ```{r setup, include=FALSE}
@@ -79,8 +78,9 @@ knitr::include_graphics("../results/boxplot_discrete.png")
 ```
 
 ## Re-creating plot from the article
-```{r out.width="100%"}
-knitr::include_graphics("../results/article_visualization.png")
+```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="Article visualization",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("../results/article_visualization.png",
+                        "../docs/Zhou_et_al_boxplot.png"))
 ```
 
 ## A better biomarker for PCa?
@@ -96,7 +96,7 @@ knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
 ## Logistic regression, excl. PSA {.build}
 Significant p-values:
 ```{r}
-read_rds("../results/Logistic_regression_mtDNA.rds") %>%
+read_csv("../results/Logistic_regression_mtDNA.csv") %>%
   filter(identified_as == "Significant") %>% 
   paged_table()
 ```
@@ -115,7 +115,7 @@ data_aug %>%
 ## Logistic regression, incl. PSA
 Significant p-values:
 ```{r}
-read_rds("../results/Logistic_regression_PSA.rds") %>%
+read_csv("../results/Logistic_regression_PSA.csv") %>%
   filter(identified_as == "Significant") %>% 
   paged_table()
 ```
