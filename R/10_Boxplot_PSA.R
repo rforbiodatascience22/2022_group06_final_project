@@ -18,14 +18,14 @@ boxplot_psa <- ggplot(data, mapping = aes(x = group_names,
                                    "pca_cases")), 
               map_signif_level=TRUE,
               size = 0.4) +
-  theme(legend.position = "right") + 
+  theme(legend.position = "none") + 
   labs(title = "Boxplot of PSA of controls and PCa cases", 
        y = "PSA", 
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number
-                  in Han chinese with prostate cancer and healthy controls.") +
+in Han chinese with prostate cancer and healthy controls.") +
   theme(text = element_text(size = 16),
-        plot.caption.position = "plot")  
+        plot.caption = element_text(hjust = 0, face= "italic"))  
 
 #Add statistical test
 boxplot_psa <- boxplot_psa + ggpubr::stat_compare_means(method = "t.test",

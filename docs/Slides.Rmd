@@ -83,8 +83,8 @@ knitr::include_graphics("../results/boxplot_discrete.png")
 
 ## Re-creating plot from the article
 ```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="Article visualization",fig.show='hold',fig.align='center'}
-knitr::include_graphics(c("../results/article_visualization.png",
-                        "../docs/Zhou_et_al_boxplot.png"))
+knitr::include_graphics(c("../docs/Zhou_et_al_boxplot.png",
+                          "../results/article_visualization.png"))
 ```
 
 ## A better biomarker for PCa?
