@@ -41,7 +41,8 @@ medical_info <- medical_info %>%
                            str_detect(tnm,"T4N.+") ~ 4,
                            str_detect(tnm,"T4a.+") ~ 5,
                            str_detect(tnm,"T4b.+") ~ 6),
-         lymph_nodes = stri_match(tnm, regex = "N(\\d)"),
+         lymph_nodes = parse_number(stri_extract(tnm, 
+                                                 regex = "N(\\d)")),
          metastasis = case_when(str_detect(tnm,".+M0") ~ 0,
                                 str_detect(tnm,".+M1a") ~ 1,
                                 str_detect(tnm,".+M1b") ~ 2,
@@ -62,7 +63,6 @@ medical_info <- medical_info %>%
 data_augmented <- patient_info %>% 
   full_join(medical_info,
             by = "sample")
-
 
 # Write the augmented data file -----------------------------------------------------
 data_augmented %>% 
