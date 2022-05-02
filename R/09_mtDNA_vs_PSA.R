@@ -183,17 +183,54 @@ ajcc_plot_p
 
 # Introduce grouping of PSA levels ----------------------------------------
 data <- data %>% 
+<<<<<<< HEAD
+  mutate(PSA_level = case_when(PSA < 10 ~ "<10",
+                                PSA >= 10 & PSA < 20 ~ "10~20",
+                                PSA >= 20 ~ "20<"))
+=======
   mutate(psa_levels = case_when(psa < 10 ~ "low",
                                 psa >= 10 & psa < 20 ~ "medium",
                                 psa >= 20 ~ "high"))
 
+>>>>>>> 2d290be77693b2dbcfbd4245d418331b1caf75e9
 
 
 # Plot PSA on Gleason score using article groups --------------------------
+plot_data <- data %>% 
+  drop_na() %>%
+  filter(Group_names == "PCa cases") %>%
+  group_by(PSA_level, Gleason_group) %>%
+  summarise(count = n()) %>%
+  mutate(perc = count/sum(count))
+
+# Plot
+
+gleason_psa_agroup_plot <- plot_data %>%  
+  ggplot(mapping = aes(x = Gleason_group,
+                       y = perc*100,
+                       fill = PSA_level,
+                       group = PSA_level)) + 
+  geom_bar(stat = "identity",
+           position = "dodge") +
+  scale_x_discrete(limits = c("low", "medium", "high")) +
+  labs(x = "Gleason score",
+       y = "(%)",
+       fill = "PSA levels (ng/ml)",
+       title = "PSA levels based on article groups",
+       caption = "Frequency plot of patients stratified on Gleason score ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above). 
+       Colored by PSA levels measured in ng/ml in periferal blood. Every color adds up to 100 %.")
+
+gleason_psa_agroup_plot
 
 
 
+# TEST ZONE ---------------------------------------------------------------
 
+data %>% 
+  drop_na() %>%
+  filter(Group_names == "PCa cases") %>%
+  group_by(PSA_level, Gleason_group) %>%
+  count()
 
 
 
