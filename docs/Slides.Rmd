@@ -48,7 +48,7 @@ data_aug <- read_csv("../data/03_dat_aug.csv")
 - Check for duplicates  
 
 
-- Filter for PCRsuccess  
+- Filter for pcr_success  
 
 
 - New dimensions: `r dim(data_clean)`  
@@ -56,13 +56,13 @@ data_aug <- read_csv("../data/03_dat_aug.csv")
 <div>
 **Augmenting**  
 
-- BMI- and Dfi-classifier  
+- bmi- and dfi-classifier  
 
 
 - New columns based on TNM-notation  
 
 
-- Add Group as strings  
+- Add "group" as strings  
 
 
 - New dimensions: `r dim(data_aug)`  
@@ -107,8 +107,8 @@ read_csv("../results/Logistic_regression_mtDNA.csv",
 Maybe the distribution of Dfi-classes are skewed?
 ```{r}
 data_aug %>% 
-  select(Dfi_class, Group) %>% 
-  count(Dfi_class, Group) %>% 
+  select(dfi_class, group) %>% 
+  count(dfi_class, group) %>% 
   distinct() %>% 
   paged_table()
 ```
