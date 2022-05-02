@@ -8,29 +8,32 @@ data <- read_csv(file = "data/03_dat_aug.csv")
 
 
 # Select data for PCA analysis --------------------------------------------
-PCA_data <- data %>%
-  select(Group, Age, PSA, Dfi, BMI, mtDNA)
+pca_data <- data %>%
+  select(group, age, psa, dfi, bmi, mtdna)
 
-pca_fit <- PCA_data %>% 
-  select(Age, PSA, Dfi, BMI, mtDNA) %>%
+pca_fit <- pca_data %>% 
+  select(age, psa, dfi, bmi, mtdna) %>%
   prcomp(scale = TRUE)
 
 
 # Perfoming PCA analysis --------------------------------------------------
 pc1_vs_pc2 <- pca_fit %>%
-  augment(PCA_data) %>% # add original dataset back in
-  ggplot(aes(.fittedPC1, .fittedPC2, color = as.character(Group))) +
+  augment(pca_data) %>% # add original dataset back in
+  ggplot(aes(.fittedPC1, .fittedPC2, color = as.character(group))) +
   geom_point(size = 1.5) +
   theme_minimal(base_size = 19) +
   theme(legend.position = "none",
-        plot.background = element_rect(colour = "black", fill=NA, size=1),
+        plot.background = element_rect(colour = "black",
+                                       fill = NA,
+                                       size = 1),
         plot.title = element_markdown()) +
   scale_color_brewer(palette = "Dark2") +
   labs(color = "Group",
        x = "PC1",
        y = "PC2",
-       title = "PC1 vs PC2 and split up for <span style = 'color: #d95f02;'>sick</span>
-               and <span style = 'color: #1b9e77;'>control</span>"
+       title = "PC1 vs PC2 and split up for <span style = 'color:
+                #d95f02;'>sick</span> and <span style =
+                'color: #1b9e77;'>control</span>"
        )
 
 #Plot of PC1 vs PC2
@@ -43,8 +46,10 @@ ggsave(filename = "results/pc1_vs_pc2.png",
 # PCA weights -------------------------------------------------------------
 # plot rotation matrix
 # define arrow style for plotting
-arrow_style <- arrow(
-  angle = 20, ends = "first", type = "closed", length = grid::unit(8, "pt")
+arrow_style <- arrow(angle = 20,
+                     ends = "first",
+                     type = "closed",
+                     length = grid::unit(8, "pt")
 )
 
 pc1_pc2_weights <- pca_fit %>%
