@@ -34,30 +34,33 @@ patient_info <- patient_info %>%
 #Add variables derived from TNM 
 #Standard naming convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
-  mutate(tumor = case_when(str_detect(TNM,"T0.+") ~ 0,
-                           str_detect(TNM,"T1.+") ~ 1,
-                           str_detect(TNM,"T2.+") ~ 2,
-                           str_detect(TNM,"T3.+") ~ 3,
-                           str_detect(TNM,"T4N.+") ~ 4,
-                           str_detect(TNM,"T4a.+") ~ 5,
-                           str_detect(TNM,"T4b.+") ~ 6),
-         lymph_nodes = stri_match(TNM, regex = "N(\\d)"),
-         metastasis = case_when(str_detect(TNM,".+M0") ~ 0,
-                                str_detect(TNM,".+M1a") ~ 1,
-                                str_detect(TNM,".+M1b") ~ 2,
-                                str_detect(TNM,".+M1c") ~ 3,
+  mutate(tumor = case_when(str_detect(tnm,"T0.+") ~ 0,
+                           str_detect(tnm,"T1.+") ~ 1,
+                           str_detect(tnm,"T2.+") ~ 2,
+                           str_detect(tnm,"T3.+") ~ 3,
+                           str_detect(tnm,"T4N.+") ~ 4,
+                           str_detect(tnm,"T4a.+") ~ 5,
+                           str_detect(tnm,"T4b.+") ~ 6),
+         lymph_nodes = stri_match(tnm, regex = "N(\\d)"),
+         metastasis = case_when(str_detect(tnm,".+M0") ~ 0,
+                                str_detect(tnm,".+M1a") ~ 1,
+                                str_detect(tnm,".+M1b") ~ 2,
+                                str_detect(tnm,".+M1c") ~ 3,
                                 # observing the data revealed two points 
                                 # that were entered incorrectly, which
                                 # we handle at this point
-                                str_detect(TNM,".+Mlb") ~ 2,
-                                str_detect(TNM,".+m0") ~ 0))
+                                str_detect(tnm,".+Mlb") ~ 2,
+                                str_detect(tnm,".+m0") ~ 0))
 
 
 # Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
   mutate(group_names = case_when(group == 1 ~ "pca_cases",
                                  group == 0 ~ "controls"))
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1638d68a9d669ff13e6df5d83920e72241bd55d
 
 # Join patient info and medical info based on Sample ----------------------
 data_augmented <- patient_info %>% 
