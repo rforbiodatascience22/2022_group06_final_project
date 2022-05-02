@@ -51,7 +51,7 @@ data_aug <- read_csv("../data/03_dat_aug.csv",
 - Check for duplicates  
 
 
-- Filter for pcr_success  
+- Filter for PCRsuccess  
 
 
 - New dimensions: `r dim(data_clean)`  
@@ -59,13 +59,13 @@ data_aug <- read_csv("../data/03_dat_aug.csv",
 <div>
 **Augmenting**  
 
-- bmi- and dfi-classifier  
+- BMI- and DFI-classifier  
 
 
 - New columns based on TNM-notation  
 
 
-- Add "group" as strings  
+- Add "Group" as strings  
 
 
 - New dimensions: `r dim(data_aug)`  
