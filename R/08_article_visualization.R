@@ -5,9 +5,9 @@ library(ggpubr)
 data <- read_csv(file = "data/03_dat_aug.csv")
 
 #Article plot
-article_plot <- ggplot(data, mapping = aes(x = Group_names,
-                           y = mtDNA, 
-                           fill  = Group_names)) + 
+article_plot <- ggplot(data, mapping = aes(x = group_names,
+                           y = mtdna, 
+                           fill  = group_names)) + 
   
   stat_boxplot(geom = "errorbar",
                width = 0.5) +  

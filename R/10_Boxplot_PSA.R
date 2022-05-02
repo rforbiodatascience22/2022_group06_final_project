@@ -7,9 +7,9 @@ library(ggpubr)
 data <- read_csv(file = "data/03_dat_aug.csv")
 
 #Boxplot
-boxplot_PSA <- ggplot(data, mapping = aes(x = Group_names,
-                                   y = PSA, 
-                                   fill  = Group_names)) + 
+boxplot_psa <- ggplot(data, mapping = aes(x = group_names,
+                                   y = psa, 
+                                   fill  = group_names)) + 
     stat_boxplot(geom = "errorbar",
                width = 0.5) +  
   geom_boxplot(outlier.shape = 1) +
@@ -27,10 +27,10 @@ boxplot_PSA <- ggplot(data, mapping = aes(x = Group_names,
         plot.caption.position = "plot")  
 
 #Add statistical test
-boxplot_PSA <- boxplot_PSA + ggpubr::stat_compare_means(method = "t.test", size = 10)
+boxplot_psa <- boxplot_psa + ggpubr::stat_compare_means(method = "t.test", size = 10)
 
 #Save figure
-ggsave(filename = "results/boxplot_PSA.png",
-       plot = boxplot_PSA,
+ggsave(filename = "results/boxplot_psa.png",
+       plot = boxplot_psa,
        width = 10,
        height = 7)
