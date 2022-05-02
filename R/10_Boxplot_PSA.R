@@ -25,11 +25,11 @@ boxplot_psa <- ggplot(data, mapping = aes(x = group_names,
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number
 in Han chinese with prostate cancer and healthy controls.") +
   theme(text = element_text(size = 16),
-        plot.caption = element_text(hjust = 0, face= "italic"))  
+        plot.caption = element_text(hjust = 0, face= "italic"))
 
 #Add statistical test
-boxplot_psa <- boxplot_psa + ggpubr::stat_compare_means(method = "t.test",
-                                                        size = 4)
+boxplot_psa <- boxplot_psa +
+  ggpubr::stat_compare_means(method = "t.test", size = 4)
 
 #Save figure
 ggsave(filename = "results/boxplot_psa.png",
