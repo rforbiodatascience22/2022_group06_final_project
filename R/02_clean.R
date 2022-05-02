@@ -2,7 +2,8 @@ library(tidyverse)
 
 
 # Clean out unsuccessful data ---------------------------------------------
-filtered_data <- read_csv("data/01_dat_load.csv") %>% 
+filtered_data <- read_csv("data/01_dat_load.csv",
+                          show_col_types = FALSE) %>% 
   filter(pcr_success == 1) 
 
 
