@@ -21,16 +21,16 @@ read_excel("data/_raw/Data.xlsx",
            sheet = "Data Set",
            col_types = cnames,
            .name_repair = "universal") %>%
-  rename(Age = Age..yr.,
-         TNM = TNM.stage,
-         AJCC = AJCC.stage,
-         PSA = PSA.level..ng.ml.,
-         Gleason = Gleason.score,
-         Dfi = Daily.fat.dietary.intake....,
-         Smoking = Smoking.history,
-         PCaHist = Family.history.of.PCa,
-         BMI = BMI..kg.m2.,
-         mtDNA = mtDNA.copy.number) %>% 
+  rename(age = Age..yr.,
+         tnm = TNM.stage,
+         ajcc = AJCC.stage,
+         psa = PSA.level..ng.ml.,
+         gleason = Gleason.score,
+         dfi = Daily.fat.dietary.intake....,
+         smoking = Smoking.history,
+         pca_hist = Family.history.of.PCa,
+         bmi = BMI..kg.m2.,
+         mtdna = mtDNA.copy.number) %>% 
   write_csv("data/01_dat_load.csv")
 
 # Load legend data --------------------------------------------------------

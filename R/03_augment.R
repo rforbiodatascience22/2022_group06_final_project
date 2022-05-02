@@ -1,3 +1,5 @@
+library(tidyverse)
+library(stringi)
 # Load in clean data ------------------------------------------------------
 data <- read_csv(file = "data/02_dat_clean.csv")
 
@@ -32,18 +34,15 @@ patient_info <- patient_info %>%
 #Add variables derived from TNM 
 #Standard naming convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
-  mutate(Tumor = case_when(str_detect(TNM,"T0.+") ~ 0,
+  mutate(tumor = case_when(str_detect(TNM,"T0.+") ~ 0,
                            str_detect(TNM,"T1.+") ~ 1,
                            str_detect(TNM,"T2.+") ~ 2,
                            str_detect(TNM,"T3.+") ~ 3,
                            str_detect(TNM,"T4N.+") ~ 4,
                            str_detect(TNM,"T4a.+") ~ 5,
                            str_detect(TNM,"T4b.+") ~ 6),
-         LymphNodes = case_when(str_detect(TNM,".+N0.+") ~ 0,
-                                str_detect(TNM,".+N1.+") ~ 1,
-                                str_detect(TNM,".+N2.+") ~ 2,
-                                str_detect(TNM,".+N3.+") ~ 3),
-         Metastasis = case_when(str_detect(TNM,".+M0") ~ 0,
+         lymph_nodes = stri_match(TNM, regex = "N(\\d)"),
+         metastasis = case_when(str_detect(TNM,".+M0") ~ 0,
                                 str_detect(TNM,".+M1a") ~ 1,
                                 str_detect(TNM,".+M1b") ~ 2,
                                 str_detect(TNM,".+M1c") ~ 3,
