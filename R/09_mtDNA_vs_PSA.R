@@ -27,20 +27,20 @@ data <- read_csv("data/03_dat_aug.csv")
 # 
 
 # Create pointplot for Gleason on mtDNA and PSA ---------------------------
-PSA_Gleason <- data %>% 
-  ggplot(mapping = aes(x = PSA, y = Gleason)) +
-  geom_point() +
-  geom_smooth(se = FALSE)
-
-mtDNA_Gleason <- data %>% 
-  ggplot(mapping = aes(x = mtDNA, y = Gleason)) +
-  geom_point() +
-  geom_smooth(se = FALSE)
-
-Gleason_plot <- PSA_Gleason + mtDNA_Gleason +
-  plot_annotation(title = "A plot showing the correlation between Gleason classification and the biomarkers 'PSA count' and 'mtDNA number count'")
-
-Gleason_plot
+# PSA_Gleason <- data %>% 
+#   ggplot(mapping = aes(x = PSA, y = Gleason)) +
+#   geom_point() +
+#   geom_smooth(se = FALSE)
+# 
+# mtDNA_Gleason <- data %>% 
+#   ggplot(mapping = aes(x = mtDNA, y = Gleason)) +
+#   geom_point() +
+#   geom_smooth(se = FALSE)
+# 
+# Gleason_plot <- PSA_Gleason + mtDNA_Gleason +
+#   plot_annotation(title = "A plot showing the correlation between Gleason classification and the biomarkers 'PSA count' and 'mtDNA number count'")
+# 
+# Gleason_plot
 
 
 
@@ -68,7 +68,7 @@ data <- data %>%
 
 
 # Bar charts stratified on high and low mtDNA levels for both definitions. -----
-# Group data for medians besed on control group (like in the article)
+# Group data for medians based on control group (like in the article)
 plot_data <- data %>% 
   drop_na() %>%
   filter(Group_names == "PCa cases") %>%
@@ -126,6 +126,7 @@ data <- data %>%
 
 
 # Bar charts stratified on high and low mtDNA levels for both definitions. -----
+
 # Group data for medians besed on control group (like in the article)
 plot_data <- data %>% 
   drop_na() %>%
@@ -178,6 +179,19 @@ AJCC_plot_p
 
 
 # Repeat, but for PSA levels ----------------------------------------------
+
+
+# Introduce grouping of PSA levels ----------------------------------------
+data <- data %>% 
+  mutate(PSA_levels = case_when(PSA < 10 ~ "low",
+                                PSA >= 10 & PSA < 20 ~ "medium",
+                                PSA >= 20 ~ "high"))
+
+
+
+# Plot PSA on Gleason score using article groups --------------------------
+
+
 
 
 
