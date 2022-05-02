@@ -2,7 +2,8 @@ library(tidyverse)
 library(ggpubr)
 # Re-creation of plot from article ----------------------------------------
 # Load augmented data
-data <- read_csv(file = "data/03_dat_aug.csv")
+data <- read_csv(file = "data/03_dat_aug.csv",
+                 show_col_types = FALSE)
 
 #Article plot
 article_plot <- ggplot(data, mapping = aes(x = group_names,

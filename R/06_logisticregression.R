@@ -2,7 +2,8 @@ library(broom)
 
 
 # Load augmented data -----------------------------------------------------
-data <- read_csv("data/03_dat_aug.csv")
+data <- read_csv("data/03_dat_aug.csv",
+                 show_col_types = FALSE)
 
 
 # Data wrangling and regression -------------------------------------------
