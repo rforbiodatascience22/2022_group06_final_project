@@ -6,8 +6,8 @@ library(corrr)
 # selection necessary for extraction of p.value 
 data <- read_csv("data/03_dat_aug.csv") %>% 
   drop_na() %>% 
-  select(-c("Sample","BMI_class","Dfi_class","TNM","Group_names",
-            "Group","PCRsuccess"))
+  select(-c(sample,bmi_class,dfi_class,tnm,group_names,
+            group,pcr_sucess))
 
 #correlation of all 
 #data_control %>% 

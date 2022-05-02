@@ -6,9 +6,9 @@ library(tidyverse)
 data <- read_csv("data/03_dat_aug.csv")
 
 #Boxplot
-ggplot(data, mapping = aes(x = Dfi_class,
-                           y = BMI,
-                           fill = Dfi_class)) + 
+ggplot(data, mapping = aes(x = dfi_class,
+                           y = bmi,
+                           fill = dfi_class)) + 
   geom_signif(comparisons = list(c("high fat",
                                    "medium fat"),
                                  c("medium fat",
@@ -22,6 +22,6 @@ ggplot(data, mapping = aes(x = Dfi_class,
   geom_boxplot() +
   scale_x_discrete(limits = c("low fat", "medium fat", "high fat"))
 
-ggsave(filename = "results/Boxplot_BMI_Dfi.png",
+ggsave(filename = "results/boxplot_bmi_dfi.png",
        width = 10,
        height = 7)
