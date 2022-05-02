@@ -3,7 +3,8 @@ library(ggsignif)
 
 # Correlation between fat intake and BMI ----------------------------------
 # Load augmented data
-data <- read_csv("data/03_dat_aug.csv")
+data <- read_csv("data/03_dat_aug.csv",
+                 show_col_types = FALSE)
 
 #Boxplot
 ggplot(data, mapping = aes(x = dfi_class,

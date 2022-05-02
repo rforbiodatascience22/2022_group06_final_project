@@ -4,7 +4,8 @@ library(rpart)
 library(corrr)
 
 # selection necessary for extraction of p.value 
-data <- read_csv("data/03_dat_aug.csv") %>% 
+data <- read_csv("data/03_dat_aug.csv",
+                 show_col_types = FALSE) %>% 
   drop_na() %>% 
   select(-c(sample,bmi_class,dfi_class,tnm,group_names,
             group,pcr_success))

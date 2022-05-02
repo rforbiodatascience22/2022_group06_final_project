@@ -4,7 +4,8 @@ library(ggtext)
 
 
 # Load augmented data -----------------------------------------------------
-data <- read_csv(file = "data/03_dat_aug.csv")
+data <- read_csv(file = "data/03_dat_aug.csv",
+                 show_col_types = FALSE)
 
 
 # Select data for PCA analysis --------------------------------------------

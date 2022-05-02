@@ -4,7 +4,8 @@ library(fs)
 
 
 # Load augmented data -----------------------------------------------------
-data <- read_csv("data/03_dat_aug.csv")
+data <- read_csv("data/03_dat_aug.csv",
+                 show_col_types = FALSE)
 
 
 # Create boxplot for each numeric variable to check for outliers ----------
