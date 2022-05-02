@@ -76,7 +76,7 @@ pc_weights_bar <- pca_fit %>%
   mutate(across(PC, as.character)) %>%
   ggplot(mapping = aes(x = column, y = value, fill = PC)) +
   geom_col(position = "dodge") +
-  scale_fill_viridis_d() +
+  scale_fill_brewer(palette = "Dark2") +
   labs(title = "Principal component weights on indicator variables",
        y = "Weight",
        x = ""
