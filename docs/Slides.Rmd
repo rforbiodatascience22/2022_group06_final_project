@@ -9,7 +9,6 @@ author:
   - William Hagedorn-Rasmussen, s194545
 output:
   ioslides_presentation:
-    #incremental: TRUE #enable to get incremental bullet point
     smaller:  TRUE
 date: '2022-05-10'
 ---
