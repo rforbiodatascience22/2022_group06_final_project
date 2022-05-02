@@ -8,21 +8,21 @@ data <- read_csv("data/03_dat_aug.csv")
 # Data wrangling and regression -------------------------------------------
 #Nest Group and all continuous variables
 data_nested <- data %>%
-  select(Group, Dfi_class, Age, BMI, PSA, mtDNA) %>% 
-  group_by(Dfi_class) %>% 
+  select(group, dfi_class, age, bmi, psa, mtdna) %>% 
+  group_by(dfi_class) %>% 
   nest %>% 
   ungroup
 
 #Perform logistic regression on Group vs all continuous variables
 # stratisfied on Dfi_class
-data_nested_PSA <- data_nested %>% 
+data_nested_psa <- data_nested %>% 
   mutate(mu_group = map(data,
-                        ~glm(Group ~ Age + BMI + PSA + mtDNA,
+                        ~glm(group ~ age, bmi, psa, mtdna,
                              data = .x,
                              family = binomial(link = "logit"))))
 
 #Extract estimates and p-values among others
-data_nested_PSA <- data_nested_PSA %>% 
+data_nested_psa <- data_nested_psa %>% 
   # Make a new variable by extracting statistical values from model
   mutate(coef = map(mu_group,
                     ~tidy(.))) %>% 
@@ -44,11 +44,11 @@ data_nested_PSA <- data_nested_PSA %>%
 
 
 # Save file
-data_nested_PSA %>% 
+data_nested_psa %>% 
   select(-data) %>%
   mutate(estimate = round(estimate, 3),
          p.value = round(p.value, 3)) %>% 
-  write_rds(file = "results/Logistic_regression_PSA.rds")
+  write_csv(file = "results/Logistic_regression_psa.csv")
 #The above shows, that only PSA has a correlation with cancer.
 # Except for people with Dfi_class = 1, then nothing was significant.
 # More investigation into other factors,
@@ -60,12 +60,12 @@ data_nested_PSA %>%
 #Perform logistic regression on Group vs all continuous variables, except PSA
 data_nested_mtDNA <- data_nested %>% 
   mutate(mu_group = map(data,
-                        ~glm(Group ~ Age + BMI + mtDNA,
+                        ~glm(group ~ age + mbi + mtdna,
                              data = .x,
                              family = binomial(link = "logit"))))
 
 #Extract estimates and p-values among others
-data_nested_mtDNA <- data_nested_mtDNA %>% 
+data_nested_mtdna <- data_nested_mtdna %>% 
   # Make a new variable by extracting statistical values from model
   mutate(coef = map(mu_group,
                     ~tidy(.))) %>% 
@@ -87,8 +87,8 @@ data_nested_mtDNA <- data_nested_mtDNA %>%
 
 
 # Save file
-data_nested_mtDNA %>% 
+data_nested_mtdna %>% 
   select(-data) %>%
   mutate(estimate = round(estimate, 3),
          p.value = round(p.value, 3)) %>% 
-  write_rds(file = "results/Logistic_regression_mtDNA.rds")
+  write_csv(file = "results/logistic_regression_mtdna.csv")

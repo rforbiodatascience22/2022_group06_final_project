@@ -1,0 +1,13 @@
+Dfi_class,term,estimate,p.value,identified_as
+low fat,Age,-83.471,0.93,Not significant
+low fat,BMI,78.946,0.929,Not significant
+low fat,PSA,475.61,0.93,Not significant
+low fat,mtDNA,184.842,0.933,Not significant
+medium fat,Age,-0.04,0.695,Not significant
+medium fat,BMI,0.132,0.537,Not significant
+medium fat,PSA,1.631,0.004,Significant
+medium fat,mtDNA,1.508,0.572,Not significant
+high fat,Age,0.031,0.649,Not significant
+high fat,BMI,0.368,0.198,Not significant
+high fat,PSA,2.033,0.018,Significant
+high fat,mtDNA,-3.766,0.296,Not significant

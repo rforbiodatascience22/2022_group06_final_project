@@ -6,8 +6,8 @@ library(corrr)
 # selection necessary for extraction of p.value 
 data <- read_csv("data/03_dat_aug.csv") %>% 
   drop_na() %>% 
-  select(-c("Sample","BMI_class","Dfi_class","TNM","Group_names",
-            "Group","PCRsuccess"))
+  select(-c(sample,bmi_class,dfi_class,tnm,group_names,
+            group,pcr_success))
 
 #correlation of all 
 #data_control %>% 
@@ -15,13 +15,13 @@ data <- read_csv("data/03_dat_aug.csv") %>%
 #                   "AJCC","PSA","Gleason","mtDNA",
 #                   "Tumor","LymphNodes","Metastasis")])
 
-preds01 <- predict(rpart(Tumor~LymphNodes,
+preds01 <- predict(rpart(tumor~lymph_nodes,
                        data = data, 
                        method = "anova"), 
                  type = "vector")
-tumorPlot01 <- data %>% 
-  ggplot(aes(x = Tumor,
-         y = LymphNodes)) +
+tumor_plot01 <- data %>% 
+  ggplot(aes(x = tumor,
+         y = lymph_nodes)) +
   geom_jitter(alpha = 0.5,
               width = 0.15,
               height = 0.15) +
@@ -30,13 +30,13 @@ tumorPlot01 <- data %>%
                 color = "red"))
 
 
-preds02 <- predict(rpart(Tumor~Metastasis,
+preds02 <- predict(rpart(tumor~metastasis,
                        data = data, 
                        method = "anova"), 
                  type = "vector")
-tumorPlot02 <- data %>% 
-  ggplot(aes(x = Tumor,
-             y = Metastasis)) +
+tumor_plot02 <- data %>% 
+  ggplot(aes(x = tumor,
+             y = metastasis)) +
   geom_jitter(alpha = 0.5,
               width = 0.15,
               height = 0.15) + 
@@ -45,13 +45,13 @@ tumorPlot02 <- data %>%
                 color = "red"))
 
 
-preds03 <- predict(rpart(Tumor~mtDNA,
+preds03 <- predict(rpart(tumor~mtdna,
                        data = data, 
                        method = "anova"), 
                  type = "vector")
-tumorPlot03 <- data %>% 
-  ggplot(aes(x = Tumor,
-             y = mtDNA)) +
+tumor_plot03 <- data %>% 
+  ggplot(aes(x = tumor,
+             y = mtdna)) +
   geom_jitter(alpha = 0.5,
               width = 0.15,
               height = 0.15) + 
@@ -60,13 +60,13 @@ tumorPlot03 <- data %>%
                 color = "red"))
 
 
-preds04 <- predict(rpart(Tumor~PSA,
+preds04 <- predict(rpart(tumor~psa,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  
-tumorPlot04 <- data %>% 
-  ggplot(aes(x = Tumor,
-             y = PSA)) +
+tumor_plot04 <- data %>% 
+  ggplot(aes(x = tumor,
+             y = psa)) +
   geom_jitter(alpha = 0.5,
               width = 0.15,
               height = 0.15) + 
@@ -75,13 +75,13 @@ tumorPlot04 <- data %>%
                 color = "red"))
 
 
-preds05 <- predict(rpart(Tumor~Gleason,
+preds05 <- predict(rpart(tumor~gleason,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  
-tumorPlot05 <- data %>% 
-  ggplot(aes(x = Tumor,
-             y = Gleason)) +
+tumor_plot05 <- data %>% 
+  ggplot(aes(x = tumor,
+             y = gleason)) +
   geom_jitter(alpha = 0.5,
               width = 0.15,
               height = 0.15) + 
@@ -90,13 +90,13 @@ tumorPlot05 <- data %>%
                 color = "red"))
 
 
-preds06 <- predict(rpart(Tumor~Gleason,
+preds06 <- predict(rpart(tumor~gleason,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  
-tumorPlot06 <- data %>% 
-  ggplot(aes(x = Tumor,
-             y = AJCC)) +
+tumor_plot06 <- data %>% 
+  ggplot(aes(x = tumor,
+             y = ajcc)) +
   geom_jitter(alpha = 0.5,
               width = 0.15,
               height = 0.15) +
@@ -104,8 +104,8 @@ tumorPlot06 <- data %>%
             aes(x=preds06,
                 color = "red"))
 
-bigTumorPlot <- (tumorPlot01 + tumorPlot02 + tumorPlot03) / 
-  (tumorPlot04 + tumorPlot05 + tumorPlot06)
+big_tumor_plot <- (tumor_plot01 + tumor_plot02 + tumor_plot03) / 
+  (tumor_plot04 + tumor_plot05 + tumor_plot06)
 
 calc_ttest_p_value <- function(vec_a, vec_b){
   1 - t.test(vec_a, vec_b)$p.value

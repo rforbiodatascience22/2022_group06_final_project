@@ -8,10 +8,10 @@ data <- read_csv("data/03_dat_aug.csv")
 
 
 # Create boxplot for each numeric variable to check for outliers ----------
-Age_Plot <- data %>% 
-  ggplot(aes(y = Age,
-             x = Group_names,
-             color = Group_names)) +
+age_Plot <- data %>% 
+  ggplot(aes(y = age,
+             x = group_names,
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -26,10 +26,10 @@ Age_Plot <- data %>%
   theme_classic()
 
 
-Fat_Intake_Plot <- data %>% 
-  ggplot(aes(y = Dfi,
-             x = Group_names,
-             color = Group_names)) +
+fat_intake_plot <- data %>% 
+  ggplot(aes(y = dfi,
+             x = group_names,
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -44,10 +44,10 @@ Fat_Intake_Plot <- data %>%
   theme_classic()
 
 
-BMI_Plot <- data %>% 
-  ggplot(aes(y = BMI,
-             x = Group_names,
-             color = Group_names)) +
+bmi_plot <- data %>% 
+  ggplot(aes(y = bmi,
+             x = group_names,
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -62,10 +62,10 @@ BMI_Plot <- data %>%
   theme_classic()
 
 
-PSA_Plot <- data %>% 
-  ggplot(aes(y = PSA,
-             x = Group_names,
-             color = Group_names)) +
+psa_plot <- data %>% 
+  ggplot(aes(y = psa,
+             x = group_names,
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -80,10 +80,10 @@ PSA_Plot <- data %>%
   theme_classic()
 
 
-mtDNA_Plot <- data %>% 
-  ggplot(aes(y = mtDNA,
-             x = Group_names,
-             color = Group_names)) +
+mtdna_plot <- data %>% 
+  ggplot(aes(y = mtdna,
+             x = group_names,
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -98,10 +98,10 @@ mtDNA_Plot <- data %>%
   theme_classic()
 
 
-Gleason_Plot <- data %>% 
-  ggplot(aes(y = Gleason,
+gleason_plot <- data %>% 
+  ggplot(aes(y = gleason,
              x = "",
-             color = Group_names)) +
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -117,10 +117,10 @@ Gleason_Plot <- data %>%
   theme_classic()
 
 
-AJCC_Plot <- data %>% 
-  ggplot(aes(y = AJCC,
+ajcc_Plot <- data %>% 
+  ggplot(aes(y = ajcc,
              x = "",
-             color = Group_names)) +
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -136,10 +136,10 @@ AJCC_Plot <- data %>%
   theme_classic()  
 
 
-Tumor_Plot <- data %>% 
-  ggplot(aes(y = Tumor,
+tumor_Plot <- data %>% 
+  ggplot(aes(y = tumor,
              x = "",
-             color = Group_names)) +
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -155,10 +155,10 @@ Tumor_Plot <- data %>%
   theme_classic()
 
 
-Nodes_Plot <- data %>% 
-  ggplot(aes(y = LymphNodes,
+nodes_plot <- data %>% 
+  ggplot(aes(y = lymph_nodes,
              x = "",
-             color = Group_names)) +
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -174,10 +174,10 @@ Nodes_Plot <- data %>%
   theme_classic()
 
 
-Metastasis_Plot <- data %>% 
-  ggplot(aes(y = Metastasis,
+metastasis_plot <- data %>% 
+  ggplot(aes(y = metastasis,
              x = "",
-             color = Group_names)) +
+             color = group_names)) +
   geom_boxplot(outlier.shape = NA,
                show.legend = FALSE) + 
   geom_jitter(show.legend = FALSE,
@@ -193,16 +193,16 @@ Metastasis_Plot <- data %>%
   theme_classic()
 
 
-boxplot_continuous <- Age_Plot + Fat_Intake_Plot +
-                      PSA_Plot + BMI_Plot + mtDNA_Plot +
+boxplot_continuous <- age_plot + fat_intake_plot +
+                      psa_plot + bmi_plot + mtdna_plot +
   plot_layout(ncol = 5) + 
-  plot_annotation(title = "A plot of the nonbinary attributes, to examine
+  plot_annotation(title = "A plot of the continuous attributes, to examine
                            distribution of outliers")
 
-boxplot_discrete <- AJCC_Plot + Gleason_Plot + Tumor_Plot +
-                    Nodes_Plot + MetastasisPlot + 
+boxplot_discrete <- ajcc_plot + gleason_plot + tumor_plot +
+                    nodes_plot + metastasis_plot + 
   plot_layout(ncol = 5) + 
-  plot_annotation(title = "A plot of the nonbinary attributes, to examine
+  plot_annotation(title = "A plot of the discrete attributes, to examine
                            distribution of outliers")
   
 ggsave(filename = 'results/boxplot_continuous.png',
