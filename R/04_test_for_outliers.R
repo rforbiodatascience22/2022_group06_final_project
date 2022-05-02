@@ -4,7 +4,8 @@ library(fs)
 
 
 # Load augmented data -----------------------------------------------------
-data <- read_csv("data/03_dat_aug.csv")
+data <- read_csv("data/03_dat_aug.csv",
+                 show_col_types = FALSE)
 
 
 # Create boxplot for each numeric variable to check for outliers ----------
@@ -117,7 +118,7 @@ gleason_plot <- data %>%
   theme_classic()
 
 
-ajcc_Plot <- data %>% 
+ajcc_plot <- data %>% 
   ggplot(aes(y = ajcc,
              x = "",
              color = group_names)) +
@@ -136,7 +137,7 @@ ajcc_Plot <- data %>%
   theme_classic()  
 
 
-tumor_Plot <- data %>% 
+tumor_plot <- data %>% 
   ggplot(aes(y = tumor,
              x = "",
              color = group_names)) +
@@ -196,14 +197,12 @@ metastasis_plot <- data %>%
 boxplot_continuous <- age_plot + fat_intake_plot +
                       psa_plot + bmi_plot + mtdna_plot +
   plot_layout(ncol = 5) + 
-  plot_annotation(title = "A plot of the continuous attributes, to examine
-                           distribution of outliers")
+  plot_annotation(title = "A plot of the continuous attributes, to examine distribution of outliers")
 
 boxplot_discrete <- ajcc_plot + gleason_plot + tumor_plot +
                     nodes_plot + metastasis_plot + 
   plot_layout(ncol = 5) + 
-  plot_annotation(title = "A plot of the discrete attributes, to examine
-                           distribution of outliers")
+  plot_annotation(title = "A plot of the discrete attributes, to examine distribution of outliers")
   
 ggsave(filename = 'results/boxplot_continuous.png',
        plot = boxplot_continuous,
