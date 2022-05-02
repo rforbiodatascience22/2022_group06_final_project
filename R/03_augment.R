@@ -57,7 +57,7 @@ medical_info <- medical_info %>%
 # Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
   mutate(group_names = case_when(group == 1 ~ "pca_cases",
-                                 group == 0 ~ "Controls"))
+                                 group == 0 ~ "controls"))
 
 
 # Join patient info and medical info based on Sample ----------------------

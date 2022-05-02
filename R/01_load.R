@@ -37,3 +37,4 @@ read_excel("data/_raw/Data.xlsx",
 read_excel("data/_raw/Data.xlsx",
            sheet = "Column Legend") %>%
   write_csv("data/01_legend_load.csv")
+
