@@ -24,7 +24,7 @@ read_excel("data/_raw/Data.xlsx",
            .name_repair = "universal") %>%
   rename(sample = Sample,
          group = Group,
-         pcr_success = pcrsuccess,
+         pcr_success = PCRsuccess,
          age = Age..yr.,
          tnm = TNM.stage,
          ajcc = AJCC.stage,
