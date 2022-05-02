@@ -8,7 +8,7 @@ data <- read_csv("data/03_dat_aug.csv")
 
 
 # Create boxplot for each numeric variable to check for outliers ----------
-age_Plot <- data %>% 
+age_plot <- data %>% 
   ggplot(aes(y = age,
              x = group_names,
              color = group_names)) +
@@ -117,7 +117,7 @@ gleason_plot <- data %>%
   theme_classic()
 
 
-ajcc_Plot <- data %>% 
+ajcc_plot <- data %>% 
   ggplot(aes(y = ajcc,
              x = "",
              color = group_names)) +
@@ -136,7 +136,7 @@ ajcc_Plot <- data %>%
   theme_classic()  
 
 
-tumor_Plot <- data %>% 
+tumor_plot <- data %>% 
   ggplot(aes(y = tumor,
              x = "",
              color = group_names)) +
