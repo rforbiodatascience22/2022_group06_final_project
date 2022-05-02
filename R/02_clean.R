@@ -3,12 +3,12 @@ library(tidyverse)
 
 # Clean out unsuccessful data ---------------------------------------------
 filtered_data <- read_csv("data/01_dat_load.csv") %>% 
-  filter(PCRsuccess == 1) 
+  filter(pcr_success == 1) 
 
 
 # Check for duplicates ----------------------------------------------------
 is_duplicated <- filtered_data %>% 
-  group_by(Sample) %>% 
+  group_by(sample) %>% 
   filter(n() != 1)
 
 #print error if sample duplicates are present in the data frame
