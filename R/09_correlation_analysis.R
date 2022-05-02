@@ -1,7 +1,7 @@
 library(tidyverse)
 library(ggpubr)
 #load data
-data <- read_csv(file = "data/02_dat_clean.csv")
+data <- read_csv(file = "data/03_dat_aug.csv")
 
 #following analysis is based on the statistical analysis presented in the article
 

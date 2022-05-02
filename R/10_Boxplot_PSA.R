@@ -1,0 +1,38 @@
+library(tidyverse)
+library(ggpubr)
+
+
+# Boxplot for PSA-levels --------------------------------------------------
+# Load augmented data
+data <- read_csv(file = "data/03_dat_aug.csv")
+
+#Boxplot
+boxplot_PSA <- ggplot(data, mapping = aes(x = Group_names,
+                                   y = PSA, 
+                                   fill  = Group_names)) + 
+  
+  stat_boxplot(geom = "errorbar",
+               width = 0.5) +  
+  geom_boxplot(outlier.shape = 1) +
+  geom_signif(comparisons = list(c("Controls",
+                                   "PCa cases")), 
+              map_signif_level=TRUE,
+              size = 0.4) +
+  theme(legend.position = "right") + 
+  labs(title = "Boxplot of PSA of controls and PCa cases", 
+       y = "PSA", 
+       x = "Group", 
+       caption = "Figure: Distribution of pheripheral blood mtDNA copy number
+                  in Han chinese with prostate cancer and healthy controls.") +
+  theme(plot.title = element_text(size = 10), 
+        plot.caption = element_text(size = 6),
+        plot.caption.position = "plot")  
+
+#Add statistical test
+boxplot_PSA <- boxplot_PSA + ggpubr::stat_compare_means(method = "t.test", size = 3)
+
+#Save figure
+ggsave(filename = "results/boxplot_PSA.png",
+       plot = boxplot_PSA,
+       width = 10,
+       height = 7)
