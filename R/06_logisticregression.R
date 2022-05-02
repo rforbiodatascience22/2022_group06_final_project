@@ -17,7 +17,7 @@ data_nested <- data %>%
 # stratisfied on Dfi_class
 data_nested_psa <- data_nested %>% 
   mutate(mu_group = map(data,
-                        ~glm(group ~ age, bmi, psa, mtdna,
+                        ~glm(group ~ age + bmi + psa + mtdna,
                              data = .x,
                              family = binomial(link = "logit"))))
 
@@ -58,9 +58,9 @@ data_nested_psa %>%
 # Exclude PSA in regression -----------------------------------------------
 #We see that PSA is a better predictor, but can mtDNA also contribute?
 #Perform logistic regression on Group vs all continuous variables, except PSA
-data_nested_mtDNA <- data_nested %>% 
+data_nested_mtdna <- data_nested %>% 
   mutate(mu_group = map(data,
-                        ~glm(group ~ age + mbi + mtdna,
+                        ~glm(group ~ age + bmi + mtdna,
                              data = .x,
                              family = binomial(link = "logit"))))
 

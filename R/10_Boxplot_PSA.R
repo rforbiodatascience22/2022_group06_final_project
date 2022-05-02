@@ -27,7 +27,7 @@ boxplot_psa <- ggplot(data, mapping = aes(x = group_names,
         plot.caption.position = "plot")  
 
 #Add statistical test
-boxplot_psa <- boxplot_psa + ggpubr::stat_compare_means(method = "t.test", size = 10)
+boxplot_psa <- boxplot_psa + ggpubr::stat_compare_means(method = "t.test", size = 6)
 
 #Save figure
 ggsave(filename = "results/boxplot_psa.png",
