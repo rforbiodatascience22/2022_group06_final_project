@@ -14,8 +14,8 @@ boxplot_psa <- ggplot(data, mapping = aes(x = group_names,
     stat_boxplot(geom = "errorbar",
                width = 0.5) +  
   geom_boxplot(outlier.shape = 1) +
-  geom_signif(comparisons = list(c("Controls",
-                                   "PCa cases")), 
+  geom_signif(comparisons = list(c("controls",
+                                   "pca_cases")), 
               map_signif_level=TRUE,
               size = 0.4) +
   theme(legend.position = "right") + 
@@ -28,7 +28,8 @@ boxplot_psa <- ggplot(data, mapping = aes(x = group_names,
         plot.caption.position = "plot")  
 
 #Add statistical test
-boxplot_psa <- boxplot_psa + ggpubr::stat_compare_means(method = "t.test", size = 6)
+boxplot_psa <- boxplot_psa + ggpubr::stat_compare_means(method = "t.test",
+                                                        size = 4)
 
 #Save figure
 ggsave(filename = "results/boxplot_psa.png",

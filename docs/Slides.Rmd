@@ -89,18 +89,18 @@ knitr::include_graphics(c("../results/article_visualization.png",
 
 ## A better biomarker for PCa?
 ```{r out.width="100%"}
-knitr::include_graphics("../results/boxplot_PSA.png")
+knitr::include_graphics("../results/boxplot_psa.png")
 ```
 
 ## Interesting finding during exploratory data analysis
 ```{r out.width="80%", fig.align='center'}
-knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
+knitr::include_graphics("../results/boxplot_bmi_dfi.png")
 ```
 
 ## Logistic regression, excl. PSA {.build}
 Significant p-values:
 ```{r}
-read_csv("../results/Logistic_regression_mtDNA.csv",
+read_csv("../results/logistic_regression_mtdna.csv",
          show_col_types = FALSE) %>%
   filter(identified_as == "Significant") %>% 
   paged_table()
@@ -120,7 +120,7 @@ data_aug %>%
 ## Logistic regression, incl. PSA
 Significant p-values:
 ```{r}
-read_csv("../results/Logistic_regression_PSA.csv",
+read_csv("../results/logistic_regression_psa.csv",
          show_col_types = FALSE) %>%
   filter(identified_as == "Significant") %>% 
   paged_table()
