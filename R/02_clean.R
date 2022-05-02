@@ -19,3 +19,4 @@ if (nrow(is_duplicated) > 0) {
 #nrow(is_duplicated)
 filtered_data %>% 
   write_csv("data/02_dat_clean.csv")
+

@@ -1,4 +1,4 @@
-Sample,Group,PCRsuccess,Age,TNM,AJCC,PSA,Gleason,Dfi,Smoking,PCaHist,BMI,mtDNA
+Sample,Group,PCRsuccess,age,tnm,ajcc,psa,gleason,dfi,smoking,pca_hist,bmi,mtdna
 CM4028,1,1,50,T4N1M0,4,17.02,7,14.6,0,0,22.35,0.842
 CM4033,1,1,76,T4N0M0,4,23.29,8,27.3,0,0,34.12,0.804
 CM4038,1,1,70,T4N1M1b,4,100.3,7,34.2,0,0,19.59,1.797
