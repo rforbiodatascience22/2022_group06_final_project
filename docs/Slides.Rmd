@@ -3,10 +3,10 @@ title: "Prostate cancer (PCa) analysis"
 subtitle: "Group 6"
 author:
   - Esben Vestergaard Øyan, s194564
-  - William Hagedorn-Rasmussen, s194545
   - Eskild Fisker Angen, s184241
-  - Mathias Rahbek-Borre, s183447
   - Joachim Breitenstein, s183460
+  - Mathias Rahbek-Borre, s183447
+  - William Hagedorn-Rasmussen, s194545
 output:
   ioslides_presentation:
     #incremental: TRUE #enable to get incremental bullet point
@@ -26,7 +26,7 @@ library(knitr)
 data_load <- read_csv("../data/01_dat_load.csv") 
 ```
 
-- Dimensions of the data set: `r dim(data_load)` 
+- Dimensions of the raw data set: `r dim(data_load)` 
 
 
 - Stratified on Controls and PCa cases (attribute called Group)  
@@ -42,6 +42,7 @@ data_clean <- read_csv("../data/02_dat_clean.csv")
 ```{r data_aug, include = FALSE}
 data_aug <- read_csv("../data/03_dat_aug.csv")
 ```
+<div>
 **Cleaning**  
 
 - Check for duplicates  
@@ -51,7 +52,7 @@ data_aug <- read_csv("../data/03_dat_aug.csv")
 
 
 - New dimensions: `r dim(data_clean)`  
-
+</div>
 <div>
 **Augmenting**  
 
@@ -68,12 +69,12 @@ data_aug <- read_csv("../data/03_dat_aug.csv")
 </div>
 
 ## Boxplot with continuous variables, any outliers?
-```{r out.width="100%", out.height="100%"}
+```{r out.width="90%", fig.align='center'}
 knitr::include_graphics("../results/boxplot_continuous.png")
 ```
 
 ## Boxplot with discrete variables, any outliers?
-```{r out.width="100%", out.height="100%"}
+```{r out.width="90%", fig.align='center'}
 knitr::include_graphics("../results/boxplot_discrete.png")
 ```
 
@@ -89,14 +90,15 @@ knitr::include_graphics("../results/boxplot_PSA.png")
 ```
 
 ## Interesting finding during exploratory data analysis
-```{r out.width="100%",out.height="100%"}
+```{r out.width="80%", fig.align='center'}
 knitr::include_graphics("../results/Boxplot_BMI_Dfi.png")
 ```
 
 ## Logistic regression, excl. PSA {.build}
 Significant p-values:
 ```{r}
-read_csv("../results/Logistic_regression_mtDNA.csv") %>%
+read_csv("../results/Logistic_regression_mtDNA.csv",
+         show_col_types = FALSE) %>%
   filter(identified_as == "Significant") %>% 
   paged_table()
 ```
@@ -115,7 +117,8 @@ data_aug %>%
 ## Logistic regression, incl. PSA
 Significant p-values:
 ```{r}
-read_csv("../results/Logistic_regression_PSA.csv") %>%
+read_csv("../results/Logistic_regression_PSA.csv",
+         show_col_types = FALSE) %>%
   filter(identified_as == "Significant") %>% 
   paged_table()
 ```
