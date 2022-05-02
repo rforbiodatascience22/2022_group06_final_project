@@ -23,7 +23,8 @@ ggplot(data, mapping = aes(x = dfi_class,
   geom_boxplot() +
   scale_x_discrete(limits = c("low fat", 
                               "medium fat", 
-                              "high fat"))
+                              "high fat")) +
+  theme(text = element_text(size = 16))  
 
 ggsave(filename = "results/boxplot_bmi_dfi.png",
        width = 10,
