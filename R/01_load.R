@@ -8,7 +8,7 @@ library(readxl)
 
 
 # Fix wrong guesses -------------------------------------------------------
-#readr takes a wrong guess when guessing the type of data for column "PSA level
+# readr takes a wrong guess when guessing the type of data for column "PSA level
 # (ng/ml)". Instead we get column name and uses an if-else statement
 nms <- names(read_excel("data/_raw/Data.xlsx",
                         sheet = "Data Set",
@@ -17,6 +17,7 @@ cnames <- ifelse(str_detect(nms, "^PSA"), "numeric", "guess")
 
 
 # Load data set -----------------------------------------------------------
+# In addition to loading the data naming is changed to snake_case
 read_excel("data/_raw/Data.xlsx",
            sheet = "Data Set",
            col_types = cnames,
