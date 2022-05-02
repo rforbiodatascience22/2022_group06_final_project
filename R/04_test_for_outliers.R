@@ -117,7 +117,7 @@ gleason_plot <- data %>%
   theme_classic()
 
 
-ajcc_Plot <- data %>% 
+ajcc_plot <- data %>% 
   ggplot(aes(y = ajcc,
              x = "",
              color = group_names)) +
@@ -136,7 +136,7 @@ ajcc_Plot <- data %>%
   theme_classic()  
 
 
-tumor_Plot <- data %>% 
+tumor_plot <- data %>% 
   ggplot(aes(y = tumor,
              x = "",
              color = group_names)) +
