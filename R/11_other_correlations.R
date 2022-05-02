@@ -3,6 +3,7 @@ library(patchwork)
 library(rpart)
 library(corrr)
 
+# selection necessary for extraction of p.value 
 data <- read_csv("data/03_dat_aug.csv") %>% 
   drop_na() %>% 
   select(-c("Sample","BMI_class","Dfi_class","TNM","Group_names",
@@ -107,7 +108,7 @@ bigTumorPlot <- (tumorPlot01 + tumorPlot02 + tumorPlot03) /
   (tumorPlot04 + tumorPlot05 + tumorPlot06)
 
 calc_ttest_p_value <- function(vec_a, vec_b){
-  1 - t.test(vec_a, vec_b)$t.test
+  1 - t.test(vec_a, vec_b)$p.value
 }
 
 corrr::colpair_map(data, calc_ttest_p_value)
