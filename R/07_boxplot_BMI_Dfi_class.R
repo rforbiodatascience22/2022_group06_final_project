@@ -1,5 +1,5 @@
 library(tidyverse)
-
+library(ggsignif)
 
 # Correlation between fat intake and BMI ----------------------------------
 # Load augmented data
@@ -21,7 +21,9 @@ ggplot(data, mapping = aes(x = dfi_class,
               map_signif_level = TRUE,
               y_position = 39) +
   geom_boxplot() +
-  scale_x_discrete(limits = c("low fat", "medium fat", "high fat"))
+  scale_x_discrete(limits = c("low fat", 
+                              "medium fat", 
+                              "high fat"))
 
 ggsave(filename = "results/boxplot_bmi_dfi.png",
        width = 10,
