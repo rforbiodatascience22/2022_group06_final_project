@@ -57,3 +57,4 @@ To do:
 12) Use "separate" function for TMN? (function from Lab 5, Q20)
 13) Manhatten plot? (lab 6)
 14) Might need to do some broom stuff, whatever that is
+15) Create a flowchart of our data handlig? To visualize what we did
