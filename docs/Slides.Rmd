@@ -146,3 +146,7 @@ knitr::include_graphics(c("../results/pc1_vs_pc2.png",
 <div>
 - Conclusion for PCA?
 </div>
+
+<div>
+- Some further research? Should be possible to do classification on Gleason scores/AJCC, should also be possible to do regression (albeit out of the scope of this course)
+</div>
