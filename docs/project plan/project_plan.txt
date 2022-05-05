@@ -49,16 +49,15 @@ To do:
 4) Data visualitation with "slice" function
 5) Use geom_violin?
 9) Add color to titles, see Lab 3 Task IX
-6) Insert subtitles?
-9) Add color to titles, see Lab 3 Task IX
+- 6) Insert subtitles?
+- 9) Add color to titles, see Lab 3 Task IX
 10) Make sure we fully understand the summarise function
 - first part 11) *Go through code*, did we do anything multiple times? Make a function
 12) Use "separate" function for TMN? (function from Lab 5, Q20)
 15) Create a flowchart of our data handlig? To visualize what we did
 
 
+change "controls" to "control" and "pca_cases" to "pca_case"
 William looks at separate
-
-Fix 11_, should it be included?
-Go through code.
-
+Mathias looks at title color (09_mtDNA)
+Joachim looks at flowchart of script
