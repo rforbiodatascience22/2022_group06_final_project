@@ -59,9 +59,11 @@ To do:
 
 Fix 11_, should it be included?
 Go through code.
+fix libraries
+violin plots (article visualization)
 
 Slides
   Include 09-slide
   Adjust conclusion slide.
-  Code - flowchart
-  More color its bland
+  Code-flowchart
+  More color, its bland.
