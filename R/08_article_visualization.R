@@ -1,5 +1,5 @@
 library(tidyverse)
-library(ggpubr)
+# library(ggpubr)
 library(ggsignif)
 # Re-creation of plot from article ----------------------------------------
 # Load augmented data

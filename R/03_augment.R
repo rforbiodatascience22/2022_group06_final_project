@@ -13,7 +13,7 @@ medical_info <- data %>%
   select(!c(age, dfi, smoking, pca_hist, bmi))
 
 
-# Add in a bmi classifier -------------------------------------------------
+# Add in and factorize a BMI class ----------------------------------------
 patient_info <- patient_info %>% 
   mutate(bmi_class = case_when(bmi < 18.5 ~ "underweight",
                                18.5 <= bmi & bmi < 25 ~ "normal weight",
@@ -24,16 +24,19 @@ patient_info <- patient_info %>%
                                         "overweight", "obese")))
 
 
-# Add in a dfi classifier -------------------------------------------------
+# Add in a DFI class ------------------------------------------------------
 patient_info <- patient_info %>% 
   mutate(dfi_class = case_when(dfi < 20 ~ "low fat",
                                    20 <= dfi & dfi < 30 ~ "medium fat",
-                                   30 <= dfi ~ "high fat"))
+                                   30 <= dfi ~ "high fat"),
+         dfi_class = factor(dfi_class,
+                            levels =  c("low fat", "medium fat",
+                                        "high fat")))
 
 
-# Split TNM notation into usable numbers ----------------------------------
-#Add variables derived from TNM 
-#Standard naming convention taken from www.cancerresearchuk.org
+# Split TNM notation into separate variables ------------------------------
+# Add variables derived from TNM 
+# Standard naming convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
   mutate(tumor = case_when(str_detect(tnm,"T0.+") ~ 0,
                            str_detect(tnm,"T1.+") ~ 1,
