@@ -7,61 +7,22 @@ library(dplyr)
 # read augmented data -----------------------------------------------------
 data <- read_csv("data/03_dat_aug.csv")
 
-
-
-# Create pointplot for AJCC on mtDNA and PSA -------------------------
-# PSA_AJCC <- data %>% 
-#   ggplot(mapping = aes(x = PSA, y = AJCC)) +
-#   geom_point() +
-#   geom_smooth(se = FALSE)
-# 
-# mtDNA_AJCC <- data %>% 
-#   ggplot(mapping = aes(x = mtDNA, y = AJCC)) +
-#   geom_point() +
-#   geom_smooth(se = FALSE)
-# 
-# AJCC_plot <- PSA_AJCC + mtDNA_AJCC +
-#   plot_annotation(title = "A plot showing the correlation between AJCC classification and the biomarkers 'PSA count' and 'mtDNA number count'")
-# 
-# AJCC_plot
-# 
-
-# Create pointplot for Gleason on mtDNA and PSA ---------------------------
-# PSA_Gleason <- data %>% 
-#   ggplot(mapping = aes(x = PSA, y = Gleason)) +
-#   geom_point() +
-#   geom_smooth(se = FALSE)
-# 
-# mtDNA_Gleason <- data %>% 
-#   ggplot(mapping = aes(x = mtDNA, y = Gleason)) +
-#   geom_point() +
-#   geom_smooth(se = FALSE)
-# 
-# Gleason_plot <- PSA_Gleason + mtDNA_Gleason +
-#   plot_annotation(title = "A plot showing the correlation between Gleason classification and the biomarkers 'PSA count' and 'mtDNA number count'")
-# 
-# Gleason_plot
-
-
-
 # Stratify on mtDNA levels and Gleason score -----------------------------------
 mtdna_control_median <- data %>% 
   filter(group_names == "controls") %>% 
-  summarise(median = median(mtdna)) %>% 
-  print()
+  summarise(median = median(mtdna))
 
 data <- data %>% 
-  mutate(mtdna_group_c = case_when(mtdna > mtdna_control_median[[1]] ~ "high",
-                                   mtdna <= mtdna_control_median[[1]] ~ "low"))
+  mutate(mtdna_group_c = case_when(mtdna > mtdna_control_median[[1]] ~ "count low",
+                                   mtdna <= mtdna_control_median[[1]] ~ "high count"))
 
 mtdna_patient_median <- data %>% 
   filter(group_names == "pca_cases") %>% 
-  summarise(median = median(mtdna)) %>% 
-  print()
+  summarise(median = median(mtdna))
 
 data <- data %>% 
-  mutate(mtdna_group_p = case_when(mtdna > mtdna_patient_median[[1]] ~ "high",
-                                   mtdna <= mtdna_patient_median[[1]] ~ "low")) %>% 
+  mutate(mtdna_group_p = case_when(mtdna > mtdna_patient_median[[1]] ~ "count low",
+                                   mtdna <= mtdna_patient_median[[1]] ~ "high count")) %>% 
   mutate(gleason_group = case_when(gleason <= 6 ~ "low",
                                    gleason == 7 ~ "medium",
                                    gleason >= 8 ~ "high"))
@@ -85,12 +46,14 @@ gleason_plot_c <- plot_data %>%
   geom_bar(stat = "identity",
            position = "dodge") +
   scale_x_discrete(limits = c("low", "medium", "high")) +
+  scale_fill_brewer(palette = "Dark2") +
   labs(x = "Gleason score",
-       y = "percentage",
+       y = "(%)",
        fill = "mtDNA levels",
-       title = "mtDNA levels based on control median")
-
-gleason_plot_c 
+       title = "C) mtDNA levels based on control median")
+       # caption = "Frequency plot of patients stratified on Gleason score ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above).
+       # Colored by mtDNA count number in PBL relative to median derived from control group.
+       # Every color adds up to 100 %.")
 
 
 # Group data based on the mtDNA median in patient group.
@@ -110,12 +73,14 @@ gleason_plot_p <- plot_data %>%
   geom_bar(stat = "identity",
            position = "dodge") +
   scale_x_discrete(limits = c("low", "medium", "high")) +
+  scale_fill_brewer(palette = "Dark2") +
   labs(x = "Gleason score",
-       y = "percentage",
+       y = "",
        fill = "mtDNA levels",
-       title = "mtDNA levels based on patient median")
-
-gleason_plot_p
+       title = "D) mtDNA levels based on patient median")
+       # caption = "Frequency plot of patients stratified on Gleason score ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above).
+       # Colored by mtDNA count number in PBL relative to median derived from patient group.
+       # Every color adds up to 100 %.")
 
 
 # Stratify on mtDNA levels and AJCC score -----------------------------------
@@ -144,12 +109,14 @@ ajcc_plot_c <- plot_data %>%
   geom_bar(stat = "identity",
            position = "dodge") +
   scale_x_discrete(limits = c("II", "III", "IV")) +
+  scale_fill_brewer(palette = "Dark2") +
   labs(x = "AJCC stage",
-       y = "percentage",
+       y = "(%)",
        fill = "mtDNA levels",
-       title = "mtDNA levels based on control median")
-
-ajcc_plot_c 
+       title = "A) mtDNA levels based on control median")
+       # caption = "Frequency plot of patients stratified on AJCC stage ('II' is both II A and II B). 
+       # Colored by mtDNA count number in PBL relative to median derived from control group.
+       # Every color adds up to 100 %.")
 
 
 # Group data based on the mtDNA median in patient group.
@@ -169,13 +136,14 @@ ajcc_plot_p <- plot_data %>%
   geom_bar(stat = "identity",
            position = "dodge") +
   scale_x_discrete(limits = c("II", "III", "IV")) +
+  scale_fill_brewer(palette = "Dark2") +
   labs(x = "AJCC stage",
-       y = "percentage",
+       y = "",
        fill = "mtDNA levels",
-       title = "mtDNA levels based on patient median")
-
-ajcc_plot_p
-
+       title = "B) mtDNA levels based on patient median")
+       # caption = "Frequency plot of patients stratified on AJCC stage ('II' is both II A and II B). 
+       # Colored by mtDNA count number in PBL relative to median derived from patient group.
+       # Every color adds up to 100 %.")
 
 
 # Repeat, but for PSA levels ----------------------------------------------
@@ -205,16 +173,60 @@ gleason_psa_agroup_plot <- plot_data %>%
   geom_bar(stat = "identity",
            position = "dodge") +
   scale_x_discrete(limits = c("low", "medium", "high")) +
+  scale_fill_brewer(palette = "Dark2") +
   labs(x = "Gleason score",
-       y = "(%)",
+       y = "",
        fill = "PSA levels (ng/ml)",
-       title = "PSA levels based on article groups",
-       caption = "Frequency plot of patients stratified on Gleason score ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above). 
-       Colored by PSA levels measured in ng/ml in periferal blood. Every color adds up to 100 %.")
-
-gleason_psa_agroup_plot
+       title = "F) PSA levels from article, stratified on Glea. score")
+       # caption = "Frequency plot of patients stratified on Gleason score ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above). 
+       # Colored by PSA levels measured in ng/ml in periferal blood. Every color adds up to 100 %.")
 
 
+# Plot PSA on AJCC using article grouping ---------------------------------
+plot_data <- data %>% 
+  drop_na() %>%
+  filter(group_names == "pca_cases") %>%
+  group_by(psa_level, ajcc_stage) %>%
+  summarise(count = n()) %>% 
+  mutate(perc = count/sum(count))
+
+# Plot
+
+ajcc_psa_agroup_plot <- plot_data %>%  
+  ggplot(mapping = aes(x = ajcc_stage,
+                       y = perc*100,
+                       fill = psa_level,
+                       group = psa_level)) + 
+  geom_bar(stat = "identity",
+           position = "dodge") +
+  scale_x_discrete(limits = c("II", "III", "IV")) +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(x = "AJCC stage",
+       y = "",
+       fill = "PSA levels (ng/ml)",
+       title = "E) PSA levels from article, stratified on AJCC stage")
+       # caption = "Frequency plot of patients stratified on AJCC stage ('II' is stage II A and II B). 
+       # Colored by PSA levels measured in ng/ml in periferal blood. Every color adds up to 100 %.")
 
 
+# Paste plots together in a png -------------------------------------------
+
+mtdna_vs_psa <- ajcc_plot_c +
+  ajcc_plot_p +
+  ajcc_psa_agroup_plot +
+  gleason_plot_c +
+  gleason_plot_p +
+  gleason_psa_agroup_plot +
+  labs(caption = "A-D, colored by mtDNA number counts in PBL's grouped above and below a median derived from control group (as in article) and patient group respectively.
+  E-F colored by PSA levels measured in ng/ml. Every color adds up to 100 %.
+  Stratification on AJCC stage: ('II' refers to both II A and II B). Stratification on Gleason score: ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above)")
+  
+
+mtdna_vs_psa
+
+#Plot of PC1 vs PC2
+ggsave(filename = "results/mtdna_vs_psa.png", 
+       plot = mtdna_vs_psa,
+       width = 10,
+       height = 7)
 
