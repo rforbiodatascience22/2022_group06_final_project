@@ -227,6 +227,6 @@ mtdna_vs_psa
 #Plot of PC1 vs PC2
 ggsave(filename = "results/mtdna_vs_psa.png", 
        plot = mtdna_vs_psa,
-       width = 10,
+       width = 14,
        height = 7)
 
