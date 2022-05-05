@@ -35,25 +35,10 @@ patient_info <- patient_info %>%
 #Add variables derived from TNM 
 #Standard naming convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
-  mutate(tumor = case_when(str_detect(tnm,"T0.+") ~ 0,
-                           str_detect(tnm,"T1.+") ~ 1,
-                           str_detect(tnm,"T2.+") ~ 2,
-                           str_detect(tnm,"T3.+") ~ 3,
-                           str_detect(tnm,"T4N.+") ~ 4,
-                           str_detect(tnm,"T4a.+") ~ 5,
-                           str_detect(tnm,"T4b.+") ~ 6),
-         lymph_nodes = parse_number(stri_extract(tnm, 
-                                                 regex = "N(\\d)")),
-         metastasis = case_when(str_detect(tnm,".+M0") ~ 0,
-                                str_detect(tnm,".+M1a") ~ 1,
-                                str_detect(tnm,".+M1b") ~ 2,
-                                str_detect(tnm,".+M1c") ~ 3,
-                                # observing the data revealed two points 
-                                # that were entered incorrectly, which
-                                # we handle at this point
-                                str_detect(tnm,".+Mlb") ~ 2,
-                                str_detect(tnm,".+m0") ~ 0))
-
+  select(tnm) %>% 
+  extract(col = tnm,
+          into = c("tumor","lymph_nodes","metastasis"),
+          regex = "T(\\d).?N(\\d)M(\\d)")
 
 # Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
