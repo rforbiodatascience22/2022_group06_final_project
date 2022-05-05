@@ -1,10 +1,13 @@
-# load data
+
+# Load data ---------------------------------------------------------------
 data <- read_csv(file = "data/03_dat_aug.csv",
                  show_col_types = FALSE)
 
-# following analysis is based on the statistical analysis presented in the article
 
-# split data frame
+# Re-create statistical analysis from article -----------------------------
+# The following analysis is based on the statistical analysis presented in the article
+
+# Split data frame
 data_control <- data %>% 
   filter(group_names == "controls")
 data_pca <- data %>% 
@@ -18,7 +21,7 @@ plt1 <- data_control %>%
 
 plt1 + ggpubr::stat_cor(method = "spearman")
 
-#mtDNA vs. Age for PCa cases
+# mtDNA vs. Age for PCa cases
 plt2 <- data_pca %>% 
   ggplot(mapping = aes(x = age, 
                        y = mtdna)) + 
@@ -27,7 +30,7 @@ plt2 <- data_pca %>%
 plt2 + ggpubr::stat_cor(method = "spearman")
 
 
-#mtDNA vs. BMI for controls
+# mtDNA vs. BMI for controls
 plt3 <- data_control %>% 
   ggplot(mapping = aes(x = bmi, 
                        y = mtdna)) + 
@@ -36,7 +39,7 @@ plt3 <- data_control %>%
 plt3 + ggpubr::stat_cor(method = "spearman")
 
 
-#mtDNA vs. BMI for PCa cases
+# mtDNA vs. BMI for PCa cases
 plt4 <- data_pca %>% 
   ggplot(mapping = aes(x = bmi, 
                        y = mtdna)) + 
