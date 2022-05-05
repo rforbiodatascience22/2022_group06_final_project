@@ -1,7 +1,7 @@
 library(tidyverse)
 library("patchwork")
 library(dplyr)
-
+library(ggtext)
 
 
 # read augmented data -----------------------------------------------------
@@ -47,10 +47,15 @@ gleason_plot_c <- plot_data %>%
            position = "dodge") +
   scale_x_discrete(limits = c("low", "medium", "high")) +
   scale_fill_brewer(palette = "Dark2") +
+  theme(legend.position = "none",
+        plot.subtitle = element_markdown()) +
   labs(x = "Gleason score",
        y = "(%)",
        fill = "mtDNA levels",
-       title = "C) mtDNA levels based on control median")
+       title = "C) mtDNA levels based on control median", 
+       subtitle = "Stratified on mtDNA levels <span style = 'color: #d95f02;'>
+                  above the median</span> <br>and <span style ='color: 
+                  #1b9e77;'>below the median</span>")
        # caption = "Frequency plot of patients stratified on Gleason score ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above).
        # Colored by mtDNA count number in PBL relative to median derived from control group.
        # Every color adds up to 100 %.")
@@ -74,10 +79,15 @@ gleason_plot_p <- plot_data %>%
            position = "dodge") +
   scale_x_discrete(limits = c("low", "medium", "high")) +
   scale_fill_brewer(palette = "Dark2") +
+  theme(legend.position = "none",
+        plot.subtitle = element_markdown()) +
   labs(x = "Gleason score",
        y = "",
        fill = "mtDNA levels",
-       title = "D) mtDNA levels based on patient median")
+       title = "D) mtDNA levels based on patient median", 
+       subtitle = "Stratified on mtDNA levels <span style = 'color: #d95f02;'>
+                  above the median</span> <br>and <span style ='color: 
+                  #1b9e77;'>below the median</span>")
        # caption = "Frequency plot of patients stratified on Gleason score ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above).
        # Colored by mtDNA count number in PBL relative to median derived from patient group.
        # Every color adds up to 100 %.")
@@ -110,10 +120,15 @@ ajcc_plot_c <- plot_data %>%
            position = "dodge") +
   scale_x_discrete(limits = c("II", "III", "IV")) +
   scale_fill_brewer(palette = "Dark2") +
+  theme(legend.position = "none",
+        plot.subtitle = element_markdown()) +
   labs(x = "AJCC stage",
        y = "(%)",
        fill = "mtDNA levels",
-       title = "A) mtDNA levels based on control median")
+       title = "A) mtDNA levels based on control median", 
+       subtitle = "Stratified on mtDNA levels <span style = 'color: #d95f02;'>
+                  above the median</span> <br>and <span style ='color: 
+                  #1b9e77;'>below the median</span>")
        # caption = "Frequency plot of patients stratified on AJCC stage ('II' is both II A and II B). 
        # Colored by mtDNA count number in PBL relative to median derived from control group.
        # Every color adds up to 100 %.")
@@ -137,10 +152,15 @@ ajcc_plot_p <- plot_data %>%
            position = "dodge") +
   scale_x_discrete(limits = c("II", "III", "IV")) +
   scale_fill_brewer(palette = "Dark2") +
+  theme(legend.position = "none",
+        plot.subtitle = element_markdown()) +
   labs(x = "AJCC stage",
        y = "",
        fill = "mtDNA levels",
-       title = "B) mtDNA levels based on patient median")
+       title = "B) mtDNA levels based on patient median", 
+       subtitle = "Stratified on mtDNA levels <span style = 'color: #d95f02;'>
+                  above the median</span> <br>and <span style ='color: 
+                  #1b9e77;'>below the median</span>")
        # caption = "Frequency plot of patients stratified on AJCC stage ('II' is both II A and II B). 
        # Colored by mtDNA count number in PBL relative to median derived from patient group.
        # Every color adds up to 100 %.")
@@ -174,10 +194,16 @@ gleason_psa_agroup_plot <- plot_data %>%
            position = "dodge") +
   scale_x_discrete(limits = c("low", "medium", "high")) +
   scale_fill_brewer(palette = "Dark2") +
+  theme(legend.position = "none",
+        plot.subtitle = element_markdown()) +
   labs(x = "Gleason score",
        y = "",
        fill = "PSA levels (ng/ml)",
-       title = "F) PSA levels from article, stratified on Glea. score")
+       title = "F) PSA levels from article, stratified on Glea. score", 
+       subtitle = "Stratified on PSA levels <span style = 'color: #1b9e77;'>
+                  < 10</span>, <span style ='color: 
+                  #d95f02;'>10~20</span> and <span style ='color: #7570b3;'>
+                  20 <</span>")
        # caption = "Frequency plot of patients stratified on Gleason score ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above). 
        # Colored by PSA levels measured in ng/ml in periferal blood. Every color adds up to 100 %.")
 
@@ -201,10 +227,16 @@ ajcc_psa_agroup_plot <- plot_data %>%
            position = "dodge") +
   scale_x_discrete(limits = c("II", "III", "IV")) +
   scale_fill_brewer(palette = "Dark2") +
+  theme(legend.position = "none",
+        plot.subtitle = element_markdown()) +
   labs(x = "AJCC stage",
        y = "",
        fill = "PSA levels (ng/ml)",
-       title = "E) PSA levels from article, stratified on AJCC stage")
+       title = "E) PSA levels from article, stratified on AJCC stage", 
+       subtitle = "Stratified on PSA levels <span style = 'color: #1b9e77;'>
+                  < 10</span>, <span style ='color: 
+                  #d95f02;'>10~20</span> and <span style ='color: #7570b3;'>
+                  20 <</span>")
        # caption = "Frequency plot of patients stratified on AJCC stage ('II' is stage II A and II B). 
        # Colored by PSA levels measured in ng/ml in periferal blood. Every color adds up to 100 %.")
 
