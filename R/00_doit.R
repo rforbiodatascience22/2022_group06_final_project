@@ -1,5 +1,7 @@
 library(tidyverse)
 library(readxl)
+library(patchwork)
+library(fs)
 
 # Run all scripts ---------------------------------------------------------
 source("R/01_load.R")

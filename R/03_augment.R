@@ -1,5 +1,4 @@
 library(tidyverse)
-library(stringi)
 # Load in clean data ------------------------------------------------------
 data <- read_csv(file = "data/02_dat_clean.csv",
                  show_col_types = FALSE)
@@ -13,7 +12,7 @@ medical_info <- data %>%
   select(!c(age, dfi, smoking, pca_hist, bmi))
 
 
-# Add in a bmi classifier -------------------------------------------------
+# Add in and factorize a BMI class ----------------------------------------
 patient_info <- patient_info %>% 
   mutate(bmi_class = case_when(bmi < 18.5 ~ "underweight",
                                18.5 <= bmi & bmi < 25 ~ "normal weight",
@@ -24,21 +23,24 @@ patient_info <- patient_info %>%
                                         "overweight", "obese")))
 
 
-# Add in a dfi classifier -------------------------------------------------
+# Add in a DFI class ------------------------------------------------------
 patient_info <- patient_info %>% 
   mutate(dfi_class = case_when(dfi < 20 ~ "low fat",
                                    20 <= dfi & dfi < 30 ~ "medium fat",
-                                   30 <= dfi ~ "high fat"))
+                                   30 <= dfi ~ "high fat"),
+         dfi_class = factor(dfi_class,
+                            levels =  c("low fat", "medium fat",
+                                        "high fat")))
 
 
-# Split TNM notation into usable numbers ----------------------------------
-#Add variables derived from TNM 
-#Standard naming convention taken from www.cancerresearchuk.org
+# Split TNM notation into separate variables ------------------------------
+# Add variables derived from TNM 
+# Standard naming convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
-  select(tnm) %>% 
   extract(col = tnm,
           into = c("tumor","lymph_nodes","metastasis"),
           regex = "T(\\d).?N(\\d)M(\\d)")
+
 
 # Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
@@ -52,4 +54,4 @@ data_augmented <- patient_info %>%
 
 # Write the augmented data file -----------------------------------------------------
 data_augmented %>% 
-  write_csv("data/03_dat_aug.csv")
+  write_csv(path = "data/03_dat_aug.csv")

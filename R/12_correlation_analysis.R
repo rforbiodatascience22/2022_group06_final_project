@@ -21,7 +21,7 @@ plt1 <- ggplot(data_control[[1]][[1]], mapping = aes(x = age,
 plt1+ ggpubr::stat_cor(method = "spearman")
 
 #mtDNA vs. Age for PCa cases
-plt2 <- ggplot(data_PCa[[1]][[1]], mapping = aes(x = age, 
+plt2 <- ggplot(data_pca[[1]][[1]], mapping = aes(x = age, 
                                                  y = mtdna)) + 
   geom_point()  
 
@@ -37,7 +37,7 @@ plt3 + ggpubr::stat_cor(method = "spearman")
 
 
 #mtDNA vs. BMI for PCa cases
-plt4 <- ggplot(data_PCa[[1]][[1]], mapping = aes(x = bmi, 
+plt4 <- ggplot(data_pca[[1]][[1]], mapping = aes(x = bmi, 
                                                  y = mtdna)) + 
   geom_point()  
 
