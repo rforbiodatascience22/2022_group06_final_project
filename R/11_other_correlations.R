@@ -1,14 +1,8 @@
-library(tidyverse)
-library(patchwork)
-library(rpart)
-library(corrr)
-
 # selection necessary for extraction of p.value 
-data <- read_csv("data/03_dat_aug.csv",
+data <- read_csv(file = "data/03_dat_aug.csv",
                  show_col_types = FALSE) %>% 
   drop_na() %>% 
-  select(-c(sample,bmi_class,dfi_class,tnm,group_names,
-            group,pcr_success))
+  select(-c(sample, bmi_class, dfi_class, group_names, group, pcr_success))
 
 #correlation of all 
 #data_control %>% 
@@ -16,13 +10,13 @@ data <- read_csv("data/03_dat_aug.csv",
 #                   "AJCC","PSA","Gleason","mtDNA",
 #                   "Tumor","LymphNodes","Metastasis")])
 
-preds01 <- predict(rpart(tumor~lymph_nodes,
+preds01 <- predict(rpart::rpart(tumor~lymph_nodes,
                        data = data, 
                        method = "anova"), 
-                 type = "vector")
+                       type = "vector")
 tumor_plot01 <- data %>% 
-  ggplot(aes(x = tumor,
-         y = lymph_nodes)) +
+  ggplot(mapping = aes(x = tumor,
+                       y = lymph_nodes)) +
   geom_jitter(alpha = 0.5,
               width = 0.15,
               height = 0.15) +
@@ -31,7 +25,7 @@ tumor_plot01 <- data %>%
                 color = "red"))
 
 
-preds02 <- predict(rpart(tumor~metastasis,
+preds02 <- predict(rpart::rpart(tumor~metastasis,
                        data = data, 
                        method = "anova"), 
                  type = "vector")
@@ -46,7 +40,7 @@ tumor_plot02 <- data %>%
                 color = "red"))
 
 
-preds03 <- predict(rpart(tumor~mtdna,
+preds03 <- predict(rpart::rpart(tumor~mtdna,
                        data = data, 
                        method = "anova"), 
                  type = "vector")
@@ -61,7 +55,7 @@ tumor_plot03 <- data %>%
                 color = "red"))
 
 
-preds04 <- predict(rpart(tumor~psa,
+preds04 <- predict(rpart::rpart(tumor~psa,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  
@@ -76,7 +70,7 @@ tumor_plot04 <- data %>%
                 color = "red"))
 
 
-preds05 <- predict(rpart(tumor~gleason,
+preds05 <- predict(rpart::rpart(tumor~gleason,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  
@@ -91,7 +85,7 @@ tumor_plot05 <- data %>%
                 color = "red"))
 
 
-preds06 <- predict(rpart(tumor~gleason,
+preds06 <- predict(rpart::rpart(tumor~gleason,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  

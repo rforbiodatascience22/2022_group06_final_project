@@ -61,6 +61,8 @@ Fix 11_, should it be included?
 Go through code.
 fix libraries
 violin plots (article visualization)
+factor classes in 09, like in 03. - Esben
+
 
 Slides
   Include 09-slide
