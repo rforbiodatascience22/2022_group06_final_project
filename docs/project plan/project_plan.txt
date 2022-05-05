@@ -47,7 +47,7 @@ To do:
 2) Make sure we use the same naming conventions
 3) Is the coding style correct across the board (newline, include "=" where possible)
 4) Data visualitation with "slice" function
-5) Use geom_density?
+5) Use geom_violin?
 6) Insert subtitles?
 7) Use geom_label?
 8) Use a heatmap? (geom_tile). Perhaps illustrate difference in PSA-level
