@@ -38,10 +38,10 @@ patient_info <- patient_info %>%
 # Add variables derived from TNM 
 # Standard naming convention taken from www.cancerresearchuk.org
 medical_info <- medical_info %>% 
-  select(tnm) %>% 
   extract(col = tnm,
           into = c("tumor","lymph_nodes","metastasis"),
           regex = "T(\\d).?N(\\d)M(\\d)")
+
 
 # Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
@@ -55,4 +55,4 @@ data_augmented <- patient_info %>%
 
 # Write the augmented data file -----------------------------------------------------
 data_augmented %>% 
-  write_csv("data/03_dat_aug.csv")
+  write_csv(path = "data/03_dat_aug.csv")
