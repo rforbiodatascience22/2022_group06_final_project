@@ -9,6 +9,7 @@ library("ggtext")
 library("ggpubr")
 library("rpart")
 library("corrr")
+source("R/99_func_file.R")
 
 # Run project pipeline ----------------------------------------------------
 source("R/01_load.R")
