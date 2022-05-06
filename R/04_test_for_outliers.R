@@ -56,11 +56,9 @@ boxplot_discrete <- ajcc_plot +
 ggsave(filename = 'results/boxplot_continuous.png',
        plot = boxplot_continuous,
        width = 10,
-       height = 6.5,
-       dpi = 800)
+       height = 6.5)
 
 ggsave(filename = 'results/boxplot_discrete.png',
        plot = boxplot_discrete,
        width = 10,
-       height = 6.5,
-       dpi = 800)
+       height = 6.5)

@@ -7,13 +7,18 @@ data <- read_csv(file = "data/03_dat_aug.csv",
 boxplot_psa <- data %>% 
   ggplot(mapping = aes(x = group_names,
                        y = psa, 
-                       fill  = group_names)) + 
+                       color  = group_names)) + 
   stat_boxplot(geom = "errorbar",
                width = 0.5) +  
-  geom_boxplot(outlier.shape = 1) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(alpha = 0.5,
+              width = 0.1,
+              height = 0.2) +
   geom_signif(comparisons = list(c("control", "pca_case")), 
               map_signif_level = TRUE,
-              size = 0.4) +
+              size = 0.4,
+              color = "black") +
+  scale_color_brewer(palette = "Dark2") +
   theme(legend.position = "none") + 
   labs(title = "Boxplot of PSA of controls and PCa cases", 
        y = "PSA", 
@@ -28,6 +33,7 @@ in Han chinese with prostate cancer and healthy controls.") +
 boxplot_psa <- boxplot_psa +
   ggpubr::stat_compare_means(method = "t.test",
                              size = 4,
+                             hjust = -1.15,
                              vjust = 1)
 
 #Save figure

@@ -43,11 +43,9 @@ while project == "not_finished":
 8) Data visualization
 
 To do:
-1) Data visualitation with "slice" function
-2) Insert subtitles?
-3) Make functions where needed
-4) Factor 09 as in 03 - Esben
-5) Make manuscript for oral exam
-6) Include 09 in slides
-7) Conclusion slide is not done
+1) Insert subtitles?
+2) Make functions where needed
+3) Factor 09 as in 03 - Esben
+4) Make manuscript for oral exam
+6) Conclusion slide is not done
 
