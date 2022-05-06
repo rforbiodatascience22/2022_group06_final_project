@@ -224,7 +224,7 @@ ggsave(filename = "results/full_mtdna_vs_psa.png",
        width = 14,
        height = 9)
 
-ggsave(filename = "results/simplified_mtdna_vs_psa",
+ggsave(filename = "results/simplified_mtdna_vs_psa.png",
        plot = simplified_mtdna_vs_psa,
        width = 14,
        height = 9)
