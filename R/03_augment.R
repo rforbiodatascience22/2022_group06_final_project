@@ -31,8 +31,9 @@ patient_info <- patient_info %>%
 medical_info <- medical_info %>% 
   extract(col = tnm,
           into = c("tumor","lymph_nodes","metastasis"),
-          regex = "T(\\d).?N(\\d)M(\\d)")
-
+          regex = "[Tt](\\d).?[Nn](\\d)[Mm](\\d)")
+# Sample CM4082 has an "l" which maybe should have been a "1", but we cannot 
+# be sure, and as such we do not accept it for TNM
 
 # Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
