@@ -160,5 +160,5 @@ knitr::include_graphics("../results/mtdna_vs_psa.png")
 </div>
 
 <div>
-- Some further research? Should be possible to do classification on Gleason scores/AJCC, should also be possible to do regression (albeit out of the scope of this course)
+- Did we find anything interesting for EDA?
 </div>
