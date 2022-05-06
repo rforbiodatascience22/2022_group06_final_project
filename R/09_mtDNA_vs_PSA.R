@@ -18,19 +18,33 @@ mtdna_patient_median <- data %>%
 # Augment data for upcoming plots. Four variables; higher/lower than control and
 # patient median. Gleason class and AJCC class.
 data <- data %>% 
-  mutate(mtdna_group_c = case_when(mtdna <= mtdna_control_median ~ "count low",
-                                   mtdna > mtdna_control_median ~ "high count"),
-         mtdna_group_p = case_when(mtdna <= mtdna_patient_median ~ "count low",
-                                   mtdna > mtdna_patient_median ~ "high count"),
+  mutate(mtdna_group_c = case_when(mtdna <= mtdna_control_median ~ "low",
+                                   mtdna > mtdna_control_median ~ "high"),
+         mtdna_group_c = factor(mtdna_group_c,
+                                levels = c("low", "high")),
+         
+         mtdna_group_p = case_when(mtdna <= mtdna_patient_median ~ "low",
+                                   mtdna > mtdna_patient_median ~ "high"),
+         mtdna_group_p = factor(mtdna_group_p,
+                                levels = c("low", "high")),
+         
          gleason_group = case_when(gleason <= 6 ~ "low",
                                    gleason == 7 ~ "medium",
                                    gleason >= 8 ~ "high"),
+         gleason_group = factor(gleason_group,
+                                levels = c("low", "medium", "high")),
+         
          ajcc_stage = case_when(ajcc <= 2 ~ "II",
                                 ajcc == 3 ~ "III",
                                 ajcc == 4 ~ "IV"),
+         ajcc_stage = factor(ajcc_stage,
+                             levels = c("II", "III", "IV")),
+         
          psa_level = case_when(psa < 10 ~ "<10",
                                psa >= 10 & psa < 20 ~ "10~20",
-                               psa >= 20 ~ "20<"))
+                               psa >= 20 ~ ">=20"),
+         psa_level = factor(psa_level,
+                            levels = c("<10", "10~20", ">=20")))
 
 
 # Bar charts stratified on high and low mtDNA levels for both definitions. -----
@@ -61,6 +75,7 @@ gleason_plot_c <- plot_data %>%
                   above the median</span> <br>and <span style ='color: 
                   #1b9e77;'>below the median</span>")
 
+gleason_plot_c
 
 # Group data based on the mtDNA median in patient group.
 plot_data <- data %>% 
