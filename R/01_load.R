@@ -1,6 +1,3 @@
-library(tidyverse)
-library(readxl)
-
 # Load data sheet
 # Since the data structure of the PSA level attribute column is 
 # set to "custom" in the data/_raw/Data.xlsx and not "general"

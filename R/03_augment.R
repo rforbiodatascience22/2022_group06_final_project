@@ -1,4 +1,3 @@
-library(tidyverse)
 # Load in clean data ------------------------------------------------------
 data <- read_csv(file = "data/02_dat_clean.csv",
                  show_col_types = FALSE)
