@@ -35,7 +35,7 @@ logistic_regression <- function(include_psa = TRUE){
   return(data_nested)
 }
 
-#Outlier detection function ----------------------------------------
+#Outlier detection plot function ----------------------------------------
 test_for_outliers <- function(df, variable1, variable2, xlab, ylab){
   plt <- ggplot(df, mapping = aes(y = {{variable2}},
                                   x = {{variable1}},
@@ -44,7 +44,8 @@ test_for_outliers <- function(df, variable1, variable2, xlab, ylab){
                        show.legend = FALSE) + 
           geom_jitter(show.legend = FALSE,
                       alpha = 0.5,
-                      width = 0.15) + 
+                      width = 0.15,
+                      height = 0.2) + 
           stat_boxplot(geom = "errorbar",
                        width = 0.5,
                        show.legend = FALSE) + 
@@ -61,7 +62,7 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
   data_control <- df %>% 
     filter(group_names == "controls")
   data_pca <- df %>% 
-    filter(group_names == "pca_cases")
+    filter(group_names == "prostate cancer")
   
   if (control == TRUE) {
     plt <- ggplot(data_control, mapping = aes(x = {{variable1}}, 
@@ -91,7 +92,7 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
 # Output is a small summarized tibble with percentage-column.
 generate_09_plot_data <- function(input_data, group1, group2){
   output <- input_data %>% 
-    filter(group_names == "pca_case") %>%
+    filter(group_names == "prostate cancer") %>%
     group_by({{group1}}, {{group2}}) %>% 
     summarize(count = n()) %>%
     drop_na() %>% 

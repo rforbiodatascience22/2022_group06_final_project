@@ -1,8 +1,12 @@
+# Call support function ---------------------------------------------------
+source("R/99_func_file.R")
+
+
 # read augmented data -----------------------------------------------------
 data <- read_csv(file = "data/03_dat_aug.csv",
                  show_col_types = FALSE)
 
-# Stratify on mtDNA levels and Gleason score -----------------------------------
+# Stratify on mtDNA levels and Gleason score ------------------------------
 # Find mtDNA level median based on control group.
 mtdna_control_median <- data %>% 
   filter(group_names == "control") %>% 
@@ -11,7 +15,7 @@ mtdna_control_median <- data %>%
 
 # Find mtDNA level median based on patient group.
 mtdna_patient_median <- data %>% 
-  filter(group_names == "pca_case") %>% 
+  filter(group_names == "prostate cancer") %>% 
   summarise(median = median(mtdna)) %>% 
   unlist()
 
