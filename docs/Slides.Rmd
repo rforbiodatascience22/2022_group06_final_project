@@ -17,6 +17,21 @@ date: '2022-05-10'
 knitr::opts_chunk$set(echo = FALSE)
 library("tidyverse")
 ```
+<<<<<<< HEAD
+=======
+## Article introduction
+
+**Title:** "Peripheral Blood Mitochondrial DNA Copy Number Is Associated with Prostate Cancer Risk and Tumor Burden"
+
+**Authors:** Weimin Zhou, Min Zhu, Ming Gui, Lihua Huang, Zhi Long, Li Wang, Hui Chen, Yinghao Yin, Xianzhen Jiang, Yingbo Dai, Yuxin Tang, Leye He, Kuangbiao Zhong
+
+**Goal:** Determine if mtDNA from peripheral blood leukocytes is a predictor for prostate cancer
+
+## Flowchart for project flow
+```{r out.width="90%", fig.align='center'}
+#knitr::include_graphics("../docs/flowchart.png")
+```
+>>>>>>> f9bed0730c00860f2fa64521553188e771a0c578
 
 ## Data set overview
 ```{r read data_load, include = FALSE}
