@@ -69,6 +69,11 @@ data_aug <- read_csv("../data/03_dat_aug.csv",
 - Add "Group" as strings  
 
 - New dimensions: `r dim(data_aug)` 
+
+```{r out.width="90%"}
+knitr::include_graphics("../docs/tnm_notation.png")
+```
+
 </div>
 
 ## Boxplot with continuous variables, any outliers?
@@ -90,11 +95,6 @@ knitr::include_graphics(c("../docs/Zhou_et_al_boxplot.png",
 ## A better biomarker for PCa?
 ```{r out.width="100%"}
 knitr::include_graphics("../results/boxplot_psa.png")
-```
-
-## Interesting finding during exploratory data analysis
-```{r out.width="80%", fig.align='center'}
-knitr::include_graphics("../results/boxplot_bmi_dfi.png")
 ```
 
 ## Logistic regression, excl. PSA {.build}
@@ -132,6 +132,17 @@ knitr::include_graphics(c("../results/pc1_vs_pc2.png",
                           "../results/pca_var_explained.png",
                           "../results/pc1_pc2_weights.png"))
 ```
+
+## Interesting finding during exploratory data analysis
+```{r out.width="80%", fig.align='center'}
+knitr::include_graphics("../results/boxplot_bmi_dfi.png")
+```
+
+## Some more data exploration
+```{r out.width="80%", fig.align='center'}
+knitr::include_graphics("../results/mtdna_vs_psa.png")
+```
+
 
 ## Conclusion {.build}
 - We can support the conclusion of the article, mtDNA is a biomarker for PCa (e.g, it is reproducible)  
