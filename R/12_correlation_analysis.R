@@ -17,8 +17,12 @@ data_pca <- data %>%
 plt1 <- data %>% 
   correlation_analysis(age, mtdna, control = FALSE)
 
-ggsave(filename = 'results/scatterplot_age_mtdna.png',
+plt2 <- data %>% 
+  correlation_analysis(age, mtdna, control = TRUE)
+
+ggsave(filename = 'results/correlation_age_mtdna.png',
        plot = plt1,
        width = 10,
        height = 6.5)
+
 
