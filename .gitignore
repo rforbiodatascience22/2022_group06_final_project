@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+data/01_dat_load.csv
+data/01_legend_load.csv
+data/02_dat_clean.csv
+data/03_dat_aug.csv
+results

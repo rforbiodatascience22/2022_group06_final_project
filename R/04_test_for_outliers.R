@@ -14,7 +14,7 @@ bmi_plot <- data %>%
   test_for_outliers(group_names, bmi, "BMI", "")
 
 psa_plot <- data %>% 
-  test_for_outliers(group_names, psa, "Prostate specific antigen", "")
+  test_for_outliers(group_names, psa, "PSA", "")
 
 mtdna_plot <- data %>% 
   test_for_outliers(group_names, mtdna, "mtDNA copy number", "")

@@ -22,6 +22,7 @@ ggsave(filename = 'results/scatterplot_age_mtdna.png',
        width = 10,
        height = 6.5)
 
+<<<<<<< HEAD
 # mtDNA vs. Age for controls  
 #plt1 <- data_control %>% 
 #  ggplot(mapping = aes(x = age, 
@@ -73,3 +74,5 @@ ggsave(filename = 'results/scatterplot_age_mtdna.png',
 #                        y = psa)) + 
 #   geom_point()   
 # plt6 + stat_cor(method = "spearman")
+=======
+>>>>>>> be997d15c05205a43b73d949b4a25ed1fa5a9838
