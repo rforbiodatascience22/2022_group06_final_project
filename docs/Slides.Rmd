@@ -23,7 +23,7 @@ library("tidyverse")
 
 **Authors:** Weimin Zhou, Min Zhu, Ming Gui, Lihua Huang, Zhi Long, Li Wang, Hui Chen, Yinghao Yin, Xianzhen Jiang, Yingbo Dai, Yuxin Tang, Leye He, Kuangbiao Zhong
 
-**Goal:** Determine if mtDNA is a predictor for prostate cancer
+**Goal:** Determine if mtDNA from peripheral blood leukocytes is a predictor for prostate cancer
 
 ## Flowchart for project flow
 ```{r out.width="90%", fig.align='center'}
