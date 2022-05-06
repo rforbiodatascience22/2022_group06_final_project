@@ -107,7 +107,7 @@ read_csv("../results/logistic_regression_mtdna.csv",
 ```
 
 <div>
-Maybe the distribution of Dfi-classes are skewed?
+Maybe the distribution of DFI-classes are skewed?
 ```{r}
 data_aug %>% 
   select(dfi_class, group) %>% 
