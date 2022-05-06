@@ -44,6 +44,7 @@ while project == "not_finished":
 
 To do:
 <<<<<<< HEAD
+<<<<<<< HEAD
 1) Check we follow the project flow
 2) Make sure we use the same naming conventions
 3) Is the coding style correct across the board (newline, include "=" where possible)
@@ -80,4 +81,11 @@ Slides
 6) Include 09 in slides
 7) Conclusion slide is not done
 >>>>>>> 6a0a1b0f010481ae482c8ca99014f4778e5484c0
+=======
+1) Insert subtitles?
+2) Make functions where needed
+3) Factor 09 as in 03 - Esben
+4) Make manuscript for oral exam
+6) Conclusion slide is not done
+>>>>>>> 7cb7aad3ebad3fd5de205b151b4e94ad41ba2fb6
 

@@ -4,7 +4,11 @@ library("ggsignif")
 library("rmarkdown")
 library("knitr")
 
-# Run all scripts ---------------------------------------------------------
+
+# Call support functions --------------------------------------------------
+source("R/99_func_file.R")
+
+# Run project pipeline ----------------------------------------------------
 source("R/01_load.R")
 source("R/02_clean.R")
 source("R/03_augment.R")

@@ -49,38 +49,19 @@ data <- data %>%
 
 
 
-# Bar charts stratified on high and low mtDNA levels for both definitions. -----
-# Group data for medians based on control group (like in the article)
-plot_data <- data %>% 
-  filter(group_names == "pca_case") %>%
-  group_by(mtdna_group_c, gleason_group) %>% 
-  summarize(count = n()) %>%
-  drop_na() %>% 
-  mutate(perc = count/sum(count))
+# Gleason bar charts stratified on mtDNA levels for both definitions. ------
 
-generate_09_plot_data <- function(input_data, group1, group2){
-  output <- input_data %>% 
-    filter(group_names == "pca_case") %>%
-    group_by({{group1}}, {{group2}}) %>% 
-    summarize(count = n()) %>%
-    drop_na() %>% 
-    mutate(perc = count/sum(count))
-  
-  return(output)
-}
-
-test_data <- data %>% 
+## Control Median (like in the article).
+# Call support function and group data, then pipe to plot.
+gleason_plot_c <- data %>% 
   generate_09_plot_data(group1 = mtdna_group_c,
-                        group2 = gleason_group)
-
-# Plot
-gleason_plot_c <- test_data %>%  
+                        group2 = gleason_group) %>% 
+  
   ggplot(mapping = aes(x = gleason_group,
                        y = perc*100,
                        fill = mtdna_group_c)) + 
   geom_bar(stat = "identity",
            position = "dodge") +
-  # scale_x_discrete(limits = c("low", "medium", "high")) +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
         plot.subtitle = ggtext::element_markdown()) +
@@ -92,24 +73,17 @@ gleason_plot_c <- test_data %>%
                   above the median</span> <br>and <span style ='color: 
                   #1b9e77;'>below the median</span>")
 
-gleason_plot_c
-
-# Group data based on the mtDNA median in patient group.
-plot_data <- data %>% 
-  drop_na() %>%
-  filter(group_names == "pca_case") %>%
-  group_by(mtdna_group_p, gleason_group) %>%
-  add_count() %>%
-  mutate(perc = n/sum(n))
-
-# Plot
-gleason_plot_p <- plot_data %>%  
+## Patient median (which might make more sense).
+# Call support function and group data, then pipe to plot.
+gleason_plot_p <- data %>%  
+  generate_09_plot_data(group1 = mtdna_group_p,
+                        group2 = gleason_group) %>% 
+  
   ggplot(mapping = aes(x = gleason_group,
                        y = perc*100,
                        fill = mtdna_group_p)) + 
   geom_bar(stat = "identity",
            position = "dodge") +
-  scale_x_discrete(limits = c("low", "medium", "high")) +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
         plot.subtitle = ggtext::element_markdown()) +
@@ -122,23 +96,19 @@ gleason_plot_p <- plot_data %>%
                   #1b9e77;'>below the median</span>")
 
 
-# Bar charts stratified on high and low mtDNA levels for both definitions. -----
-# Group data for medians besed on control group (like in the article)
-plot_data <- data %>% 
-  drop_na() %>%
-  filter(group_names == "pca_case") %>%
-  group_by(mtdna_group_c, ajcc_stage) %>%
-  add_count() %>%
-  mutate(perc = n/sum(n))
+# ADJJ bar charts stratified on mtDNA levels for both definitions. -----
 
-# Plot
-ajcc_plot_c <- plot_data %>%  
+## Control median (like in the article).
+# Call support function and group data, then pipe to plot.
+ajcc_plot_c <- data %>% 
+  generate_09_plot_data(group1 = mtdna_group_c,
+                        group2 = ajcc_stage) %>%
+  
   ggplot(mapping = aes(x = ajcc_stage,
                        y = perc*100,
                        fill = mtdna_group_c)) + 
   geom_bar(stat = "identity",
            position = "dodge") +
-  scale_x_discrete(limits = c("II", "III", "IV")) +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
         plot.subtitle = ggtext::element_markdown()) +
@@ -151,22 +121,17 @@ ajcc_plot_c <- plot_data %>%
                   #1b9e77;'>below the median</span>")
 
 
-# Group data based on the mtDNA median in patient group.
-plot_data <- data %>% 
-  drop_na() %>%
-  filter(group_names == "pca_case") %>%
-  group_by(mtdna_group_p, ajcc_stage) %>%
-  add_count() %>%
-  mutate(perc = n/sum(n))
-
-# Plot
-ajcc_plot_p <- plot_data %>%  
+## Patient median (which might make more sense).
+# Call support function and group data, then pipe to plot.
+ajcc_plot_p <- data %>%
+  generate_09_plot_data(group1 = mtdna_group_p,
+                        group2 = ajcc_stage) %>%
+  
   ggplot(mapping = aes(x = ajcc_stage,
                        y = perc*100,
                        fill = mtdna_group_p)) + 
   geom_bar(stat = "identity",
            position = "dodge") +
-  scale_x_discrete(limits = c("II", "III", "IV")) +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
         plot.subtitle = ggtext::element_markdown()) +
@@ -180,22 +145,16 @@ ajcc_plot_p <- plot_data %>%
 
 
 # Plot PSA on Gleason score using article groups --------------------------
-plot_data <- data %>% 
-  drop_na() %>%
-  filter(group_names == "pca_case") %>%
-  group_by(psa_level, gleason_group) %>%
-  add_count() %>%
-  mutate(perc = n/sum(n))
-
-# Plot
-
-gleason_psa_agroup_plot <- plot_data %>%  
+# Call support function and pipe to plot.
+gleason_psa_agroup_plot <- data %>%  
+  generate_09_plot_data(group1 = psa_level,
+                        group2 = gleason_group) %>%
+  
   ggplot(mapping = aes(x = gleason_group,
                        y = perc*100,
                        fill = psa_level)) + 
   geom_bar(stat = "identity",
            position = "dodge") +
-  scale_x_discrete(limits = c("low", "medium", "high")) +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
         plot.subtitle = ggtext::element_markdown()) +
@@ -209,17 +168,12 @@ gleason_psa_agroup_plot <- plot_data %>%
                   20 <</span>")
 
 
-# Plot PSA on AJCC using article grouping ---------------------------------
-plot_data <- data %>% 
-  drop_na() %>%
-  filter(group_names == "pca_case") %>%
-  group_by(psa_level, ajcc_stage) %>%
-  add_count() %>% 
-  mutate(perc = n/sum(n))
-
-# Plot
-
-ajcc_psa_agroup_plot <- plot_data %>%  
+# Plot PSA on AJCC using article groups ---------------------------------
+# Call support function and pipe to plot.
+ajcc_psa_agroup_plot <- data %>%  
+  generate_09_plot_data(group1 = psa_level,
+                        group2 = ajcc_stage) %>%
+  
   ggplot(mapping = aes(x = ajcc_stage,
                        y = perc*100,
                        fill = psa_level)) + 
@@ -255,5 +209,4 @@ mtdna_vs_psa <- ajcc_plot_c +
 ggsave(filename = "results/mtdna_vs_psa.png", 
        plot = mtdna_vs_psa,
        width = 14,
-       height = 7)
-
+       height = 9)
