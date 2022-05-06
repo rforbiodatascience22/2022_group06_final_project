@@ -107,7 +107,7 @@ read_csv("../results/logistic_regression_mtdna.csv",
 ```
 
 <div>
-Maybe the distribution of Dfi-classes are skewed?
+Maybe the distribution of DFI-classes are skewed?
 ```{r}
 data_aug %>% 
   select(dfi_class, group) %>% 
@@ -160,5 +160,5 @@ knitr::include_graphics("../results/mtdna_vs_psa.png")
 </div>
 
 <div>
-- Some further research? Should be possible to do classification on Gleason scores/AJCC, should also be possible to do regression (albeit out of the scope of this course)
+- Did we find anything interesting for EDA?
 </div>
