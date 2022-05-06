@@ -86,3 +86,18 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
 
 
 
+# Function for prepping data for plotting in 09 ---------------------------
+# Filters data on patients, and groups on the compared/stratified variables.
+# Output is a small summarized tibble with percentage-column.
+generate_09_plot_data <- function(input_data, group1, group2){
+  output <- input_data %>% 
+    filter(group_names == "pca_case") %>%
+    group_by({{group1}}, {{group2}}) %>% 
+    summarize(count = n()) %>%
+    drop_na() %>% 
+    mutate(perc = count/sum(count))
+  
+  return(output)
+}
+
+
