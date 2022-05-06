@@ -24,7 +24,7 @@ logistic_regression <- function(include_psa = TRUE){
   
     data_nested <- data_nested %>%
       mutate(coef = map(mu_group,
-                        ~broom::tidy(.))) %>%
+                        ~tidy(.))) %>%
       unnest(coef) %>% 
       filter(term != "(Intercept)") %>% 
       select(-c(mu_group,
@@ -62,7 +62,7 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
   data_control <- df %>% 
     filter(group_names == "controls")
   data_pca <- df %>% 
-    filter(group_names == "pca_cases")
+    filter(group_names == "prostate cancer")
   
   if (control == TRUE) {
     plt <- ggplot(data_control, mapping = aes(x = {{variable1}}, 
@@ -70,7 +70,7 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
       
       geom_point(size = 3) 
     
-    plt <- plt + ggpubr::stat_cor(method = "spearman")
+    plt <- plt + stat_cor(method = "spearman")
   }
   
   if (control == FALSE) {
@@ -79,7 +79,7 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
           
       geom_point(size = 3) 
     
-    plt <- plt + ggpubr::stat_cor(method = "spearman")
+    plt <- plt + stat_cor(method = "spearman")
   }
   
   return(plt)
@@ -92,7 +92,7 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
 # Output is a small summarized tibble with percentage-column.
 generate_09_plot_data <- function(input_data, group1, group2){
   output <- input_data %>% 
-    filter(group_names == "pca_case") %>%
+    filter(group_names == "prostate cancer") %>%
     group_by({{group1}}, {{group2}}) %>% 
     summarize(count = n()) %>%
     drop_na() %>% 

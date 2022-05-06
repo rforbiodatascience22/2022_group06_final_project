@@ -17,7 +17,7 @@ pca_fit <- pca_data %>%
 
 # Plot PCA ----------------------------------------------------------------
 pc1_vs_pc2 <- pca_fit %>%
-  broom::augment(pca_data) %>% # add original dataset back in
+  augment(pca_data) %>% # add original dataset back in
   ggplot(mapping = aes(x = .fittedPC1, 
                        y = .fittedPC2, 
                        color = as.character(group))) +
@@ -27,7 +27,7 @@ pc1_vs_pc2 <- pca_fit %>%
         plot.background = element_rect(colour = "black",
                                        fill = NA,
                                        size = 1),
-        plot.title = ggtext::element_markdown()) +
+        plot.title = element_markdown()) +
   scale_color_brewer(palette = "Dark2") +
   labs(color = "Group",
        x = "PC1",
@@ -53,7 +53,7 @@ arrow_style <- arrow(angle = 20,
 
 # Plot rotation matrix.
 pc1_pc2_weights <- pca_fit %>%
-  broom::tidy(matrix = "rotation") %>%
+  tidy(matrix = "rotation") %>%
   pivot_wider(names_from = "PC", 
               names_prefix = "PC", 
               values_from = "value") %>%
@@ -83,7 +83,7 @@ ggsave(filename = "results/pc1_pc2_weights.png",
 
 # PC bar-plot -------------------------------------------------------------
 pc_weights_bar <- pca_fit %>%
-  broom::tidy(matrix = "rotation") %>%
+  tidy(matrix = "rotation") %>%
   mutate(PC = as.character(PC)) %>%
   ggplot(mapping = aes(x = column, 
                        y = value, 
@@ -104,7 +104,7 @@ ggsave(filename = "results/pc_weights_bar.png",
 
 # Plot of the explained variance ------------------------------------------
 pca_var_explained <- pca_fit %>%
-  broom::tidy(matrix = "eigenvalues") %>%
+  tidy(matrix = "eigenvalues") %>%
   filter(percent > 0.025) %>%
   ggplot(mapping = aes(x = PC,
                        y = percent)) +

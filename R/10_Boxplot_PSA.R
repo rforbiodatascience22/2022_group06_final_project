@@ -14,13 +14,13 @@ boxplot_psa <- data %>%
   geom_jitter(alpha = 0.5,
               width = 0.1,
               height = 0.2) +
-  geom_signif(comparisons = list(c("control", "pca_case")), 
+  geom_signif(comparisons = list(c("control", "prostate cancer")), 
               map_signif_level = TRUE,
               size = 0.4,
               color = "black") +
   scale_color_brewer(palette = "Dark2") +
   theme(legend.position = "none") + 
-  labs(title = "Boxplot of PSA of controls and PCa cases", 
+  labs(title = "Boxplot of PSA of controls and prostate cancer cases", 
        y = "PSA", 
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number
@@ -31,7 +31,7 @@ in Han chinese with prostate cancer and healthy controls.") +
 
 #Add statistical test
 boxplot_psa <- boxplot_psa +
-  ggpubr::stat_compare_means(method = "t.test",
+  stat_compare_means(method = "t.test",
                              size = 4,
                              hjust = -1.15,
                              vjust = 1)

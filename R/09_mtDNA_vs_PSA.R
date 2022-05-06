@@ -11,7 +11,7 @@ mtdna_control_median <- data %>%
 
 # Find mtDNA level median based on patient group.
 mtdna_patient_median <- data %>% 
-  filter(group_names == "pca_case") %>% 
+  filter(group_names == "prostate cancer") %>% 
   summarise(median = median(mtdna)) %>% 
   unlist()
 
@@ -64,7 +64,7 @@ gleason_plot_c <- data %>%
            position = "dodge") +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
-        plot.subtitle = ggtext::element_markdown()) +
+        plot.subtitle = element_markdown()) +
   labs(x = "Gleason score",
        y = "(%)",
        fill = "mtDNA levels",
@@ -86,7 +86,7 @@ gleason_plot_p <- data %>%
            position = "dodge") +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
-        plot.subtitle = ggtext::element_markdown()) +
+        plot.subtitle = element_markdown()) +
   labs(x = "Gleason score",
        y = "",
        fill = "mtDNA levels",
@@ -111,7 +111,7 @@ ajcc_plot_c <- data %>%
            position = "dodge") +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
-        plot.subtitle = ggtext::element_markdown()) +
+        plot.subtitle = element_markdown()) +
   labs(x = "AJCC stage",
        y = "(%)",
        fill = "mtDNA levels",
@@ -134,7 +134,7 @@ ajcc_plot_p <- data %>%
            position = "dodge") +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
-        plot.subtitle = ggtext::element_markdown()) +
+        plot.subtitle = element_markdown()) +
   labs(x = "AJCC stage",
        y = "",
        fill = "mtDNA levels",
@@ -157,7 +157,7 @@ gleason_psa_agroup_plot <- data %>%
            position = "dodge") +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
-        plot.subtitle = ggtext::element_markdown()) +
+        plot.subtitle = element_markdown()) +
   labs(x = "Gleason score",
        y = "",
        fill = "PSA levels (ng/ml)",
@@ -182,7 +182,7 @@ ajcc_psa_agroup_plot <- data %>%
   scale_x_discrete(limits = c("II", "III", "IV")) +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
-        plot.subtitle = ggtext::element_markdown()) +
+        plot.subtitle = element_markdown()) +
   labs(x = "AJCC stage",
        y = "",
        fill = "PSA levels (ng/ml)",

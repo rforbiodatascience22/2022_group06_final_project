@@ -3,6 +3,12 @@ library("patchwork")
 library("ggsignif")
 library("rmarkdown")
 library("knitr")
+library("readxl")
+library("broom")
+library("ggtext")
+library("ggpubr")
+library("rpart")
+library("corrr")
 
 
 # Call support functions --------------------------------------------------

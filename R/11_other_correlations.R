@@ -10,7 +10,7 @@ data <- read_csv(file = "data/03_dat_aug.csv",
 #                   "AJCC","PSA","Gleason","mtDNA",
 #                   "Tumor","LymphNodes","Metastasis")])
 
-preds01 <- predict(rpart::rpart(tumor~lymph_nodes,
+preds01 <- predict(rpart(tumor~lymph_nodes,
                        data = data, 
                        method = "anova"), 
                        type = "vector")
@@ -25,7 +25,7 @@ tumor_plot01 <- data %>%
                 color = "red"))
 
 
-preds02 <- predict(rpart::rpart(tumor~metastasis,
+preds02 <- predict(rpart(tumor~metastasis,
                        data = data, 
                        method = "anova"), 
                  type = "vector")
@@ -40,7 +40,7 @@ tumor_plot02 <- data %>%
                 color = "red"))
 
 
-preds03 <- predict(rpart::rpart(tumor~mtdna,
+preds03 <- predict(rpart(tumor~mtdna,
                        data = data, 
                        method = "anova"), 
                  type = "vector")
@@ -55,7 +55,7 @@ tumor_plot03 <- data %>%
                 color = "red"))
 
 
-preds04 <- predict(rpart::rpart(tumor~psa,
+preds04 <- predict(rpart(tumor~psa,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  
@@ -70,7 +70,7 @@ tumor_plot04 <- data %>%
                 color = "red"))
 
 
-preds05 <- predict(rpart::rpart(tumor~gleason,
+preds05 <- predict(rpart(tumor~gleason,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  
@@ -85,7 +85,7 @@ tumor_plot05 <- data %>%
                 color = "red"))
 
 
-preds06 <- predict(rpart::rpart(tumor~gleason,
+preds06 <- predict(rpart(tumor~gleason,
                          data = data, 
                          method = "anova"), 
                    type = "vector")  

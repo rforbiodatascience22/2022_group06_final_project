@@ -19,7 +19,7 @@ cnames <- ifelse(str_detect(string = nms, pattern = "^PSA"), "numeric", "guess")
 # Load data set -----------------------------------------------------------
 # In addition to loading the data naming is changed to snake_case
 # Uses 'cnames' to decide columntypes of excel-file.
-readxl::read_excel(path = "data/_raw/Data.xlsx",
+read_excel(path = "data/_raw/Data.xlsx",
            sheet = "Data Set",
            col_types = cnames,
            .name_repair = "universal") %>%
@@ -33,13 +33,13 @@ readxl::read_excel(path = "data/_raw/Data.xlsx",
          gleason = Gleason.score,
          dfi = Daily.fat.dietary.intake....,
          smoking = Smoking.history,
-         pca_hist = Family.history.of.PCa,
+         cancer_hist = Family.history.of.PCa,
          bmi = BMI..kg.m2.,
          mtdna = mtDNA.copy.number) %>% 
   write_csv(path = "data/01_dat_load.csv")
 
 # Load legend data --------------------------------------------------------
-readxl::read_excel(path = "data/_raw/Data.xlsx",
+read_excel(path = "data/_raw/Data.xlsx",
            sheet = "Column Legend") %>%
   write_csv(path = "data/01_legend_load.csv")
 

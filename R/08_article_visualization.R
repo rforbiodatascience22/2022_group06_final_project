@@ -12,14 +12,14 @@ accurate_article_plot <- data %>%
                width = 0.5) +  
   geom_boxplot(outlier.shape = 1,
                outlier.size = 5) +
-  geom_signif(comparisons = list(c("control", "pca_case")), 
+  geom_signif(comparisons = list(c("control", "prostate cancer")), 
               map_signif_level = TRUE,
               size = 1) +
   theme_classic() + 
   theme(legend.position = "None",
         panel.background = element_rect(colour = "black",
                                         size=3)) + 
-  labs(title = "Boxplot of relative mtDNA copy number of controls\nand PCa cases", 
+  labs(title = "Boxplot of relative mtDNA copy number of controls\nand cancer cases", 
        y = "mtDNA", 
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number in 
@@ -44,7 +44,7 @@ article_plot <- data %>%
                color = "black",
                width = 0.35,
                show.legend = FALSE) +
-  geom_signif(comparisons = list(c("control", "pca_case")), 
+  geom_signif(comparisons = list(c("control", "prostate cancer")), 
               map_signif_level = TRUE,
               size = 1,
               color = "black") +
@@ -53,7 +53,7 @@ article_plot <- data %>%
   theme(legend.position = "None",
         panel.background = element_rect(colour = "black",
                                         size=3)) + 
-  labs(title = "Boxplot of relative mtDNA copy number of controls\nand PCa cases", 
+  labs(title = "Boxplot of relative mtDNA copy number of controls\nand cancer cases", 
        y = "mtDNA", 
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number in 
@@ -66,7 +66,7 @@ Han chinese with prostate cancer and healthy controls.") +
   
 # Add statistical test.
 article_plot <- article_plot + 
-  ggpubr::stat_compare_means(method = "t.test", 
+  stat_compare_means(method = "t.test", 
                              size = 8,
                              hjust = -1.5,
                              vjust = 1)
