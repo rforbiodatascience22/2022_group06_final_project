@@ -72,7 +72,7 @@ gleason_plot_c <- data %>%
   labs(x = "Gleason score",
        y = "(%)",
        fill = "mtDNA levels",
-       title = "C) mtDNA levels based on control median", 
+       title = "F) mtDNA levels based on control median", 
        subtitle = "Stratified on mtDNA levels <span style = 'color: #d95f02;'>
                   above the median</span> <br>and <span style ='color: 
                   #1b9e77;'>below the median</span>")
@@ -94,7 +94,7 @@ gleason_plot_p <- data %>%
   labs(x = "Gleason score",
        y = "",
        fill = "mtDNA levels",
-       title = "D) mtDNA levels based on patient median", 
+       title = "B) mtDNA levels based on patient median", 
        subtitle = "Stratified on mtDNA levels <span style = 'color: #d95f02;'>
                   above the median</span> <br>and <span style ='color: 
                   #1b9e77;'>below the median</span>")
@@ -119,7 +119,7 @@ ajcc_plot_c <- data %>%
   labs(x = "AJCC stage",
        y = "(%)",
        fill = "mtDNA levels",
-       title = "A) mtDNA levels based on control median", 
+       title = "E) mtDNA levels based on control median", 
        subtitle = "Stratified on mtDNA levels <span style = 'color: #d95f02;'>
                   above the median</span> <br>and <span style ='color: 
                   #1b9e77;'>below the median</span>")
@@ -142,7 +142,7 @@ ajcc_plot_p <- data %>%
   labs(x = "AJCC stage",
        y = "",
        fill = "mtDNA levels",
-       title = "B) mtDNA levels based on patient median", 
+       title = "A) mtDNA levels based on patient median", 
        subtitle = "Stratified on mtDNA levels <span style = 'color: #d95f02;'>
                   above the median</span> <br>and <span style ='color: 
                   #1b9e77;'>below the median</span>")
@@ -165,7 +165,7 @@ gleason_psa_agroup_plot <- data %>%
   labs(x = "Gleason score",
        y = "",
        fill = "PSA levels (ng/ml)",
-       title = "F) PSA levels from article, stratified on Glea. score", 
+       title = "D) PSA levels from article, stratified on Glea. score", 
        subtitle = "Stratified on PSA levels <span style = 'color: #1b9e77;'>
                   < 10</span>, <span style ='color: 
                   #d95f02;'>10~20</span> and <span style ='color: #7570b3;'>
@@ -190,7 +190,7 @@ ajcc_psa_agroup_plot <- data %>%
   labs(x = "AJCC stage",
        y = "",
        fill = "PSA levels (ng/ml)",
-       title = "E) PSA levels from article, stratified on AJCC stage", 
+       title = "C) PSA levels from article, stratified on AJCC stage", 
        subtitle = "Stratified on PSA levels <span style = 'color: #1b9e77;'>
                   < 10</span>, <span style ='color: 
                   #d95f02;'>10~20</span> and <span style ='color: #7570b3;'>
@@ -199,18 +199,33 @@ ajcc_psa_agroup_plot <- data %>%
 
 # Paste plots together with patchwork -----------------------------------
 
-mtdna_vs_psa <- ajcc_plot_c +
+full_mtdna_vs_psa <- ajcc_plot_c +
   ajcc_plot_p +
   ajcc_psa_agroup_plot +
   gleason_plot_c +
   gleason_plot_p +
   gleason_psa_agroup_plot +
-  labs(caption = "A-D, colored by mtDNA number counts in PBL's grouped above and below a median derived from control group (as in article) and patient group respectively.
-  E-F colored by PSA levels measured in ng/ml. Every color adds up to 100 %.
+  labs(caption = "A-B + E-F, colored by mtDNA number counts in PBL's grouped above and below a median derived from control group (as in article) and patient group respectively.
+  C-D colored by PSA levels measured in ng/ml. Every color adds up to 100 %.
   Stratification on AJCC stage: ('II' refers to both II A and II B). Stratification on Gleason score: ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above)")
 
-# Save plot to results.
-ggsave(filename = "results/mtdna_vs_psa.png", 
-       plot = mtdna_vs_psa,
+simplified_mtdna_vs_psa <- ajcc_plot_p +
+  ajcc_psa_agroup_plot +
+  gleason_plot_p +
+  gleason_psa_agroup_plot +
+  labs(caption = "A-B, colored by mtDNA number counts in PBL's grouped above and below a median derived from patient group.
+  C-D colored by PSA levels measured in ng/ml. Every color adds up to 100 %.
+  Note that A-B is colored based on median from data-set, while C-D is colored based on 'arbitrary' classification, leading to overweight of '>20'.
+  Stratification on AJCC stage: ('II' refers to both II A and II B). Stratification on Gleason score: ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above)")
+
+# Save plots to results.
+ggsave(filename = "results/full_mtdna_vs_psa.png", 
+       plot = full_mtdna_vs_psa,
        width = 14,
        height = 9)
+
+ggsave(filename = "results/simplified_mtdna_vs_psa.png",
+       plot = simplified_mtdna_vs_psa,
+       width = 14,
+       height = 9)
+
