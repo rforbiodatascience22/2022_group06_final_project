@@ -40,8 +40,6 @@ while project == "not_finished":
 8) Data visualization
 
 To do:
-Align pca and Prostate cancer. - Esben
-
 
 Slides
 3) Adjust conclusion slide
