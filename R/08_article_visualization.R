@@ -36,14 +36,9 @@ article_plot <- data %>%
                        y = mtdna, 
                        fill = group_names)) +
   geom_violin() +
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) +  
-  stat_summary(fun = "mean",
-               geom = "crossbar",
+  geom_boxplot(width = 0.05,
                color = "black",
-               width = 0.35,
-               show.legend = FALSE) +
+               outlier.shape = NA) +
   geom_signif(comparisons = list(c("control", "prostate cancer")), 
               map_signif_level = TRUE,
               size = 1,
