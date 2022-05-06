@@ -12,7 +12,7 @@ article_plot <- data %>%
                width = 0.5) +  
   geom_boxplot(outlier.shape = 1,
                outlier.size = 5) +
-  geom_signif(comparisons = list(c("controls", "pca_cases")), 
+  geom_signif(comparisons = list(c("control", "pca_case")), 
               map_signif_level = TRUE,
               size = 1) +
   theme_classic() + 

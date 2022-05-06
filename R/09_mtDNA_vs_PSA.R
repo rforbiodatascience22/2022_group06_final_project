@@ -5,7 +5,7 @@ data <- read_csv(file = "data/03_dat_aug.csv",
 # Stratify on mtDNA levels and Gleason score -----------------------------------
 # Find mtDNA level median based on control group.
 mtdna_control_median <- data %>% 
-  filter(group_names == "controls") %>% 
+  filter(group_names == "control") %>% 
   summarise(median = median(mtdna)) %>% 
   unlist()
 
@@ -37,7 +37,7 @@ data <- data %>%
 # Group data for medians based on control group (like in the article)
 plot_data <- data %>% 
   drop_na() %>%
-  filter(group_names == "pca_cases") %>%
+  filter(group_names == "pca_case") %>%
   group_by(mtdna_group_c, gleason_group) %>%
   add_count() %>%
   mutate(perc = n/sum(n))

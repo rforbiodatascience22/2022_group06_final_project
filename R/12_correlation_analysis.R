@@ -9,9 +9,9 @@ data <- read_csv(file = "data/03_dat_aug.csv",
 
 # Split data frame
 data_control <- data %>% 
-  filter(group_names == "controls")
+  filter(group_names == "control")
 data_pca <- data %>% 
-  filter(group_names == "pca_cases")
+  filter(group_names == "pca_case")
 
 # mtDNA vs. Age for controls  
 plt1 <- data_control %>% 
