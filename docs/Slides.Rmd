@@ -15,15 +15,25 @@ date: '2022-05-10'
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-library(tidyverse)
-library(rmarkdown)
-library(knitr)
+library("tidyverse")
+```
+## Article introduction
+
+**Title:** "Peripheral Blood Mitochondrial DNA Copy Number Is Associated with Prostate Cancer Risk and Tumor Burden"
+
+**Authors:** Weimin Zhou, Min Zhu, Ming Gui, Lihua Huang, Zhi Long, Li Wang, Hui Chen, Yinghao Yin, Xianzhen Jiang, Yingbo Dai, Yuxin Tang, Leye He, Kuangbiao Zhong
+
+**Goal:** Determine if mtDNA is a predictor for prostate cancer
+
+## Flowchart for project flow
+```{r out.width="90%", fig.align='center'}
+knitr::include_graphics("../docs/flowchart.png")
 ```
 
 ## Data set overview
 ```{r read data_load, include = FALSE}
 data_load <- read_csv("../data/01_dat_load.csv",
-                      show_col_types = FALSE) 
+                      show_col_types = FALSE)
 ```
 
 - Dimensions of the raw data set: `r dim(data_load)` 
@@ -102,7 +112,7 @@ Significant p-values:
 read_csv("../results/logistic_regression_mtdna.csv",
          show_col_types = FALSE) %>%
   filter(identified_as == "Significant") %>% 
-  paged_table()
+  rmarkdown::paged_table()
 ```
 
 <div>
@@ -112,7 +122,7 @@ data_aug %>%
   select(dfi_class, group) %>% 
   count(dfi_class, group) %>% 
   distinct() %>% 
-  paged_table()
+  rmarkdown::paged_table()
 ```
 </div>
 
@@ -122,7 +132,7 @@ Significant p-values:
 read_csv("../results/logistic_regression_psa.csv",
          show_col_types = FALSE) %>%
   filter(identified_as == "Significant") %>% 
-  paged_table()
+  rmarkdown::paged_table()
 ```
 
 ## Principal component analysis (PCA)
