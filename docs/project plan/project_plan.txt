@@ -57,10 +57,8 @@ To do:
 15) Create a flowchart of our data handlig? To visualize what we did
 
 
-change "controls" to "control" and "pca_cases" to "pca_case"
 Fix 11_, should it be included?
 Go through code.
-fix libraries
 violin plots (article visualization)
 factor classes in 09, like in 03. - Esben
 
