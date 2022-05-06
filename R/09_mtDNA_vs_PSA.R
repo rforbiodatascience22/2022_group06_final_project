@@ -11,7 +11,7 @@ mtdna_control_median <- data %>%
 
 # Find mtDNA level median based on patient group.
 mtdna_patient_median <- data %>% 
-  filter(group_names == "pca_case") %>% 
+  filter(group_names == "prostate cancer") %>% 
   summarise(median = median(mtdna)) %>% 
   unlist()
 
