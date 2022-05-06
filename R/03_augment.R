@@ -1,4 +1,3 @@
-library(tidyverse)
 # Load in clean data ------------------------------------------------------
 data <- read_csv(file = "data/02_dat_clean.csv",
                  show_col_types = FALSE)
@@ -17,20 +16,13 @@ patient_info <- patient_info %>%
   mutate(bmi_class = case_when(bmi < 18.5 ~ "underweight",
                                18.5 <= bmi & bmi < 25 ~ "normal weight",
                                25 <= bmi & bmi < 30 ~ "overweight",
-                               30 <= bmi ~ "obese"),
-         bmi_class = factor(bmi_class,
-                            levels =  c("underweight", "normal weight",
-                                        "overweight", "obese")))
-
+                               30 <= bmi ~ "obese"))
 
 # Add in a DFI class ------------------------------------------------------
 patient_info <- patient_info %>% 
   mutate(dfi_class = case_when(dfi < 20 ~ "low fat",
                                    20 <= dfi & dfi < 30 ~ "medium fat",
-                                   30 <= dfi ~ "high fat"),
-         dfi_class = factor(dfi_class,
-                            levels =  c("low fat", "medium fat",
-                                        "high fat")))
+                                   30 <= dfi ~ "high fat"))
 
 
 # Split TNM notation into separate variables ------------------------------
@@ -44,8 +36,8 @@ medical_info <- medical_info %>%
 
 # Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
-  mutate(group_names = case_when(group == 1 ~ "pca_cases",
-                                 group == 0 ~ "controls"))
+  mutate(group_names = case_when(group == 1 ~ "pca_case",
+                                 group == 0 ~ "control"))
 
 # Join patient info and medical info based on Sample ----------------------
 data_augmented <- patient_info %>% 

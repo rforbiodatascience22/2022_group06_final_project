@@ -43,31 +43,11 @@ while project == "not_finished":
 8) Data visualization
 
 To do:
-1) Check we follow the project flow
-2) Make sure we use the same naming conventions
-3) Is the coding style correct across the board (newline, include "=" where possible)
-4) Data visualitation with "slice" function
-5) Use geom_violin?
-9) Add color to titles, see Lab 3 Task IX
-- 6) Insert subtitles?
-- 9) Add color to titles, see Lab 3 Task IX
-10) Make sure we fully understand the summarise function
-11) *Go through code*, did we do anything multiple times? Make a function
-12) Use "separate" function for TMN? (function from Lab 5, Q20)
-15) Create a flowchart of our data handlig? To visualize what we did
-
-
-change "controls" to "control" and "pca_cases" to "pca_case"
-Fix 11_, should it be included?
-Go through code.
-fix libraries
-violin plots (article visualization)
-factor classes in 09, like in 03. - Esben
-
-
-Slides
-  Include 09-slide
-  Adjust conclusion slide.
-  Code-flowchart
-  More color, its bland.
+1) Data visualitation with "slice" function
+2) Insert subtitles?
+3) Make functions where needed
+4) Factor 09 as in 03 - Esben
+5) Make manuscript for oral exam
+6) Include 09 in slides
+7) Conclusion slide is not done
 
