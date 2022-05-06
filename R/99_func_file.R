@@ -25,3 +25,47 @@ logistic_regression <- function(psa = psa){
                                      p.value >= 0.05 ~ "Not significant"))
   return(data_nested)
 }
+
+#Function for correlation analysis ----------------------------------------
+correlation_analysis <- function(df, variable1, variable2){
+  
+  plt <- ggplot(df, mapping = aes(x = {{variable1}}, 
+                                  y = {{variable2}})) +
+    
+    geom_point(size = 3) 
+  
+  plt <- plt + ggpubr::stat_cor(method = "spearman")
+    
+  return(plt)
+}
+
+
+correlation_analysis1 <- function(df, variable1, variable2, control = TRUE){
+  data_control <- df %>% 
+    filter(group_names == "controls")
+  data_pca <- df %>% 
+    filter(group_names == "pca_cases")
+  
+  if (control == TRUE) {
+    plt <- ggplot(data_control, mapping = aes(x = {{variable1}}, 
+                                              y = {{variable2}})) +
+      
+      geom_point(size = 3) 
+    
+    plt <- plt + ggpubr::stat_cor(method = "spearman")
+  }
+  
+  if (control == FALSE) {
+    plt <- ggplot(data_pca, mapping = aes(x = {{variable1}}, 
+                                          y = {{variable2}})) +
+          
+      geom_point(size = 3) 
+    
+    plt <- plt + ggpubr::stat_cor(method = "spearman")
+  }
+  
+  return(plt)
+}
+
+
+

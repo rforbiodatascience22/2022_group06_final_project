@@ -27,8 +27,7 @@ Han chinese with prostate cancer and healthy controls.") +
   theme(plot.caption = element_text(size = 22,
                                     hjust = 0),
         text = element_text(size = 22)) +
-  scale_y_continuous(limits = c(0, 2.5)) +
-  ylim(0, 2.8) 
+  scale_y_continuous(limits = c(0, 2.5)) 
 
 # Add statistical test.
 article_plot <- article_plot + 
