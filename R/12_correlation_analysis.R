@@ -15,7 +15,7 @@ data_pca <- data %>%
   filter(group_names == "pca_case")
 
 plt1 <- data %>% 
-  correlation_analysis1(age, mtdna, control = FALSE)
+  correlation_analysis(age, mtdna, control = FALSE)
 
 ggsave(filename = 'results/scatterplot_age_mtdna.png',
        plot = plt1,
