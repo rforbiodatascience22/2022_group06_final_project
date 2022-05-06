@@ -87,7 +87,7 @@ knitr::include_graphics(c("../docs/Zhou_et_al_boxplot.png",
 ```
 
 ## A better biomarker for prostate cancer?
-```{r out.width="100%"}
+```{r out.width="80%",fig.align='center'}
 knitr::include_graphics("../results/boxplot_psa.png")
 ```
 
@@ -121,7 +121,7 @@ read_csv("../results/logistic_regression_psa.csv",
 ```
 
 ## Principal component analysis (PCA)
-```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="PCA",fig.show='hold',fig.align='center'}
+```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap=" ",fig.show='hold',fig.align='center'}
 knitr::include_graphics(c("../results/pc1_vs_pc2.png",
                           "../results/pca_var_explained.png",
                           "../results/pc1_pc2_weights.png"))
