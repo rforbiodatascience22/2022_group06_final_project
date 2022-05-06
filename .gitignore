@@ -7,4 +7,4 @@ data/01_legend_load.csv
 data/02_dat_clean.csv
 data/03_dat_aug.csv
 docs/Slides.html
-results
+results/*
