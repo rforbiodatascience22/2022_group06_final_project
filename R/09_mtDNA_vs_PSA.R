@@ -11,7 +11,7 @@ mtdna_control_median <- data %>%
 
 # Find mtDNA level median based on patient group.
 mtdna_patient_median <- data %>% 
-  filter(group_names == "pca_cases") %>% 
+  filter(group_names == "pca_case") %>% 
   summarise(median = median(mtdna)) %>% 
   unlist()
 
@@ -52,33 +52,29 @@ data <- data %>%
 # Bar charts stratified on high and low mtDNA levels for both definitions. -----
 # Group data for medians based on control group (like in the article)
 plot_data <- data %>% 
-<<<<<<< HEAD
   filter(group_names == "pca_case") %>%
   group_by(mtdna_group_c, gleason_group) %>% 
   summarize(count = n()) %>%
   drop_na() %>% 
   mutate(perc = count/sum(count))
 
-generate_09_plot_data <- function(data, group1, group2){
-  output <- data %>% 
+generate_09_plot_data <- function(input_data, group1, group2){
+  output <- input_data %>% 
     filter(group_names == "pca_case") %>%
-    group_by(group1, group2) %>% 
+    group_by({{group1}}, {{group2}}) %>% 
     summarize(count = n()) %>%
     drop_na() %>% 
     mutate(perc = count/sum(count))
   
   return(output)
 }
-=======
-  drop_na() %>%
-  filter(group_names == "pca_case") %>%
-  group_by(mtdna_group_c, gleason_group) %>%
-  add_count() %>%
-  mutate(perc = n/sum(n))
->>>>>>> 6a0a1b0f010481ae482c8ca99014f4778e5484c0
+
+test_data <- data %>% 
+  generate_09_plot_data(group1 = mtdna_group_c,
+                        group2 = gleason_group)
 
 # Plot
-gleason_plot_c <- plot_data %>%  
+gleason_plot_c <- test_data %>%  
   ggplot(mapping = aes(x = gleason_group,
                        y = perc*100,
                        fill = mtdna_group_c)) + 
@@ -101,7 +97,7 @@ gleason_plot_c
 # Group data based on the mtDNA median in patient group.
 plot_data <- data %>% 
   drop_na() %>%
-  filter(group_names == "pca_cases") %>%
+  filter(group_names == "pca_case") %>%
   group_by(mtdna_group_p, gleason_group) %>%
   add_count() %>%
   mutate(perc = n/sum(n))
@@ -130,7 +126,7 @@ gleason_plot_p <- plot_data %>%
 # Group data for medians besed on control group (like in the article)
 plot_data <- data %>% 
   drop_na() %>%
-  filter(group_names == "pca_cases") %>%
+  filter(group_names == "pca_case") %>%
   group_by(mtdna_group_c, ajcc_stage) %>%
   add_count() %>%
   mutate(perc = n/sum(n))
@@ -158,7 +154,7 @@ ajcc_plot_c <- plot_data %>%
 # Group data based on the mtDNA median in patient group.
 plot_data <- data %>% 
   drop_na() %>%
-  filter(group_names == "pca_cases") %>%
+  filter(group_names == "pca_case") %>%
   group_by(mtdna_group_p, ajcc_stage) %>%
   add_count() %>%
   mutate(perc = n/sum(n))
@@ -186,7 +182,7 @@ ajcc_plot_p <- plot_data %>%
 # Plot PSA on Gleason score using article groups --------------------------
 plot_data <- data %>% 
   drop_na() %>%
-  filter(group_names == "pca_cases") %>%
+  filter(group_names == "pca_case") %>%
   group_by(psa_level, gleason_group) %>%
   add_count() %>%
   mutate(perc = n/sum(n))
@@ -216,7 +212,7 @@ gleason_psa_agroup_plot <- plot_data %>%
 # Plot PSA on AJCC using article grouping ---------------------------------
 plot_data <- data %>% 
   drop_na() %>%
-  filter(group_names == "pca_cases") %>%
+  filter(group_names == "pca_case") %>%
   group_by(psa_level, ajcc_stage) %>%
   add_count() %>% 
   mutate(perc = n/sum(n))
