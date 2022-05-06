@@ -10,7 +10,10 @@ boxplot_psa <- data %>%
                        fill  = group_names)) + 
   stat_boxplot(geom = "errorbar",
                width = 0.5) +  
-  geom_boxplot(outlier.shape = 1) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(alpha = 0.5,
+              width = 0.1,
+              height = 0.2) +
   geom_signif(comparisons = list(c("control", "pca_case")), 
               map_signif_level = TRUE,
               size = 0.4) +
