@@ -47,14 +47,27 @@ data <- data %>%
                             levels = c("<10", "10~20", ">=20")))
 
 
+
+
 # Bar charts stratified on high and low mtDNA levels for both definitions. -----
 # Group data for medians based on control group (like in the article)
 plot_data <- data %>% 
-  drop_na() %>%
-  filter(group_names == "pca_cases") %>%
-  group_by(mtdna_group_c, gleason_group) %>%
-  add_count() %>%
-  mutate(perc = n/sum(n))
+  filter(group_names == "pca_case") %>%
+  group_by(mtdna_group_c, gleason_group) %>% 
+  summarize(count = n()) %>%
+  drop_na() %>% 
+  mutate(perc = count/sum(count))
+
+generate_09_plot_data <- function(data, group1, group2){
+  output <- data %>% 
+    filter(group_names == "pca_case") %>%
+    group_by(group1, group2) %>% 
+    summarize(count = n()) %>%
+    drop_na() %>% 
+    mutate(perc = count/sum(count))
+  
+  return(output)
+}
 
 # Plot
 gleason_plot_c <- plot_data %>%  
@@ -63,7 +76,7 @@ gleason_plot_c <- plot_data %>%
                        fill = mtdna_group_c)) + 
   geom_bar(stat = "identity",
            position = "dodge") +
-  scale_x_discrete(limits = c("low", "medium", "high")) +
+  # scale_x_discrete(limits = c("low", "medium", "high")) +
   scale_fill_brewer(palette = "Dark2") +
   theme(legend.position = "none",
         plot.subtitle = ggtext::element_markdown()) +
