@@ -1,192 +1,39 @@
+source("R/99_func_file.R")
 # Load augmented data -----------------------------------------------------
 data <- read_csv(file = "data/03_dat_aug.csv",
                  show_col_types = FALSE)
 
-
-# Create boxplot for each numeric variable to check for outliers ----------
+# Generate boxplots of all continous variables
 age_plot <- data %>% 
-  ggplot(mapping = aes(y = age,
-                       x = group_names,
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.15) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "Age",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
-
+  test_for_outliers(group_names, age, "Age", "")
 
 fat_intake_plot <- data %>% 
-  ggplot(mapping = aes(y = dfi,
-                       x = group_names,
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.15) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "Daily dietary fat intake",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
-
+  test_for_outliers(group_names, dfi, "Daily dietary fat intake", "")
 
 bmi_plot <- data %>% 
-  ggplot(mapping = aes(y = bmi,
-                       x = group_names,
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.15) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "BMI",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
-
+  test_for_outliers(group_names, bmi, "BMI", "")
 
 psa_plot <- data %>% 
-  ggplot(mapping = aes(y = psa,
-                       x = group_names,
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.15) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "Prostate specific antigen",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
-
+  test_for_outliers(group_names, psa, "Prostate specific antigen", "")
 
 mtdna_plot <- data %>% 
-  ggplot(mapping = aes(y = mtdna,
-                       x = group_names,
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.15) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "mtDNA copy number",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
+  test_for_outliers(group_names, mtdna, "mtDNA copy number", "")
 
-
+# Generate plots of all discrete variables
 gleason_plot <- data %>% 
-  ggplot(mapping = aes(y = gleason,
-                       x = "",
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.2,
-              height = 0.2) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "Gleason score",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
-
+  test_for_outliers(group_names, gleason, "Gleason score", "")
 
 ajcc_plot <- data %>% 
-  ggplot(mapping = aes(y = ajcc,
-                       x = "",
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.2,
-              height = 0.2) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "AJCC Stage",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()  
-
+  test_for_outliers(group_names, ajcc, "AJCC stage", "")
 
 tumor_plot <- data %>% 
-  ggplot(mapping = aes(y = tumor,
-                       x = "",
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.2,
-              height = 0.2) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "Tumor severity",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
-
+  test_for_outliers(group_names, tumor, "Tumor severity", "")
 
 nodes_plot <- data %>% 
-  ggplot(mapping = aes(y = lymph_nodes,
-                       x = "",
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.2,
-              height = 0.2) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5,
-               show.legend = FALSE) + 
-  labs(x = "Lymph nodes affected",
-       y = "") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
-
+  test_for_outliers(group_names, lymph_nodes, "Lymph nodes affected", "")
 
 metastasis_plot <- data %>% 
-  ggplot(mapping = aes(y = metastasis,
-                       x = "",
-                       color = group_names)) +
-  geom_boxplot(outlier.shape = NA,
-               show.legend = FALSE) + 
-  geom_jitter(show.legend = FALSE,
-              alpha = 0.5,
-              width = 0.2,
-              height = 0.2) + 
-  stat_boxplot(geom = "errorbar",
-               width = 0.5) + 
-  labs(x = "Metastasis",
-       y = "",
-       color="Group names") + 
-  scale_color_brewer(palette = "Dark2") +
-  theme_classic()
+  test_for_outliers(group_names, metastasis, "Metastasis", "")
 
 
 boxplot_continuous <- age_plot +
@@ -205,6 +52,7 @@ boxplot_discrete <- ajcc_plot +
   plot_layout(ncol = 5) + 
   plot_annotation(title = "A plot of the discrete attributes, to examine distribution of outliers")
   
+#Save plots to results
 ggsave(filename = 'results/boxplot_continuous.png',
        plot = boxplot_continuous,
        width = 10,

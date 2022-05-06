@@ -35,21 +35,29 @@ logistic_regression <- function(include_psa = TRUE){
   return(data_nested)
 }
 
-#Function for correlation analysis ----------------------------------------
-correlation_analysis <- function(df, variable1, variable2){
-  
-  plt <- ggplot(df, mapping = aes(x = {{variable1}}, 
-                                  y = {{variable2}})) +
-    
-    geom_point(size = 3) 
-  
-  plt <- plt + ggpubr::stat_cor(method = "spearman")
-    
+#Outlier detection function ----------------------------------------
+test_for_outliers <- function(df, variable1, variable2, xlab, ylab){
+  plt <- ggplot(df, mapping = aes(y = {{variable2}},
+                                  x = {{variable1}},
+                                  color = {{variable1}})) +
+          geom_boxplot(outlier.shape = NA,
+                       show.legend = FALSE) + 
+          geom_jitter(show.legend = FALSE,
+                      alpha = 0.5,
+                      width = 0.15) + 
+          stat_boxplot(geom = "errorbar",
+                       width = 0.5,
+                       show.legend = FALSE) + 
+          labs(x = xlab,
+               y = ylab) + 
+          scale_color_brewer(palette = "Dark2") +
+          theme_classic()
   return(plt)
 }
 
 
-correlation_analysis1 <- function(df, variable1, variable2, control = TRUE){
+#Function for correlation analysis ----------------------------------------
+correlation_analysis <- function(df, variable1, variable2, control = TRUE){
   data_control <- df %>% 
     filter(group_names == "controls")
   data_pca <- df %>% 

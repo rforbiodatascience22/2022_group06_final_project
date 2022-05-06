@@ -34,17 +34,21 @@ Han chinese with prostate cancer and healthy controls.") +
 article_plot <- data %>% 
   ggplot(mapping = aes(x = group_names,
                        y = mtdna, 
-                       fill  = group_names)) + 
+                       fill = group_names)) +
   geom_violin() +
   stat_boxplot(geom = "errorbar",
-               width = 0.5) +  
+               width = 0.5,
+               show.legend = FALSE) +  
   stat_summary(fun = "mean",
                geom = "crossbar",
                color = "black",
-               width = 0.35) +
+               width = 0.35,
+               show.legend = FALSE) +
   geom_signif(comparisons = list(c("control", "pca_case")), 
               map_signif_level = TRUE,
-              size = 1) +
+              size = 1,
+              color = "black") +
+  scale_fill_brewer(palette = "Dark2") +
   theme_classic() + 
   theme(legend.position = "None",
         panel.background = element_rect(colour = "black",
