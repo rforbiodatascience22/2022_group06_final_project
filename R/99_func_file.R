@@ -1,5 +1,5 @@
 # Function for logistic regression ----------------------------------------
-logistic_regression <- function(psa = psa){
+logistic_regression <- function(include_psa = TRUE){
   
   data <- read_csv(file = "data/03_dat_aug.csv",
                    show_col_types = FALSE)
@@ -12,17 +12,26 @@ logistic_regression <- function(psa = psa){
     mutate(mu_group = map(data,
                           ~glm(group ~ age + bmi + mtdna + psa,
                                data = .x,
-                               family = binomial(link = "logit"),))) %>% 
+                               family = binomial(link = "logit"))))
     
-    mutate(coef = map(mu_group,
-                      ~broom::tidy(.))) %>% 
-    unnest(coef) %>% 
-    filter(term != "(Intercept)") %>% 
-    select(-c(mu_group,
-              std.error,
-              statistic)) %>% 
-    mutate(identified_as = case_when(p.value < 0.05 ~ "Significant",
-                                     p.value >= 0.05 ~ "Not significant"))
+  if (include_psa == FALSE) {
+    data_nested <- data_nested %>% 
+      mutate(mu_group = map(data,
+                            ~glm(group ~ age + bmi + mtdna,
+                                 data = .x,
+                                 family = binomial(link = "logit"))))
+  } 
+  
+    data_nested <- data_nested %>%
+      mutate(coef = map(mu_group,
+                        ~broom::tidy(.))) %>%
+      unnest(coef) %>% 
+      filter(term != "(Intercept)") %>% 
+      select(-c(mu_group,
+                std.error,
+                statistic)) %>% 
+      mutate(identified_as = case_when(p.value < 0.05 ~ "Significant",
+                                       p.value >= 0.05 ~ "Not significant"))
   return(data_nested)
 }
 
