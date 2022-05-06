@@ -28,7 +28,7 @@ ggsave(filename = 'results/scatterplot_age_mtdna.png',
 #                       y = mtdna)) + 
 #  geom_point() 
 
-#plt1 + ggpubr::stat_cor(method = "spearman")
+#plt1 + stat_cor(method = "spearman")
 
 # mtDNA vs. Age for PCa cases
 #plt2 <- data_pca %>% 
@@ -36,7 +36,7 @@ ggsave(filename = 'results/scatterplot_age_mtdna.png',
  #                      y = mtdna)) + 
   #geom_point()  
 
-#plt2 + ggpubr::stat_cor(method = "spearman")
+#plt2 + stat_cor(method = "spearman")
 
 
 # mtDNA vs. BMI for controls
@@ -45,7 +45,7 @@ ggsave(filename = 'results/scatterplot_age_mtdna.png',
   #                     y = mtdna)) + 
   #geom_point()  
 
-#plt3 + ggpubr::stat_cor(method = "spearman")
+#plt3 + stat_cor(method = "spearman")
 
 
 # mtDNA vs. BMI for PCa cases
@@ -54,7 +54,7 @@ ggsave(filename = 'results/scatterplot_age_mtdna.png',
   #                     y = mtdna)) + 
   #geom_point()  
 
-#plt4 + ggpubr::stat_cor(method = "spearman")
+#plt4 + stat_cor(method = "spearman")
 
 # #mtDNA vs. gleason score
 # plt5 <- data_pca %>% 
@@ -65,11 +65,11 @@ ggsave(filename = 'results/scatterplot_age_mtdna.png',
 #                        color = gleason)) + 
 #   geom_point()   
 # 
-# plt5 + ggpubr::stat_cor(method = "spearman")
+# plt5 + stat_cor(method = "spearman")
 # 
 # #PSA vs. Gleason
 # plt6 <- data_pca %>% 
 #   ggplot(mapping = aes(x = gleason, 
 #                        y = psa)) + 
 #   geom_point()   
-# plt6 + ggpubr::stat_cor(method = "spearman")
+# plt6 + stat_cor(method = "spearman")

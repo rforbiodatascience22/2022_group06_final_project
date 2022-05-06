@@ -31,7 +31,7 @@ in Han chinese with prostate cancer and healthy controls.") +
 
 #Add statistical test
 boxplot_psa <- boxplot_psa +
-  ggpubr::stat_compare_means(method = "t.test",
+  stat_compare_means(method = "t.test",
                              size = 4,
                              hjust = -1.15,
                              vjust = 1)
