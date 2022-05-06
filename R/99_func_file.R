@@ -35,7 +35,7 @@ logistic_regression <- function(include_psa = TRUE){
   return(data_nested)
 }
 
-#Outlier detection function ----------------------------------------
+#Outlier detection plot function ----------------------------------------
 test_for_outliers <- function(df, variable1, variable2, xlab, ylab){
   plt <- ggplot(df, mapping = aes(y = {{variable2}},
                                   x = {{variable1}},
@@ -44,7 +44,8 @@ test_for_outliers <- function(df, variable1, variable2, xlab, ylab){
                        show.legend = FALSE) + 
           geom_jitter(show.legend = FALSE,
                       alpha = 0.5,
-                      width = 0.15) + 
+                      width = 0.15,
+                      height = 0.2) + 
           stat_boxplot(geom = "errorbar",
                        width = 0.5,
                        show.legend = FALSE) + 
