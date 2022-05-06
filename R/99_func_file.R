@@ -45,7 +45,7 @@ test_for_outliers <- function(df, variable1, variable2, xlab, ylab){
           geom_jitter(show.legend = FALSE,
                       alpha = 0.5,
                       width = 0.15,
-                      height = 0.2) + 
+                      height = 0.15) + 
           stat_boxplot(geom = "errorbar",
                        width = 0.5,
                        show.legend = FALSE) + 
