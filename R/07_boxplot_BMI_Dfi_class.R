@@ -22,7 +22,11 @@ boxplot_bmi_dfi <- data %>%
   scale_x_discrete(limits = c("low fat", 
                               "medium fat", 
                               "high fat")) +
-  theme(text = element_text(size = 16))
+  scale_fill_discrete(name = "DFI-class") +
+  theme(text = element_text(size = 16)) +
+  labs(x = "DFI-class",
+       y = "BMI",
+       title = "Boxplot of BMI stratified on DFI-class")
 
 # Save plot to results.
 ggsave(filename = "results/boxplot_bmi_dfi.png",

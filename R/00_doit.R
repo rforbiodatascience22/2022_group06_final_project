@@ -1,13 +1,8 @@
-library(tidyverse)
-# library(readxl)
-library(patchwork)
-# library(fs)
-# library(broom)
-# library(ggtext)
-library(ggsignif)
-# library(ggpubr)
-# library(rpart)
-# library(corrr)
+library("tidyverse")
+library("patchwork")
+library("ggsignif")
+library("rmarkdown")
+library("knitr")
 
 # Run all scripts ---------------------------------------------------------
 source("R/01_load.R")

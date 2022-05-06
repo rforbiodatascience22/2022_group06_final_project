@@ -43,6 +43,7 @@ while project == "not_finished":
 8) Data visualization
 
 To do:
+<<<<<<< HEAD
 1) Check we follow the project flow
 2) Make sure we use the same naming conventions
 3) Is the coding style correct across the board (newline, include "=" where possible)
@@ -70,4 +71,13 @@ Slides
   Adjust conclusion slide.
   Code-flowchart
   More color, its bland.
+=======
+1) Data visualitation with "slice" function
+2) Insert subtitles?
+3) Make functions where needed
+4) Factor 09 as in 03 - Esben
+5) Make manuscript for oral exam
+6) Include 09 in slides
+7) Conclusion slide is not done
+>>>>>>> 6a0a1b0f010481ae482c8ca99014f4778e5484c0
 

@@ -11,7 +11,7 @@ boxplot_psa <- data %>%
   stat_boxplot(geom = "errorbar",
                width = 0.5) +  
   geom_boxplot(outlier.shape = 1) +
-  geom_signif(comparisons = list(c("controls", "pca_cases")), 
+  geom_signif(comparisons = list(c("control", "pca_case")), 
               map_signif_level = TRUE,
               size = 0.4) +
   theme(legend.position = "none") + 
