@@ -20,7 +20,7 @@ boxplot_psa <- data %>%
               color = "black") +
   scale_color_brewer(palette = "Dark2") +
   theme(legend.position = "none") + 
-  labs(title = "Boxplot of PSA of controls and PCa cases", 
+  labs(title = "Boxplot of PSA of controls and prostate cancer cases", 
        y = "PSA", 
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number
