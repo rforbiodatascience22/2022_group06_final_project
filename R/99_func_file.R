@@ -60,7 +60,7 @@ test_for_outliers <- function(df, variable1, variable2, xlab, ylab){
 #Function for correlation analysis ----------------------------------------
 correlation_analysis <- function(df, variable1, variable2, control = TRUE){
   data_control <- df %>% 
-    filter(group_names == "controls")
+    filter(group_names == "control")
   data_pca <- df %>% 
     filter(group_names == "prostate cancer")
   
@@ -68,16 +68,18 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
     plt <- ggplot(data_control, mapping = aes(x = {{variable1}}, 
                                               y = {{variable2}})) +
       
-      geom_point(size = 3) 
+      geom_point(size = 3) +
+      labs(subtitle = "Control")
     
     plt <- plt + stat_cor(method = "spearman")
   }
   
-  if (control == FALSE) {
+  else {
     plt <- ggplot(data_pca, mapping = aes(x = {{variable1}}, 
                                           y = {{variable2}})) +
           
-      geom_point(size = 3) 
+      geom_point(size = 3) +
+      labs(subtitle = "Prostate cancer")
     
     plt <- plt + stat_cor(method = "spearman")
   }
