@@ -38,6 +38,7 @@ article_plot <- data %>%
   geom_violin() +
   geom_boxplot(width = 0.05,
                color = "black",
+               fill = "white",
                outlier.shape = NA) +
   geom_signif(comparisons = list(c("control", "prostate cancer")), 
               map_signif_level = TRUE,
@@ -71,3 +72,4 @@ ggsave(filename = "results/article_visualization.png",
        plot = article_plot,
        width = 10,
        height = 10)
+article_plot
