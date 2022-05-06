@@ -11,9 +11,6 @@ Q4) We have a problem with loading data, how much can we add to our load script?
 Q5) How can we guard against duplets in 02_clean.R?
   a) current implement is good, maybe use a logfile
 
-Q6) How important is it that we don't use base R functions? (using ncol over creating a function with purrr)
-
-
 Presentation outline 
 -Introduction data    DONE
 -Cleaning             DONE
@@ -43,29 +40,10 @@ while project == "not_finished":
 8) Data visualization
 
 To do:
-<<<<<<< HEAD
-<<<<<<< HEAD
-1) Check we follow the project flow
-2) Make sure we use the same naming conventions
-3) Is the coding style correct across the board (newline, include "=" where possible)
-4) Data visualitation with "slice" function
-5) Use geom_violin?
-9) Add color to titles, see Lab 3 Task IX
-- 6) Insert subtitles?
-- 9) Add color to titles, see Lab 3 Task IX
-10) Make sure we fully understand the summarise function
-11) *Go through code*, did we do anything multiple times? Make a function
-12) Use "separate" function for TMN? (function from Lab 5, Q20)
-15) Create a flowchart of our data handlig? To visualize what we did
-
-
-Align pca and Prostate cancer. - Mathias
-Fix 11_, should it be included? - no, we keep it for show, but there is no
-  relevant info to be found.
+Align pca and Prostate cancer. - Joachim
 
 
 Slides
-  Adjust conclusion slide.
-  Code-flowchart
+3) Adjust conclusion slide
+4) Code-flowchart - Joachim
 5) Make manuscript for oral exam
-7) Conclusion slide is not done
