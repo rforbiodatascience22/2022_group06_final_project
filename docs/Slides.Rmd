@@ -129,7 +129,7 @@ knitr::include_graphics(c("../results/pc1_vs_pc2.png",
 
 ## Some more data exploration
 ```{r out.width="100%", fig.align='center'}
-knitr::include_graphics("../results/mtdna_vs_psa.png")
+knitr::include_graphics("../results/simplified_mtdna_vs_psa.png")
 ```
 
 ## Interesting finding during exploratory data analysis
