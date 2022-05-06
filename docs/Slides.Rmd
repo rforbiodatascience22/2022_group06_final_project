@@ -17,18 +17,6 @@ date: '2022-05-10'
 knitr::opts_chunk$set(echo = FALSE)
 library("tidyverse")
 ```
-## Article introduction
-
-**Title:** "Peripheral Blood Mitochondrial DNA Copy Number Is Associated with Prostate Cancer Risk and Tumor Burden"
-
-**Authors:** Weimin Zhou, Min Zhu, Ming Gui, Lihua Huang, Zhi Long, Li Wang, Hui Chen, Yinghao Yin, Xianzhen Jiang, Yingbo Dai, Yuxin Tang, Leye He, Kuangbiao Zhong
-
-**Goal:** Determine if mtDNA from peripheral blood leukocytes is a predictor for prostate cancer
-
-## Flowchart for project flow
-```{r out.width="90%", fig.align='center'}
-#knitr::include_graphics("../docs/flowchart.png")
-```
 
 ## Data set overview
 ```{r read data_load, include = FALSE}
@@ -39,21 +27,22 @@ data_clean <- read_csv("../data/02_dat_clean.csv",
 data_aug <- read_csv("../data/03_dat_aug.csv",
                      show_col_types = FALSE)
 ```
+**Title:** "Peripheral Blood Mitochondrial DNA Copy Number Is Associated with Prostate Cancer Risk and Tumor Burden"  
+**Authors:** Zhou W. et. al. (2014)  
+**Purpose:** Predict cancer from biomarkers, mainly mtDNA
 
 <div style="float: left; width: 50%;">
 **Loading**  
 
-- Dimensions of the raw data set: `r dim(data_load)` 
+- Dimensions: `r dim(data_load)` 
 
-- Stratified on Controls and prostate cancer cases (attribute called Group)  
-
-- Purpose of article: Predict prostate cancer from other variables, mainly mtDNA
+- Control and cancer case groups are proportional
 
 **Cleaning**  
 
-- Check for duplicates  
+- Check for duplicates
 
-- Filter for PCRsuccess  
+- Filter for PCR success (pcr_success)
 
 - New dimensions: `r dim(data_clean)` 
 </div>
@@ -62,19 +51,24 @@ data_aug <- read_csv("../data/03_dat_aug.csv",
 
 **Augmenting**  
 
-- BMI- and DFI-classifier  
+- BMI- and DFI-classifier
 
-- New columns based on TNM-notation  
+- New columns based on TNM-notation
 
-- Add "Group" as strings  
+- Add 'group' as strings
 
-- New dimensions: `r dim(data_aug)` 
+- New dimensions: `r dim(data_aug)`
 
 ```{r out.width="90%"}
 knitr::include_graphics("../docs/tnm_notation.png")
 ```
 
 </div>
+
+## Flowchart for project flow
+```{r out.width="50%", fig.align='center'}
+knitr::include_graphics("../docs/22100_flowchart.png")
+```
 
 ## Boxplot with continuous variables, any outliers?
 ```{r out.width="90%", fig.align='center'}
@@ -87,7 +81,7 @@ knitr::include_graphics("../results/boxplot_discrete.png")
 ```
 
 ## Re-creating plot from the article
-```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap="Article visualization",fig.show='hold',fig.align='center'}
+```{r echo=FALSE,out.width="49%", out.height="10%",fig.cap=" ",fig.show='hold',fig.align='center'} 
 knitr::include_graphics(c("../docs/Zhou_et_al_boxplot.png",
                           "../results/article_visualization.png"))
 ```
@@ -133,16 +127,15 @@ knitr::include_graphics(c("../results/pc1_vs_pc2.png",
                           "../results/pc1_pc2_weights.png"))
 ```
 
+## Some more data exploration
+```{r out.width="100%", fig.align='center'}
+knitr::include_graphics("../results/simplified_mtdna_vs_psa.png")
+```
+
 ## Interesting finding during exploratory data analysis
 ```{r out.width="80%", fig.align='center'}
 knitr::include_graphics("../results/boxplot_bmi_dfi.png")
 ```
-
-## Some more data exploration
-```{r out.width="100%", fig.align='center'}
-knitr::include_graphics("../results/mtdna_vs_psa.png")
-```
-
 
 ## Conclusion {.build}
 - We can support the conclusion of the article, mtDNA is a biomarker for prostate cancer (e.g, it is reproducible)  
