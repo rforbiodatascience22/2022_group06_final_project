@@ -1,5 +1,5 @@
 ---
-title: "Prostate cancer (PCa) analysis"
+title: "Prostate cancer analysis"
 subtitle: "Group 6"
 author:
   - "Esben Vestergaard Øyan, s194564"
@@ -45,9 +45,9 @@ data_aug <- read_csv("../data/03_dat_aug.csv",
 
 - Dimensions of the raw data set: `r dim(data_load)` 
 
-- Stratified on Controls and PCa cases (attribute called Group)  
+- Stratified on Controls and prostate cancer cases (attribute called Group)  
 
-- Purpose of article: Predict PCa from other variables, mainly mtDNA
+- Purpose of article: Predict prostate cancer from other variables, mainly mtDNA
 
 **Cleaning**  
 
@@ -92,7 +92,7 @@ knitr::include_graphics(c("../docs/Zhou_et_al_boxplot.png",
                           "../results/article_visualization.png"))
 ```
 
-## A better biomarker for PCa?
+## A better biomarker for prostate cancer?
 ```{r out.width="100%"}
 knitr::include_graphics("../results/boxplot_psa.png")
 ```
@@ -145,7 +145,7 @@ knitr::include_graphics("../results/mtdna_vs_psa.png")
 
 
 ## Conclusion {.build}
-- We can support the conclusion of the article, mtDNA is a biomarker for PCa (e.g, it is reproducible)  
+- We can support the conclusion of the article, mtDNA is a biomarker for prostate cancer (e.g, it is reproducible)  
 
 <div>
 - PSA levels seem to be an even better biomarker

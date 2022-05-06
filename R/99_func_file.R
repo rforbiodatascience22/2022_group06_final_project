@@ -24,7 +24,7 @@ logistic_regression <- function(include_psa = TRUE){
   
     data_nested <- data_nested %>%
       mutate(coef = map(mu_group,
-                        ~broom::tidy(.))) %>%
+                        ~tidy(.))) %>%
       unnest(coef) %>% 
       filter(term != "(Intercept)") %>% 
       select(-c(mu_group,
@@ -69,7 +69,7 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
       
       geom_point(size = 3) 
     
-    plt <- plt + ggpubr::stat_cor(method = "spearman")
+    plt <- plt + stat_cor(method = "spearman")
   }
   
   if (control == FALSE) {
@@ -78,7 +78,7 @@ correlation_analysis <- function(df, variable1, variable2, control = TRUE){
           
       geom_point(size = 3) 
     
-    plt <- plt + ggpubr::stat_cor(method = "spearman")
+    plt <- plt + stat_cor(method = "spearman")
   }
   
   return(plt)

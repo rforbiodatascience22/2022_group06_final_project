@@ -20,7 +20,7 @@ boxplot_psa <- data %>%
               color = "black") +
   scale_color_brewer(palette = "Dark2") +
   theme(legend.position = "none") + 
-  labs(title = "Boxplot of PSA of controls and cancer cases", 
+  labs(title = "Boxplot of PSA of controls and prostate cancer cases", 
        y = "PSA", 
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number
@@ -31,7 +31,7 @@ in Han chinese with prostate cancer and healthy controls.") +
 
 #Add statistical test
 boxplot_psa <- boxplot_psa +
-  ggpubr::stat_compare_means(method = "t.test",
+  stat_compare_means(method = "t.test",
                              size = 4,
                              hjust = -1.15,
                              vjust = 1)

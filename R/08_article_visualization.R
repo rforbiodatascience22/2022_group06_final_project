@@ -66,7 +66,7 @@ Han chinese with prostate cancer and healthy controls.") +
   
 # Add statistical test.
 article_plot <- article_plot + 
-  ggpubr::stat_compare_means(method = "t.test", 
+  stat_compare_means(method = "t.test", 
                              size = 8,
                              hjust = -1.5,
                              vjust = 1)
