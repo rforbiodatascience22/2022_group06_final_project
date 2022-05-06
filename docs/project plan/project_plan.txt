@@ -11,9 +11,6 @@ Q4) We have a problem with loading data, how much can we add to our load script?
 Q5) How can we guard against duplets in 02_clean.R?
   a) current implement is good, maybe use a logfile
 
-Q6) How important is it that we don't use base R functions? (using ncol over creating a function with purrr)
-
-
 Presentation outline 
 -Introduction data    DONE
 -Cleaning             DONE
@@ -43,9 +40,10 @@ while project == "not_finished":
 8) Data visualization
 
 To do:
-1) Insert subtitles?
-2) Make functions where needed
-3) Factor 09 as in 03 - Esben
-4) Make manuscript for oral exam
-6) Conclusion slide is not done
+Align pca and Prostate cancer. - Joachim
 
+
+Slides
+3) Adjust conclusion slide
+4) Code-flowchart - Joachim
+5) Make manuscript for oral exam

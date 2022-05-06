@@ -4,13 +4,17 @@ library("ggsignif")
 library("rmarkdown")
 library("knitr")
 
-# Run all scripts ---------------------------------------------------------
+
+# Call support functions --------------------------------------------------
+source("R/99_func_file.R")
+
+# Run project pipeline ----------------------------------------------------
 source("R/01_load.R")
 source("R/02_clean.R")
 source("R/03_augment.R")
 source("R/04_test_for_outliers.R")
 source("R/05_PCA_model.R")
-source("R/06_logisticregression.R")
+source("R/06_logistic_regression.R")
 source("R/07_boxplot_BMI_Dfi_class.R")
 source("R/08_article_visualization.R")
 source("R/09_mtDNA_vs_PSA.R")
