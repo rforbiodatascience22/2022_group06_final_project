@@ -12,7 +12,7 @@ data <- read_csv(file = "data/03_dat_aug.csv",
 data_control <- data %>% 
   filter(group_names == "control")
 data_pca <- data %>% 
-  filter(group_names == "pca_case")
+  filter(group_names == "prostate cancer")
 
 plt1 <- data %>% 
   correlation_analysis(age, mtdna, control = FALSE)

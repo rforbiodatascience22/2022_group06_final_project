@@ -5,10 +5,10 @@ data <- read_csv(file = "data/02_dat_clean.csv",
 
 # Make artificial split. Split into patient- and medical info --------------
 patient_info <- data %>% 
-  select(sample, age, dfi, smoking, pca_hist, bmi)
+  select(sample, age, dfi, smoking, cancer_hist, bmi)
   
 medical_info <- data %>% 
-  select(!c(age, dfi, smoking, pca_hist, bmi))
+  select(!c(age, dfi, smoking, cancer_hist, bmi))
 
 
 # Add in and factorize a BMI class ----------------------------------------
@@ -37,7 +37,7 @@ medical_info <- medical_info %>%
 
 # Add group names ------------------------------------------------
 medical_info <- medical_info %>% 
-  mutate(group_names = case_when(group == 1 ~ "pca_case",
+  mutate(group_names = case_when(group == 1 ~ "prostate cancer",
                                  group == 0 ~ "control"))
 
 # Join patient info and medical info based on Sample ----------------------
