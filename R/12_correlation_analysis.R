@@ -1,3 +1,4 @@
+source("R/99_func_file.R")
 
 # Load data ---------------------------------------------------------------
 data <- read_csv(file = "data/03_dat_aug.csv",
@@ -13,39 +14,47 @@ data_control <- data %>%
 data_pca <- data %>% 
   filter(group_names == "pca_case")
 
-# mtDNA vs. Age for controls  
-plt1 <- data_control %>% 
-  ggplot(mapping = aes(x = age, 
-                       y = mtdna)) + 
-  geom_point() 
+plt1 <- data %>% 
+  correlation_analysis1(age, mtdna, control = FALSE)
 
-plt1 + ggpubr::stat_cor(method = "spearman")
+ggsave(filename = 'results/scatterplot_age_mtdna.png',
+       plot = plt1,
+       width = 10,
+       height = 6.5)
+
+# mtDNA vs. Age for controls  
+#plt1 <- data_control %>% 
+#  ggplot(mapping = aes(x = age, 
+#                       y = mtdna)) + 
+#  geom_point() 
+
+#plt1 + ggpubr::stat_cor(method = "spearman")
 
 # mtDNA vs. Age for PCa cases
-plt2 <- data_pca %>% 
-  ggplot(mapping = aes(x = age, 
-                       y = mtdna)) + 
-  geom_point()  
+#plt2 <- data_pca %>% 
+#  ggplot(mapping = aes(x = age, 
+ #                      y = mtdna)) + 
+  #geom_point()  
 
-plt2 + ggpubr::stat_cor(method = "spearman")
+#plt2 + ggpubr::stat_cor(method = "spearman")
 
 
 # mtDNA vs. BMI for controls
-plt3 <- data_control %>% 
-  ggplot(mapping = aes(x = bmi, 
-                       y = mtdna)) + 
-  geom_point()  
+#plt3 <- data_control %>% 
+ # ggplot(mapping = aes(x = bmi, 
+  #                     y = mtdna)) + 
+  #geom_point()  
 
-plt3 + ggpubr::stat_cor(method = "spearman")
+#plt3 + ggpubr::stat_cor(method = "spearman")
 
 
 # mtDNA vs. BMI for PCa cases
-plt4 <- data_pca %>% 
-  ggplot(mapping = aes(x = bmi, 
-                       y = mtdna)) + 
-  geom_point()  
+#plt4 <- data_pca %>% 
+ # ggplot(mapping = aes(x = bmi, 
+  #                     y = mtdna)) + 
+  #geom_point()  
 
-plt4 + ggpubr::stat_cor(method = "spearman")
+#plt4 + ggpubr::stat_cor(method = "spearman")
 
 # #mtDNA vs. gleason score
 # plt5 <- data_pca %>% 
