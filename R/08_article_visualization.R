@@ -72,4 +72,3 @@ ggsave(filename = "results/article_visualization.png",
        plot = article_plot,
        width = 10,
        height = 10)
-article_plot
