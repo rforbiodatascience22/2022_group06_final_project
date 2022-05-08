@@ -10,7 +10,7 @@ author:
 output:
   ioslides_presentation:
     smaller:  TRUE
-date: '2022-05-10'
+date: '2022-05-09'
 ---
 
 ```{r setup, include=FALSE}
