@@ -1,16 +1,17 @@
 ---
 title: "Prostate cancer analysis"
-subtitle: "Group 6"
 author:
-  - "Esben Vestergaard Øyan, s194564"
-  - "Eskild Fisker Angen, s184241"
-  - "Joachim Breitenstein, s183460"
-  - "Mathias Rahbek-Borre, s183447"
-  - "William Hagedorn-Rasmussen, s194545"
+- Esben Vestergaard Øyan, s194564
+- Eskild Fisker Angen, s184241
+- Joachim Breitenstein, s183460
+- Mathias Rahbek-Borre, s183447
+- William Hagedorn-Rasmussen, s194545
+date: '2022-05-10'
 output:
   ioslides_presentation:
-    smaller:  TRUE
-date: '2022-05-10'
+    smaller: yes
+  slidy_presentation: default
+subtitle: Group 6
 ---
 
 ```{r setup, include=FALSE}
