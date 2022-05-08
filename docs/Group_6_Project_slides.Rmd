@@ -1,16 +1,22 @@
 ---
 title: "Prostate cancer analysis"
-subtitle: "Group 6"
 author:
-  - "Esben Vestergaard Øyan, s194564"
-  - "Eskild Fisker Angen, s184241"
-  - "Joachim Breitenstein, s183460"
-  - "Mathias Rahbek-Borre, s183447"
-  - "William Hagedorn-Rasmussen, s194545"
+- Esben Vestergaard Øyan, s194564
+- Eskild Fisker Angen, s184241
+- Joachim Breitenstein, s183460
+- Mathias Rahbek-Borre, s183447
+- William Hagedorn-Rasmussen, s194545
+date: '2022-05-10'
 output:
   ioslides_presentation:
+<<<<<<< HEAD
+    smaller: yes
+  slidy_presentation: default
+subtitle: Group 6
+=======
     smaller:  TRUE
 date: '2022-05-09'
+>>>>>>> 61340d8cffed6dbb557e481f18015a4b16ee4f64
 ---
 
 ```{r setup, include=FALSE}
@@ -146,8 +152,4 @@ knitr::include_graphics("../results/boxplot_bmi_dfi.png")
 
 <div>
 - Both of the above could be supported by Logistic Regression and PCA
-</div>
-
-<div>
-- Did we find anything interesting for EDA?
 </div>
