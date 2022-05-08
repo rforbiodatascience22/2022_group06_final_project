@@ -212,7 +212,8 @@ simplified_mtdna_vs_psa <- ajcc_plot_p +
   labs(caption = "A-B, colored by mtDNA number counts in PBL's grouped above and below a median derived from patient group.
   C-D colored by PSA levels measured in ng/ml. Every color adds up to 100 %.
   Note that A-B is colored based on median from data-set, while C-D is colored based on 'arbitrary' classification, leading to overweight of '>20'.
-  Stratification on AJCC stage: ('II' refers to both II A and II B). Stratification on Gleason score: ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above)")
+  Stratification on AJCC stage: ('II' refers to both II A and II B). Stratification on Gleason score: ('low' is less than 7, 'medium' is 7 and 'high' is 8 or above)") +
+  theme(plot.caption = element_text(size = 12))
 
 # Save plots to results.
 ggsave(filename = "results/full_mtdna_vs_psa.png", 

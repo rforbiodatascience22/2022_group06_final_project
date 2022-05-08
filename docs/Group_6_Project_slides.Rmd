@@ -9,9 +9,14 @@ author:
 date: '2022-05-10'
 output:
   ioslides_presentation:
+<<<<<<< HEAD
     smaller: yes
   slidy_presentation: default
 subtitle: Group 6
+=======
+    smaller:  TRUE
+date: '2022-05-09'
+>>>>>>> 61340d8cffed6dbb557e481f18015a4b16ee4f64
 ---
 
 ```{r setup, include=FALSE}
