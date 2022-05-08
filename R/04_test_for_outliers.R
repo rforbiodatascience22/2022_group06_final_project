@@ -1,4 +1,3 @@
-source("R/99_func_file.R")
 # Load augmented data -----------------------------------------------------
 data <- read_csv(file = "data/03_dat_aug.csv",
                  show_col_types = FALSE)
@@ -53,12 +52,12 @@ boxplot_discrete <- ajcc_plot +
   plot_annotation(title = "A plot of the discrete attributes, to examine distribution of outliers")
   
 #Save plots to results
-ggsave(filename = 'results/boxplot_continuous.png',
+ggsave(filename = "results/boxplot_continuous.png",
        plot = boxplot_continuous,
        width = 10,
        height = 6.5)
 
-ggsave(filename = 'results/boxplot_discrete.png',
+ggsave(filename = "results/boxplot_discrete.png",
        plot = boxplot_discrete,
        width = 10,
        height = 6.5)

@@ -1,3 +1,7 @@
+# The following was an analysis that we hypothesized would yield interesting 
+# results, but ended up not being worth including in our presentation. 
+
+
 # selection necessary for extraction of p.value 
 data <- read_csv(file = "data/03_dat_aug.csv",
                  show_col_types = FALSE) %>% 
@@ -107,6 +111,3 @@ calc_ttest_p_value <- function(vec_a, vec_b){
 }
 
 corrr::colpair_map(data, calc_ttest_p_value)
-
-# The above was an analysis that we hypothesized would yield interesting 
-# results, but ended up not being worth including in our presentation. 
