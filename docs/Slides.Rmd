@@ -151,7 +151,3 @@ knitr::include_graphics("../results/boxplot_bmi_dfi.png")
 <div>
 - Conclusion for PCA?
 </div>
-
-<div>
-- Did we find anything interesting for EDA?
-</div>
