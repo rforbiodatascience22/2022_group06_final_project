@@ -20,7 +20,7 @@ accurate_article_plot <- data %>%
         panel.background = element_rect(colour = "black",
                                         size=3)) + 
   labs(title = "Boxplot of relative mtDNA copy number of controls\nand cancer cases", 
-       y = "mtDNA", 
+       y = "Relative mtDNA copy number", 
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number in 
 Han chinese with prostate cancer and healthy controls.") +
@@ -50,7 +50,7 @@ article_plot <- data %>%
         panel.background = element_rect(colour = "black",
                                         size=3)) + 
   labs(title = "Boxplot of relative mtDNA copy number of controls\nand cancer cases", 
-       y = "mtDNA", 
+       y = "Relative mtDNA copy number", 
        x = "Group", 
        caption = "Figure: Distribution of pheripheral blood mtDNA copy number in 
 Han chinese with prostate cancer and healthy controls.") +

@@ -1,4 +1,3 @@
-source("R/99_func_file.R")
 # Load augmented data -----------------------------------------------------
 data <- read_csv(file = "data/03_dat_aug.csv",
                  show_col_types = FALSE)

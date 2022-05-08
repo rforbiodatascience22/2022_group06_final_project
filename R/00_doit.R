@@ -9,6 +9,7 @@ library("ggtext")
 library("ggpubr")
 library("rpart")
 library("corrr")
+source("R/99_func_file.R")
 
 # Run project pipeline ----------------------------------------------------
 source("R/01_load.R")
@@ -23,6 +24,6 @@ source("R/09_mtDNA_vs_PSA.R")
 source("R/10_Boxplot_PSA.R")
 source("R/11_other_correlations.R")
 source("R/12_correlation_analysis.R")
-rmarkdown::render("docs/Slides.Rmd")
-browseURL("docs/Slides.html")
+rmarkdown::render("docs/Group_6_Project_slides.Rmd")
+browseURL("docs/Group_6_Project_slides.html")
 

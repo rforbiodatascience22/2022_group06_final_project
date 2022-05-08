@@ -1,6 +1,3 @@
-source("R/99_func_file.R")
-
-
 # Logistic regression without 'psa' ---------------------------------------
 logistic_regression(include_psa = FALSE) %>%
   select(-data) %>%
